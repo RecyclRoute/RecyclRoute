@@ -15,9 +15,6 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Navigate to="/openlayers" replace />} />
         <Route path="openlayers" element={<OpenlayersPage />} />
-        <Route path="maplibre" element={<MaplibrePage />} />
-        <Route path="spatialanalysis" element={<SpatialAnalysisPage />} />
-        <Route path="geotiff" element={<GeoTIFFPage />} />
       </Routes>
     </HashRouter>
   </StrictMode>

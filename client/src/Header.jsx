@@ -30,12 +30,6 @@ function Header() {
           <img src="./OpenLayers_logo.svg" className="logo" alt="OpenLayers logo" />
           OpenLayers
         </NavButton>
-        <NavButton path="maplibre">
-          <img src="./Maplibre-logo.png" className="logo" alt="MapLibre logo" />
-          MapLibre (Reactive)
-        </NavButton>
-        <NavButton path="spatialanalysis">Spatial Analysis</NavButton>
-        <NavButton path="geotiff">Cloud-optimized GeoTIFF</NavButton>
       </h2>
     </>
   );
