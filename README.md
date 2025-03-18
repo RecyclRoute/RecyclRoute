@@ -1,54 +1,69 @@
-<header>
+# GDI_Project
+Server Client Projekt für eine Geodateninfrastruktur Webportal im Rahmen des Moduls 4230
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+- **Frontend:** React.js, OpenLayers und MUI
+- **Backend:** FastAPI, GeoServer
 
-# GitHub Pages
+GitHub Pages: https://314a.github.io/GDI_Project/
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+Getestet mit Node version 22.14.0, openlayers 9.1.0, mapliber 5.1.0, react 18.3.1
 
-</header>
+## Requirements
 
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
+- [Git](https://git-scm.com/)
+- IDE wie [Visual Studio Code](https://code.visualstudio.com/) 
+- [Anaconda Distribution](https://www.anaconda.com/products/distribution) oder [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+- Node.js und npm ([https://docs.npmjs.com/downloading-and-installing-node-js-and-npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)) 
 
-## Step 1: Enable GitHub Pages
+## Repository lokal klonen
+Mit Git in einem Terminal das GitHub Repository *Geoharvester* in ein lokales Verzeichnis klonen.
 
-_Welcome to GitHub Pages and Jekyll :tada:!_
+``` shell
+cd /path/to/workspace
+# Clone Repository 
+git clone https://github.com/314a/GDI_Project.git
+```
 
-The first step is to enable GitHub Pages on this [repository](https://docs.github.com/en/get-started/quickstart/github-glossary#repository). When you enable GitHub Pages on a repository, GitHub takes the content that's on the main branch and publishes a website based on its contents.
+### Git Projekt mit Visual Studio Code lokal klonen
+Öffne ein neues Visual Studio Code Fenster und wähle unter Start *Clone Git Repository*. Alternativ öffne die Command Palette in VS Code `CTRL+Shift+P` (*View / Command Palette*) und wähle `Git: clone`. 
+Füge die Git web URL `https://github.com/314a/GDI_Project.git` ein und bestätige die Eingabe mit Enter. Wähle einen Ordner in welchen das Repository *geklont* werden soll.
 
-### :keyboard: Activity: Enable GitHub Pages
+## Frontend installieren
+Öffne ein Terminal (Command Prompt in VS Code) und wechsle in den *client* Ordner in diesem Projekt
 
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Under your repository name, click **Settings**.
-1. Click **Pages** in the **Code and automation** section.
-1. Ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu.
-1. Click the **Save** button.
-1. Wait about _one minute_ then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-   > Turning on GitHub Pages creates a deployment of your repository. GitHub Actions may take up to a minute to respond while waiting for the deployment. Future steps will be about 20 seconds; this step is slower.
-   > **Note**: In the **Pages** of **Settings**, the **Visit site** button will appear at the top. Click the button to see your GitHub Pages site.
+``` shell
+cd client
+# aktiviere node.js (falls nvm genutzt wird) 
+# nvm use 22.14.0
+# install all the node.js dependencies
+npm install
+# node Projekt ausführen
+# npm run dev ist in package.json definiert
+npm run dev
+```
 
-<footer>
+## Backend installieren
+Öffne ein Terminal und wechsle in den *server* Ordner.
+1. Virtuelle Umgebung für Python mit allen Requirements in der `requirements.txt` Datei aufsetzen.
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+```shell
+# Requirements
+cd server
+# Füge conda-forge den als Channel in conda hinzu, da sonst nicht alle Pakete installiert werden können.
+conda config --add channels conda-forge
+# Erstelle ein neues Conda Environment und füge die Python Packges requirements.txt hinzu, requirements.txt befindet sich im Ordner server/app
+conda create --name gdiproject python=3.10.9 --file app/requirements.txt
+```
 
----
+2. Backend ausführen, virtuelle Umgebung starten und server *uvicorn* starten. Öffne http://localhost:8000/docs im Browser und verifiziere, ob das Backend läuft.
+``` shell
+cd server
+# aktiviere die conda umgebung gdiproject
+conda activate gdiproject
+# start server auf localhost aus dem Ordner "server"
+uvicorn app.main:app --reload
+# Öffne die angegebene URL im Browser und verifiziere, ob das Backend läuft.
+```
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+## API Dokumentation
+Fast API kommt mit vorinstallierter Swagger UI. Wenn der Fast API Backen Server läuft, kann auf die Dokumentation der API über Swagger UI auf http://localhost:8000/docs verfügbar.
