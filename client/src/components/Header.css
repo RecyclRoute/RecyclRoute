@@ -1,0 +1,23 @@
+.App-header {
+  background-color: #227d5aa6;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #273028;
+  height: 80px;
+}
+
+
+#HeaderTitle {
+  color: #273028;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#HeaderUsername {
+  align-content: right;
+
+}

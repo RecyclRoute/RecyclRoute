@@ -1,0 +1,76 @@
+.button-panel {
+    position: absolute;
+    bottom: 120px;    /* z.B. 10px unter der Top-Bar (wenn diese 50px hoch ist) */
+    right: 10px;  /* Abstand vom rechten Rand */
+    z-index: 200; /* Höher als die Karte, damit sie oben angezeigt werden */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.circle-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-color: #273028;
+    border-width: 1px;
+    background-color: #227d5a;
+    cursor: pointer;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+}
+.circle-button:hover {
+    background-color: #c0719a;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  /* Inhalt des Modals */
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+  }
+
+  .addmarker-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    align-items: flex-end;
+  }
+
+  .addmarker-content {
+    background-color: #fff;
+    padding: 10px;
+    max-width: 80%;
+    max-height: 30%;
+    overflow: auto;
+    outline-color: #000000;
+    outline-style: solid;
+    outline-width: 2px;
+    margin-bottom: 90px;    /* 80px vom unteren Rand entfernt */
+    display: flex;          /* Elemente in einer Zeile anordnen */
+    flex-direction: column;
+    gap: 5px; 
+  }
+  

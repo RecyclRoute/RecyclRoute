@@ -1,0 +1,16 @@
+#AddMarkerButton {
+height: 50px;
+border-radius: 50%;
+border-color: #273028;
+border-width: 1px;
+background-color: #227d5a;
+cursor: pointer;
+font-size: 0.7rem;
+display: flex;
+align-items: center;
+justify-content: center;
+border-style: solid;
+}
+#AddMarkerButton:hover {
+    background-color: #c0719a;
+}

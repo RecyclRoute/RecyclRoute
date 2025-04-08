@@ -1,0 +1,129 @@
+.PageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 85vh;
+  background-color: #f0f0f0;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.LoginWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+}
+
+.Formular {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-content: center;
+}
+
+#WeiterButton {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-content: right;
+}
+
+#SpeichernButton {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-content: left;
+}
+
+#ButtonWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#SliderWrapper {
+  margin: 20px 0;
+}
+
+#FormWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#TableHeader {
+  background-color: #007cc3;
+  color: white;
+  padding: 4px;
+}
+
+.TableWrapper {
+  overflow-y: auto;
+  height: 90vh;
+  border-bottom: 2px solid grey;
+}
+
+.TableWrapper thead th {
+  position: sticky;
+  top: 0px;
+}
+
+
+#TableBody {
+  background-color: white;
+  color: black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100vw;
+}
+
+tr {
+  font-size: 16px;
+}
+
+#ResetButton {
+  color: white;
+  background-color: #007cc3;
+  height: 40px;
+  min-width: 100px;
+  cursor: pointer;
+  border: 1px solid white;
+
+}
+
+#ResetButton:hover {
+  opacity: 0.5;
+}
+
+
+select {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.SpecificCantons {
+  font-weight: 700;
+  color: #007cc3;
+}
+
+.footer {
+  color: #c30000;
+  background-color: white;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #007cc3;
+  height: 60px;
+  z-index: 200;
+}

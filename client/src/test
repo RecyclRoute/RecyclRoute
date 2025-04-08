@@ -1,0 +1,102 @@
+import { Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+import { Header } from "./Header";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Select from "@mui/material/Select";
+import Slider from "@mui/material/Slider";
+import { useState } from "react";
+
+
+export const FormularPage = (props) => {
+
+  const [title, setTitle]  = useState("");
+  const [provider, setProvider] = useState("");
+  const [service, setService] = useState("");
+  const [abstract, setAbstract] = useState("");
+
+  return (
+    <div className="PageWrapper">
+      <div>
+        <Header/>
+      </div>
+      <Box id="FormularBox" sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2} className="Formular">
+            <Grid xs={6} md={8} className="Formular">
+                <h2>Add Data</h2>
+          </Grid>
+          <Grid xs={6} md={8} className="Formular">
+          <TextField 
+            id="outlined-basic"
+            label="Title"
+            variant="outlined"
+            value={title}
+            placeholder="Title"
+            onChange={(e) => setTitle(e.target.value)}
+            sx={{bgcolor: "#ffffff",}}>
+            </TextField>
+          </Grid>
+          <Grid xs={6} md={8} className="Formular">
+            <Select
+              id="outlined-basic"
+              label="Provider"
+              variant="outlined"
+              value={provider}
+              placeholder="Provider"
+              onChange={(e) => setProvider(e.target.value)}
+              sx={{bgcolor: "#ffffff",}}>
+            </Select>
+          </Grid>
+          <Grid xs={6} md={8} className="Formular">
+            <Select
+              id="outlined-basic"
+              label="Service"
+              variant="outlined"
+              value={service}
+              placeholder="Service"
+              onChange={(e) => setService(e.target.value)}
+              sx={{bgcolor: "#ffffff",}}>
+            </Select>
+          </Grid>
+          <Grid xs={6} md={8} className="Formular">
+          <TextField 
+            id="outlined-basic"
+            label="Abstract"
+            variant="outlined"
+            value={abstract}
+            placeholder="Abstract"
+            onChange={(e) => setAbstract(e.target.value)}
+            sx={{bgcolor: "#ffffff",}}>
+            </TextField>
+          </Grid>
+          <Grid xs={6} md={8} className="Formular">
+                <h4>Metaquality</h4>
+          </Grid>
+          <Grid xs={6} md={8} className="Formular">
+          <Slider aria-label=""/>
+          </Grid>
+          <Grid xs={6} md={8} className="Formular">
+          <Button
+              id="contained-basic"
+              className="Formular"
+              label="SPEICHERN"
+              variant="contained"
+              onClick={() =>  {setAbstract(abstract); setProvider(provider); setService(service); setTitle(title);}}
+              >SPEICHERN</Button>
+          </Grid>
+          <Grid xs={6} md={8} className="Formular">
+          <Button
+              component={Link} to="/TablePage"
+              id="contained-basic"
+              className="Formular"
+              label="WEITER"
+              variant="outlined"
+              >WEITER</Button>
+          </Grid>
+          </Grid>
+        </Box>
+    </div>
+  );
+};
