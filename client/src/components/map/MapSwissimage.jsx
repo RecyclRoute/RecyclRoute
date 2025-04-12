@@ -6,52 +6,39 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 export const MapSwissimage = (props) => {
     const mapContainer = useRef(null);
 
-
-      // Speicher die Karteninstanz, sobald sie von MapSwissimage geladen ist
-      const [map, setMap] = useState(null);
-        // Wenn active, dann erscheint das Fadenkreuz und der Klick-Handler ist aktiv
-        const [markerMode, setMarkerMode] = useState(false);
-        // Falls du nur einen Marker zulassen möchtest, kannst du diesen hier speichern
-        const [marker, setMarker] = useState(null);
-      
-        // Callback, das von MapSwissimage aufgerufen wird, sobald die Karte geladen ist
-        const handleMapLoad = (mapInstance) => {
-          setMap(mapInstance);
-        };
-
         // useEffect: Wird jedes Mal ausgeführt, wenn markerMode oder die map sich ändert
         useEffect(() => {
-          if (!map) return; // Falls die Karte noch nicht geladen ist, nichts tun
+          if (!props.map) return; // Falls die Karte noch nicht geladen ist, nichts tun
       
           // Handler, der beim Klick auf die Karte ausgeführt wird: marker wird an der Kartenmitte gesetzt
           const handleMapClick = () => {
-            const center = map.getCenter();
+            const center = props.map.getCenter();
             // Falls bereits ein Marker vorhanden ist, entfernen wir diesen – falls nur ein Marker existieren soll
-            if (marker) {
-              marker.remove();
+            if (props.marker) {
+              props.marker.remove();
             }
             // Neuen Marker an der aktuellen Kartenmitte setzen
             const newMarker = new maplibregl.Marker({ color: "red" })
               .setLngLat(center)
-              .addTo(map);
-            setMarker(newMarker);
+              .addTo(props.map);
+            props.setMarker(newMarker);
       
             // Optional: Marker-Modus wieder deaktivieren, damit der nächste Klick nicht sofort einen neuen Marker setzt
-            setMarkerMode(false);
+            
           };
       
         
           // Wenn der Marker-Modus aktiv ist, den Klick-Handler registrieren
-          if (markerMode) {
-            map.on("click", handleMapClick);
+          if (props.markerMode) {
+            props.map.on("click", handleMapClick);
           }
           // Cleanup: Entferne den Handler wieder, wenn der Marker-Modus deaktiviert wird
           return () => {
-            if (markerMode) {
-              map.off("click", handleMapClick);
+            if (props.markerMode) {
+              props.map.off("click", handleMapClick);
             }
           };
-        }, [markerMode, map, marker]);
+        }, [props.markerMode, props.map, props.marker, props.setMarker, props.setMarkerMode]);
   
     useEffect(() => {
       // Definiere den benutzerdefinierten Style für Swissimage
@@ -80,30 +67,35 @@ export const MapSwissimage = (props) => {
       };
   
       // Initialisiere die Map mit dem Swissimage-Style
-      const map = new maplibregl.Map({
+      const mapInstance = new maplibregl.Map({
         container: mapContainer.current,
         style: swissImageStyle,
         center: [7.641948397622829, 47.53488012308844], // Beispielkoordinaten (z.B. Zürich)
         zoom: 17,
         maxZoom: 21,  
         pitch: 0,
+        pitchWithRotate: false,
+        interactive: true,
       });
 
+      // Speichere die Karteninstanz im Parent-State über den Setter
+      props.setMap(mapInstance);
+
       // Sobald die Map geladen ist, rufe den Callback auf
-      map.on('load', () => {
-        if (handleMapLoad) {
-          handleMapLoad(map);
+      mapInstance.on('load', () => {
+        if (props.onMapLoad) {
+          props.onMapLoad(mapInstance);
         }
       });
   
       // Aufräumfunktion beim Unmounten der Komponente
-      return () => map.remove();
+      return () => mapInstance.remove();
     }, []);
   
     return (
       <div style={{ position: "relative", width: "100%", height: "100%" }}>
         <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
-        {markerMode && (
+        {props.markerMode && (
           <div
             style={{
               position: "absolute",

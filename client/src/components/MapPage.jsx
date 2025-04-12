@@ -1,11 +1,10 @@
 import "../App.css";
-import "./Footer.css"
+import "./footer/Footer.css"
 import "./MapPage.css"
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { Header } from "./Header.jsx";
-import { Footer } from "./Footer.jsx";
+import { Footer } from "./footer/Footer.jsx";
 import { MapSwissimage} from "./map/MapSwissimage.jsx";
 // import Map from "ol/Map.js";
 // import View from "ol/View.js";
@@ -14,12 +13,20 @@ import { MapSwissimage} from "./map/MapSwissimage.jsx";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { AddMarkerButton } from "./add_marker/add_marker_button.jsx";
-
+import { AddMarkerPopup } from "./add_marker/add_marker_popup.jsx";
+import { LoginPopup } from "./footer/login_popup.jsx";
+import { AddMarkerPopupInfo } from "./add_marker/add_marker_popup_info.jsx";
+import { MapRotationButton } from "./map/MapRotationButton.jsx";
+import { MapPositionButton } from "./map/MapPositionButton.jsx";
+import { MapLayerButton } from "./map/MapLayerButton.jsx";
+import { ProjectManagerButton} from "./project_manager/ProjectManagerButton.jsx";
+import { ProjectStatsButton} from "./project_manager/ProjectStatsButton.jsx";
 
 
 export const MapPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [addMarkerOpen, setAddMarkerOpen] = useState(false);
+  const [LoginOpen, setLoginOpen] = useState(false);
 
   const openModal = () => {
     setModalOpen(true);};
@@ -27,26 +34,21 @@ export const MapPage = () => {
   const closeModal = () => {
     setModalOpen(false);};
 
-  const closeAddMarker = () => {
-    setAddMarkerOpen(false);};
-
-
   // Speicher die Karteninstanz, sobald sie von MapSwissimage geladen ist
   const [map, setMap] = useState(null);
+
     // Wenn active, dann erscheint das Fadenkreuz und der Klick-Handler ist aktiv
     const [markerMode, setMarkerMode] = useState(false);
     // Falls du nur einen Marker zulassen möchtest, kannst du diesen hier speichern
     const [marker, setMarker] = useState(null);
+
+    const [startPageMode, setStartPageMode] = useState(true)
   
     // Callback, das von MapSwissimage aufgerufen wird, sobald die Karte geladen ist
     const handleMapLoad = (mapInstance) => {
       setMap(mapInstance);
     };
   
-
-
-
-
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
     <Header></Header>
@@ -60,85 +62,60 @@ export const MapPage = () => {
         setMarker={setMarker}
         onMapLoad={handleMapLoad}
       />
-
+      {startPageMode && (
       <div className="button-panel">
-          <button className="circle-button" onClick={openModal}>
+          <ProjectStatsButton>
             Ordner
-          </button>
+          </ProjectStatsButton>
+          <ProjectManagerButton>
+            Ordner
+          </ProjectManagerButton>
           <AddMarkerButton
             markerMode={markerMode}
             setMarkerMode={setMarkerMode}
             setAddMarkerOpen={setAddMarkerOpen}
-
+            startPageMode={startPageMode}
+            setStartPageMode={setStartPageMode}
           />
-          <button className="circle-button" onClick={openModal}>
-            Info
-          </button>
-          <button className="circle-button" onClick={openModal}>
-            Karte
-          </button>
-          <button className="circle-button" onClick={openModal}>
-            Sonstiges
-          </button>
-        </div>
+          <MapLayerButton>
+            
+          </MapLayerButton>
+          <MapPositionButton
+            map={map}
+          />
+          <MapRotationButton
+            map={map}
+          />
+          </div>
+        )} 
     </div>
-    <Footer></Footer>
-
-    {modalOpen && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <h2>Pop-up-Fenster</h2>
-            <p>Hier könnte ein Formular oder weitere Informationen stehen.</p>
-            <button onClick={closeModal}>Schließen</button>
-          </div>
-        </div>
-      )}
-
-{addMarkerOpen && (
-        <div className="addmarker-overlay">
-          <div className="addmarker-content">
-            <h3>Neuer Punkt erstellen:</h3>
-            <div>
-              <label>
-                Layer:
-                <select style={{ marginLeft: "10px" }}>
-                  <option value="">Bitte wählen...</option>
-                </select>
-              </label>
-            </div>
-
-            <div style={{ marginBottom: "10px" }}>
-              <label>
-                Bemerkungen:
-                <input
-                  type="text"
-                  style={{ marginLeft: "10px", width: "60%" }}
-                />
-              </label>
-            </div>
-    
-            <div style={{ marginBottom: "10px", flexDirection: "row" }}>
-              <label>
-                Upload Foto:
-                <input
-                  type="file"
-                  accept="image/*"
-                  style={{ marginLeft: "10px" }}
-                />
-              </label>
-            </div>
-  
-            <div>
-              <button style={{ marginRight: "10px" }} onClick={closeAddMarker}>
-                Abbrechen
-              </button>
-              <button>Speichern</button>
-            </div>
-          </div>
-        </div>
+    <Footer
+      setLoginOpen={setLoginOpen}
+      startPageMode={startPageMode}
+      setStartPageMode={setStartPageMode}
+    />
+    {addMarkerOpen && (
+    <AddMarkerPopup
+      markerMode={markerMode}
+      setMarkerMode={setMarkerMode}
+      setAddMarkerOpen={setAddMarkerOpen}
+      startPageMode={startPageMode}
+      setStartPageMode={setStartPageMode}
+      marker={marker}
+    />
     )}
-    
-  </div>  
+  {addMarkerOpen && (
+    <AddMarkerPopupInfo
+    />
+  )}
+{LoginOpen && (
+    <LoginPopup
+      setLoginOpen={setLoginOpen}
+      startPageMode={startPageMode}
+      setStartPageMode={setStartPageMode}
+    />
+    )}
+    </div>  
   );
 };
 

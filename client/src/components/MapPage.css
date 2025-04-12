@@ -47,19 +47,21 @@
     max-height: 80%;
     overflow: auto;
   }
-
+  
   .addmarker-overlay {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     display: flex;
     justify-content: center;
     z-index: 999;
     align-items: flex-end;
+    pointer-events: none;
   }
 
   .addmarker-content {
+    pointer-events: auto;
     background-color: #fff;
     padding: 10px;
     max-width: 80%;
@@ -68,9 +70,8 @@
     outline-color: #000000;
     outline-style: solid;
     outline-width: 2px;
-    margin-bottom: 90px;    /* 80px vom unteren Rand entfernt */
+    margin-bottom: 117px;    /* 80px vom unteren Rand entfernt */
     display: flex;          /* Elemente in einer Zeile anordnen */
     flex-direction: column;
     gap: 5px; 
   }
-  
