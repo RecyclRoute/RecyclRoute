@@ -17,7 +17,6 @@ export const Footer = (props) => {
         <SearchButton></SearchButton>
         <input id="SearchBar" type="text" placeholder="Suche (Ortschaft, Adressen)" />
         <DeleteButton></DeleteButton>
-        
         </div>
         <LoginButton
           setLoginOpen={setLoginOpen}
