@@ -22,9 +22,6 @@ export const MapSwissimage = (props) => {
               .setLngLat(center)
               .addTo(props.map);
             props.setMarker(newMarker);
-      
-            // Optional: Marker-Modus wieder deaktivieren, damit der nächste Klick nicht sofort einen neuen Marker setzt
-            
           };
       
         
@@ -70,7 +67,7 @@ export const MapSwissimage = (props) => {
       const mapInstance = new maplibregl.Map({
         container: mapContainer.current,
         style: swissImageStyle,
-        center: [7.641948397622829, 47.53488012308844], // Beispielkoordinaten (z.B. Zürich)
+        center: [7.641948397622829, 47.53488012308844], // Beispielkoordinaten (FHNW-Park)
         zoom: 17,
         maxZoom: 21,  
         pitch: 0,
@@ -86,6 +83,58 @@ export const MapSwissimage = (props) => {
         if (props.onMapLoad) {
           props.onMapLoad(mapInstance);
         }
+
+        // Fiktives Straßennetz als GeoJSON
+const fakeStreets = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: { name: 'Papierweg' },
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [7.6415, 47.5347],
+          [7.6420, 47.5350],
+          [7.6425, 47.5353]
+        ]
+      }
+    },
+    {
+      type: 'Feature',
+      properties: { name: 'Kartonallee' },
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [7.6410, 47.5345],
+          [7.6405, 47.5349],
+          [7.6402, 47.5352]
+        ]
+      }
+    }
+  ]
+};
+
+// Quelle hinzufügen
+mapInstance.addSource('fake-streets', {
+  type: 'geojson',
+  data: fakeStreets
+});
+
+// Layer hinzufügen
+mapInstance.addLayer({
+  id: 'fake-streets-layer',
+  type: 'line',
+  source: 'fake-streets',
+  layout: {
+    'line-join': 'round',
+    'line-cap': 'round'
+  },
+  paint: {
+    'line-color': '#FF6F00', // gut sichtbar auf Luftbild
+    'line-width': 4
+  }
+});
       });
   
       // Aufräumfunktion beim Unmounten der Komponente

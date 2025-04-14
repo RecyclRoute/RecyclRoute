@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MapSwissimage} from "../map/MapSwissimage.jsx";
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { ReactComponent as CrossIcon } from "../icons/cross_icon.svg"
+import { ReactComponent as CrossIcon } from "../icons/black/cross_icon.svg"
 
 export const LoginPopup = (props) => {
 

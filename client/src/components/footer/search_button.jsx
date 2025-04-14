@@ -1,4 +1,4 @@
-import { ReactComponent as SearchIcon } from "../icons/search_icon.svg"
+import { ReactComponent as SearchIcon } from "../icons/black/search_icon.svg"
 import "./Footer.css";
 
 export const SearchButton = () => {
