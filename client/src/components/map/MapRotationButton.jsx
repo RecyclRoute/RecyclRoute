@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as NorthArrowIcon } from "../icons/north_arrow_icon.svg";
+import { ReactComponent as NorthArrowIcon } from "../icons/black/north_arrow_icon.svg";
 import "./Map.css";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";

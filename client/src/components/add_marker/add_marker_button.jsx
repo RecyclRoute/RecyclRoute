@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MapSwissimage} from "../map/MapSwissimage.jsx";
 import maplibregl from 'maplibre-gl';
 import "./add_marker.css";
-import { ReactComponent as AddMarkerIcon } from "../icons/add_marker_icon.svg";
+import { ReactComponent as AddMarkerIcon } from "../icons/black/add_marker_icon.svg";
 
 export const AddMarkerButton = (props) => {
 

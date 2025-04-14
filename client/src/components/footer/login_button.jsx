@@ -1,4 +1,4 @@
-import { ReactComponent as UserIcon } from "../icons/user_icon.svg"
+import { ReactComponent as UserIcon } from "../icons/black/user_icon.svg"
 import "./Footer.css"
 
 export const LoginButton = (props) => {

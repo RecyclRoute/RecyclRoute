@@ -1,5 +1,5 @@
-import { ReactComponent as CrosshairIcon } from "../icons/crosshair_icon.svg";
-import { ReactComponent as CircleIcon } from "../icons/circle_icon.svg";
+import { ReactComponent as CrosshairIcon } from "../icons/black/crosshair_icon.svg";
+import { ReactComponent as CircleIcon } from "../icons/black/circle_icon.svg";
 import React, { useState, useRef, useEffect } from 'react';
 import "maplibre-gl/dist/maplibre-gl.css";
 import maplibregl from "maplibre-gl";
