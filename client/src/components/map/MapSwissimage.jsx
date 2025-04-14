@@ -1,10 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import testStrassenGeojson from '../../data/test_strassen.json';
 
 
 export const MapSwissimage = (props) => {
-    const mapContainer = useRef(null);
+    
+  const mapContainer = useRef(null);
 
         // useEffect: Wird jedes Mal ausgeführt, wenn markerMode oder die map sich ändert
         useEffect(() => {
@@ -84,57 +86,78 @@ export const MapSwissimage = (props) => {
           props.onMapLoad(mapInstance);
         }
 
-        // Fiktives Straßennetz als GeoJSON
-const fakeStreets = {
-  type: 'FeatureCollection',
-  features: [
-    {
-      type: 'Feature',
-      properties: { name: 'Papierweg' },
-      geometry: {
-        type: 'LineString',
-        coordinates: [
-          [7.6415, 47.5347],
-          [7.6420, 47.5350],
-          [7.6425, 47.5353]
-        ]
-      }
-    },
-    {
-      type: 'Feature',
-      properties: { name: 'Kartonallee' },
-      geometry: {
-        type: 'LineString',
-        coordinates: [
-          [7.6410, 47.5345],
-          [7.6405, 47.5349],
-          [7.6402, 47.5352]
-        ]
-      }
-    }
-  ]
-};
+        const geojson = testStrassenGeojson;
+        geojson.features = geojson.features.map(feature => ({
+          ...feature,
+          properties: {
+            ...feature.properties,
+            Fortschritt: feature.properties.Fortschritt || 'nochOffen'
+          }
+        }));
 
-// Quelle hinzufügen
-mapInstance.addSource('fake-streets', {
-  type: 'geojson',
-  data: fakeStreets
-});
+        mapInstance.addSource('strassen', {
+          type: 'geojson',
+          data: geojson
+        });
 
-// Layer hinzufügen
-mapInstance.addLayer({
-  id: 'fake-streets-layer',
-  type: 'line',
-  source: 'fake-streets',
-  layout: {
-    'line-join': 'round',
-    'line-cap': 'round'
-  },
-  paint: {
-    'line-color': '#FF6F00', // gut sichtbar auf Luftbild
-    'line-width': 4
-  }
-});
+        mapInstance.addLayer({
+          id: 'strassen-layer',
+          type: 'line',
+          source: 'strassen',
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round'
+          },
+          paint: {
+            'line-color': '#1976D2',
+            'line-width': 4
+          }
+        });
+
+        mapInstance.on('click', 'strassen-layer', (e) => {
+          const feature = e.features[0];
+          const coordinates = e.lngLat;
+          const aktuelleWahl = feature.properties.Fortschritt || 'nochOffen';
+
+          const dropdown = `
+            <label for="fortschritt-select">Fortschritt:</label>
+            <select id="fortschritt-select">
+              <option value="nochOffen" ${aktuelleWahl === 'nochOffen' ? 'selected' : ''}>nochOffen</option>
+              <option value="inArbeit" ${aktuelleWahl === 'inArbeit' ? 'selected' : ''}>inArbeit</option>
+              <option value="abgeschlossen" ${aktuelleWahl === 'abgeschlossen' ? 'selected' : ''}>abgeschlossen</option>
+            </select>
+          `;
+
+          const popup = new maplibregl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(dropdown)
+            .addTo(mapInstance);
+
+          popup.on('open', () => {
+            const select = document.getElementById('fortschritt-select');
+            if (select) {
+              select.addEventListener('change', (event) => {
+                const newStatus = event.target.value;
+
+                geojson.features = geojson.features.map(f => {
+                  if (f.properties.id === feature.properties.id) {
+                    return {
+                      ...f,
+                      properties: {
+                        ...f.properties,
+                        Fortschritt: newStatus
+                      }
+                    };
+                  }
+                  return f;
+                });
+
+                mapInstance.getSource('strassen').setData(geojson);
+                popup.remove();
+              });
+            }
+          });
+        });
       });
   
       // Aufräumfunktion beim Unmounten der Komponente
