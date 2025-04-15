@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import testStrassenGeojson from '../../data/test_strassen.json';
 
 
 export const MapSwissimage = (props) => {
@@ -313,80 +312,8 @@ export const MapSwissimage = (props) => {
       if (props.onMapLoad) {
         props.onMapLoad(mapInstance);
       }
-
-      const geojson = testStrassenGeojson;
-      geojson.features = geojson.features.map(feature => ({
-        ...feature,
-        properties: {
-          ...feature.properties,
-          Fortschritt: feature.properties.Fortschritt || 'nochOffen'
-        }
-      }));
-
-      mapInstance.addSource('strassen', {
-        type: 'geojson',
-        data: geojson
-      });
-
-      mapInstance.addLayer({
-        id: 'strassen-layer',
-        type: 'line',
-        source: 'strassen',
-        layout: {
-          'line-join': 'round',
-          'line-cap': 'round'
-        },
-        paint: {
-          'line-color': '#1976D2',
-          'line-width': 4
-        }
-      });
-
-      mapInstance.on('click', 'strassen-layer', (e) => {
-        const feature = e.features[0];
-        const coordinates = e.lngLat;
-        const aktuelleWahl = feature.properties.Fortschritt || 'nochOffen';
-
-        const dropdown = `
-          <label for="fortschritt-select">Fortschritt:</label>
-          <select id="fortschritt-select">
-            <option value="nochOffen" ${aktuelleWahl === 'nochOffen' ? 'selected' : ''}>nochOffen</option>
-            <option value="inArbeit" ${aktuelleWahl === 'inArbeit' ? 'selected' : ''}>inArbeit</option>
-            <option value="abgeschlossen" ${aktuelleWahl === 'abgeschlossen' ? 'selected' : ''}>abgeschlossen</option>
-          </select>
-        `;
-
-        const popup = new maplibregl.Popup()
-          .setLngLat(coordinates)
-          .setHTML(dropdown)
-          .addTo(mapInstance);
-
-        popup.on('open', () => {
-          const select = document.getElementById('fortschritt-select');
-          if (select) {
-            select.addEventListener('change', (event) => {
-              const newStatus = event.target.value;
-
-              geojson.features = geojson.features.map(f => {
-                if (f.properties.id === feature.properties.id) {
-                  return {
-                    ...f,
-                    properties: {
-                      ...f.properties,
-                      Fortschritt: newStatus
-                    }
-                  };
-                }
-                return f;
-              });
-
-              mapInstance.getSource('strassen').setData(geojson);
-              popup.remove();
-            });
-          }
-        });
-      });
     });
+
 
     return () => mapInstance.remove();
   }, []);
