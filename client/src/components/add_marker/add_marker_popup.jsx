@@ -26,7 +26,7 @@ export const AddMarkerPopup = (props) => {
       <h3>Neuer Punkt erstellen:</h3>
       <div>
         <label>
-          Layer:
+          Projekt:
           <select style={{ marginLeft: "10px" }}>
             <option value="">Bitte wählen...</option>
           </select>
