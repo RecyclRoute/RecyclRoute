@@ -3,11 +3,13 @@ import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import testStrassenGeojson from '../../data/test_strassen.json';
 
+
 export const MapSwissimage = (props) => {
   // Deklariere den Ref nur einmal
   const mapContainer = useRef(null);
   const [mousePosition, setMousePosition] = useState(null);
   const [routeData, setRouteData] = useState(null);
+  const { projectInfo } = props;
 
   // Helper: Visualisiere die Route
   const displayRoute = (geojson) => {
@@ -48,6 +50,8 @@ export const MapSwissimage = (props) => {
       const routeGeoJSON = await response.json();
       setRouteData(routeGeoJSON);
       alert('Route erfolgreich berechnet!');
+      props.onNavigateToNavigation();
+
     } catch (error) {
       console.error('Backend Fehler:', error);
       alert('Fehler bei der Routenberechnung.');
@@ -94,39 +98,37 @@ export const MapSwissimage = (props) => {
       if (props.polygonPoints.length >= 3) {
         const closedPolygon = [...props.polygonPoints, props.polygonPoints[0]];
         props.setPolygonPoints(closedPolygon);
-
-        const geojson = {
-          type: "FeatureCollection",
-          features: [
-            {
-              type: "Feature",
-              properties: { name: "Mein Projekt" },
-              geometry: {
-                type: "Polygon",
-                coordinates: [closedPolygon],
-              },
-            },
-          ],
+    
+        if (!projectInfo) {
+          alert("Projektinformationen fehlen!");
+          return;
+        }
+    
+        const customPolygon = {
+          name: projectInfo.projectName,
+          gemeindename: projectInfo.municipality,
+          perimeter: closedPolygon
         };
-
-        // Speichern als Datei
-        const blob = new Blob([JSON.stringify(geojson, null, 2)], { type: 'application/json' });
+    
+        // Optional: lokal speichern
+        const blob = new Blob([JSON.stringify(customPolygon, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = 'polygon_project.geojson';
+        link.download = 'polygon_custom.json';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-
+    
         alert('Das Gebiet ist gespeichert! Nun wird die Route berechnet, bitte kurz Geduld haben...');
-
-        await sendPolygonToBackend(geojson);
+    
+        await sendPolygonToBackend(customPolygon);
         props.setPolygonMode(false);
       } else {
         alert('Mindestens 3 Punkte notwendig!');
       }
     };
+    
 
     const handleMouseMove = (e) => {
       setMousePosition([e.lngLat.lng, e.lngLat.lat]);

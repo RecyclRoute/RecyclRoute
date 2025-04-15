@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 import psycopg2
 from pydantic import BaseModel
 from typing import List
+from shapely.geometry import shape, Polygon
+from fastapi.responses import JSONResponse
 
 # Initialize FastAPI app
 app = FastAPI()
@@ -138,3 +140,35 @@ def add_project(project: Project):
         cur.close()
         conn.close()
         raise HTTPException(status_code=500, detail=f"Error adding project: {e}")
+
+@app.post("/calculate-route")
+def calculate_route(geojson: dict):
+    try:
+        # Extrahiere Polygon aus GeoJSON FeatureCollection
+        if not geojson or "features" not in geojson:
+            raise ValueError("Ungültiges GeoJSON.")
+
+        polygon_feature = geojson["features"][0]
+        geometry = polygon_feature["geometry"]
+
+        if geometry["type"] != "Polygon":
+            raise ValueError("Nur Polygon wird unterstützt.")
+
+        # Erzeuge Shapely-Polygon
+        shapely_polygon = shape(geometry)
+
+        # Beispiel: Gib Koordinaten + Fläche zurück
+        coords = list(shapely_polygon.exterior.coords)
+        flaeche = shapely_polygon.area
+
+        # Dummy-Antwort (hier kann später echte Routenlogik rein)
+        response = {
+            "route_type": "demo",
+            "area": flaeche,
+            "used_polygon": coords
+        }
+
+        return JSONResponse(content=response)
+
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Polygon-Fehler: {e}")

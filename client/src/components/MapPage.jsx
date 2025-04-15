@@ -15,6 +15,7 @@ import { MapLayerButton } from "./map/MapLayerButton.jsx";
 import { ProjectManagerButton } from "./project_manager/ProjectManagerButton.jsx";
 import { ProjectStatsButton } from "./project_manager/ProjectStatsButton.jsx";
 import { ProjectPopup } from "./project_manager/ProjectPopup.jsx";
+import { useNavigate } from "react-router-dom";
 
 export const MapPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -28,14 +29,19 @@ export const MapPage = () => {
   const [marker, setMarker] = useState(null);
   const [startPageMode, setStartPageMode] = useState(true);
   const [isLoading, setIsLoading] = useState(false); // 🧩 Ladezustand für Animation
-
+  const [showProjectPopup, setShowProjectPopup] = useState(false); // oder false, wenn du manuell öffnest
+  const [projectInfo, setProjectInfo] = useState(null);
+  const navigate = useNavigate(); // 🧩 useNavigate-Hook für Navigation
   const handleMapLoad = (mapInstance) => {
     setMap(mapInstance);
   };
 
+  const handleNavigationToPage = () => {
+    navigate("/navigation");
+  };
   const handleProjectSubmit = async ({ projectName, municipality }) => {
     setProjectPopupOpen(false);
-
+  
     try {
       const response = await fetch(
         `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(
@@ -43,11 +49,14 @@ export const MapPage = () => {
         )}&country=Switzerland&format=json`
       );
       const data = await response.json();
-
+  
       if (data.length > 0) {
         const { lon, lat } = data[0];
         map.flyTo({ center: [parseFloat(lon), parseFloat(lat)], zoom: 14 });
-
+  
+        // 🔥 HIER: Projektinfo speichern
+        setProjectInfo({ projectName, municipality });
+  
         setPolygonMode(true);
         alert(`Projekt "${projectName}" gestartet! Bitte zeichne nun das Polygon.`);
       } else {
@@ -58,6 +67,7 @@ export const MapPage = () => {
       alert("Fehler beim Geocoding.");
     }
   };
+  
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
@@ -76,6 +86,8 @@ export const MapPage = () => {
           polygonPoints={polygonPoints}
           setPolygonPoints={setPolygonPoints}
           setIsLoading={setIsLoading} // 🧩 Ladeanimation übergeben
+          projectInfo={projectInfo}
+          onNavigateToNavigation={handleNavigationToPage}
         />
 
         {startPageMode && (
@@ -141,6 +153,16 @@ export const MapPage = () => {
           onSubmit={(projectData) => handleProjectSubmit(projectData)}
         />
       )}
+      {showProjectPopup && (
+        <ProjectPopup
+        onClose={() => setShowProjectPopup(false)}
+        onSubmit={(info) => {
+          setProjectInfo(info);
+          setShowProjectPopup(false);
+        }}
+  />
+)}
+
     </div>
   );
 };
