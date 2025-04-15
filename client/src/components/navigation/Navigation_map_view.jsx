@@ -3,6 +3,7 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { Header } from "../Header.jsx";
 import { Footer } from "../footer/Footer.jsx";
+import { MapSwissimage } from "../map/MapSwissimage.jsx";
 
 export const NavigationMap = () => {
   const mapContainer = useRef(null);
@@ -129,21 +130,21 @@ export const NavigationMap = () => {
     }
   };
 
-  return (
-    <div style={{ width: "100%", height: "100vh", display: "flex", flexDirection: "column" }}>
-      <Header />
-      <div style={{ flexGrow: 1, position: "relative" }}>
-        <div ref={mapContainer} style={{ width: "100%", height: "100%" }} />
-        <button
-          onClick={handleWeiter}
-          style={{ position: "absolute", bottom: 20, left: 20, padding: "10px 20px", zIndex: 10 }}
-        >
-          Weiter
-        </button>
-      </div>
-      <Footer />
-    </div>
-  );
+    return(
+      <MapSwissimage></MapSwissimage>
+    )
+
+
+
+
+  // return (
+  //     <div style={{ position: "relative", width: "100%", height: "100%"  }}>
+  //       <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
+  //       <button onClick={handleWeiter} style={{ position: "absolute", bottom: 20, left: 20, padding: "10px 20px", zIndex: 10 }}>
+  //         Weiter
+  //       </button>
+  //     </div>
+  // );
 };
 
 function styleGraph(graph, order, index) {

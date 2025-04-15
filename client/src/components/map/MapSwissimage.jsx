@@ -306,8 +306,6 @@ export const MapSwissimage = (props) => {
       interactive: true,
     });
 
-    props.setMap(mapInstance);
-
     mapInstance.on('load', () => {
       if (props.onMapLoad) {
         props.onMapLoad(mapInstance);

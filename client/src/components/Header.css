@@ -1,22 +1,17 @@
 .App-header {
   background-color: #85A995;
-  font-size: calc(10px + 2vmin);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #273028;
-  height: 80px;
+  height: 80px !important;
+  padding-left: 15px;
 }
 
 
 #HeaderTitle {
   color: #273028;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
-}
-
-#HeaderUsername {
-  align-content: right;
-
 }
