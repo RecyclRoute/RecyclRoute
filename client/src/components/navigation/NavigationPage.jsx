@@ -1,6 +1,6 @@
 import React from "react";
-import { InstructionDisplay } from "./navigation/InstructionDisplay.jsx";
-import { GraphMap } from "./navigation/GraphMap.jsx";
+import { InstructionDisplay } from "./InstructionDisplay.jsx";
+import { GraphMap } from "./GraphMap.jsx";
 
 export const NavigationPage = () => {
   return (
