@@ -1,102 +1,165 @@
-import { Routes, Route, Link } from "react-router-dom";
-import "./App.css";
-import { Header } from "./Header";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import Select from "@mui/material/Select";
-import Slider from "@mui/material/Slider";
-import { useState } from "react";
+import React, { useRef, useEffect, useState } from 'react';
+import maplibregl from 'maplibre-gl';
+import 'maplibre-gl/dist/maplibre-gl.css';
 
 
-export const FormularPage = (props) => {
+export const MapSwissimage = (props) => {
+    const mapContainer = useRef(null);
 
-  const [title, setTitle]  = useState("");
-  const [provider, setProvider] = useState("");
-  const [service, setService] = useState("");
-  const [abstract, setAbstract] = useState("");
+        // useEffect: Wird jedes Mal ausgeführt, wenn markerMode oder die map sich ändert
+        useEffect(() => {
+          if (!props.map) return; // Falls die Karte noch nicht geladen ist, nichts tun
+      
+          // Handler, der beim Klick auf die Karte ausgeführt wird: marker wird an der Kartenmitte gesetzt
+          const handleMapClick = () => {
+            const center = props.map.getCenter();
+            // Falls bereits ein Marker vorhanden ist, entfernen wir diesen – falls nur ein Marker existieren soll
+            if (props.marker) {
+              props.marker.remove();
+            }
+            // Neuen Marker an der aktuellen Kartenmitte setzen
+            const newMarker = new maplibregl.Marker({ color: "red" })
+              .setLngLat(center)
+              .addTo(props.map);
+            props.setMarker(newMarker);
+          };
+      
+        
+          // Wenn der Marker-Modus aktiv ist, den Klick-Handler registrieren
+          if (props.markerMode) {
+            props.map.on("click", handleMapClick);
+          }
+          // Cleanup: Entferne den Handler wieder, wenn der Marker-Modus deaktiviert wird
+          return () => {
+            if (props.markerMode) {
+              props.map.off("click", handleMapClick);
+            }
+          };
+        }, [props.markerMode, props.map, props.marker, props.setMarker, props.setMarkerMode]);
+  
+    useEffect(() => {
+      // Definiere den benutzerdefinierten Style für Swissimage
+      const swissImageStyle = {
+        version: 8,
+        sources: {
+          swissimage: {
+            type: 'raster',
+            tiles: [
+              // URL des WMTS-Endpunkts von Swissimage
+              'https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg'
+            ],
+            tileSize: 256,
+            attribution: '© swisstopo'
+          }
+        },
+        layers: [
+          {
+            id: 'swissimage-layer',
+            type: 'raster',
+            source: 'swissimage',
+            minzoom: 0,
+            maxzoom: 22
+          }
+        ]
+      };
+  
+      // Initialisiere die Map mit dem Swissimage-Style
+      const mapInstance = new maplibregl.Map({
+        container: mapContainer.current,
+        style: swissImageStyle,
+        center: [7.641948397622829, 47.53488012308844], // Beispielkoordinaten (FHNW-Park)
+        zoom: 17,
+        maxZoom: 21,  
+        pitch: 0,
+        pitchWithRotate: false,
+        interactive: true,
+      });
 
-  return (
-    <div className="PageWrapper">
-      <div>
-        <Header/>
-      </div>
-      <Box id="FormularBox" sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2} className="Formular">
-            <Grid xs={6} md={8} className="Formular">
-                <h2>Add Data</h2>
-          </Grid>
-          <Grid xs={6} md={8} className="Formular">
-          <TextField 
-            id="outlined-basic"
-            label="Title"
-            variant="outlined"
-            value={title}
-            placeholder="Title"
-            onChange={(e) => setTitle(e.target.value)}
-            sx={{bgcolor: "#ffffff",}}>
-            </TextField>
-          </Grid>
-          <Grid xs={6} md={8} className="Formular">
-            <Select
-              id="outlined-basic"
-              label="Provider"
-              variant="outlined"
-              value={provider}
-              placeholder="Provider"
-              onChange={(e) => setProvider(e.target.value)}
-              sx={{bgcolor: "#ffffff",}}>
-            </Select>
-          </Grid>
-          <Grid xs={6} md={8} className="Formular">
-            <Select
-              id="outlined-basic"
-              label="Service"
-              variant="outlined"
-              value={service}
-              placeholder="Service"
-              onChange={(e) => setService(e.target.value)}
-              sx={{bgcolor: "#ffffff",}}>
-            </Select>
-          </Grid>
-          <Grid xs={6} md={8} className="Formular">
-          <TextField 
-            id="outlined-basic"
-            label="Abstract"
-            variant="outlined"
-            value={abstract}
-            placeholder="Abstract"
-            onChange={(e) => setAbstract(e.target.value)}
-            sx={{bgcolor: "#ffffff",}}>
-            </TextField>
-          </Grid>
-          <Grid xs={6} md={8} className="Formular">
-                <h4>Metaquality</h4>
-          </Grid>
-          <Grid xs={6} md={8} className="Formular">
-          <Slider aria-label=""/>
-          </Grid>
-          <Grid xs={6} md={8} className="Formular">
-          <Button
-              id="contained-basic"
-              className="Formular"
-              label="SPEICHERN"
-              variant="contained"
-              onClick={() =>  {setAbstract(abstract); setProvider(provider); setService(service); setTitle(title);}}
-              >SPEICHERN</Button>
-          </Grid>
-          <Grid xs={6} md={8} className="Formular">
-          <Button
-              component={Link} to="/TablePage"
-              id="contained-basic"
-              className="Formular"
-              label="WEITER"
-              variant="outlined"
-              >WEITER</Button>
-          </Grid>
-          </Grid>
-        </Box>
-    </div>
-  );
+    props.setMap(mapInstance);
+
+      // Sobald die Map geladen ist, rufe den Callback auf
+      mapInstance.on('load', () => {
+        if (props.onMapLoad) {
+          props.onMapLoad(mapInstance);
+        }
+
+        // Fiktives Straßennetz als GeoJSON
+const fakeStreets = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: { name: 'Papierweg' },
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [7.6415, 47.5347],
+          [7.6420, 47.5350],
+          [7.6425, 47.5353]
+        ]
+      }
+    },
+    {
+      type: 'Feature',
+      properties: { name: 'Kartonallee' },
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [7.6410, 47.5345],
+          [7.6405, 47.5349],
+          [7.6402, 47.5352]
+        ]
+      }
+    }
+  ]
 };
+
+// Quelle hinzufügen
+mapInstance.addSource('fake-streets', {
+  type: 'geojson',
+  data: fakeStreets
+});
+
+// Layer hinzufügen
+mapInstance.addLayer({
+  id: 'fake-streets-layer',
+  type: 'line',
+  source: 'fake-streets',
+  layout: {
+    'line-join': 'round',
+    'line-cap': 'round'
+  },
+  paint: {
+    'line-color': '#FF6F00', // gut sichtbar auf Luftbild
+    'line-width': 4
+  }
+});
+      });
+  
+      // Aufräumfunktion beim Unmounten der Komponente
+      return () => mapInstance.remove();
+    }, []);
+  
+    return (
+      <div style={{ position: "relative", width: "100%", height: "100%" }}>
+        <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
+        {props.markerMode && (
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              pointerEvents: "none", // Damit Klicks durchgehen
+              fontSize: "30px",
+              color: "black",
+              fontWeight: "bold",
+              textShadow: "1px 1px 2px white"
+            }}
+          >
+            +
+          </div>
+        )}
+      </div>
+    );
+  };

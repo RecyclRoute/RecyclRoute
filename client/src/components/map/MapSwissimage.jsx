@@ -1,13 +1,15 @@
 import React, { useRef, useEffect, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import testStrassenGeojson from '../../data/test_strassen.json';
 
 export const MapSwissimage = (props) => {
+  // Deklariere den Ref nur einmal
   const mapContainer = useRef(null);
   const [mousePosition, setMousePosition] = useState(null);
-  const [routeData, setRouteData] = useState(null); // 🧩 Neu: Route-Daten
+  const [routeData, setRouteData] = useState(null);
 
-  // 🧩 Helper: Visualisiere die Route
+  // Helper: Visualisiere die Route
   const displayRoute = (geojson) => {
     if (props.map.getSource('route')) {
       props.map.getSource('route').setData(geojson);
@@ -28,7 +30,7 @@ export const MapSwissimage = (props) => {
     }
   };
 
-  // 🧩 Backend Request
+  // Backend Request
   const sendPolygonToBackend = async (polygonGeoJSON) => {
     try {
       const response = await fetch('http://localhost:8000/calculate-route', {
@@ -44,7 +46,7 @@ export const MapSwissimage = (props) => {
       }
 
       const routeGeoJSON = await response.json();
-      setRouteData(routeGeoJSON); // Speichern für Visualisierung
+      setRouteData(routeGeoJSON);
       alert('Route erfolgreich berechnet!');
     } catch (error) {
       console.error('Backend Fehler:', error);
@@ -52,7 +54,7 @@ export const MapSwissimage = (props) => {
     }
   };
 
-  // Marker Mode
+  // Marker Mode: Registriere Klick-Handler (einmalig, oben – keine Dopplung)
   useEffect(() => {
     if (!props.map) return;
 
@@ -70,7 +72,6 @@ export const MapSwissimage = (props) => {
     if (props.markerMode) {
       props.map.on("click", handleMapClick);
     }
-
     return () => {
       if (props.markerMode) {
         props.map.off("click", handleMapClick);
@@ -78,7 +79,7 @@ export const MapSwissimage = (props) => {
     };
   }, [props.markerMode, props.map, props.marker, props.setMarker]);
 
-  // Polygon Mode - Punktesammeln & Klicks
+  // Polygon Mode – Punktesammeln
   useEffect(() => {
     if (!props.map || !props.polygonMode) return;
 
@@ -99,9 +100,7 @@ export const MapSwissimage = (props) => {
           features: [
             {
               type: "Feature",
-              properties: {
-                name: "Mein Projekt",
-              },
+              properties: { name: "Mein Projekt" },
               geometry: {
                 type: "Polygon",
                 coordinates: [closedPolygon],
@@ -122,9 +121,7 @@ export const MapSwissimage = (props) => {
 
         alert('Das Gebiet ist gespeichert! Nun wird die Route berechnet, bitte kurz Geduld haben...');
 
-        // Anfrage ans Backend senden
         await sendPolygonToBackend(geojson);
-
         props.setPolygonMode(false);
       } else {
         alert('Mindestens 3 Punkte notwendig!');
@@ -147,19 +144,18 @@ export const MapSwissimage = (props) => {
     };
   }, [props.map, props.polygonMode, props.polygonPoints]);
 
-  // Visualisierung Route bei Antwort vom Backend
+  // Visualisiere Route, wenn routeData aktualisiert wird
   useEffect(() => {
     if (routeData && props.map) {
       displayRoute(routeData);
     }
   }, [routeData, props.map]);
 
-  // Polygon Visualisierung
+  // Polygon Visualisierung (Punkte und Linien)
   useEffect(() => {
     if (!props.map || !props.polygonMode) return;
 
     const pointsLength = props.polygonPoints.length;
-
     if (pointsLength === 0) {
       ["polygon-line", "polygon-points-layer", "polygon-live-line-layer"].forEach(layerId => {
         if (props.map.getLayer(layerId)) props.map.removeLayer(layerId);
@@ -205,10 +201,7 @@ export const MapSwissimage = (props) => {
       type: 'FeatureCollection',
       features: props.polygonPoints.map(point => ({
         type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: point
-        }
+        geometry: { type: 'Point', coordinates: point }
       }))
     };
 
@@ -273,9 +266,9 @@ export const MapSwissimage = (props) => {
         props.map.removeSource('polygon-live-line');
       }
     }
-
   }, [props.polygonPoints, props.map, props.polygonMode, mousePosition]);
 
+  // Map-Initialisierung
   useEffect(() => {
     const swissImageStyle = {
       version: 8,
@@ -300,12 +293,13 @@ export const MapSwissimage = (props) => {
       ]
     };
 
+    // Erstelle die Map; benutze dabei den oben deklarierten mapContainer Ref
     const mapInstance = new maplibregl.Map({
       container: mapContainer.current,
       style: swissImageStyle,
       center: [7.641948397622829, 47.53488012308844],
       zoom: 17,
-      maxZoom: 21,
+      maxZoom: 21,  
       pitch: 0,
       pitchWithRotate: false,
       interactive: true,
@@ -314,7 +308,82 @@ export const MapSwissimage = (props) => {
     props.setMap(mapInstance);
 
     mapInstance.on('load', () => {
-      if (props.onMapLoad) props.onMapLoad(mapInstance);
+      if (props.onMapLoad) {
+        props.onMapLoad(mapInstance);
+      }
+
+      const geojson = testStrassenGeojson;
+      geojson.features = geojson.features.map(feature => ({
+        ...feature,
+        properties: {
+          ...feature.properties,
+          Fortschritt: feature.properties.Fortschritt || 'nochOffen'
+        }
+      }));
+
+      mapInstance.addSource('strassen', {
+        type: 'geojson',
+        data: geojson
+      });
+
+      mapInstance.addLayer({
+        id: 'strassen-layer',
+        type: 'line',
+        source: 'strassen',
+        layout: {
+          'line-join': 'round',
+          'line-cap': 'round'
+        },
+        paint: {
+          'line-color': '#1976D2',
+          'line-width': 4
+        }
+      });
+
+      mapInstance.on('click', 'strassen-layer', (e) => {
+        const feature = e.features[0];
+        const coordinates = e.lngLat;
+        const aktuelleWahl = feature.properties.Fortschritt || 'nochOffen';
+
+        const dropdown = `
+          <label for="fortschritt-select">Fortschritt:</label>
+          <select id="fortschritt-select">
+            <option value="nochOffen" ${aktuelleWahl === 'nochOffen' ? 'selected' : ''}>nochOffen</option>
+            <option value="inArbeit" ${aktuelleWahl === 'inArbeit' ? 'selected' : ''}>inArbeit</option>
+            <option value="abgeschlossen" ${aktuelleWahl === 'abgeschlossen' ? 'selected' : ''}>abgeschlossen</option>
+          </select>
+        `;
+
+        const popup = new maplibregl.Popup()
+          .setLngLat(coordinates)
+          .setHTML(dropdown)
+          .addTo(mapInstance);
+
+        popup.on('open', () => {
+          const select = document.getElementById('fortschritt-select');
+          if (select) {
+            select.addEventListener('change', (event) => {
+              const newStatus = event.target.value;
+
+              geojson.features = geojson.features.map(f => {
+                if (f.properties.id === feature.properties.id) {
+                  return {
+                    ...f,
+                    properties: {
+                      ...f.properties,
+                      Fortschritt: newStatus
+                    }
+                  };
+                }
+                return f;
+              });
+
+              mapInstance.getSource('strassen').setData(geojson);
+              popup.remove();
+            });
+          }
+        });
+      });
     });
 
     return () => mapInstance.remove();
@@ -323,6 +392,23 @@ export const MapSwissimage = (props) => {
   return (
     <div style={{ position: "relative", width: "100%", height: "100%" }}>
       <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
+      {props.markerMode && (
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            pointerEvents: "none",
+            fontSize: "30px",
+            color: "black",
+            fontWeight: "bold",
+            textShadow: "1px 1px 2px white"
+          }}
+        >
+          +
+        </div>
+      )}
     </div>
   );
 };
