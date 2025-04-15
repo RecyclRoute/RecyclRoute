@@ -1,10 +1,14 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import psycopg2
+import os
+import logging
+import json
 from pydantic import BaseModel
 from typing import List
-from shapely.geometry import shape, Polygon
+from shapely.geometry import Polygon, mapping
 from fastapi.responses import JSONResponse
+
 
 # Initialize FastAPI app
 app = FastAPI()
@@ -109,13 +113,17 @@ def delete_point(point_id: int):
         conn.close()
         raise HTTPException(status_code=500, detail=f"Error deleting point: {e}")
 
-# Endpoint to add a new project with polygon perimeter
+# Setup logging
+logging.basicConfig(level=logging.DEBUG)
+
 @app.post("/addProject")
 def add_project(project: Project):
     conn = get_db_connection()
     cur = conn.cursor()
 
     try:
+        logging.debug(f"Received project data: {project}")
+
         # Convert perimeter coordinates to WKT string
         coord_str = ", ".join([f"{lon} {lat}" for lon, lat in project.perimeter])
 
@@ -135,12 +143,30 @@ def add_project(project: Project):
         )
         conn.commit()
 
-        # --- SHAPELY ROUTE / AREA CALCULATION ---
-        # Convert to Shapely polygon (input is in EPSG:3857, so area is in m²)
+        # SHAPELY polygon + export to GeoJSON
         shapely_polygon = Polygon(project.perimeter)
-
         area = shapely_polygon.area
         coords = list(shapely_polygon.exterior.coords)
+
+        logging.debug(f"Polygon area: {area}")
+        logging.debug(f"Polygon coordinates: {coords}")
+
+        # Export to GeoJSON
+        geojson_data = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": mapping(shapely_polygon)
+                }
+            ]
+        }
+
+        geojson_path = "polygon.geojson"
+        with open(geojson_path, "w") as f:
+            json.dump(geojson_data, f)
+
 
         cur.close()
         conn.close()
@@ -148,10 +174,11 @@ def add_project(project: Project):
         return JSONResponse(content={
             "message": "Project added successfully",
             "area": area,
-            "route": coords  # You can replace this with actual route logic later
+            "route": coords
         })
 
     except Exception as e:
+        logging.error(f"Error adding project: {e}")
         cur.close()
         conn.close()
         raise HTTPException(status_code=500, detail=f"Error adding project: {e}")
