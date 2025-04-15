@@ -1,165 +1,140 @@
-from fastapi import FastAPI, HTTPException, status
-from fastapi.responses import HTMLResponse
-from fastapi.responses import ORJSONResponse
-# CORS aktivieren für FastAPI Backend
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-# Datenbank Verbindung
-from psycopg2 import pool
-#from psycopg2.extras import RealDictCursor
+import psycopg2
 from pydantic import BaseModel
+from typing import List
 
-app = FastAPI() 
+# Initialize FastAPI app
+app = FastAPI()
 
-# CORS Einstellungen
-# siehe: https://fastapi.tiangolo.com/tutorial/cors/#use-corsmiddleware
+# Add CORS middleware to allow requests from your frontend
 origins = [
-    "http://localhost",
-    "http://localhost:8080",
-    "http://localhost:3000",
+    "http://localhost:3000",  # Your React app running locally
+    # You can add other origins here if needed
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=origins,  # Allows access from the frontend origin
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],  # Added DELETE here too
+    allow_headers=["*"],  # Allow all headers
 )
 
-# Simple Hello World example
-@app.get("/") 
-async def root(): 
-	return {"message": "Hello GDI Project"}
-	
-    
-# Erstellt eine About Seite mit HTML Output 
-# import HTMLResponse benötigt
-@app.get("/about/")
-def about():
-    return HTMLResponse(
-    """
-    <html>
-      <head>
-        <title>FAST API Service</title>
-      </head>
-      <body>
-        <div align="center">
-          <h1>Simple FastAPI Server About Page</h1>
-          <p>Dieser FastAPI Rest Server bietet eine einfache REST Schnittstelle. Die Dokumentation ist über <a href="http://localhost:8000/docs">http://localhost:8000/docs</a> verfügbar.</p> 
-        </div>
-      </body>
-    </html>
-    """
-    )
-
-# Simple static JSON Response 
-# (requires package "orjson" https://github.com/ijl/orjson https://anaconda.org/conda-forge/orjson conda install -c conda-forge orjson)
-# source: https://fastapi.tiangolo.com/advanced/custom-response/
-@app.get("/points/", response_class=ORJSONResponse)
-async def read_points():
-    return ORJSONResponse({
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "FHNW"
-      },
-      "geometry": {
-        "coordinates": [
-          7.642053725874888,
-          47.53482543914882
-        ],
-        "type": "Point"
-      },
-      "id": 0
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Bern"
-      },
-      "geometry": {
-        "coordinates": [
-          7.4469686824532175,
-          46.95873550880529
-        ],
-        "type": "Point"
-      },
-      "id": 1
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Zurich"
-      },
-      "geometry": {
-        "coordinates": [
-          8.54175132796243,
-          47.37668053625666
-        ],
-        "type": "Point"
-      },
-      "id": 2
-    }
-  ]
-})
-
-   
-# Post Query - test on the OPENAPI Docs Page
-@app.post("/square")
-def square(some_number: int) -> dict:
-	square = some_number**2
-	return {f"{some_number} squared is: ": square}
-
-
-# Simple Database query
+# Database connection settings
 DB_HOST = "localhost"
 DB_PORT = 5432
-DB_NAME = "geoserver"
+DB_NAME = "gis_database"
 DB_USER = "postgres"
-DB_PASSWORD = "postgres"
-DB_POOL_MIN_CONN = 1
-DB_POOL_MAX_CONN = 10
+DB_PASSWORD = "ADMIN"
 
-db_pool = pool.SimpleConnectionPool(
-  DB_POOL_MIN_CONN, DB_POOL_MAX_CONN, host=DB_HOST, port=DB_PORT, database=DB_NAME, user=DB_USER, password=DB_PASSWORD
-)
+# Connect to the PostgreSQL database
+def get_db_connection():
+    conn = psycopg2.connect(
+        dbname=DB_NAME,
+        user=DB_USER,
+        password=DB_PASSWORD,
+        host=DB_HOST,
+        port=DB_PORT,
+    )
+    return conn
 
-# Definition für das Antwortschema (response schema) für den Endpunkt getPoints
-class PunkteResponse(BaseModel):
-    id: int
+# Pydantic model for Point input data
+class Point(BaseModel):
     name: str
-    x: float
-    y: float
-    geom: str
-    
-# Funktion für den getPoints-Endpunkt
-# Test: curl http://localhost:8000/getPoints   
-@app.get("/getPoints" , response_model=list[PunkteResponse])
-async def get_punkte():
-    conn = None
-    try:
-        # Verbindung zur Datenbank über den Verbindungspool herstellen
-        conn = db_pool.getconn()
-        cur = conn.cursor()
-        query = "SELECT id, name, ST_X(geom) as x, ST_Y(geom) as y, ST_AsText(geom) as geom FROM punkte"
-        cur.execute(query)
-        results = cur.fetchall()
-        # Ergebnisse in Pydantic-Modelle umwandeln und zurückgeben
-        punkte = []
-        for row in results:
-        # Prüfen, ob die Ergebnisse ausreichend Spalten enthalten
-             if len(row) > 4:
-                  punkte.append(PunkteResponse(id=row[0], name=row[1], x=row[2], y=row[3], geom=row[4]))   
-        #print(punkte)
-        return punkte
-    except Exception as e:
-        print(e)
-        # Eine HTTPException mit Statuscode 500 (Interner Serverfehler) auslösen und den ausgelösten Fehler als Detail übergeben
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error: "+str(e))
-    finally:
-        if conn:
-            # Die Verbindung zur Datenbank beenden
-            db_pool.putconn(conn)
+    latitude: float
+    longitude: float
 
+# Pydantic model for Project input data
+class Project(BaseModel):
+    name: str
+    gemeindename: str
+    perimeter: List[List[float]]  # list of [lon, lat] pairs forming the polygon
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello from FastAPI!"}
+
+# Endpoint to get points from the database
+@app.get("/getPoints")
+def get_points():
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    cur.execute("SELECT id, name, ST_X(geom), ST_Y(geom) FROM points")
+    rows = cur.fetchall()
+
+    cur.close()
+    conn.close()
+
+    points = [{"id": row[0], "name": row[1], "latitude": row[2], "longitude": row[3]} for row in rows]
+    return {"points": points}
+
+# Endpoint to add a new point to the database
+@app.post("/addPoint")
+def add_point(point: Point):
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    try:
+        cur.execute(
+            "INSERT INTO points (name, geom) VALUES (%s, ST_SetSRID(ST_MakePoint(%s, %s), 4326))",
+            (point.name, point.longitude, point.latitude)
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
+        return {"message": "Point added successfully"}
+    except Exception as e:
+        cur.close()
+        conn.close()
+        raise HTTPException(status_code=500, detail=f"Error adding point: {e}")
+
+# Endpoint to delete a point by its ID
+@app.delete("/deletePoint/{point_id}")
+def delete_point(point_id: int):
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    try:
+        cur.execute("DELETE FROM points WHERE id = %s", (point_id,))
+        conn.commit()
+        cur.close()
+        conn.close()
+        return {"message": f"Point with ID {point_id} deleted successfully"}
+    except Exception as e:
+        cur.close()
+        conn.close()
+        raise HTTPException(status_code=500, detail=f"Error deleting point: {e}")
+
+# Endpoint to add a new project with polygon perimeter
+@app.post("/addProject")
+def add_project(project: Project):
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    try:
+        # Convert perimeter coordinates to WKT string
+        coord_str = ", ".join([f"{lon} {lat}" for lon, lat in project.perimeter])
+
+        # Ensure polygon is closed
+        if project.perimeter[0] != project.perimeter[-1]:
+            coord_str += f", {project.perimeter[0][0]} {project.perimeter[0][1]}"
+
+        polygon_wkt = f"POLYGON(({coord_str}))"
+
+        cur.execute(
+            """
+            INSERT INTO project (name, gemeindename, perimeter)
+            VALUES (%s, %s, ST_GeomFromText(%s, 3857))
+            """,
+            (project.name, project.gemeindename, polygon_wkt)
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
+        return {"message": "Project added successfully"}
+    except Exception as e:
+        cur.close()
+        conn.close()
+        raise HTTPException(status_code=500, detail=f"Error adding project: {e}")
