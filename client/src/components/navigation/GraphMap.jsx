@@ -2,37 +2,39 @@ import React, { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-// Dummy GeoJSON für die Linien (später ersetzen durch echte Daten)
-const dummyLines = {
-  type: "FeatureCollection",
-  features: [
-    {
-      type: "Feature",
-      properties: { status: "open" },
-      geometry: {
-        type: "LineString",
-        coordinates: [
-          [7.6419, 47.5348],
-          [7.6420, 47.5352],
-        ],
-      },
-    },
-  ],
-};
-
 export const GraphMap = () => {
   const mapContainer = useRef(null);
   const mapRef = useRef(null);
+  const [geojsonData, setGeojsonData] = useState(null);
 
-  const [geojsonData, setGeojsonData] = useState(dummyLines);
-
+  // Lade GeoJSON-Datei bei Mount
   useEffect(() => {
-    if (mapRef.current) return; // Nur 1x initialisieren
+    fetch("/chinese_postman_path.geojson")
+      .then((res) => res.json())
+      .then((data) => {
+        // Entferne alle Punkte, behalte nur LineStrings
+        const onlyLines = {
+          type: "FeatureCollection",
+          features: data.features.filter(f => f.geometry.type === "LineString").map(f => ({
+            ...f,
+            properties: {
+              ...f.properties,
+              status: "open",
+            },
+          })),
+        };
+        setGeojsonData(onlyLines);
+      });
+  }, []);
+
+  // Initialisiere Karte
+  useEffect(() => {
+    if (!geojsonData || mapRef.current) return;
 
     const map = new maplibregl.Map({
       container: mapContainer.current,
       style: "https://demotiles.maplibre.org/style.json",
-      center: [7.6419, 47.5348],
+      center: geojsonData.features[0].geometry.coordinates[0],
       zoom: 17,
     });
 
@@ -50,11 +52,9 @@ export const GraphMap = () => {
           "line-color": [
             "match",
             ["get", "status"],
-            "done",
-            "#00cc66", // grün
-            "open",
-            "#cc3333", // rot
-            "#000000", // fallback
+            "done", "#00cc66",  // grün
+            "open", "#cc3333",  // rot
+            "#000000",          // fallback
           ],
           "line-width": 5,
         },
@@ -90,7 +90,6 @@ export const GraphMap = () => {
     });
 
     mapRef.current = map;
-
     return () => map.remove();
   }, [geojsonData]);
 
