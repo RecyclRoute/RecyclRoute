@@ -125,6 +125,7 @@ def add_project(project: Project):
 
         polygon_wkt = f"POLYGON(({coord_str}))"
 
+        # Insert into DB
         cur.execute(
             """
             INSERT INTO project (name, gemeindename, perimeter)
@@ -133,42 +134,24 @@ def add_project(project: Project):
             (project.name, project.gemeindename, polygon_wkt)
         )
         conn.commit()
+
+        # --- SHAPELY ROUTE / AREA CALCULATION ---
+        # Convert to Shapely polygon (input is in EPSG:3857, so area is in m²)
+        shapely_polygon = Polygon(project.perimeter)
+
+        area = shapely_polygon.area
+        coords = list(shapely_polygon.exterior.coords)
+
         cur.close()
         conn.close()
-        return {"message": "Project added successfully"}
+
+        return JSONResponse(content={
+            "message": "Project added successfully",
+            "area": area,
+            "route": coords  # You can replace this with actual route logic later
+        })
+
     except Exception as e:
         cur.close()
         conn.close()
         raise HTTPException(status_code=500, detail=f"Error adding project: {e}")
-
-@app.post("/calculate-route")
-def calculate_route(geojson: dict):
-    try:
-        # Extrahiere Polygon aus GeoJSON FeatureCollection
-        if not geojson or "features" not in geojson:
-            raise ValueError("Ungültiges GeoJSON.")
-
-        polygon_feature = geojson["features"][0]
-        geometry = polygon_feature["geometry"]
-
-        if geometry["type"] != "Polygon":
-            raise ValueError("Nur Polygon wird unterstützt.")
-
-        # Erzeuge Shapely-Polygon
-        shapely_polygon = shape(geometry)
-
-        # Beispiel: Gib Koordinaten + Fläche zurück
-        coords = list(shapely_polygon.exterior.coords)
-        flaeche = shapely_polygon.area
-
-        # Dummy-Antwort (hier kann später echte Routenlogik rein)
-        response = {
-            "route_type": "demo",
-            "area": flaeche,
-            "used_polygon": coords
-        }
-
-        return JSONResponse(content=response)
-
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Polygon-Fehler: {e}")
