@@ -5,6 +5,8 @@ import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 export const AddMarkerPopup = (props) => {
+  const [projects, setProjects] = useState([]);
+  const [pointTypes, setPointTypes] = useState([]);
   const [projectName, setProjectName] = useState('');
   const [bemerkungen, setBemerkungen] = useState('');
   const [datum, setDatum] = useState('');
@@ -12,7 +14,24 @@ export const AddMarkerPopup = (props) => {
   useEffect(() => {
     const heute = new Date().toISOString().split('T')[0];
     setDatum(heute);
+
+    // Fetch projects
+    fetch("http://localhost:8000/getProjects")
+      .then(res => res.json())
+      .then(data => setProjects(data))
+      .catch(err => console.error("Fehler beim Laden der Projekte:", err));
+
+    // Fetch point types
+    fetch("http://localhost:8000/getPointTypes")
+      .then(res => res.json())
+      .then(data => setPointTypes(data))
+      .catch(err => console.error("Fehler beim Laden der Punkt-Typen:", err));
   }, []);
+
+  const getProjectIdFromName = (name) => {
+    const project = projects.find(p => p.name === name);
+    return project?.id || 0;
+  };
 
   const closeAddMarker = () => {
     props.setAddMarkerOpen(false);
@@ -23,15 +42,49 @@ export const AddMarkerPopup = (props) => {
     }
   };
 
-  const saveMarker = () => {
-    if (projectName && bemerkungen && datum) {
-      onsubmit({ projectName, bemerkungen, datum });
-    } else {
-      alert('Bitte alle Felder ausfüllen.');
+  const saveMarker = async () => {
+    if (!projectName || !bemerkungen || !datum || !props.marker) {
+      alert('Bitte alle Felder ausfüllen und Marker setzen.');
+      return;
     }
-    props.setAddMarkerOpen(false);
-    props.setMarkerMode(false);
-    props.setStartPageMode(true);
+
+    const coordinates = props.marker.getLngLat();
+    const latitude = coordinates.lat;
+    const longitude = coordinates.lng;
+
+    const fileInput = document.querySelector('input[type="file"]');
+    const file = fileInput.files[0];
+
+    if (!file) {
+      alert("Bitte ein Foto hochladen.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("project_id", getProjectIdFromName(projectName));
+    formData.append("point_type", bemerkungen);
+    formData.append("date", datum.replace(/-/g, "/"));
+    formData.append("latitude", latitude);
+    formData.append("longitude", longitude);
+    formData.append("picture", file);
+
+    try {
+      const response = await fetch("http://localhost:8000/addPointWithDetails", {
+        method: "POST",
+        body: formData
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.detail);
+      }
+
+      alert("Punkt erfolgreich gespeichert.");
+    } catch (error) {
+      alert("Fehler beim Speichern: " + error.message);
+    }
+
+    closeAddMarker();
   };
 
   return (
@@ -48,8 +101,11 @@ export const AddMarkerPopup = (props) => {
               style={{ marginLeft: "10px" }}
             >
               <option value="">Bitte wählen...</option>
-              <option value="Projekt A">Projekt A</option>
-              <option value="Projekt B">Projekt B</option>
+              {projects.map(project => (
+                <option key={project.id} value={project.name}>
+                  {project.name}
+                </option>
+              ))}
             </select>
           </label>
         </div>
@@ -58,14 +114,14 @@ export const AddMarkerPopup = (props) => {
           <label>
             Bemerkungen:
             <select
-              type="text"
               value={bemerkungen}
               onChange={(e) => setBemerkungen(e.target.value)}
               style={{ marginLeft: "10px", width: "60%" }}
             >
-              <option value="Schlecht bereitgestellt">Schlecht bereitgestellt</option>
-              <option value="Enthält Fremdstoffe">Enthält Fremdstoffe</option>
-              <option value="Andere">Andere</option>
+              <option value="">Bitte wählen...</option>
+              {pointTypes.map((type, idx) => (
+                <option key={idx} value={type}>{type}</option>
+              ))}
             </select>
           </label>
         </div>
