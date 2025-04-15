@@ -37,6 +37,7 @@ export const BaseMap = (props) => {
       maxZoom: 21,  
       pitch: 0,
       pitchWithRotate: false,
+      touchPitch: false, 
       interactive: true,
     });
 
