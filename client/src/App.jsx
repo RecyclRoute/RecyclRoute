@@ -2,29 +2,16 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { MapPage } from "./components/MapPage.jsx";
 import { ErrorPage } from "./components/ErrorPage.jsx";
+import { NavigationPage} from "./NavigationPage.jsx"
 import "./App.css";
 
 function App() {
-  
-  
   return (
     <Routes>
-
-      <Route
-        id="Startpage"
-        path="/"
-        element={
-          <MapPage
-          />}
-        />
-      <Route
-        path="/*"
-        element={
-          <ErrorPage/>
-        }
-      />
+      <Route path="/" element={<MapPage />} />
+      <Route path="/navigation" element={<NavigationPage />} /> {/* <- NEU */}
+      <Route path="/*" element={<ErrorPage />} />
     </Routes>
-    
   );
 }
 
