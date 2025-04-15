@@ -35,7 +35,7 @@ export const MapSwissimage = (props) => {
   // Backend Request
   const sendPolygonToBackend = async (polygonGeoJSON) => {
     try {
-      const response = await fetch('http://localhost:8000/calculate-route', {
+      const response = await fetch('http://localhost:8000/addProject', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
