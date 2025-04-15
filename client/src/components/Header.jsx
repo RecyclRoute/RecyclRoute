@@ -8,7 +8,7 @@ export const Header = (props) => {
     <header className="App-header" position="static">
       <div>
         <div id="HeaderTitle">
-          RecylRoute
+          RecyclRoute - Planner
         </div>
         <div id="HeaderUsername"></div>
       </div>
