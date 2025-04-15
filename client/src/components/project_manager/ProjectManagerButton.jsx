@@ -3,13 +3,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import "maplibre-gl/dist/maplibre-gl.css";
 import maplibregl from "maplibre-gl";
 
-export const ProjectManagerButton = () => {
-
-
-
+export const ProjectManagerButton = ({ onClick }) => {
   return (
-    <button className="MapButtons">
-      <FolderIcon style={{ width: "30px", height: "30px" }}/>
+    <button className="MapButtons" onClick={onClick}>
+      <FolderIcon style={{ width: "30px", height: "30px" }} />
     </button>
   );
 };
