@@ -20,7 +20,6 @@ import useCreateMarker from "./map/useCreateMarker";
 import useCreatePolygon from "./map/useCreatePolygon";
 
 export const MapPage = () => {
-  const [modalOpen, setModalOpen] = useState(false);
   const [addMarkerOpen, setAddMarkerOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
   const [projectPopupOpen, setProjectPopupOpen] = useState(false);
@@ -33,6 +32,7 @@ export const MapPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showProjectPopup, setShowProjectPopup] = useState(false);
   const [projectInfo, setProjectInfo] = useState(null);
+  
   const navigate = useNavigate();
 
   const handleMapLoad = (mapInstance) => {
