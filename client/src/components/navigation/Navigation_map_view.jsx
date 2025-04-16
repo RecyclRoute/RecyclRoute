@@ -3,26 +3,19 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { Header } from "../Header.jsx";
 import { Footer } from "../footer/Footer.jsx";
-import { MapSwissimage } from "../map/MapSwissimage.jsx";
 
 export const NavigationMap = () => {
   const mapContainer = useRef(null);
   const mapRef = useRef(null);
   const [graphData, setGraphData] = useState(null);
-  const [order, setOrder] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    Promise.all([
-      fetch("/data/prepared_graph.geojson").then((res) => res.json()),
-      fetch("/data/coordinates.json").then((res) => res.json()),
-    ])
-      .then(([geojson, coordOrder]) => {
-        console.log("GeoJSON geladen:", geojson);
+    fetch("/data/coordinates_output.geojson")
+      .then((res) => res.json())
+      .then((geojson) => {
         setGraphData(geojson);
-        setOrder(coordOrder);
       })
-      .catch((err) => console.error("Fehler beim Laden der Dateien:", err));
+      .catch((err) => console.error("Fehler beim Laden der Route:", err));
   }, []);
 
   useEffect(() => {
@@ -64,123 +57,77 @@ export const NavigationMap = () => {
     });
 
     map.on("load", () => {
-      console.log("Map geladen");
+      const styledData = {
+        ...graphData,
+        features: graphData.features.map((feature, i) => ({
+          ...feature,
+          properties: {
+            ...feature.properties,
+            id: i,
+            status: feature.properties.status || "nochOffen",
+          },
+        })),
+      };
 
-      const styledData = styleGraph(graphData, order, currentIndex);
-
-      map.addSource("graph", {
+      map.addSource("route", {
         type: "geojson",
         data: styledData,
       });
 
       map.addLayer({
-        id: "graph-layer",
+        id: "route-layer",
         type: "line",
-        source: "graph",
+        source: "route",
         paint: {
           "line-color": [
             "match",
             ["get", "status"],
-            "current", "#cc0000",
-            "done", "#999999",
-            "next", "#FFD700",
-            "upcoming", "#FFD700",
+            "abgeschlossen", "#999999",
+            "inArbeit", "#FFD700",
+            "nochOffen", "#cc0000",
             "#000000",
           ],
           "line-width": 5,
-          "line-dasharray": [
-            "match",
-            ["get", "status"],
-            "upcoming", [2, 2],
-            [1, 0],
-          ],
         },
       });
 
-      const bounds = getFeatureBounds(styledData.features);
-      map.fitBounds(bounds, { padding: 40 });
+      map.on("mouseenter", "route-layer", () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+
+      map.on("mouseleave", "route-layer", () => {
+        map.getCanvas().style.cursor = "";
+      });
+
+      map.on("click", "route-layer", (e) => {
+        const feature = e.features[0];
+        const id = feature.properties.id;
+        const currentStatus = feature.properties.status;
+        const nextStatus =
+          currentStatus === "nochOffen"
+            ? "inArbeit"
+            : currentStatus === "inArbeit"
+            ? "abgeschlossen"
+            : "nochOffen";
+
+        const updatedFeatures = graphData.features.map((f, i) =>
+          i === id ? { ...f, properties: { ...f.properties, status: nextStatus } } : f
+        );
+
+        const updatedData = { ...graphData, features: updatedFeatures };
+        setGraphData(updatedData);
+        map.getSource("route").setData(updatedData);
+      });
 
       mapRef.current = map;
     });
 
     return () => map.remove();
-  }, [graphData, order]);
+  }, [graphData]);
 
-  useEffect(() => {
-    if (mapRef.current && graphData && order.length > 0) {
-      const updated = styleGraph(graphData, order, currentIndex);
-      const source = mapRef.current.getSource("graph");
-      if (source) source.setData(updated);
-
-      const currentFeature = updated.features.find(
-        (f) => f.properties.status === "current"
-      );
-      if (currentFeature) {
-        const center = getLineCenter(currentFeature.geometry.coordinates);
-        mapRef.current.flyTo({ center, zoom: 18 });
-      }
-    }
-  }, [currentIndex, graphData, order]);
-
-  const handleWeiter = () => {
-    if (currentIndex < order.length - 1) {
-      setCurrentIndex((prev) => prev + 1);
-    } else {
-      alert("Alle Abschnitte erledigt!");
-    }
-  };
-
-    return(
-      <MapSwissimage></MapSwissimage>
-    )
-
-
-
-
-  // return (
-  //     <div style={{ position: "relative", width: "100%", height: "100%"  }}>
-  //       <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
-  //       <button onClick={handleWeiter} style={{ position: "absolute", bottom: 20, left: 20, padding: "10px 20px", zIndex: 10 }}>
-  //         Weiter
-  //       </button>
-  //     </div>
-  // );
+  return (
+    <div style={{ width: "100%", height: "100vh", display: "flex", flexDirection: "column" }}>
+      <div ref={mapContainer} style={{ flexGrow: 1 }} />
+    </div>
+  );
 };
-
-function styleGraph(graph, order, index) {
-  return {
-    ...graph,
-    features: graph.features.map((feature, i) => {
-      let status = "upcoming";
-      if (i < index) status = "done";
-      else if (i === index) status = "current";
-      else if (i === index + 1) status = "next";
-      return {
-        ...feature,
-        properties: {
-          ...feature.properties,
-          status,
-        },
-      };
-    }),
-  };
-}
-
-function getLineCenter(coords) {
-  const idx = Math.floor(coords.length / 2);
-  return coords[idx];
-}
-
-function getFeatureBounds(features) {
-  const allCoords = features.flatMap((f) => f.geometry.coordinates.flat());
-  const lons = allCoords.map((c) => c[0]);
-  const lats = allCoords.map((c) => c[1]);
-  const minLng = Math.min(...lons);
-  const maxLng = Math.max(...lons);
-  const minLat = Math.min(...lats);
-  const maxLat = Math.max(...lats);
-  return [
-    [minLng, minLat],
-    [maxLng, maxLat],
-  ];
-}

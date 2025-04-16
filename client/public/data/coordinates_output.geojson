@@ -7,52 +7,710 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.575452,
-            47.556693
+            75.75309,
+            475.56675
           ],
           [
-            7.575385,
-            47.556985
-          ],
-          [
-            7.575377,
-            47.557013
-          ],
-          [
-            7.575337,
-            47.557142
-          ],
-          [
-            7.575268,
-            47.55715
-          ],
-          [
-            7.575229,
-            47.557157
-          ],
-          [
-            7.575151,
-            47.557173
-          ],
-          [
-            7.575205,
-            47.557016
-          ],
-          [
-            7.575233,
-            47.55692
-          ],
-          [
-            7.575312,
-            47.556665
+            75.75434,
+            475.5627
           ]
         ]
       },
       "properties": {
-        "instruction": "Komplette Route (ohne Man\u00f6ver)",
-        "type": "none",
-        "length_m": 123.0,
-        "time_s": 31.206
+        "instruction": "Drive south on Spalenring/12/18.",
+        "type": 1,
+        "length_m": 46.0,
+        "time_s": 3.316
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.75434,
+            475.5627
+          ],
+          [
+            75.75474,
+            475.56276
+          ],
+          [
+            75.75511,
+            475.56281
+          ],
+          [
+            75.75552,
+            475.56287
+          ],
+          [
+            75.75471,
+            475.56609
+          ],
+          [
+            75.75385,
+            475.56985
+          ],
+          [
+            75.75377,
+            475.57013
+          ],
+          [
+            75.75337,
+            475.57142
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Make a left U-turn to stay on Spalenring/12/18.",
+        "type": 13,
+        "length_m": 106.0,
+        "time_s": 12.094
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.75337,
+            475.57142
+          ],
+          [
+            75.75268,
+            475.5715
+          ],
+          [
+            75.75229,
+            475.57157
+          ],
+          [
+            75.75151,
+            475.57173
+          ],
+          [
+            75.75205,
+            475.57016
+          ],
+          [
+            75.75233,
+            475.5692
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Make a left U-turn to stay on Spalenring/12/18.",
+        "type": 13,
+        "length_m": 43.0,
+        "time_s": 8.78
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.75233,
+            475.5692
+          ],
+          [
+            75.75165,
+            475.56898
+          ],
+          [
+            75.75054,
+            475.56864
+          ],
+          [
+            75.74937,
+            475.56828
+          ],
+          [
+            75.74384,
+            475.56266
+          ],
+          [
+            75.74233,
+            475.55998
+          ],
+          [
+            75.7422,
+            475.55975
+          ],
+          [
+            75.74209,
+            475.55955
+          ],
+          [
+            75.74203,
+            475.55944
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn right onto Friedrichstrasse.",
+        "type": 10,
+        "length_m": 137.0,
+        "time_s": 19.932
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.74203,
+            475.55944
+          ],
+          [
+            75.74061,
+            475.55975
+          ],
+          [
+            75.73948,
+            475.55999
+          ],
+          [
+            75.73332,
+            475.5613
+          ],
+          [
+            75.72816,
+            475.56241
+          ],
+          [
+            75.72572,
+            475.56293
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn right onto Allschwilerstrasse.",
+        "type": 10,
+        "length_m": 129.0,
+        "time_s": 18.485
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.72572,
+            475.56293
+          ],
+          [
+            75.72576,
+            475.56303
+          ],
+          [
+            75.72596,
+            475.56343
+          ],
+          [
+            75.73679,
+            475.57381
+          ],
+          [
+            75.73735,
+            475.57436
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn right onto Birkenstrasse.",
+        "type": 10,
+        "length_m": 153.0,
+        "time_s": 33.183
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.73735,
+            475.57436
+          ],
+          [
+            75.74438,
+            475.57299
+          ],
+          [
+            75.74519,
+            475.57284
+          ],
+          [
+            75.74652,
+            475.57262
+          ],
+          [
+            75.74974,
+            475.57207
+          ],
+          [
+            75.75031,
+            475.57196
+          ],
+          [
+            75.75151,
+            475.57173
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn right onto Ahornstrasse/312.",
+        "type": 10,
+        "length_m": 109.0,
+        "time_s": 10.83
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.75151,
+            475.57173
+          ],
+          [
+            75.75205,
+            475.57016
+          ],
+          [
+            75.75233,
+            475.5692
+          ],
+          [
+            75.75434,
+            475.5627
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn right onto Spalenring/12/18.",
+        "type": 10,
+        "length_m": 103.0,
+        "time_s": 9.138
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.75434,
+            475.5627
+          ],
+          [
+            75.75474,
+            475.56276
+          ],
+          [
+            75.75511,
+            475.56281
+          ],
+          [
+            75.75552,
+            475.56287
+          ],
+          [
+            75.75471,
+            475.56609
+          ],
+          [
+            75.75385,
+            475.56985
+          ],
+          [
+            75.75377,
+            475.57013
+          ],
+          [
+            75.75337,
+            475.57142
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Make a left U-turn to stay on Spalenring/12/18.",
+        "type": 13,
+        "length_m": 106.0,
+        "time_s": 12.094
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.75337,
+            475.57142
+          ],
+          [
+            75.75439,
+            475.57135
+          ],
+          [
+            75.75484,
+            475.57137
+          ],
+          [
+            75.75577,
+            475.57142
+          ],
+          [
+            75.75676,
+            475.57151
+          ],
+          [
+            75.75727,
+            475.57158
+          ],
+          [
+            75.75783,
+            475.57169
+          ],
+          [
+            75.75824,
+            475.57178
+          ],
+          [
+            75.75917,
+            475.57201
+          ],
+          [
+            75.76523,
+            475.57394
+          ],
+          [
+            75.76642,
+            475.57432
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn right onto Birmannsgasse.",
+        "type": 10,
+        "length_m": 105.0,
+        "time_s": 19.455
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.76642,
+            475.57432
+          ],
+          [
+            75.76091,
+            475.5818
+          ],
+          [
+            75.75802,
+            475.58562
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn left onto Nonnenweg.",
+        "type": 15,
+        "length_m": 141.0,
+        "time_s": 19.147
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.75802,
+            475.58562
+          ],
+          [
+            75.76062,
+            475.58718
+          ],
+          [
+            75.76224,
+            475.58815
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn right onto Pilgerstrasse.",
+        "type": 10,
+        "length_m": 42.0,
+        "time_s": 8.39
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.76224,
+            475.58815
+          ],
+          [
+            75.76346,
+            475.58724
+          ],
+          [
+            75.76357,
+            475.58714
+          ],
+          [
+            75.76364,
+            475.58699
+          ],
+          [
+            75.76366,
+            475.58685
+          ],
+          [
+            75.76363,
+            475.58672
+          ],
+          [
+            75.7627,
+            475.58615
+          ],
+          [
+            75.76249,
+            475.58609
+          ],
+          [
+            75.76228,
+            475.58607
+          ],
+          [
+            75.76209,
+            475.58611
+          ],
+          [
+            75.76062,
+            475.58718
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn right to stay on Pilgerstrasse.",
+        "type": 10,
+        "length_m": 50.0,
+        "time_s": 14.394
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.76062,
+            475.58718
+          ],
+          [
+            75.75802,
+            475.58562
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn left to stay on Pilgerstrasse.",
+        "type": 15,
+        "length_m": 26.0,
+        "time_s": 5.125
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.75802,
+            475.58562
+          ],
+          [
+            75.76091,
+            475.5818
+          ],
+          [
+            75.76642,
+            475.57432
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn left onto Nonnenweg.",
+        "type": 15,
+        "length_m": 141.0,
+        "time_s": 17.862
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.76642,
+            475.57432
+          ],
+          [
+            75.76751,
+            475.5747
+          ],
+          [
+            75.77501,
+            475.57736
+          ],
+          [
+            75.77581,
+            475.57763
+          ],
+          [
+            75.79378,
+            475.58389
+          ],
+          [
+            75.79622,
+            475.58473
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn left onto Birmannsgasse.",
+        "type": 15,
+        "length_m": 253.0,
+        "time_s": 32.595
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.79622,
+            475.58473
+          ],
+          [
+            75.78546,
+            475.56737
+          ],
+          [
+            75.78413,
+            475.56523
+          ],
+          [
+            75.78384,
+            475.56509
+          ],
+          [
+            75.78345,
+            475.56498
+          ],
+          [
+            75.77591,
+            475.56392
+          ],
+          [
+            75.77464,
+            475.56329
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Make a sharp right onto Socinstrasse.",
+        "type": 11,
+        "length_m": 311.0,
+        "time_s": 45.493
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.77464,
+            475.56329
+          ],
+          [
+            75.77148,
+            475.56732
+          ],
+          [
+            75.76642,
+            475.57432
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn right onto Nonnenweg.",
+        "type": 10,
+        "length_m": 138.0,
+        "time_s": 22.309
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.76642,
+            475.57432
+          ],
+          [
+            75.76751,
+            475.5747
+          ],
+          [
+            75.77501,
+            475.57736
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "Turn right onto Birmannsgasse.",
+        "type": 10,
+        "length_m": 73.0,
+        "time_s": 14.154
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            75.77501,
+            475.57736
+          ]
+        ]
+      },
+      "properties": {
+        "instruction": "You have arrived at your destination.",
+        "type": 4,
+        "length_m": 0.0,
+        "time_s": 0.0
       }
     }
   ]

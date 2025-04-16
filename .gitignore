@@ -40,3 +40,4 @@ venv
 
 client/src/data/SWISSTLM3D_no_height.gpkg
 client/src/data/prepared_graph.pkl
+routing-valhalla
