@@ -1,11 +1,10 @@
-import "./Header.css";
-import { AppBar, Toolbar, Typography, Grid } from "@mui/material";
+import "./planner_page_header.css";
 
-export const Header = (props) => {
+export const PlannerpageHeader = (props) => {
 
 
   return (
-    <header className="App-header" position="static">
+    <header className="Header" position="static">
       <div>
         <div id="HeaderTitle">
           RecyclRoute - Planner

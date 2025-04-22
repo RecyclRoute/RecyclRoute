@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-import { Header } from "../Header.jsx";
+import { PlannerpageHeader } from "../planner_page/planner_page_header.jsx";
 import { Footer } from "../footer/Footer.jsx";
 
 export const NavigationMap = () => {

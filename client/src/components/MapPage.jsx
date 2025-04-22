@@ -1,8 +1,7 @@
-import "../App.css";
 import "./footer/Footer.css";
 import "./MapPage.css";
 import { useState, useEffect } from "react";
-import { Header } from "./Header.jsx";
+import { PlannerpageHeader } from "./planner_page/planner_page_header.jsx";
 import { Footer } from "./footer/Footer.jsx";
 import { AddMarkerButton } from "./add_marker/add_marker_button.jsx";
 import { AddMarkerPopup } from "./add_marker/add_marker_popup.jsx";
@@ -95,7 +94,7 @@ export const MapPage = () => {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
-      <Header />
+      <PlannerpageHeader/>
       <div style={{ zIndex: 0, height: "100%" }}>
         <BaseMap
           map={map}

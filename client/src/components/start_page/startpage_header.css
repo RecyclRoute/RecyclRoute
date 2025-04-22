@@ -1,0 +1,17 @@
+.header {
+  background-color: #9E9E9E;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #333333;
+  height: 80px;
+  z-index: 200;
+  padding-left: 15px;
+}
+
+#HeaderTitle {
+  color: #333333;
+  font-size: 25px;
+  font-weight: 700;
+}
