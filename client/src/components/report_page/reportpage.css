@@ -63,4 +63,22 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+  .ReportMapButtons {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: #2F2F2F;
+    border-width: 1px;
+    background-color: #A67C52;
+    cursor: pointer;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    }
+.ReportMapButtons:hover {
+    background-color: #6D4C41;
+}
   

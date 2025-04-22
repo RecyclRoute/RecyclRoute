@@ -103,11 +103,11 @@ export const PlannerPage = () => {
 
         {startPageMode && (
           <div className="button-panel">
-            <ProjectStatsButton />
+            <ProjectStatsButton className="PlannerPageMapButtons"/>
             <ProjectManagerButton onClick={() => setProjectPopupOpen(true)} />
-            <MapLayerButton />
-            <MapPositionButton map={map} />
-            <MapRotationButton map={map} />
+            <MapLayerButton className="PlannerPageMapButtons"/>
+            <MapPositionButton className="PlannerPageMapButtons" map={map} />
+            <MapRotationButton className="PlannerPageMapButtons" map={map} />
           </div>
         )}
 

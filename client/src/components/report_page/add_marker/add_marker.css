@@ -2,9 +2,9 @@
 height: 50px;
 width: 50px;
 border-radius: 50%;
-border-color: #273028;
+border-color: #2F2F2F;
 border-width: 1px;
-background-color: #227d5a;
+background-color: #A67C52;
 cursor: pointer;
 display: flex;
 align-items: center;
@@ -12,7 +12,7 @@ justify-content: center;
 border-style: solid;
 }
 #AddMarkerButton:hover {
-    background-color: #AED581;
+    background-color: #6D4C41;
 }
 
 .addmarker-overlay {
@@ -29,12 +29,12 @@ border-style: solid;
 
 .addmarker-content {
   pointer-events: auto;
-  background-color: #F4F7F5;
+  background-color: #FAF7F0;
   padding: 10px;
   width: 85%;
   max-height: 30%;
   overflow: auto;
-  outline-color: #273028;
+  outline-color: #2F2F2F;
   outline-style: solid;
   outline-width: 2px;
   margin-bottom: 117px;    /* 80px vom unteren Rand entfernt */
@@ -57,11 +57,11 @@ border-style: solid;
 
 .addmarkerInfo_Content {
 pointer-events: auto;
-background-color: #F4F7F5;
+background-color: #FAF7F0;
 padding: 10px;
 width: 85%;
 height: 15px;
-outline-color: #273028;
+outline-color: #2F2F2F;
 outline-style: solid;
 outline-width: 2px;
 margin-top: 85px;

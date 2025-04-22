@@ -14,7 +14,7 @@ export const AddMarkerButton = (props) => {
   
   return (
       <button id= "AddMarkerButton" onClick={AddMarkerClick}>
-        <AddMarkerIcon style={{widht: "30px", height: "30px"}}/>
+        <AddMarkerIcon style={{width: "30px", height: "30px"}}/>
       </button>
   );
 };

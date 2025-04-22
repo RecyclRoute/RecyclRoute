@@ -2,7 +2,6 @@ import "./reportpage.css";
 import { useState, useEffect } from "react";
 import { ReportpageHeader } from "./reportpage_header/reportpage_header.jsx";
 import { ReportpageFooter } from "./reportpage_footer/reportpage_footer.jsx";
-import { AddMarkerButton } from "./add_marker/add_marker_button.jsx";
 import { AddMarkerPopup } from "./add_marker/add_marker_popup.jsx";
 import { AddMarkerPopupInfo } from "./add_marker/add_marker_popup_info.jsx";
 import { MapRotationButton } from "../map/MapRotationButton.jsx";
@@ -40,22 +39,20 @@ export const ReportPage = () => {
 
         {startPageMode && (
           <div className="button-panel">
-            <AddMarkerButton
-              markerMode={markerMode}
-              setMarkerMode={setMarkerMode}
-              setAddMarkerOpen={setAddMarkerOpen}
-              startPageMode={startPageMode}
-              setStartPageMode={setStartPageMode}
-              useCreateMarker={useCreateMarker}
-            />
-            <MapLayerButton />
-            <MapPositionButton map={map} />
-            <MapRotationButton map={map} />
+            <MapLayerButton calssName="ReportMapButtons"/>
+            <MapPositionButton calssName="ReportMapButtons" map={map} />
+            <MapRotationButton map={map} className="ReportPageMapButtons" />
           </div>
         )}
       </div>
 
-      <ReportpageFooter/>
+      <ReportpageFooter
+                            markerMode={markerMode}
+                            setMarkerMode={setMarkerMode}
+                            setAddMarkerOpen={setAddMarkerOpen}
+                            startPageMode={startPageMode}
+                            setStartPageMode={setStartPageMode}
+                            useCreateMarker={useCreateMarker}/>
 
       {addMarkerOpen && (
         <>

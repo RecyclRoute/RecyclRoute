@@ -3,8 +3,9 @@ import { ReactComponent as CircleIcon } from "../icons/black/circle_icon.svg";
 import React, { useState, useRef, useEffect } from 'react';
 import "maplibre-gl/dist/maplibre-gl.css";
 import maplibregl from "maplibre-gl";
+import "./Map.css";
 
-export const MapPositionButton = ({ map }) => {
+export const MapPositionButton = ({ map, classNameMapButtons = ""}) => {
   const [isActive, setIsActive] = useState(false);
   const markerRef = useRef(null);
   const intervalIdRef = useRef(null);
@@ -83,7 +84,7 @@ export const MapPositionButton = ({ map }) => {
   };
 
   return (
-    <button className="MapButtons" onClick={toggleAutoUpdate}>
+    <button className={classNameMapButtons} onClick={toggleAutoUpdate}>
       {isActive ? <CrosshairIcon style={{ width: "30px", height: "30px" }}/> : <CircleIcon style={{ width: "30px", height: "30px" }}/>}
     </button>
   );
