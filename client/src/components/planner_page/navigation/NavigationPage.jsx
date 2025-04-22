@@ -1,8 +1,7 @@
-import "../footer/Footer.css";
-import "../MapPage.css";
+import "../plannerpage.css";
 import { useState } from "react";
-import { PlannerpageHeader } from "../planner_page/planner_page_header.jsx";
-import { Footer } from "../footer/Footer.jsx";
+import { PlannerpageHeader } from "../plannerpage_header/plannerpage_header.jsx";
+import { PlannerpageFooter } from "../plannerpage_footer/plannerpage_footer.jsx";
 import { NavigationMap } from "./Navigation_map_view.jsx";
 
 export const NavigationPage = () => {
@@ -16,7 +15,7 @@ export const NavigationPage = () => {
     <div style={{ zIndex: 0, height: "100%" }}>
       <NavigationMap />
     </div>
-    <Footer/>
+    <PlannerpageFooter/>
     </div>
   );
 };

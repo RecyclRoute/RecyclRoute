@@ -1,5 +1,6 @@
-import { ReactComponent as CrossIcon } from "../icons/black/cross_icon.svg"
-import "./Footer.css";
+import { ReactComponent as CrossIcon } from "../../icons/black/cross_icon.svg"
+
+import "./reportpage_footer.css";
 
 export const DeleteButton = () => {
     return (

@@ -1,4 +1,4 @@
-import "./Footer.css";
+import "./reportpage_footer.css";
 
 export const SearchBar = () => {
     return (

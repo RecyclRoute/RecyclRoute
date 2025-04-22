@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../MapPage.css'; // Modal Styling ist schon drin!
+import '../plannerpage.css'; // Modal Styling ist schon drin!
 
 export const ProjectPopup = ({ onClose, onSubmit }) => {
   const [projectName, setProjectName] = useState('');

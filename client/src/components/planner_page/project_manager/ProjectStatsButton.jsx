@@ -1,4 +1,4 @@
-import { ReactComponent as StatsIcon } from "../icons/black/stats_icon.svg";
+import { ReactComponent as StatsIcon } from "../../icons/black/stats_icon.svg";
 import React, { useState, useRef, useEffect } from 'react';
 import "maplibre-gl/dist/maplibre-gl.css";
 import maplibregl from "maplibre-gl";

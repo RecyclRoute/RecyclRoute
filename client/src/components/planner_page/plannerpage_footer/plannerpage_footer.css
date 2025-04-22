@@ -1,0 +1,55 @@
+.PlannerpageFooter {
+    background-color: #85A995;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #273028;
+    height: 60px;
+    z-index: 200;
+    padding: 10px;
+  }
+
+.PlannerpageFooter_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+} 
+
+
+
+#PlannerpageFooter_SearchBar {
+  width: 220px;
+  height: 50px;
+  border-color: #273028;
+  background-color: #F4F7F5;
+  border-width: 1px;
+  cursor: pointer;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 13x;
+}
+
+.PlannerpageFooter_SearchBarButtons {
+  width: 50px;
+  height: 50px;
+  background-color: #227d5a;
+  border-color: #273028;
+  border-width: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+.Icons {
+  width: 30px !important;
+  height: 30px !important;
+}

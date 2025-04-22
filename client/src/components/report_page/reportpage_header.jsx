@@ -1,13 +1,13 @@
-import "./planner_page_header.css";
+import "./reportpage_header.css";
 
-export const PlannerpageHeader = (props) => {
+export const ReportpageHeader = () => {
 
 
   return (
     <header className="Header" position="static">
       <div>
         <div id="HeaderTitle">
-          RecyclRoute - Planner
+          RecyclRoute - Report
         </div>
         <div id="HeaderUsername"></div>
       </div>

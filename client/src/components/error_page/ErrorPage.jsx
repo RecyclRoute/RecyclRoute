@@ -8,7 +8,7 @@ export const ErrorPage = () => {
     
 <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
 <StartpageHeader />
-  <div style={{ backgroundColor: "F5F5F5", height: "100%", display: "center", "justify-content": "center", alignItems: "center"}}>
+  <div style={{ backgroundColor: "F5F5F5", height: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
     <h3>ERROR 404 - THIS SITE DOES NOT EXIST</h3>
   </div>
 <StartpageFooter/>

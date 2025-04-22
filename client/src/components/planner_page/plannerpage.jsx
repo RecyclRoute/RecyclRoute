@@ -1,31 +1,24 @@
-import "./footer/Footer.css";
-import "./MapPage.css";
+import "./plannerpage_footer/plannerpage_footer.css";
+import "./plannerpage.css";
 import { useState, useEffect } from "react";
-import { PlannerpageHeader } from "./planner_page/planner_page_header.jsx";
-import { Footer } from "./footer/Footer.jsx";
-import { AddMarkerButton } from "./add_marker/add_marker_button.jsx";
-import { AddMarkerPopup } from "./add_marker/add_marker_popup.jsx";
-import { LoginPopup } from "./footer/login_popup.jsx";
-import { AddMarkerPopupInfo } from "./add_marker/add_marker_popup_info.jsx";
-import { MapRotationButton } from "./map/MapRotationButton.jsx";
-import { MapPositionButton } from "./map/MapPositionButton.jsx";
-import { MapLayerButton } from "./map/MapLayerButton.jsx";
+import { PlannerpageHeader } from "./plannerpage_header/plannerpage_header.jsx";
+import { Footer, PlannerpageFooter } from "./plannerpage_footer/plannerpage_footer.jsx";
+import { MapRotationButton } from "../map/MapRotationButton.jsx";
+import { MapPositionButton } from "../map/MapPositionButton.jsx";
+import { MapLayerButton } from "../map/MapLayerButton.jsx";
 import { ProjectManagerButton } from "./project_manager/ProjectManagerButton.jsx";
 import { ProjectStatsButton } from "./project_manager/ProjectStatsButton.jsx";
 import { ProjectPopup } from "./project_manager/ProjectPopup.jsx";
 import { useNavigate } from "react-router-dom";
-import { BaseMap } from "./map/BaseMap.jsx";
-import useCreateMarker from "./map/useCreateMarker";
-import useCreatePolygon from "./map/useCreatePolygon";
+import { BaseMap } from "../map/BaseMap.jsx";
+import useCreateMarker from "../map/useCreateMarker.jsx";
+import useCreatePolygon from "../map/useCreatePolygon.jsx";
 
-export const MapPage = () => {
-  const [addMarkerOpen, setAddMarkerOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
+export const PlannerPage = () => {
   const [projectPopupOpen, setProjectPopupOpen] = useState(false);
   const [polygonMode, setPolygonMode] = useState(false);
   const [polygonPoints, setPolygonPoints] = useState([]);
   const [map, setMap] = useState(null);
-  const [markerMode, setMarkerMode] = useState(false);
   const [marker, setMarker] = useState(null);
   const [startPageMode, setStartPageMode] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -59,7 +52,6 @@ export const MapPage = () => {
     }
   };
 
-  useCreateMarker(map, markerMode, marker, setMarker);
   useCreatePolygon({
     map,
     polygonMode,
@@ -99,10 +91,6 @@ export const MapPage = () => {
         <BaseMap
           map={map}
           setMap={setMap}
-          markerMode={markerMode}
-          setMarkerMode={setMarkerMode}
-          marker={marker}
-          setMarker={setMarker}
           onMapLoad={handleMapLoad}
           polygonMode={polygonMode}
           setPolygonMode={setPolygonMode}
@@ -117,14 +105,6 @@ export const MapPage = () => {
           <div className="button-panel">
             <ProjectStatsButton />
             <ProjectManagerButton onClick={() => setProjectPopupOpen(true)} />
-            <AddMarkerButton
-              markerMode={markerMode}
-              setMarkerMode={setMarkerMode}
-              setAddMarkerOpen={setAddMarkerOpen}
-              startPageMode={startPageMode}
-              setStartPageMode={setStartPageMode}
-              useCreateMarker={useCreateMarker}
-            />
             <MapLayerButton />
             <MapPositionButton map={map} />
             <MapRotationButton map={map} />
@@ -150,25 +130,7 @@ export const MapPage = () => {
         )}
       </div>
 
-      <Footer setLoginOpen={setLoginOpen} startPageMode={startPageMode} setStartPageMode={setStartPageMode} />
-
-      {addMarkerOpen && (
-        <>
-          <AddMarkerPopup
-            markerMode={markerMode}
-            setMarkerMode={setMarkerMode}
-            setAddMarkerOpen={setAddMarkerOpen}
-            startPageMode={startPageMode}
-            setStartPageMode={setStartPageMode}
-            marker={marker}
-          />
-          <AddMarkerPopupInfo />
-        </>
-      )}
-
-      {loginOpen && (
-        <LoginPopup setLoginOpen={setLoginOpen} startPageMode={startPageMode} setStartPageMode={setStartPageMode} />
-      )}
+      <PlannerpageFooter/>
 
       {projectPopupOpen && (
         <ProjectPopup

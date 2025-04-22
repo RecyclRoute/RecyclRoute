@@ -1,5 +1,5 @@
-import { ReactComponent as SearchIcon } from "../icons/black/search_icon.svg"
-import "./Footer.css";
+import { ReactComponent as SearchIcon } from "../../icons/black/search_icon.svg"
+import "./reportpage_footer.css";
 
 export const SearchButton = () => {
     return (
