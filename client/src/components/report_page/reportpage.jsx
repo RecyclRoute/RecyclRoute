@@ -1,6 +1,6 @@
 import "./reportpage.css";
 import { useState, useEffect } from "react";
-import { ReportpageHeader } from "./reportpage_header.jsx";
+import { ReportpageHeader } from "./reportpage_header/reportpage_header.jsx";
 import { ReportpageFooter } from "./reportpage_footer/reportpage_footer.jsx";
 import { AddMarkerButton } from "./add_marker/add_marker_button.jsx";
 import { AddMarkerPopup } from "./add_marker/add_marker_popup.jsx";
