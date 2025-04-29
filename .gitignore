@@ -44,3 +44,5 @@ routing-valhalla
 myenv3117
 myenv311
 ortools_package
+.venv
+ortools_package
