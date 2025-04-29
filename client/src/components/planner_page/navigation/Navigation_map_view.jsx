@@ -119,28 +119,8 @@ export const NavigationMap = ({ currentIndex, onRouteLoad }) => {
           type: "line",
           source: "route",
           paint: {
-            "line-color": [
-              "match",
-              ["get", "status"],
-              "aktiv", "#cc0000",
-              "zukuenftig", "#FFD700",
-              "abgeschlossen", "#999999",
-              "#000000"
-            ],
-            "line-width": [
-              "match",
-              ["get", "status"],
-              "aktiv", 6,
-              "zukuenftig", 4,
-              "abgeschlossen", 3,
-              2
-            ],
-            "line-dasharray": [
-              "match",
-              ["get", "status"],
-              "zukuenftig", [2, 2],
-              [1, 0]
-            ],
+            "line-color": "#cc0000",
+            "line-width": 6,
           },
         });
       });
