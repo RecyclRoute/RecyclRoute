@@ -320,7 +320,11 @@ def get_valhalla_route_chunked(coords, order, chunk_size=100, output_dir="output
         if idx > 0:
             chunk = [chunks[idx-1][-1]] + chunk
 
-        locations = [{"lat": lat, "lon": lon, "type": "trough"} for lon, lat in chunk]
+        locations = []
+        for i, (lon, lat) in enumerate(chunk):
+            loc_type = "break" if i == 0 else "break"
+            locations.append({"lat": lat, "lon": lon, "type": loc_type})
+
         costing = "auto"
 
         body = {
