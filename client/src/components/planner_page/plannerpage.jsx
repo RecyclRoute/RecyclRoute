@@ -6,16 +6,15 @@ import { Footer, PlannerpageFooter } from "./plannerpage_footer/plannerpage_foot
 import { MapRotationButton } from "../map/MapRotationButton.jsx";
 import { MapPositionButton } from "../map/MapPositionButton.jsx";
 import { MapLayerButton } from "../map/MapLayerButton.jsx";
-import { ProjectManagerButton } from "./project_manager/ProjectManagerButton.jsx";
-import { ProjectStatsButton } from "./project_manager/ProjectStatsButton.jsx";
-import { ProjectPopup } from "./project_manager/ProjectPopup.jsx";
+import { ProjectManagerPopup } from "./project_manager/ProjectManagerPopup.jsx";
 import { useNavigate } from "react-router-dom";
 import { BaseMap } from "../map/BaseMap.jsx";
-import useCreateMarker from "../map/useCreateMarker.jsx";
 import useCreatePolygon from "../map/useCreatePolygon.jsx";
+import { NewProjectPopup } from "./project_manager/NewProjectPopup.jsx";
 
 export const PlannerPage = () => {
-  const [projectPopupOpen, setProjectPopupOpen] = useState(false);
+  const [ProjectManagerMode, setProjectManagerMode] = useState(false);
+  const [NewProjectMode, setNewProjectMode] = useState(false);
   const [polygonMode, setPolygonMode] = useState(false);
   const [polygonPoints, setPolygonPoints] = useState([]);
   const [map, setMap] = useState(null);
@@ -24,6 +23,7 @@ export const PlannerPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showProjectPopup, setShowProjectPopup] = useState(false);
   const [projectInfo, setProjectInfo] = useState(null);
+  const [ActiveProject, setActiveProject] = useState(null);
   
   const navigate = useNavigate();
 
@@ -63,7 +63,7 @@ export const PlannerPage = () => {
   });
 
   const handleProjectSubmit = async ({ projectName, municipality }) => {
-    setProjectPopupOpen(false);
+    setProjectManagerMode(false);
     try {
       const response = await fetch(
         `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(municipality)}&country=Switzerland&format=json`
@@ -103,11 +103,9 @@ export const PlannerPage = () => {
 
         {startPageMode && (
           <div className="button-panel">
-            <ProjectStatsButton className="PlannerPageMapButtons"/>
-            <ProjectManagerButton onClick={() => setProjectPopupOpen(true)} />
-            <MapLayerButton className="PlannerPageMapButtons"/>
-            <MapPositionButton className="PlannerPageMapButtons" map={map} />
-            <MapRotationButton className="PlannerPageMapButtons" map={map} />
+            <MapLayerButton classNameMapButtons="PlannerPageMapButtons"/>
+            <MapPositionButton classNameMapButtons="PlannerPageMapButtons" map={map} />
+            <MapRotationButton classNameMapButtons="PlannerPageMapButtons" map={map} />
           </div>
         )}
 
@@ -130,22 +128,35 @@ export const PlannerPage = () => {
         )}
       </div>
 
-      <PlannerpageFooter/>
+      <PlannerpageFooter
+        startPageMode={startPageMode}
+        setStartPageMode={setStartPageMode}
+        ProjectManagerMode={ProjectManagerMode}
+        setProjectManagerMode={setProjectManagerMode}
+      />
 
-      {projectPopupOpen && (
-        <ProjectPopup
-          onClose={() => setProjectPopupOpen(false)}
-          onSubmit={(projectData) => handleProjectSubmit(projectData)}
+      {ProjectManagerMode && (
+        <ProjectManagerPopup
+        startPageMode={startPageMode}
+        setStartPageMode={setStartPageMode}
+        ProjectManagerMode={ProjectManagerMode}
+        setProjectManagerMode={setProjectManagerMode}
+        NewProjectMode={NewProjectMode}
+        setNewProjectMode={setNewProjectMode}
+        ActiveProject={setActiveProject}
+        setActiveProject={setActiveProject}
         />
       )}
 
-      {showProjectPopup && (
-        <ProjectPopup
-          onClose={() => setShowProjectPopup(false)}
-          onSubmit={(info) => {
-            setProjectInfo(info);
-            setShowProjectPopup(false);
-          }}
+      {NewProjectMode && (
+        <NewProjectPopup
+          startPageMode={startPageMode}
+          setStartPageMode={setStartPageMode}
+          NewProjectMode={NewProjectMode}
+          setNewProjectMode={setNewProjectMode}
+          ActiveProject={setActiveProject}
+          setActiveProject={setActiveProject}
+          onSubmit={(projectData) => handleProjectSubmit(projectData)}
         />
       )}
     </div>

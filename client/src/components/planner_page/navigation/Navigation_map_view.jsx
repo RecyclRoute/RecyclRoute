@@ -50,6 +50,7 @@ export const NavigationMap = () => {
       maxZoom: 21,
       pitch: 0,
       pitchWithRotate: false,
+      touchPitch: false, 
       interactive: true,
       crossOrigin: "anonymous",
     });
@@ -124,8 +125,8 @@ export const NavigationMap = () => {
   }, [graphData]);
 
   return (
-    <div style={{ width: "100%", height: "100vh", display: "flex", flexDirection: "column" }}>
-      <div ref={mapContainer} style={{ flexGrow: 1 }} />
+    <div style={{ position: "relative", width: "100%", height: "100%" }}>
+      <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
     </div>
   );
 };

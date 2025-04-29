@@ -1,11 +1,17 @@
 import { ReactComponent as FolderIcon } from "../../icons/black/folder_icon.svg";
 import React, { useState, useRef, useEffect } from 'react';
 import "maplibre-gl/dist/maplibre-gl.css";
-import maplibregl from "maplibre-gl";
+import "../plannerpage.css";
 
-export const ProjectManagerButton = ({ onClick }) => {
+export const ProjectManagerButton = (props) => {
+
+  const ProjectManagerClick = () => {
+    props.setProjectManagerMode(true);
+    props.setStartPageMode(false);
+  }
+
   return (
-    <button className="MapButtons" onClick={onClick}>
+    <button id= "ProjectManagerButton" onClick={ProjectManagerClick}>
       <FolderIcon style={{ width: "30px", height: "30px" }} />
     </button>
   );

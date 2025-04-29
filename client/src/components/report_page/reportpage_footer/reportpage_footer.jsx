@@ -18,12 +18,13 @@ export const ReportpageFooter = (props) => {
         <DeleteButton/>
         </div>
         <AddMarkerButton
-                      markerMode={props.markerMode}
-                      setMarkerMode={props.setMarkerMode}
-                      setAddMarkerOpen={props.setAddMarkerOpen}
-                      startPageMode={props.startPageMode}
-                      setStartPageMode={props.setStartPageMode}
-                      useCreateMarker={props.useCreateMarker}/>
+          markerMode={props.markerMode}
+          setMarkerMode={props.setMarkerMode}
+          setAddMarkerOpen={props.setAddMarkerOpen}
+          startPageMode={props.startPageMode}
+          setStartPageMode={props.setStartPageMode}
+          useCreateMarker={props.useCreateMarker}
+        />
     </footer>
     
   );

@@ -39,20 +39,21 @@ export const ReportPage = () => {
 
         {startPageMode && (
           <div className="button-panel">
-            <MapLayerButton calssName="ReportMapButtons"/>
-            <MapPositionButton calssName="ReportMapButtons" map={map} />
-            <MapRotationButton map={map} className="ReportPageMapButtons" />
+            <MapLayerButton classNameMapButtons="ReportMapButtons"/>
+            <MapPositionButton classNameMapButtons="ReportMapButtons" map={map} />
+            <MapRotationButton map={map} classNameMapButtons="ReportPageMapButtons" />
           </div>
         )}
       </div>
 
       <ReportpageFooter
-                            markerMode={markerMode}
-                            setMarkerMode={setMarkerMode}
-                            setAddMarkerOpen={setAddMarkerOpen}
-                            startPageMode={startPageMode}
-                            setStartPageMode={setStartPageMode}
-                            useCreateMarker={useCreateMarker}/>
+        markerMode={markerMode}
+        setMarkerMode={setMarkerMode}
+        setAddMarkerOpen={setAddMarkerOpen}
+        startPageMode={startPageMode}
+        setStartPageMode={setStartPageMode}
+        useCreateMarker={useCreateMarker}
+      />
 
       {addMarkerOpen && (
         <>

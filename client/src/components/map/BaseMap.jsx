@@ -32,7 +32,7 @@ export const BaseMap = (props) => {
     const mapInstance = new maplibregl.Map({
       container: mapContainer.current,
       style: swissImageStyle,
-      center: [7.641948397622829, 47.53488012308844],
+      center: [7.6419, 47.5348],
       zoom: 17,
       maxZoom: 21,  
       pitch: 0,
