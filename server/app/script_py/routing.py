@@ -386,17 +386,20 @@ def save_geojson(valhalla_json, filename="route.geojson"):
     print(f"Teilroute gespeichert als {filename}")
 
 
-def save_route_with_directions(valhalla_routes, filename="route_with_directions.geojson"):
+
+def save_route_with_directions(valhalla_routes, filename="navigation.geojson"):
     import polyline
     features = []
+    step_counter = 0
 
     for route in valhalla_routes:
         legs = route.get("trip", {}).get("legs", [])
-        step_counter = 0
         for leg in legs:
             maneuvers = leg.get("maneuvers", [])
             for m in maneuvers:
                 if "shape" not in m:
+                    continue
+                if m.get("type") in [4, 5]:  # Überspringe Typen 4 = continue, 5 = merge
                     continue
                 coords = polyline.decode(m["shape"], 6)
                 coords = [[lon, lat] for lat, lon in coords]
@@ -408,8 +411,8 @@ def save_route_with_directions(valhalla_routes, filename="route_with_directions.
                         "instruction": m.get("instruction", ""),
                         "length_km": m.get("length", 0),
                         "type": m.get("type", ""),
-                        "begin_heading": m.get("begin_heading", None),
-                        "end_heading": m.get("end_heading", None)
+                        "begin_heading": m.get("begin_heading"),
+                        "end_heading": m.get("end_heading")
                     }
                 })
                 step_counter += 1
@@ -417,7 +420,55 @@ def save_route_with_directions(valhalla_routes, filename="route_with_directions.
     geojson = {"type": "FeatureCollection", "features": features}
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(geojson, f, indent=2)
-    print(f"Route mit Turn-by-Turn-Anweisungen gespeichert als {filename}")
+    print(f"Navigation gespeichert als {filename}")
+
+def save_navigation_geojson_from_shape_indices(valhalla_routes, filename="navigation.geojson"):
+    import polyline
+    features = []
+    step_counter = 0
+
+    for route in valhalla_routes:
+        legs = route.get("trip", {}).get("legs", [])
+        for leg in legs:
+            full_shape = polyline.decode(leg.get("shape"), 6)  # ganze Linie
+            maneuvers = leg.get("maneuvers", [])
+
+            for m in maneuvers:
+                if m.get("type") in [4, 5]:  # optional überspringen
+                    continue
+
+                start_idx = m.get("begin_shape_index")
+                end_idx = m.get("end_shape_index")
+                coords = full_shape[start_idx:end_idx + 1]
+
+                features.append({
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [[lon, lat] for lat, lon in coords]
+                    },
+                    "properties": {
+                        "step": step_counter,
+                        "instruction": m.get("instruction", ""),
+                        "verbal_pre": m.get("verbal_pre_transition_instruction", ""),
+                        "verbal_post": m.get("verbal_post_transition_instruction", ""),
+                        "length_km": m.get("length", 0),
+                        "type": m.get("type", ""),
+                        "street_names": m.get("street_names", []),
+                        "time_sec": m.get("time", 0),
+                    }
+                })
+                step_counter += 1
+
+    geojson = {
+        "type": "FeatureCollection",
+        "features": features
+    }
+
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(geojson, f, indent=2)
+
+    print(f"Navigation gespeichert als {filename}")
 
 
 def save_trace_route_json(valhalla_routes, filename="trace_route.json"):
@@ -481,8 +532,9 @@ def run_routing(input_json, input_gpkg, start_node_coord_3857, output_dir="outpu
 
     part_files = [os.path.join(output_dir, f"route_part_{i+1}.geojson") for i in range(len(routes))]
     merge_geojson_parts(part_files, os.path.join(output_dir, "route_full.geojson"))
-    save_route_with_directions(routes, os.path.join(output_dir, "route_with_directions.geojson"))
+    save_route_with_directions(routes, os.path.join(output_dir, "navigati-on.geojson"))
     save_trace_route_json(routes, os.path.join(output_dir, "trace_route.json"))
+    save_navigation_geojson_from_shape_indices(routes, os.path.join(output_dir, "navigation.geojson"))
     print("Temporäre Dateien werden gelöscht...")
     for f in part_files + routes:
         try:
