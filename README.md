@@ -1,69 +1,78 @@
-# GDI_Project
-Server Client Projekt für eine Geodateninfrastruktur Webportal im Rahmen des Moduls 4230
+# ♻️ RecyclRoute
 
-- **Frontend:** React.js, OpenLayers und MUI
-- **Backend:** FastAPI, GeoServer
+**RecyclRoute** ist ein GIS-basiertes Webportal zur Planung und Optimierung von Sammelrouten für Papier- und Kartonabfälle. Das Projekt wurde im Rahmen des Moduls 4230 entwickelt und kombiniert moderne Webtechnologien mit Geodateninfrastruktur-Komponenten, um eine effiziente und benutzerfreundliche Lösung für die Abfallwirtschaft bereitzustellen.
 
-GitHub Pages: https://314a.github.io/GDI_Project/
+## 🌐 Projektübersicht
 
-Getestet mit Node version 22.14.0, openlayers 9.1.0, mapliber 5.1.0, react 18.3.1
+- **Frontend**: React.js, OpenLayers
+- **Backend**: FastAPI, GeoServer
+- **Deployment**: GitHub Pages
 
-## Requirements
+## 🚀 Live-Demo
+
+Erlebe die Anwendung in Aktion: [GDI_Project auf GitHub Pages](https://314a.github.io/GDI_Project/)
+
+## 🛠️ Voraussetzungen
+
+Stelle sicher, dass folgende Tools auf deinem System installiert sind:
 
 - [Git](https://git-scm.com/)
-- IDE wie [Visual Studio Code](https://code.visualstudio.com/) 
-- [Anaconda Distribution](https://www.anaconda.com/products/distribution) oder [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-- Node.js und npm ([https://docs.npmjs.com/downloading-and-installing-node-js-and-npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)) 
+- [Visual Studio Code](https://code.visualstudio.com/) oder eine andere IDE
+- [Anaconda](https://www.anaconda.com/)
+- [Node.js und npm](https://nodejs.org/)
+- [Docker] (https://docs.docker.com/desktop/setup/install/windows-install/)
 
-## Repository lokal klonen
-Mit Git in einem Terminal das GitHub Repository *Geoharvester* in ein lokales Verzeichnis klonen.
+## 📦 Installation
 
-``` shell
-cd /path/to/workspace
-# Clone Repository 
-git clone https://github.com/314a/GDI_Project.git
+### Repository klonen
+
+```bash
+cd / #(Pfad zu deinem Verzeichnis)
+git clone https://github.com/RecyclRoute/RecyclRoute.git
 ```
 
-### Git Projekt mit Visual Studio Code lokal klonen
-Öffne ein neues Visual Studio Code Fenster und wähle unter Start *Clone Git Repository*. Alternativ öffne die Command Palette in VS Code `CTRL+Shift+P` (*View / Command Palette*) und wähle `Git: clone`. 
-Füge die Git web URL `https://github.com/314a/GDI_Project.git` ein und bestätige die Eingabe mit Enter. Wähle einen Ordner in welchen das Repository *geklont* werden soll.
+### Frontend einrichten
 
-## Frontend installieren
-Öffne ein Terminal (Command Prompt in VS Code) und wechsle in den *client* Ordner in diesem Projekt
-
-``` shell
-cd client
-# aktiviere node.js (falls nvm genutzt wird) 
-# nvm use 22.14.0
-# install all the node.js dependencies
+```bash
+cd RecyclRoute/client
 npm install
-# node Projekt ausführen
-# npm run dev ist in package.json definiert
-npm run dev
+npm start
 ```
 
-## Backend installieren
-Öffne ein Terminal und wechsle in den *server* Ordner.
-1. Virtuelle Umgebung für Python mit allen Requirements in der `requirements.txt` Datei aufsetzen.
+### Backend einrichten
 
-```shell
-# Requirements
-cd server
-# Füge conda-forge den als Channel in conda hinzu, da sonst nicht alle Pakete installiert werden können.
+```bash
+cd ../server
 conda config --add channels conda-forge
-# Erstelle ein neues Conda Environment und füge die Python Packges requirements.txt hinzu, requirements.txt befindet sich im Ordner server/app
-conda create --name gdiproject python=3.10.9 --file app/requirements.txt
+conda create --name recyclroute-venv python=3.11.7 --file app/requirements.txt
+conda activate recyclroute-venv
 ```
 
-2. Backend ausführen, virtuelle Umgebung starten und server *uvicorn* starten. Öffne http://localhost:8000/docs im Browser und verifiziere, ob das Backend läuft.
-``` shell
-cd server
-# aktiviere die conda umgebung gdiproject
-conda activate gdiproject
-# start server auf localhost aus dem Ordner "server"
-uvicorn app.main:app --reload
-# Öffne die angegebene URL im Browser und verifiziere, ob das Backend läuft.
+## 🧪 Getestete Versionen
+
+- Node.js: 22.14.0
+- OpenLayers: 9.1.0
+- Maplibre: 5.1.0
+- React: 18.3.1
+-
+
+## 📁 Projektstruktur
+
+```
+RecyclRoute/
+├── client/        # Frontend-Anwendung
+├── server/        # Backend-Anwendung
+│   └── app/       # FastAPI-Anwendung
+├── README.md      # Projektbeschreibung
+└── ...
 ```
 
-## API Dokumentation
-Fast API kommt mit vorinstallierter Swagger UI. Wenn der Fast API Backen Server läuft, kann auf die Dokumentation der API über Swagger UI auf http://localhost:8000/docs verfügbar.
+## 🤝 Mitwirken
+
+Beiträge sind herzlich willkommen! Bitte beachte die [CONTRIBUTING.md](CONTRIBUTING.md) für weitere Informationen.
+
+## 📄 Lizenz
+
+Dieses Projekt steht unter der [MIT-Lizenz](LICENSE).
+
+---

@@ -200,7 +200,6 @@ def generate_chinese_postman_coordinates(graph, start_node_coord):
     start_node = min(graph.nodes, key=lambda n: (n[0] - start_node_coord[0])**2 + (n[1] - start_node_coord[1])**2)
     circuit = chinese_postman(graph, start_node=start_node)
 
-    #circuit = chinese_postman(graph)
     transformer = pyproj.Transformer.from_crs("EPSG:2056", "EPSG:4326", always_xy=True)
     coordinates = []
     for node in circuit:
@@ -237,17 +236,17 @@ def try_sources_to_targets(sources, targets, last_costing):
         return response.json(), "auto"
     except requests.exceptions.HTTPError as e:
         if response.status_code == 400 and last_costing == "auto":
-            print(f"↪️ Kein Auto-Routing möglich → Versuche Fußweg bei {sources[0]}")
+            print(f"Kein Auto-Routing möglich → Versuche Fußweg bei {sources[0]}")
             body["costing"] = "pedestrian"
             try:
                 response = requests.post(f"{VALHALLA_URL}/sources_to_targets", json=body)
                 response.raise_for_status()
                 return response.json(), "pedestrian"
             except Exception as e:
-                print(f"❌ Auch pedestrian fehlgeschlagen: {e}")
+                print(f"Auch pedestrian fehlgeschlagen: {e}")
                 return None, "auto"
         else:
-            print(f"❌ Fehler bei Valhalla: {e}")
+            print(f"Fehler bei Valhalla: {e}")
             return None, "auto"
 
 
@@ -297,7 +296,7 @@ def solve_tsp(dist_matrix):
     search_parameters.first_solution_strategy = routing_enums_pb2.FirstSolutionStrategy.PATH_CHEAPEST_ARC
     solution = routing.SolveWithParameters(search_parameters)
     if not solution:
-        raise Exception("❌ Keine Lösung für das TSP gefunden.")
+        raise Exception("Keine Lösung für das TSP gefunden.")
     index = routing.Start(0)
     route = []
     while not routing.IsEnd(index):
@@ -321,13 +320,13 @@ def get_valhalla_route_chunked(coords, order, chunk_size=100, output_dir="output
         if idx > 0:
             chunk = [chunks[idx-1][-1]] + chunk
 
-        locations = [{"lat": lat, "lon": lon} for lon, lat in chunk]
+        locations = [{"lat": lat, "lon": lon, "type": "trough"} for lon, lat in chunk]
         costing = "auto"
 
         body = {
             "locations": locations,
             "costing": costing,
-            "directions_options": {"units": "kilometers"}
+            "directions_options": {"units": "kilometers", "language": "de-DE"},
         }
 
         try:
@@ -336,7 +335,7 @@ def get_valhalla_route_chunked(coords, order, chunk_size=100, output_dir="output
             data = response.json()
         except requests.exceptions.HTTPError as e:
             if response.status_code == 400:
-                print(f"↪️ Chunk {idx+1}: auto fehlgeschlagen → versuche pedestrian")
+                print(f"Chunk {idx+1}: auto fehlgeschlagen → versuche pedestrian")
                 body["costing"] = "pedestrian"
                 response = requests.post(f"{VALHALLA_URL}/route", json=body)
                 response.raise_for_status()
@@ -365,7 +364,7 @@ def save_geojson(valhalla_json, filename="route.geojson"):
     elif "routes" in valhalla_json:
         shape = valhalla_json["routes"][0]["legs"]
     else:
-        print(f"⚠️ Kein Shape für {filename}")
+        print(f"Kein Shape für {filename}")
         return
 
     features = []
@@ -380,7 +379,7 @@ def save_geojson(valhalla_json, filename="route.geojson"):
     geojson = {"type": "FeatureCollection", "features": features}
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(geojson, f, indent=2)
-    print(f"💾 Teilroute gespeichert als {filename}")
+    print(f"Teilroute gespeichert als {filename}")
 
 
 def save_route_with_directions(valhalla_routes, filename="route_with_directions.geojson"):
@@ -414,7 +413,7 @@ def save_route_with_directions(valhalla_routes, filename="route_with_directions.
     geojson = {"type": "FeatureCollection", "features": features}
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(geojson, f, indent=2)
-    print(f"🧭 Route mit Turn-by-Turn-Anweisungen gespeichert als {filename}")
+    print(f"Route mit Turn-by-Turn-Anweisungen gespeichert als {filename}")
 
 
 def save_trace_route_json(valhalla_routes, filename="trace_route.json"):
@@ -442,7 +441,7 @@ def save_trace_route_json(valhalla_routes, filename="trace_route.json"):
 
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(instructions, f, indent=2)
-    print(f"📄 Trace-Route gespeichert als {filename}")
+    print(f"Trace-Route gespeichert als {filename}")
 
 
 def merge_geojson_parts(part_filenames, output_file="route_full.geojson"):
@@ -454,7 +453,7 @@ def merge_geojson_parts(part_filenames, output_file="route_full.geojson"):
     geojson = {"type": "FeatureCollection", "features": features}
     with open(output_file, "w") as f:
         json.dump(geojson, f, indent=2)
-    print(f"🧩 Zusammengeführte Route gespeichert als {output_file}")
+    print(f"Zusammengeführte Route gespeichert als {output_file}")
 
 def run_routing(input_json, input_gpkg, start_node_coord_3857, output_dir="output"):
     os.makedirs(output_dir, exist_ok=True)
@@ -463,9 +462,9 @@ def run_routing(input_json, input_gpkg, start_node_coord_3857, output_dir="outpu
     print("→ Graph vorbereitet!")
 
     coords = generate_chinese_postman_coordinates(graph, start_node_coord)
-    print(f"📍 Ursprünglich: {len(coords)} Koordinaten")
+    print(f"Ursprünglich: {len(coords)} Koordinaten")
     #coords = filter_nearby_coordinates(coords, min_dist=0.1)
-    print(f"✅ Nach Filterung: {len(coords)} Koordinaten (≥1m Abstand)")
+    print(f"Nach Filterung: {len(coords)} Koordinaten (≥1m Abstand)")
 
     print("→ Distanzmatrix berechnen...")
     dist_matrix = build_dist_matrix(coords, batch_size=50, max_workers=25)
@@ -480,11 +479,11 @@ def run_routing(input_json, input_gpkg, start_node_coord_3857, output_dir="outpu
     merge_geojson_parts(part_files, os.path.join(output_dir, "route_full.geojson"))
     save_route_with_directions(routes, os.path.join(output_dir, "route_with_directions.geojson"))
     save_trace_route_json(routes, os.path.join(output_dir, "trace_route.json"))
-    print("🧹 Temporäre Dateien werden gelöscht...")
+    print("Temporäre Dateien werden gelöscht...")
     for f in part_files + routes:
         try:
             os.remove(f)
         except Exception as e:
-            print(f"⚠️ Fehler beim Löschen von {f}: {e}")
-    print("✅ Alle Routen erfolgreich gespeichert!")
-    print("→ Berechnung abgeschlossen!")
+            print(f"Fehler beim Löschen von {f}: {e}")
+    print("Alle Routen erfolgreich gespeichert!")
+    print("Berechnung abgeschlossen!")
