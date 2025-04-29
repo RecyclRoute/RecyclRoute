@@ -76,3 +76,11 @@ Beiträge sind herzlich willkommen! Bitte beachte die [CONTRIBUTING.md](CONTRIBU
 Dieses Projekt steht unter der [MIT-Lizenz](LICENSE).
 
 ---
+
+## Virtualenv aufestzen
+
+python -m venv myenv311
+
+.\myenv311\Scripts\activate
+
+pip install -r requirements.txt
