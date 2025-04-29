@@ -1,0 +1,33 @@
+.NavigationpageFooter {
+    background-color: #85A995;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #273028;
+    height: 60px;
+    z-index: 200;
+    padding: 10px;
+  }
+
+.NavigationpageFooter_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+} 
+
+.NavigationpageArrowButtons {
+  height: 50px;
+  width: 120px;
+  border-radius: 50px;
+  border-color: #273028;
+  border-width: 1px;
+  background-color: #227d5a;
+  cursor: pointer;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+}

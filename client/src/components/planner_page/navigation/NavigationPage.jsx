@@ -1,22 +1,34 @@
 import "../plannerpage.css";
 import { useState } from "react";
-import { PlannerpageHeader } from "../plannerpage_header/plannerpage_header.jsx";
-import { PlannerpageFooter } from "../plannerpage_footer/plannerpage_footer.jsx";
+import { NavigationpageFooter } from "./navigationpage_header_footer/navigationpage_footer.jsx";
+import { NavigationpageHeader } from "./navigationpage_header_footer/navigationpage_header.jsx";
 import { NavigationMap } from "./Navigation_map_view.jsx";
-import { BaseMap } from "../../map/BaseMap.jsx";
+import { NavigationGuidePopup } from "./NavigationGuidePopup.jsx";
 
 export const NavigationPage = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [routeLength, setRouteLength] = useState(0);
 
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev < routeLength - 1 ? prev + 1 : prev));
+  };
 
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : 0));
+  };
 
+  const handleRouteLength = (length) => {
+    setRouteLength(length);
+  };
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
-      <PlannerpageHeader/>
-    <div style={{ zIndex: 0, height: "100%" }}>
-      <NavigationMap />
-    </div>
-    <PlannerpageFooter/>
+      <NavigationpageHeader />
+      <div style={{ zIndex: 0, height: "100%" }}>
+        <NavigationMap currentIndex={currentIndex} onRouteLoad={handleRouteLength} />
+      </div>
+      <NavigationGuidePopup currentIndex={currentIndex} />
+      <NavigationpageFooter handleNext={handleNext} handlePrev={handlePrev} />
     </div>
   );
 };

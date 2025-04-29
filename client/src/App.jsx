@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { StartPage } from "./components/start_page/StartPage.jsx";
 import { PlannerPage } from "./components/planner_page/plannerpage.jsx";
 import { ErrorPage } from "./components/error_page/ErrorPage.jsx";
-import { NavigationPage} from "./components/planner_page/navigation/NavigationPage.jsx";
+import { NavigationPage } from "./components/planner_page/navigation/navigationpage.jsx";
 import { ReportPage } from "./components/report_page/reportpage.jsx";
 
 function App() {
