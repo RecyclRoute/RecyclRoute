@@ -14,8 +14,6 @@ client/.vscode
 # testing
 client/coverage
 
-# production
-client/build
 
 # dependencies
 client/node_modules

@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/RecyclRoute/static/css/main.f3ac18e5.css",
+    "main.js": "/RecyclRoute/static/js/main.003e33e5.js",
+    "static/media/folder_icon.svg": "/RecyclRoute/static/media/folder_icon.e0b35bef062f05cf7d4e3d000a51e3eb.svg",
+    "static/media/add_marker_icon.svg": "/RecyclRoute/static/media/add_marker_icon.12923a84204188e4a939ba00074306b5.svg",
+    "static/media/crosshair_icon.svg": "/RecyclRoute/static/media/crosshair_icon.9c53b9588d11cbbd4bf3a165431f7389.svg",
+    "index.html": "/RecyclRoute/index.html",
+    "static/media/search_icon.svg": "/RecyclRoute/static/media/search_icon.5eec14ef486cf83d234b7aa636a95a41.svg",
+    "static/media/north_arrow_icon.svg": "/RecyclRoute/static/media/north_arrow_icon.081fe9079c3b9f3ea65f92ba8c3ea255.svg",
+    "static/media/cross_icon.svg": "/RecyclRoute/static/media/cross_icon.b9ad0d8b5b226c22f6a962bf8e9ae70e.svg",
+    "static/media/arrow_right_icon.svg": "/RecyclRoute/static/media/arrow_right_icon.dacc5d37145a78346d598a8271164ba9.svg",
+    "static/media/arrow_left_icon.svg": "/RecyclRoute/static/media/arrow_left_icon.e8e8933a58208adc8520cab494824005.svg",
+    "static/media/layer_icon.svg": "/RecyclRoute/static/media/layer_icon.2dc62fc10526b096af8fb3274d810dac.svg",
+    "static/media/circle_icon.svg": "/RecyclRoute/static/media/circle_icon.61efdfd1d684466ab89d9fd25d7b1be5.svg",
+    "main.f3ac18e5.css.map": "/RecyclRoute/static/css/main.f3ac18e5.css.map",
+    "main.003e33e5.js.map": "/RecyclRoute/static/js/main.003e33e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3ac18e5.css",
+    "static/js/main.003e33e5.js"
+  ]
+}
