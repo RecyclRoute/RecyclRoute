@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapSwissimage } from "../../map/useCreateMarker.jsx";
 import "./add_marker.css";
-import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 export const AddMarkerPopup = (props) => {
@@ -90,15 +88,20 @@ export const AddMarkerPopup = (props) => {
   return (
     <div className="addmarker-overlay">
       <div className="addmarker-content">
-        <h3>Neuer Punkt erstellen:</h3>
+        <div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-start", height: "45px"}}>
+        <h3 style={{marginTop: "0px", alignItems: "flex-start"}}>Neuer Punkt erstellen:</h3>
+        <button className='closeButton' onClick={closeAddMarker}>
+            X
+          </button>
+        </div>
+        
 
         <div>
           <label>
             Projekt:
-            <select
+            <select className='addMarkerPullDownMenus'
               value={projectName}
               onChange={(e) => setProjectName(e.target.value)}
-              style={{ marginLeft: "10px" }}
             >
               <option value="">Bitte wählen...</option>
               {projects.map(project => (
@@ -110,13 +113,13 @@ export const AddMarkerPopup = (props) => {
           </label>
         </div>
 
-        <div style={{ marginBottom: "10px" }}>
+        <div>
           <label>
             Bemerkungen:
             <select
+              className='addMarkerPullDownMenus'
               value={bemerkungen}
               onChange={(e) => setBemerkungen(e.target.value)}
-              style={{ marginLeft: "10px", width: "60%" }}
             >
               <option value="">Bitte wählen...</option>
               {pointTypes.map((type, idx) => (
@@ -126,35 +129,43 @@ export const AddMarkerPopup = (props) => {
           </label>
         </div>
 
-        <div style={{ marginBottom: "10px" }}>
+        <div>
           <label>
             Datum:
-            <input
+            <input className='addMarkerPullDownMenus'
               type="date"
               value={datum}
               onChange={(e) => setDatum(e.target.value)}
-              style={{ marginLeft: "10px", width: "60%" }}
             />
           </label>
         </div>
+<div style={{display: "flex", alignItems: "flex-start"}}>
+  <label>Upload Foto:</label>
+        <div>
+  <label className="UploadFotoButton" style={{ marginLeft: "10px", position: 'relative', overflow: 'hidden', display: 'inline-block'}}>
+    Datei auswählen:
+    <input
+      type="file"
+      accept="image/*"
+      capture="environment"
+      style={{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        opacity: 0,
+        cursor: 'pointer',
+        height: '100%',
+        width: '100%',
 
-        <div style={{ marginBottom: "10px", flexDirection: "row" }}>
-          <label>
-            Upload Foto:
-            <input
-              type="file"
-              accept="image/*"
-              capture="environment"
-              style={{ marginLeft: "10px" }}
-            />
-          </label>
-        </div>
+      }}
+    />
+  </label>
+</div>
+</div>
 
         <div>
-          <button style={{ marginRight: "10px" }} onClick={closeAddMarker}>
-            Abbrechen
-          </button>
-          <button onClick={saveMarker}>Speichern</button>
+
+          <button className="SaveButton" onClick={saveMarker}>Punkt Speichern</button>
         </div>
       </div>
     </div>
