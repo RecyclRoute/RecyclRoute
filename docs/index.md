@@ -1,3 +1,7 @@
+---
+layout: default
+title: RecyclRoute – Startseite
+---
 <a id="top"></a>
 
 # GDI Projekt - RecyclRoute
