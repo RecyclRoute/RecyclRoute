@@ -1,6 +1,6 @@
-# GDI Projekt
+# RecyclRoute
 
-Das ist die Projekt Website des *GDI Projekts*. Das GDI enthält eine Server und eine Client Umgebung.
+Das ist die Projekt Website der *RecyclRoute*. Das GDI enthält eine Server und eine Client Umgebung.
 - Server: FastAPI
 - Client: React + OpenLayers
 
