@@ -1,4 +1,5 @@
 import "./startpage_header.css";
+import { Link } from "react-router-dom";
 
 export const StartpageHeader = () => {
 
@@ -7,10 +8,14 @@ export const StartpageHeader = () => {
     <header className="header" position="static">
       <div>
         <div id="HeaderTitle">
-          RecyclRoute
+                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  RecyclRoute
+                </Link>{" "}
         </div>
-        <div id="HeaderUsername"></div>
       </div>
     </header>
   );
 };
+
+
+

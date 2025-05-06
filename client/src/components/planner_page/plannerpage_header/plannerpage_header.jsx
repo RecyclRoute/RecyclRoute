@@ -1,16 +1,19 @@
 import "./plannerpage_header.css";
+import { Link } from "react-router-dom";
 
 export const PlannerpageHeader = (props) => {
 
 
   return (
     <header className="PlannerpageHeader" position="static">
-      <div>
-        <div id="HeaderTitle">
-          RecyclRoute - Planner
-        </div>
-        <div id="HeaderUsername"></div>
-      </div>
+  <div>
+    <div id="HeaderTitle">
+      <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+        RecyclRoute
+      </Link>{" "}
+      - Report
+    </div>
+  </div>
     </header>
   );
 };
