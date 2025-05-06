@@ -147,6 +147,12 @@ npm install
 npm start
 ```
 
+### Backend starten
+```bash
+uvicorn server.app.main:app --reload --port 8000
+uvicorn server.app.main2:app --reload --port 7999
+```
+
 ## Getestete Versionen
 
 - Python 3.11.7
