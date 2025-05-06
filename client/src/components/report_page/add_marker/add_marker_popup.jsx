@@ -18,7 +18,7 @@ export const AddMarkerPopup = (props) => {
     // Fetch projects
     fetch("http://localhost:8000/getProjects")
       .then(res => res.json())
-      .then(data => setProjects(data))
+      .then(data => setProjects(data.projects))  // ← nur das Array speichern
       .catch(err => console.error("Fehler beim Laden der Projekte:", err));
 
     // Fetch point types

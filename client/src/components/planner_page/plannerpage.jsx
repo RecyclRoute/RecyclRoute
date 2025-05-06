@@ -11,10 +11,12 @@ import { useNavigate } from "react-router-dom";
 import { BaseMap } from "../map/BaseMap.jsx";
 import useCreatePolygon from "../map/useCreatePolygon.jsx";
 import { NewProjectPopup } from "./project_manager/NewProjectPopup.jsx";
+import { ProjectUseMenuPopup } from "./project_manager/ProjectUseMenuPopup.jsx";
 
 export const PlannerPage = () => {
   const [ProjectManagerMode, setProjectManagerMode] = useState(false);
   const [NewProjectMode, setNewProjectMode] = useState(false);
+  const [ProjectUseMenuMode, setProjectUseMenuMode] = useState(false);
   const [polygonMode, setPolygonMode] = useState(false);
   const [polygonPoints, setPolygonPoints] = useState([]);
   const [map, setMap] = useState(null);
@@ -68,17 +70,20 @@ export const PlannerPage = () => {
     setDatum(heute);
 
     // Fetch projects
-      fetch("http://localhost:8000/getProjects")
-        .then(res => res.json())
-        .then(data => setProjects(data.projects))
-      .catch(err => console.error("Fehler beim Laden der Projekte:", err));
+    fetch("http://localhost:8000/getProjects")
+    .then(res => res.json())
+    .then(data => {
+      console.log("FETCH RESPONSE:", data);  // <-- richtig
+      if (Array.isArray(data.projects)) {
+        setProjects(data.projects);
+      } else {
+        console.error("Ungültiges Projektformat:", data);
+      }
+    });
+  
 
   }, []);
 
-  const getProjectIdFromName = (name) => {
-    const project = projects.find(p => p.name === name);
-    return project?.id || 0;
-  };
   const handleProjectSubmit = async ({ projectName, Location }) => {
     setProjectManagerMode(false);
     try {
@@ -164,6 +169,8 @@ export const PlannerPage = () => {
         setActiveProject={setActiveProject}
         projects={projects}
         setProjects={setProjects}
+        ProjectUseMenuMode={ProjectUseMenuMode}
+        setProjectUseMenuMode={setProjectUseMenuMode}
         />
       )}
 
@@ -173,9 +180,20 @@ export const PlannerPage = () => {
           setStartPageMode={setStartPageMode}
           NewProjectMode={NewProjectMode}
           setNewProjectMode={setNewProjectMode}
-          ActiveProject={setActiveProject}
+          ActiveProject={ActiveProject}
           setActiveProject={setActiveProject}
           onSubmit={(projectData) => handleProjectSubmit(projectData)}
+        />
+      )}
+
+      {ProjectUseMenuMode && (
+        <ProjectUseMenuPopup
+          startPageMode={startPageMode}
+          setStartPageMode={setStartPageMode}
+          ActiveProject={ActiveProject}
+          setActiveProject={setActiveProject}
+          ProjectUseMenuMode={ProjectUseMenuMode}
+          setProjectUseMenuMode={setProjectUseMenuMode}
         />
       )}
     </div>

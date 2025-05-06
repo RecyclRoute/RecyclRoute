@@ -6,8 +6,8 @@ export const ProjectManagerPopup = (props) => {
 
   const TableProjectClick = (project) => {
     props.setActiveProject(project);
-    // Project Benutzung Modus aktivieren muss noch eingefügt werden
-    alert(`Projekt geöffnet: ${project.name}`);
+    props.setProjectUseMenuMode(true);
+    props.setProjectManagerMode(false);
   };
 
   const CloseButtonClick = () => {
@@ -19,13 +19,7 @@ export const ProjectManagerPopup = (props) => {
     props.setProjectManagerMode(false);
     props.setNewProjectMode(true)
   };
-  console.log("Projects raw data:", props.projects);
-  if (Array.isArray(props.projects)) {
-    props.projects.forEach((p, i) => console.log(`Projekt ${i}:`, p));
-  } else {
-    console.warn("props.projects ist keine gültige Liste:", props.projects);
-  }
-  
+ 
 
   return (
     <div className="PlannerPopup-overlay">
@@ -56,9 +50,9 @@ export const ProjectManagerPopup = (props) => {
                   className={index % 2 === 0 ? "bg-gray-200 cursor-pointer" : "bg-white cursor-pointer"}
                   onClick={() => TableProjectClick(project)}
                 >
-                  <td>{project.name}</td>
-                  <td>{project.gemeindename}</td>
-                  <td>{project.date}</td>
+                  <td>{project.name || "–"}</td>
+                  <td>{project.gemeindename || "–"}</td>
+                  <td>{project.date || "–"}</td>
                 </tr>
               ))}
             </tbody>

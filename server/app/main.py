@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException, File, UploadFile, Form, Request
 from fastapi.middleware.cors import CORSMiddleware
 import psycopg2
+import psycopg2.extras
 from datetime import datetime
 import os
 from shapely.geometry import shape
@@ -47,6 +48,7 @@ def get_db_connection():
         password=DB_PASSWORD,
         host=DB_HOST,
         port=DB_PORT,
+        cursor_factory=psycopg2.extras.RealDictCursor
     )
     return conn
 
@@ -63,15 +65,6 @@ class Project(BaseModel):
     perimeter: List[List[float]]  # list of [lon, lat] pairs forming the polygon
 
 
-@app.get("/getProjects")
-def get_projects():
-    conn = get_db_connection()
-    cur = conn.cursor()
-    cur.execute("SELECT id, name FROM project")
-    rows = cur.fetchall()
-    cur.close()
-    conn.close()
-    return [{"id": row[0], "name": row[1]} for row in rows]
 
 @app.get("/getPointTypes")
 def get_point_types():
@@ -239,32 +232,36 @@ def add_project(project: Project):
 @app.get("/getProjects")
 def get_projects():
     conn = get_db_connection()
-    cur = conn.cursor()
+    cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
 
     try:
-        cur.execute("SELECT id, name, gemeindename, ST_AsGeoJSON(perimeter), date FROM project")
+        cur.execute("SELECT id, name, date, gemeindename, ST_AsGeoJSON(perimeter) FROM project")
         rows = cur.fetchall()
+
+        print("Gefundene DB-Zeilen:", rows)
 
         projects = []
         for row in rows:
             project = {
-                "id": row[0],
-                "name": row[1],
-                "gemeindename": row[2],
-                "geometry": json.loads(row[3]),  # Convert GeoJSON string to Python dict
-                "date": row[4]
+                "id": row["id"],
+                "name": row["name"],
+                "date": row["date"].isoformat() if row["date"] else None,
+                "gemeindename": row["gemeindename"],
+                "geometry": json.loads(row["st_asgeojson"]) if row["st_asgeojson"] else None
             }
             projects.append(project)
-
-        cur.close()
-        conn.close()
 
         return {"projects": projects}
 
     except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error retrieving projects: {e}")
+
+    finally:
         cur.close()
         conn.close()
-        raise HTTPException(status_code=500, detail=f"Error retrieving projects: {e}")
+
+
 
 
 
