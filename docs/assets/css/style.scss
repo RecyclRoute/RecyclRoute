@@ -1,177 +1,61 @@
-/* Schriftart via Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
 body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
   margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  font-weight: 400;
-  background-color: #f8f9f9;
-  color: #2a2a2a;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-h1, h2, h3 {
-  color: #1c3d2e;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+header {
+  background-color: #4CAF50;
+  padding: 1rem 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
-a {
-  color: #227d5a;
+header img {
+  height: 50px;
+  margin-right: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
   text-decoration: none;
+  color: #4CAF50;
+  font-weight: bold;
 }
-a:hover {
-  color: #145f3f;
+
+nav ul li a:hover {
   text-decoration: underline;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+main {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Footer (z. B. PlannerpageFooter) */
-.PlannerpageFooter {
-  background-color: #85A995;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 2px solid #273028;
-  height: 60px;
-  z-index: 200;
-  padding: 10px;
+main img {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin: 1rem 0;
 }
 
-.PlannerpageFooter_content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  z-index: 200;
-}
-
-/* Suchfeld im Footer */
-#PlannerpageFooter_SearchBar {
-  width: 220px;
-  height: 50px;
-  border-color: #273028;
-  background-color: #F4F7F5;
-  border-width: 1px;
-  cursor: pointer;
-  border-style: solid;
-  border-left: none;
-  border-right: none;
-  box-sizing: border-box;
-  padding: 5px;
-  font-size: 13px;
-}
-
-/* Button neben dem Suchfeld */
-.PlannerpageFooter_SearchBarButtons {
-  width: 50px;
-  height: 50px;
-  background-color: #227d5a;
-  border-color: #273028;
-  border-width: 1px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-style: solid;
-  box-sizing: border-box;
-}
-
-.Icons {
-  width: 30px !important;
-  height: 30px !important;
-}
-
-/* Floating Button Panel */
-.button-panel {
-  position: absolute;
-  bottom: 120px;
-  right: 10px;
-  z-index: 200;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Overlay (z. B. Ladeanimation, Modals) */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-.modal-content {
-  background-color: #fff;
-  padding: 20px;
-  max-width: 80%;
-  max-height: 80%;
-  overflow: auto;
-}
-
-.addmarker-overlay {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  z-index: 999;
-  align-items: flex-end;
-  pointer-events: none;
-}
-
-.addmarker-content {
-  pointer-events: auto;
-  background-color: #fff;
-  padding: 10px;
-  max-width: 80%;
-  max-height: 30%;
-  overflow: auto;
-  outline-color: #000000;
-  outline-style: solid;
-  outline-width: 2px;
-  margin-bottom: 117px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-/* Ladeanimation */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Runde Aktionsbuttons (z. B. Report Map) */
-.ReportMapButtons {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border-color: #2F2F2F;
-  border-width: 1px;
-  background-color: #A67C52;
-  cursor: pointer;
-  font-size: 0.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-style: solid;
-}
-
-.ReportMapButtons:hover {
-  background-color: #6D4C41;
+footer {
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+  font-size: 0.9rem;
+  color: #777;
 }
