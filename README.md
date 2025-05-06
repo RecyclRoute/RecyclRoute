@@ -16,11 +16,10 @@ Erlebe die Anwendung in Aktion: [GDI_Project auf GitHub Pages](https://recyclrou
 
 Stelle sicher, dass folgende Tools auf deinem System installiert sind:
 
-- [Git](https://git-scm.com/)
 - [Python 3.11.7] (https://www.python.org/downloads/release/python-3117/)
-- [Visual Studio Code](https://code.visualstudio.com/) oder eine andere IDE
+- [Visual Studio Code 1.99.3](https://code.visualstudio.com/)
 - [Docker] (https://docs.docker.com/desktop/setup/install/windows-install/)
-- [pgAdmin4] ()
+- [pgAdmin4 9.1] (https://www.postgresql.org/ftp/pgadmin/pgadmin4/v9.1/windows/)
 
 ## 📦 Installation
 
@@ -33,9 +32,9 @@ git clone https://github.com/RecyclRoute/RecyclRoute.git
 
 ### Datenbank aufsetzen
 
-#In pgAdmin4 eine neue Datendank aufsetzen mit em Namen gis_database. Das Projekt ist ausgelegt, das es auf dem Localhost 5432 mit dem user postgis läuft. Allfällige Anpassungen sind im server\app / main.py in Zeile 36-40 vorzunehmen. Dort muss auch noch das verwendete Password eingesetzt werden. 
+In pgAdmin4 eine neue Datendank aufsetzen mit em Namen gis_database. Das Projekt ist ausgelegt, das es auf dem Localhost 5432 mit dem user postgis läuft. Allfällige Anpassungen sind im server\app / main.py in Zeile 36-40 vorzunehmen. Dort muss auch noch das verwendete Password eingesetzt werden. 
 
-#Sobald die Datenbank erstellt ist, kann folgendes SQL in den Querys eingegeben werden um die Datendank aufzustezen:
+Sobald die Datenbank erstellt ist, kann folgendes SQL in den Querys eingegeben werden um die Datendank aufzustezen:
 
 ```sql
 -- Erweiterung für PostGIS installieren
@@ -132,6 +131,7 @@ Als Verzeichnis das GitVerzeichnis auswählen
 cd / #(Pfad zu deinem Verzeichnis)
 ```
 Anschliessend kann in einem neuen valhalla mittels Docker installiert werden
+Ändere im untenstehenden Code Pfadzudeinemverzeichnis noch dort wo du es gespeichert haben möchtet am besten direkt das GitVerzechnis
 
 ```bash
 docker run -dt --name valhalla_server -p 8002:8002 -v C:/Pfadzudeinemverzeichnis/valhalla_docker/valhalla_data:/custom_files -e tile_urls=https://download.geofabrik.de/europe/switzerland-latest.osm.pbf ghcr.io/nilsnolde/docker-valhalla/valhalla:latest 
@@ -142,8 +142,13 @@ Unzusehen ob die installation abgeschlossen ist kann man zum einen localhost:800
 docker logs -f valhalla_server
 ```
 
+Mit untenstehenden Befehl wird valhalla_server gestartet wenn das Projekt zu einem späteren Zeitpunkt wieder aufgestartet werden soll.
+```bash
+docker start valhalla_server
+```
+
 ### Preprocessing
-Vorab müssen noch die Grundlagendaten des Bundes (SwissTLM3D-2025-03) bezogen werden. Dazu muss folgender Befehl ausgeführt werden: (Dauer 5-10min)
+Bevor das ganze läuft müssen noch die Grundlagendaten des Bundes (SwissTLM3D-2025-03) bezogen werden. Dazu muss folgender Befehl ausgeführt werden: (Dauer 5-10min)
 ```bash
 python preprocessing/Preprocessing_swisstlm3d_2025-03_Data.py
 ```
@@ -203,12 +208,15 @@ Beiträge sind herzlich willkommen! Bitte beachte die [CONTRIBUTING.md](CONTRIBU
 
 Dieses Projekt steht unter der [MIT-Lizenz](LICENSE).
 
----
+Dieses Projekt verwendet weiter folgende Open-Source-Komponenten:
 
-## Virtualenv aufestzen
+- [Valhalla Routing Engine](https://github.com/valhalla/valhalla), MIT-Lizenz  
+  © 2015–2018 Mapillary AB, Mapzen, Valhalla contributors  
+  → [Lizenztext anzeigen](licenses/License_Valhalla_Engine.txt)
 
-python -m venv myenv311
+- [Valhalla-Docker](https://github.com/nilsnolde/valhalla-docker) von GIS•OPS UG, MIT-Lizenz  
+  © 2022 GIS•OPS UG  
+  → [Lizenztext anzeigen](licenses/License_Valhalla_Docker.txt)
 
-.\myenv311\Scripts\activate
+Die vollständigen Lizenztexte befinden sich in den jeweiligen Repositories oder im Ordner [`licenses/`](licenses/).
 
-pip install -r requirements.txt
