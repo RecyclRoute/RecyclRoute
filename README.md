@@ -10,7 +10,7 @@
 
 ## 🚀 Live-Demo
 
-Erlebe die Anwendung in Aktion: [GDI_Project auf GitHub Pages](https://314a.github.io/GDI_Project/)
+Erlebe die Anwendung in Aktion: [GDI_Project auf GitHub Pages](https://recyclroute.github.io/RecyclRoute/)
 
 ## 🛠️ Voraussetzungen
 
@@ -19,10 +19,8 @@ Stelle sicher, dass folgende Tools auf deinem System installiert sind:
 - [Git](https://git-scm.com/)
 - [Python 3.11.7] (https://www.python.org/downloads/release/python-3117/)
 - [Visual Studio Code](https://code.visualstudio.com/) oder eine andere IDE
-- [Anaconda](https://www.anaconda.com/)
-- [Node.js und npm](https://nodejs.org/)
 - [Docker] (https://docs.docker.com/desktop/setup/install/windows-install/)
-- [pgAdmin4]
+- [pgAdmin4] ()
 
 ## 📦 Installation
 
@@ -51,6 +49,7 @@ CREATE SEQUENCE IF NOT EXISTS points_id_seq;
 CREATE TABLE IF NOT EXISTS public.project (
     id integer NOT NULL DEFAULT nextval('project_id_seq'::regclass),
     name text NOT NULL,
+    date date,
     gemeindename text NOT NULL,
     perimeter geometry(Polygon, 3857),
     CONSTRAINT project_pkey PRIMARY KEY (id)
@@ -101,25 +100,54 @@ END $$;
 REVOKE ALL ON TABLE public.spatial_ref_sys FROM PUBLIC;
 GRANT SELECT ON TABLE public.spatial_ref_sys TO PUBLIC;
 GRANT ALL ON TABLE public.spatial_ref_sys TO postgres;
-
 ```
+Nun ist die DB Bereit und unter localhost:5432 zuerreichen. 
+
 
 ### Virtualenvironment erstellen
-In VSC im Powershell Terminal folgende Codes nacheinander eingeben, um das Virtuelle Environment zu installieren:
+In VSC ein Powershell Terminal öffnen und folgende Codes nacheinander eingeben, um das Virtuelle Environment zu installieren:
 
-```
-# Link durch den effektiven ablageort von Python3.11.7 ersetzen.
+Link durch den effektiven Ablageort von Python3.11.7 ersetzen.
+```bash
 & "C:\Program Files\Python311\python.exe" -m venv recyclroute-venv 
-# Python Virtual environment aktualisieren
+```
+Python Virtual environment aktualisieren
+```bash
 .\recyclroute-venv\Scripts\activate 
-# Pip auf das neuste Format upgraden
+```
+Pip auf das neuste Format upgraden
+```bash
 python -m pip install --upgrade pip
-# Requirements installieren
+```
+Requirements installieren
+```bash
 .\recyclroute-venv\Scripts\python.exe -m pip install -r requirements.txt 
 ```
 
 ### Valhalla mit Docker installieren
-Als Voraussetzung muss Docker bereits installiert sein. 
+-> Als Voraussetzung muss Docker bereits installiert sein.
+
+Als Verzeichnis das GitVerzeichnis auswählen
+```bash
+cd / #(Pfad zu deinem Verzeichnis)
+```
+Anschliessend kann in einem neuen valhalla mittels Docker installiert werden
+
+```bash
+docker run -dt --name valhalla_server -p 8002:8002 -v C:/Pfadzudeinemverzeichnis/valhalla_docker/valhalla_data:/custom_files -e tile_urls=https://download.geofabrik.de/europe/switzerland-latest.osm.pbf ghcr.io/nilsnolde/docker-valhalla/valhalla:latest 
+```
+Anschliessend läuft im Hintergrund die ganze installation ab. Dies kann bis zu 30Minuten dauern!
+Unzusehen ob die installation abgeschlossen ist kann man zum einen localhost:8002/status abrufen oder in den docker logs schauen wie weit es schon ist mit
+```bash
+docker logs -f valhalla_server
+```
+
+### Preprocessing
+Vorab müssen noch die Grundlagendaten des Bundes (SwissTLM3D-2025-03) bezogen werden. Dazu muss folgender Befehl ausgeführt werden: (Dauer 5-10min)
+```bash
+python preprocessing/Preprocessing_swisstlm3d_2025-03_Data.py
+```
+
 ### Frontend einrichten
 
 ```bash
