@@ -14,6 +14,7 @@ client/.vscode
 # testing
 client/coverage
 
+
 # dependencies
 client/node_modules
 .pnp
