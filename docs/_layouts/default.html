@@ -9,29 +9,17 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-content">
-      <img src="{{ '/Bilder/RecyclRoute_Logo.png' | relative_url }}" alt="Logo" class="logo">
+    <div class="header-inner">
       <span class="site-title">RecyclRoute</span>
     </div>
   </header>
-
-  <nav class="site-nav">
-    <ul>
-      <li><a href="{{ '/index.html' | relative_url }}">Start</a></li>
-      <li><a href="{{ '/einleitung.html' | relative_url }}">Einleitung</a></li>
-      <li><a href="{{ '/funktionen.html' | relative_url }}">Funktionen</a></li>
-      <li><a href="{{ '/aufbauGDI.html' | relative_url }}">Systemarchitektur</a></li>
-      <li><a href="{{ '/konzept.html' | relative_url }}">Konzept</a></li>
-      <li><a href="{{ '/ausblick.html' | relative_url }}">Quellen</a></li>
-    </ul>
-  </nav>
 
   <main class="site-main">
     {{ content }}
   </main>
 
   <footer class="site-footer">
-    <div class="footer-content">
+    <div class="footer-inner">
       <p>&copy; 2025 RecyclRoute – entwickelt an der FHNW</p>
       <p><a href="{{ '/impressum.html' | relative_url }}">Impressum</a></p>
     </div>

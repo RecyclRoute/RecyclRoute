@@ -1,25 +1,14 @@
 ---
 layout: default
-title: RecyclRoute – Startseite
+title: Willkommen bei RecyclRoute
 ---
 
-## Willkommen
-
-Willkommen auf der GitHub-Page der Geodateninfrastruktur **RecyclRoute**.  
-Hier findest du alle vorhandenen Funktionen und Informationen zur Erarbeitung der WebApp.
-
-🔗 [GitHub Repository: RecyclRoute/RecyclRoute](https://github.com/RecyclRoute/RecyclRoute)
-
----
-
-### Ansicht der Startseite
-
-![GDI Projekt Screenshot](Bilder/Startpage1.png)
-
----
-
-### Projektteam
-
-- [Micha Tschanz](https://github.com/micka-t)
-- [Gian Luca Schmid](https://github.com/dhalu-the-great)
-- [Patrick](https://github.com/pwol99)
+<div class="content-box">
+  <h1>Willkommen bei RecyclRoute</h1>
+  <p>Wenn du Papier- oder Kartonsammlungen organisieren oder deine Route planen möchtest, klicke auf <strong>Planner</strong>.</p>
+  <p>Wenn du nicht abgeholtes oder falsch deponiertes Material melden möchtest, klicke auf <strong>Report</strong>.</p>
+  <div class="button-container">
+    <a href="planner.html" class="planner">Planner</a>
+    <a href="report.html" class="report">Report</a>
+  </div>
+</div>
