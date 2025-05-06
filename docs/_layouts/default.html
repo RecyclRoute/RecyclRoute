@@ -8,11 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="{{ '/Bilder/RecyclRoute_Logo.png' | relative_url }}" alt="Logo">
-    <h1>Dokumentation RecyclRoute</h1>
+  <header class="site-header">
+    <div class="header-content">
+      <img src="{{ '/Bilder/RecyclRoute_Logo.png' | relative_url }}" alt="Logo" class="logo">
+      <span class="site-title">RecyclRoute</span>
+    </div>
   </header>
-  <nav>
+
+  <nav class="site-nav">
     <ul>
       <li><a href="{{ '/index.html' | relative_url }}">Start</a></li>
       <li><a href="{{ '/einleitung.html' | relative_url }}">Einleitung</a></li>
@@ -22,11 +25,16 @@
       <li><a href="{{ '/ausblick.html' | relative_url }}">Quellen</a></li>
     </ul>
   </nav>
-  <main>
+
+  <main class="site-main">
     {{ content }}
   </main>
-  <footer>
-    &copy; 2025 RecyclRoute – entwickelt an der FHNW
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 RecyclRoute – entwickelt an der FHNW</p>
+      <p><a href="{{ '/impressum.html' | relative_url }}">Impressum</a></p>
+    </div>
   </footer>
 </body>
 </html>
