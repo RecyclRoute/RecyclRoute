@@ -242,7 +242,7 @@ def get_projects():
     cur = conn.cursor()
 
     try:
-        cur.execute("SELECT id, name, gemeindename, ST_AsGeoJSON(perimeter) FROM project")
+        cur.execute("SELECT id, name, gemeindename, ST_AsGeoJSON(perimeter), date FROM project")
         rows = cur.fetchall()
 
         projects = []
@@ -251,7 +251,8 @@ def get_projects():
                 "id": row[0],
                 "name": row[1],
                 "gemeindename": row[2],
-                "geometry": json.loads(row[3])  # Convert GeoJSON string to Python dict
+                "geometry": json.loads(row[3]),  # Convert GeoJSON string to Python dict
+                "date": row[4]
             }
             projects.append(project)
 

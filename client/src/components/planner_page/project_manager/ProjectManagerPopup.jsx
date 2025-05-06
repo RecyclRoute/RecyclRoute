@@ -1,15 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../plannerpage.css"
 
-const projects = [
-  { name: "Karton - Matten b. I. 2025", location: "Matten", date: "2025" },
-  { name: "Gemischte Sammlung – Brienz Oktober 2024", location: "Brienz", date: "Oktober 2024" },
-  { name: "......", location: "-", date: "-" },
-  { name: "......", location: "-", date: "-" },
-  { name: "......", location: "-", date: "-" }
-];
-
-export const ProjectManagerPopup = (props) => {
+export const ProjectManagerPopup = (props) => { 
 
 
   const TableProjectClick = (project) => {
@@ -27,6 +19,13 @@ export const ProjectManagerPopup = (props) => {
     props.setProjectManagerMode(false);
     props.setNewProjectMode(true)
   };
+  console.log("Projects raw data:", props.projects);
+  if (Array.isArray(props.projects)) {
+    props.projects.forEach((p, i) => console.log(`Projekt ${i}:`, p));
+  } else {
+    console.warn("props.projects ist keine gültige Liste:", props.projects);
+  }
+  
 
   return (
     <div className="PlannerPopup-overlay">
@@ -51,14 +50,14 @@ export const ProjectManagerPopup = (props) => {
               </tr>
             </thead>
             <tbody>
-              {projects.map((project, index) => (
+              {Array.isArray(props.projects) && props.projects.map((project, index) => (
                 <tr
                   key={index}
                   className={index % 2 === 0 ? "bg-gray-200 cursor-pointer" : "bg-white cursor-pointer"}
                   onClick={() => TableProjectClick(project)}
                 >
                   <td>{project.name}</td>
-                  <td>{project.location}</td>
+                  <td>{project.gemeindename}</td>
                   <td>{project.date}</td>
                 </tr>
               ))}
@@ -75,4 +74,6 @@ export const ProjectManagerPopup = (props) => {
       </div>
     </div>
   );
+  
 };
+

@@ -18,12 +18,14 @@ export const PlannerPage = () => {
   const [polygonMode, setPolygonMode] = useState(false);
   const [polygonPoints, setPolygonPoints] = useState([]);
   const [map, setMap] = useState(null);
-  const [marker, setMarker] = useState(null);
   const [startPageMode, setStartPageMode] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [showProjectPopup, setShowProjectPopup] = useState(false);
   const [projectInfo, setProjectInfo] = useState(null);
   const [ActiveProject, setActiveProject] = useState(null);
+  const [projects, setProjects] = useState([]);
+  const [projectName, setProjectName] = useState('');
+  const [datum, setDatum] = useState('');
   
   const navigate = useNavigate();
 
@@ -61,18 +63,33 @@ export const PlannerPage = () => {
     setPolygonMode,
     sendPolygonToBackend
   });
+  useEffect(() => {
+    const heute = new Date().toISOString().split('T')[0];
+    setDatum(heute);
 
-  const handleProjectSubmit = async ({ projectName, municipality }) => {
+    // Fetch projects
+      fetch("http://localhost:8000/getProjects")
+        .then(res => res.json())
+        .then(data => setProjects(data.projects))
+      .catch(err => console.error("Fehler beim Laden der Projekte:", err));
+
+  }, []);
+
+  const getProjectIdFromName = (name) => {
+    const project = projects.find(p => p.name === name);
+    return project?.id || 0;
+  };
+  const handleProjectSubmit = async ({ projectName, Location }) => {
     setProjectManagerMode(false);
     try {
       const response = await fetch(
-        `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(municipality)}&country=Switzerland&format=json`
+        `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(Location)}&country=Switzerland&format=json`
       );
       const data = await response.json();
       if (data.length > 0) {
         const { lon, lat } = data[0];
         map.flyTo({ center: [parseFloat(lon), parseFloat(lat)], zoom: 14 });
-        setProjectInfo({ projectName, municipality });
+        setProjectInfo({ projectName, Location });
         setPolygonMode(true);
         alert(`Projekt "${projectName}" gestartet! Bitte zeichne nun das Polygon.`);
       } else {
@@ -145,6 +162,8 @@ export const PlannerPage = () => {
         setNewProjectMode={setNewProjectMode}
         ActiveProject={setActiveProject}
         setActiveProject={setActiveProject}
+        projects={projects}
+        setProjects={setProjects}
         />
       )}
 
