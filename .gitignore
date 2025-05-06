@@ -14,9 +14,6 @@ client/.vscode
 # testing
 client/coverage
 
-# production
-client/build
-
 # dependencies
 client/node_modules
 .pnp
@@ -46,3 +43,5 @@ myenv311
 ortools_package
 .venv
 ortools_package
+recyclroute-venv
+valhalla_docker
