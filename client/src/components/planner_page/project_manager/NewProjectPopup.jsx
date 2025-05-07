@@ -2,16 +2,7 @@ import React, { useState } from 'react';
 import '../plannerpage.css'; // Modal Styling ist schon drin!
 
 export const NewProjectPopup = (props) => {
-  const [ProjectName, setProjectName] = useState('');
-  const [Location, setLocation] = useState('');
-
-  const handleSubmit = () => {
-    if (ProjectName && Location) {
-      props.onSubmit({ ProjectName, Location });
-    } else {
-      alert('Bitte alle Felder ausfüllen.');
-    }
-  };
+  
 
   const CloseButtonClick = () => {
     props.setNewProjectMode(false)
@@ -34,17 +25,17 @@ export const NewProjectPopup = (props) => {
         <input
           type="text"
           placeholder="Projektname"
-          value={ProjectName}
-          onChange={(e) => setProjectName(e.target.value)}
+          value={props.ProjectName}
+          onChange={(e) => props.setProjectName(e.target.value)}
         />
         <input
           type="text"
           placeholder="Gemeinde"
-          value={Location}
-          onChange={(e) => setLocation(e.target.value)}
+          value={props.Location}
+          onChange={(e) => props.setLocation(e.target.value)}
         />
         <div style={{ marginTop: '10px' }}>
-          <button onClick={handleSubmit}>Weiter</button>
+          <button onClick={props.checkInputNewProject}>Weiter</button>
         </div>
       </div>
     </div>
