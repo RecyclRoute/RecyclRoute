@@ -22,12 +22,12 @@ export const PlannerPage = () => {
   const [map, setMap] = useState(null);
   const [startPageMode, setStartPageMode] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
-  const [showProjectPopup, setShowProjectPopup] = useState(false);
   const [projectInfo, setProjectInfo] = useState(null);
   const [ActiveProject, setActiveProject] = useState(null);
   const [projects, setProjects] = useState([]);
-  const [projectName, setProjectName] = useState('');
+  const [ProjectName, setProjectName] = useState('');
   const [datum, setDatum] = useState('');
+  const [Location, setLocation] = useState('');
   
   const navigate = useNavigate();
 
@@ -84,8 +84,18 @@ export const PlannerPage = () => {
 
   }, []);
 
-  const handleProjectSubmit = async ({ projectName, Location }) => {
-    setProjectManagerMode(false);
+  const checkInputNewProject = () => {
+    if (ProjectName && Location) {
+      handleProjectSubmit({ ProjectName, Location });
+    } else {
+      alert('Bitte alle Felder ausfüllen.');
+    }
+  };
+
+
+  const handleProjectSubmit = async ({ ProjectName, Location }) => {
+
+    setNewProjectMode(false);
     try {
       const response = await fetch(
         `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(Location)}&country=Switzerland&format=json`
@@ -94,9 +104,9 @@ export const PlannerPage = () => {
       if (data.length > 0) {
         const { lon, lat } = data[0];
         map.flyTo({ center: [parseFloat(lon), parseFloat(lat)], zoom: 14 });
-        setProjectInfo({ projectName, Location });
+        setProjectInfo({ ProjectName, Location });
         setPolygonMode(true);
-        alert(`Projekt "${projectName}" gestartet! Bitte zeichne nun das Polygon.`);
+        alert(`Projekt "${ProjectName}" gestartet! Bitte zeichne nun das Polygon.`);
       } else {
         alert("Keine Ergebnisse gefunden. Bitte überprüfe die Eingaben.");
       }
@@ -182,7 +192,11 @@ export const PlannerPage = () => {
           setNewProjectMode={setNewProjectMode}
           ActiveProject={ActiveProject}
           setActiveProject={setActiveProject}
-          onSubmit={(projectData) => handleProjectSubmit(projectData)}
+          ProjectName={ProjectName}
+          setProjectName={setProjectName}
+          Location={Location}
+          setLocation={setLocation}
+          checkInputNewProject={checkInputNewProject}
         />
       )}
 
