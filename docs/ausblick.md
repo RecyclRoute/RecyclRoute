@@ -1,3 +1,7 @@
+---
+layout: default
+title: RecyclRoute – Ausblick
+---
 <a id="top"></a>
 
 # Erweiterungsmöglichkeiten
@@ -9,11 +13,11 @@
 
 ### Startpage
 
-[↑](#top)
+[↑ Zurück zum Beginn der Webseite](#top) 
 
 
 <div style="display: flex; justify-content: space-between;">
   <div>
-    <a href="funktionen.html">← Konzept und Ideen</a>
+    <a href="konzept.html">← Konzept und Ideen</a>
   </div>
 </div>

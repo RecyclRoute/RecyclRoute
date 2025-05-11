@@ -1,4 +1,12 @@
-title: FootballMap
-description: Interaktive Fussball-Karte
+title: RecylRoute
+description: Webroutenberechung für Recyclingsammlungen
 navigation: main
 theme: jekyll-theme-minimal
+source: docs
+logo: Bilder/RecyclRoute_Logo.png
+baseurl: "/RecyclRoute"
+url: "https://recyclroute.github.io"
+markdown: kramdown
+kramdown:
+  input: GFM
+

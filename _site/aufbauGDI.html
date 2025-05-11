@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/RecyclRoute/assets/images/RecyclRoute_Logo.png" type="image/x-icon">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>RecyclRoute – Geodateninfrastruktur | RecylRoute</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="RecyclRoute – Geodateninfrastruktur" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Webroutenberechung für Recyclingsammlungen" />
+<meta property="og:description" content="Webroutenberechung für Recyclingsammlungen" />
+<link rel="canonical" href="http://localhost:4000/RecyclRoute/aufbauGDI.html" />
+<meta property="og:url" content="http://localhost:4000/RecyclRoute/aufbauGDI.html" />
+<meta property="og:site_name" content="RecylRoute" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="RecyclRoute – Geodateninfrastruktur" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Webroutenberechung für Recyclingsammlungen","headline":"RecyclRoute – Geodateninfrastruktur","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/RecyclRoute/Bilder/RecyclRoute_Logo.png"}},"url":"http://localhost:4000/RecyclRoute/aufbauGDI.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/RecyclRoute/assets/css/style.css?v=">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/RecyclRoute/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  
+</head>
+<body>
+
+    <header>
+    
+
+    
+
+    
+
+    <!-- Logo und Titel -->
+    <div class="header-content">
+      <img src="/RecyclRoute/assets/images/RecyclRoute_Logo.png" alt="Logo">
+      <h2>
+        <a href="/RecyclRoute/index.html" style="text-decoration: none; color: inherit;">
+          RecyclRoute - Dokumentation RecyclRoute
+        </a>
+      </h2>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="/RecyclRoute/einleitung.html">Einleitung</a></li>
+        <li><a href="/RecyclRoute/konzept.html">Konzept</a></li>
+        <li class="dropdown">
+          <a href="/RecyclRoute/funktionen.html">Erklärung der Funktionen</a>
+          <div class="dropdown-content">
+            <div><a href="/RecyclRoute/funktionen.html#startpage">Startpage</a></div>
+            <div><a href="/RecyclRoute/funktionen.html#planer">Planner</a></div>
+            <div><a href="/RecyclRoute/funktionen.html#report">Report</a></div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/RecyclRoute/aufbauGDI.html">Aufbau GDI</a>
+          <div class="dropdown-content">
+            <div><a href="/RecyclRoute/aufbauGDI.html#Backend">Backend</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#Grundlagedaten">Grundlagedaten</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#datenbank-und-datenbankschema">Datenbank</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#berechnungen">Berechnungen</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#frontend">Frontend</a></div>
+          </div>
+        </li>
+        <li><a href="/RecyclRoute/ausblick.html">Erweiterungsmöglichkeiten</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content">
+    <h1 id="aufbau-der-geodateninfrastruktur-gdi">Aufbau der Geodateninfrastruktur (GDI)</h1>
+<p><a id="top"></a></p>
+
+<p>Die Geodateninfrastruktur von <strong>RecyclRoute</strong> besteht aus einem Backend, einem Frontend sowie verschiedenen Bibliotheken und API-Schnittstellen. Die folgende Darstellung zeigt die Systemarchitektur von RecyclRoute:</p>
+
+<div id="gdi-final"></div>
+
+<p><img src="Bilder/GDI_Architektur_final.png" alt="GDI Architektur Schema" /></p>
+
+<h2 id="backend">Backend</h2>
+
+<p>Das Backend umfasst sämtliche Server-seitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript automatisiert mit Geo- und Routendaten befüllt. Der <strong>GeoServer</strong> stellt dabei die zentrale Schnittstelle dar, um die Daten aus der Datenbank als Webdienste (WMS/WFS) bereitzustellen. Über das Frontend wird via HTTP (z. B. Axios) auf diese Dienste zugegriffen.</p>
+
+<h3 id="grundlagedaten">Grundlagedaten</h3>
+<div id="grundlagedaten"></div>
+
+<p>Die Grundlagedaten bestehen aus <strong>Recycling-Sammelstellen</strong>, <strong>Straßennetzen</strong> und <strong>Einzugsgebieten</strong>, ergänzt durch eigens berechnete Routen. Die Straßendaten stammen aus der <a href="https://www.swisstopo.admin.ch/de/geodata/landscape/tlm3d.html">swissTLM3D</a>, die Routen werden durch ein angepasstes Python-Routing-Skript (basierend auf dem Chinese Postman Problem) generiert. Die Ergebnisse werden in GeoJSONs gespeichert und in die Datenbank importiert.</p>
+
+<p>Die Datenstruktur ist so aufgebaut, dass neue Regionen, Fraktionen oder Sammelarten (z. B. Glas, PET) leicht integriert werden können. Die Skripte zur Datenverarbeitung befinden sich im Repository unter <code class="language-plaintext highlighter-rouge">preprocessing/</code>.</p>
+
+<h2 id="datenbank">Datenbank</h2>
+
+<p>Die Datenbank wurde in PostgreSQL/PostGIS aufgebaut. Sie enthält u. a. folgende Tabellen:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">route</code> (berechnete Linien als Geometrie mit Reihenfolge und Attributen)</li>
+  <li><code class="language-plaintext highlighter-rouge">sammelstellen</code> (Punkte mit Adresse, Fraktion, Erfassungszeitraum)</li>
+  <li><code class="language-plaintext highlighter-rouge">netzwerk</code> (zugrunde liegendes Straßennetz aus swissTLM3D)</li>
+</ul>
+
+<p>Zur Visualisierung wurden <strong>Views</strong> erstellt, z. B.:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vw_route_vollständig</code> – vollständige Route inklusive Wiederholungen</li>
+  <li><code class="language-plaintext highlighter-rouge">vw_sammelpunkte</code> – aufbereitete Standorte</li>
+  <li><code class="language-plaintext highlighter-rouge">vw_routenabschnitte</code> – segmentweise Darstellung mit Zustandsattributen</li>
+</ul>
+
+<p>Die Daten werden über den GeoServer veröffentlicht und im Frontend genutzt.</p>
+
+<h2 id="geoserver">Geoserver</h2>
+
+<p>Die vorbereiteten Datenbank-Views werden im <strong>GeoServer</strong> als WMS- oder WFS-Dienste publiziert. Diese werden im Frontend per OpenLayers eingebunden, wodurch interaktive Kartenvisualisierung, Routenhighlighting und Layersteuerung möglich sind.</p>
+
+<h2 id="frontend">Frontend</h2>
+<div id="frontend"></div>
+
+<p>Das Frontend von RecyclRoute ist eine interaktive Webanwendung, die auf <a href="https://react.dev/">React</a>, <a href="https://openlayers.org/">OpenLayers</a> und <a href="https://axios-http.com/docs/intro">Axios</a> basiert. Es besteht aus mehreren Komponenten:</p>
+
+<h3 id="react">React</h3>
+
+<p><a href="https://react.dev/">React</a> dient dem Aufbau der Benutzeroberfläche. Es wird verwendet, um interaktive Elemente wie die Kartenansicht, Navigation, Filterfunktionen und Infoboxen umzusetzen. Der Zustand der Anwendung (z. B. „aktueller Streckenabschnitt“) wird komponentenbasiert verwaltet.</p>
+
+<h3 id="npm">npm</h3>
+
+<p>Der <a href="https://www.npmjs.com/">Node Package Manager (npm)</a> wird verwendet, um alle benötigten Bibliotheken und Abhängigkeiten (z. B. OpenLayers, Axios, Zustand) zu verwalten und das Frontend zu bauen.</p>
+
+<h3 id="openlayers">OpenLayers</h3>
+
+<p><a href="https://openlayers.org/">OpenLayers</a> ist für die Darstellung und Interaktion mit der Karte zuständig. Layer aus dem GeoServer (WMS/WFS) werden eingebunden, Streckenabschnitte hervorgehoben und Benutzerinteraktionen ermöglicht. Die Abfrage von Features (z. B. aktuell bearbeiteter Routenabschnitt) erfolgt dynamisch via <code class="language-plaintext highlighter-rouge">getSource().getFeatures()</code>.</p>
+
+<h3 id="ui-design">UI Design</h3>
+<div id="ui-design"></div>
+
+<p>Das Design von RecyclRoute ist bewusst <strong>minimalistisch und funktional</strong> gehalten. Die Farben Grün, Beige und Dunkelbraun spiegeln das Thema Nachhaltigkeit und Orientierung wider. Buttons und Kartenlayer sind einheitlich gestaltet und reagieren auf Mausbewegungen durch Hover- und Fokuszustände.</p>
+
+<p>Alle UI-Komponenten wurden manuell mit <a href="https://developer.mozilla.org/de/docs/Web/HTML">HTML</a> und <a href="https://developer.mozilla.org/de/docs/Web/CSS">CSS</a> gestaltet. Dropdowns und interaktive Felder wurden mit <a href="https://mui.com/">Material UI</a> realisiert.</p>
+
+<h3 id="ux-design">UX Design</h3>
+<div id="ux-design"></div>
+
+<p>Im Zentrum steht eine <strong>intuitive Nutzerführung</strong>: Sammelstellen, Routen und Status lassen sich einfach erkunden, bearbeiten und aktualisieren. Die Anwendung wurde im Rahmen eines UX-Tests mit 6 Testpersonen auf Bedienbarkeit überprüft. Feedback floss in die Gestaltung der Navigationsstruktur, Buttonplatzierung und Interaktionsrückmeldungen ein.</p>
+
+<p>Die meisten Aktionen erfordern <strong>maximal zwei Klicks</strong>, um von einer Sammelstelle zur vollständigen Route zu navigieren oder den Bearbeitungsstatus einer Straße zu aktualisieren.</p>
+
+<hr />
+
+<p><a href="#top">↑ Zurück zum Beginn der Webseite</a></p>
+
+<div style="display: flex; justify-content: space-between;">
+  <div>
+    <a href="funktionen.html">← Erklärung der Funktionen</a>
+  </div>
+  <div>
+    <a href="konzept.html">Konzept und Ideen →</a>
+  </div>
+</div>
+
+  </main>
+  <footer>
+    <p>
+        © RecylRoute - 2025 |
+        <a href="https://github.com/RecyclRoute/RecyclRoute">GitHub Projektseite</a>
+         |
+        <small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
+    </p>
+  </footer>
+
+  <script src="/RecyclRoute/assets/js/scale.fix.js"></script>
+</body>
+</html>

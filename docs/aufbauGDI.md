@@ -1,3 +1,7 @@
+---
+layout: default
+title: RecyclRoute – Geodateninfrastruktur
+---
 # Aufbau der Geodateninfrastruktur (GDI)
 <a id="top"></a>
 
@@ -69,7 +73,7 @@ Die meisten Aktionen erfordern **maximal zwei Klicks**, um von einer Sammelstell
 
 ---
 
-[↑](#top)
+[↑ Zurück zum Beginn der Webseite](#top) 
 
 <div style="display: flex; justify-content: space-between;">
   <div>

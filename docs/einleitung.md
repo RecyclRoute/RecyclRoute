@@ -1,10 +1,14 @@
+---
+layout: default
+title: RecyclRoute – Einleitung
+---
 <a id="top"></a>
 
 # Einleitung
 
-Diese GitHub-Page widmet sich der Geodateninfrastruktur **RecyclRoute**. Die effiziente Planung von Sammelrouten für Papier und Karton stellt viele Gemeinden und Entsorgungsbetriebe vor logistische Herausforderungen. Gerade im urbanen Raum entstehen durch ungünstige Routenführung vermeidbare Emissionen, Zeitverluste und unnötige Kosten.
+Diese GitHub-Page widmet sich der Geodateninfrastruktur RecyclRoute. Die effiziente Planung von Sammelrouten für Papier und Karton stellt viele Gemeinden und Entsorgungsbetriebe vor logistische Herausforderungen. Gerade im urbanen Raum entstehen durch ungünstige Routenführung vermeidbare Emissionen, Zeitverluste und unnötige Kosten.
 
-**RecyclRoute** bietet eine Lösung, um Sammelrouten mit Hilfe geografischer Daten zu visualisieren, analysieren. Im Gegensatz zu bestehenden Anwendungen, die sich meist auf einfache Routenplanung beschränken, setzt RecyclRoute auf eine interaktive Webkarte, die GIS-Komponenten, Routing und Visualisierung vereint. Mit RecyclRoute kannst du:
+RecyclRoute bietet eine Lösung, um Sammelrouten mit Hilfe geografischer Daten zu visualisieren, analysieren. Im Gegensatz zu bestehenden Anwendungen, die sich meist auf einfache Routenplanung beschränken, setzt RecyclRoute auf eine interaktive Webkarte, die GIS-Komponenten, Routing und Visualisierung vereint. Mit RecyclRoute kannst du:
 
 - **Sammelstellen räumlich erfassen:** Visualisiere Standorte von Sammelstellen direkt auf einer interaktiven Karte.
 - **Routen nachvollziehen:** Sieh dir die berechneten Routen für Sammelgebiete an und Navigiere dich durch deine Sammelroute
@@ -15,7 +19,7 @@ Im Rahmen des Vertiefungsmoduls 4230 „Geoinformatik & Raumanalyse I“ des Bac
 
 In den folgenden Kapiteln werden alle Funktionen, der Aufbau der Geodateninfrastruktur, das technische Konzept sowie Erweiterungspotenziale von RecyclRoute vorgestellt.
 
-[↑](#top)
+[↑ Zurück zum Beginn der Webseite](#top) 
 
 <div style="display: flex; justify-content: space-between;">
   <div>
