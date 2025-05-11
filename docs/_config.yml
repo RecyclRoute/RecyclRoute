@@ -1,7 +1,7 @@
 title: RecylRoute
 description: Webroutenberechung für Recyclingsammlungen
 navigation: main
-theme: jekyll-theme-minimal
+remote_theme: pages-themes/minimal
 source: docs
 logo: Bilder/RecyclRoute_Logo.png
 baseurl: "/RecyclRoute"
