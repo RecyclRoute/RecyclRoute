@@ -178,3 +178,6 @@ img {
   display: inline-block;
   margin-right: 1rem;
 }
+.github-fork-ribbon, .gh-header {
+  display: none !important;
+}
