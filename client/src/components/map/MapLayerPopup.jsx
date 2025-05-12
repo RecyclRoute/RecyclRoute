@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import "maplibre-gl/dist/maplibre-gl.css";
 import maplibregl from "maplibre-gl";
+import "./MapLayerPopup.css"
+
 
 export const MapLayerPopup = (props) => {
   const [projects, setProjects] = useState([]);
@@ -98,22 +100,22 @@ export const MapLayerPopup = (props) => {
 
 
   return (
-    <div className="addmarker-overlay">
-      <div className="addmarker-content">
+    <div className={`${props.designConst}-overlay`}>
+      <div className={`${props.designConst}-content`}>
         <div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-start", height: "45px"}}>
           <h3 style={{marginTop: 0}}>Punktlayer anzeigen</h3>
-          <button className="closeButton" onClick={closeLayerMode}>X</button>
+          <button className={`${props.designConst}-closeButton`} onClick={closeLayerMode}>X</button>
         </div>
         <label>
           Projekt wählen:
-          <select className='addMarkerPullDownMenus' value={selectedProject} onChange={(e) => setSelectedProject(e.target.value)}>
+          <select className={`${props.designConst}-PullDownMenus`} value={selectedProject} onChange={(e) => setSelectedProject(e.target.value)}>
             <option value="">Bitte wählen...</option>
             {projects.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
           </select>
         </label>
-        <div>
-          <button className="SaveButton" onClick={loadLayer}>Layer anzeigen</button>
-          <button className="SaveButton" onClick={resetLayer}>Layer zurücksetzen</button>
+        <div style={{ display: "flex", gap: "25px", marginTop: "10px" }}>
+          <button className={`${props.designConst}-SaveButton`} onClick={loadLayer}>Layer anzeigen</button>
+          <button className={`${props.designConst}-SaveButton`} onClick={resetLayer}>Layer zurücksetzen</button>
         </div>
       </div>
     </div>
