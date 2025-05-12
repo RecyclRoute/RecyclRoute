@@ -40,6 +40,8 @@ Die nachfolgenden Kapitel beschreiben wie die Architektur, die Datenbank, das Ko
 Die zeigt den Architekturaufbau der geplanten Anwendung. Darin sind die Vier Bereiche (Frontend, Backend, API-Dienste und der Geoserver) mit entsprechenden Software-Icons ersichtlich.
 
 ![Architekturaufbau](assets/images/Architektur_GDI_Konzept.png){: style="max-width: 100%; height: auto;" }
+
+
 Das Frontend der Anwendung funktioniert mit einem JavaScript basierten Aufbau mittels React. Zusätzlich werden andere Bibliotheken wie Leaflet und Open Layers verwendet um alle Funktionalitäten im Frontend zu gewährleistet. Das Frontend interagiert mittels Fast API mit dem Backend dabei kann auf den Geoserver oder auf eine PostGIS Datenbank zugegriffen werden. Die Daten auf dem Geoserver und in der PostGIS Datenbank werden mit einem Python Skript und den vorhandenen API-Diensten abgefragt und abgespeichert. Diese werden jeweils periodisch neu abgefragt, um die Aktualität zu garantieren.
 
 ### 2.2 Datenmodell und Datenbank
@@ -172,7 +174,10 @@ Die ToDo’s werden in einem an Scrum angelehnten Board in MSTeams geführt, dam
 ### 5.2	Zeitplan
 Es wurde ein Zeitplan erstellt, welcher nach und nach ergänzt wird. Dieser dient als Ergänzung zum Task Board in MS Teams.
 ### 5.3	Rapport
-Der Arbeitsaufwand wird laufend erfasst damit am ende vom Projekt eine Analyse zwischen dem geplanten und effektiven Zeitaufwand gemacht werden kann. Dafür wird in einer Excel Tabelle je-weils der Aufwand erfasst und es wird automatisch eine Statistik mit den Aufwandsummen pro Per-son oder pro Tätigkeit erstellt.
+Der Arbeitsaufwand wird laufend erfasst damit am ende vom Projekt eine Analyse zwischen dem geplanten und effektiven Zeitaufwand gemacht werden kann. Dafür wird in einer Excel Tabelle je-weils der Aufwand erfasst und es wird automatisch eine Statistik mit den Aufwandsummen pro Person oder pro Tätigkeit erstellt.
+
+# Abweichungen vom Konzept
+Aus diversen Gründen wurden verschiedene Details welche im Konzept überlegt wurden während dem Aufbau der Applikation geändert. Seid dies weil es so nicht praktikabel war oder auch weil man durch gezieltes aufschreiben des Nutzendenworkflows verbesserungen herausarbeiten konnte und diese sogleich umgesetzt hat. Die aktuellen Details & der Geodateninfrastruktur sind im Kapitel <a href="aufbauGDI.html">Aufbau GDI </a>erklärt.
 
 
 [↑ Zurück zum Beginn der Webseite](#top) 
@@ -183,6 +188,6 @@ Der Arbeitsaufwand wird laufend erfasst damit am ende vom Projekt eine Analyse z
     <a href="installation.html">← Erklärung der Installation</a>
   </div>
   <div>
-    <a href="aufbauGDI.html">Aufbau GDI →</a>
+    <a href="funktionen.html">Erklärung der Funktionen →</a>
   </div>
 </div>

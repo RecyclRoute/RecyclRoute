@@ -148,7 +148,7 @@ docker start valhalla_server
 ### Frontend starten
 
 ```bash
-cd RecyclRoute/client
+cd client
 npm install
 npm start
 ```

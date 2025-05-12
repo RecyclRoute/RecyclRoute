@@ -71,17 +71,18 @@ document.addEventListener("DOMContentLoaded", () => {
       <ul>
         <li><a href="/RecyclRoute/einleitung.html">Einleitung</a></li>
          <li class="dropdown">
-          <a href="/RecyclRoute/installation.html">Installation</a>
+          <a href="/RecyclRoute/Installation.html">Installation</a>
           <div class="dropdown-content">
-            <div><a href="/RecyclRoute/installation.html#starten-der-anwendung">Starten der Applikation</a></div>
+            <div><a href="/RecyclRoute/Installation.html#starten-der-anwendung">Starten der Applikation</a></div>
         </li>
         <li><a href="/RecyclRoute/konzept.html">Konzept</a></li>
         <li class="dropdown">
           <a href="/RecyclRoute/funktionen.html">Erklärung der Funktionen</a>
           <div class="dropdown-content">
             <div><a href="/RecyclRoute/funktionen.html#startpage">Startpage</a></div>
-            <div><a href="/RecyclRoute/funktionen.html#planer">Planner</a></div>
-            <div><a href="/RecyclRoute/funktionen.html#report">Report</a></div>
+            <div><a href="/RecyclRoute/funktionen.html#funktionen-report">Planner</a></div>
+            <div><a href="/RecyclRoute/funktionen.html#funktionen-planner">Report</a></div>
+            <div><a href="/RecyclRoute/funktionen.html#berechnungsalgorithmus">Routenberechnung</a></div>
           </div>
         </li>
         <li class="dropdown">
@@ -134,8 +135,9 @@ document.addEventListener("DOMContentLoaded", () => {
 <h3 id="21-architekturaufbau">2.1 Architekturaufbau</h3>
 <p>Die zeigt den Architekturaufbau der geplanten Anwendung. Darin sind die Vier Bereiche (Frontend, Backend, API-Dienste und der Geoserver) mit entsprechenden Software-Icons ersichtlich.</p>
 
-<p><img src="assets/images/Architektur_GDI_Konzept.png" alt="Architekturaufbau" style="max-width: 100%; height: auto;" />
-Das Frontend der Anwendung funktioniert mit einem JavaScript basierten Aufbau mittels React. Zusätzlich werden andere Bibliotheken wie Leaflet und Open Layers verwendet um alle Funktionalitäten im Frontend zu gewährleistet. Das Frontend interagiert mittels Fast API mit dem Backend dabei kann auf den Geoserver oder auf eine PostGIS Datenbank zugegriffen werden. Die Daten auf dem Geoserver und in der PostGIS Datenbank werden mit einem Python Skript und den vorhandenen API-Diensten abgefragt und abgespeichert. Diese werden jeweils periodisch neu abgefragt, um die Aktualität zu garantieren.</p>
+<p><img src="assets/images/Architektur_GDI_Konzept.png" alt="Architekturaufbau" style="max-width: 100%; height: auto;" /></p>
+
+<p>Das Frontend der Anwendung funktioniert mit einem JavaScript basierten Aufbau mittels React. Zusätzlich werden andere Bibliotheken wie Leaflet und Open Layers verwendet um alle Funktionalitäten im Frontend zu gewährleistet. Das Frontend interagiert mittels Fast API mit dem Backend dabei kann auf den Geoserver oder auf eine PostGIS Datenbank zugegriffen werden. Die Daten auf dem Geoserver und in der PostGIS Datenbank werden mit einem Python Skript und den vorhandenen API-Diensten abgefragt und abgespeichert. Diese werden jeweils periodisch neu abgefragt, um die Aktualität zu garantieren.</p>
 
 <h3 id="22-datenmodell-und-datenbank">2.2 Datenmodell und Datenbank</h3>
 
@@ -265,7 +267,10 @@ Die ToDo’s werden in einem an Scrum angelehnten Board in MSTeams geführt, dam
 <h3 id="52-zeitplan">5.2	Zeitplan</h3>
 <p>Es wurde ein Zeitplan erstellt, welcher nach und nach ergänzt wird. Dieser dient als Ergänzung zum Task Board in MS Teams.</p>
 <h3 id="53-rapport">5.3	Rapport</h3>
-<p>Der Arbeitsaufwand wird laufend erfasst damit am ende vom Projekt eine Analyse zwischen dem geplanten und effektiven Zeitaufwand gemacht werden kann. Dafür wird in einer Excel Tabelle je-weils der Aufwand erfasst und es wird automatisch eine Statistik mit den Aufwandsummen pro Per-son oder pro Tätigkeit erstellt.</p>
+<p>Der Arbeitsaufwand wird laufend erfasst damit am ende vom Projekt eine Analyse zwischen dem geplanten und effektiven Zeitaufwand gemacht werden kann. Dafür wird in einer Excel Tabelle je-weils der Aufwand erfasst und es wird automatisch eine Statistik mit den Aufwandsummen pro Person oder pro Tätigkeit erstellt.</p>
+
+<h1 id="abweichungen-vom-konzept">Abweichungen vom Konzept</h1>
+<p>Aus diversen Gründen wurden verschiedene Details welche im Konzept überlegt wurden während dem Aufbau der Applikation geändert. Seid dies weil es so nicht praktikabel war oder auch weil man durch gezieltes aufschreiben des Nutzendenworkflows verbesserungen herausarbeiten konnte und diese sogleich umgesetzt hat. Die aktuellen Details &amp; der Geodateninfrastruktur sind im Kapitel <a href="aufbauGDI.html">Aufbau GDI </a>erklärt.</p>
 
 <p><a href="#top">↑ Zurück zum Beginn der Webseite</a></p>
 
@@ -274,7 +279,7 @@ Die ToDo’s werden in einem an Scrum angelehnten Board in MSTeams geführt, dam
     <a href="installation.html">← Erklärung der Installation</a>
   </div>
   <div>
-    <a href="aufbauGDI.html">Aufbau GDI →</a>
+    <a href="funktionen.html">Erklärung der Funktionen →</a>
   </div>
 </div>
 
