@@ -1,0 +1,151 @@
+/*================================== ReportPage-Komponenten ====================================*/
+
+.ReportPage-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    align-items: flex-end;
+    pointer-events: none;
+}
+
+.ReportPage-content {
+  pointer-events: auto;
+  background-color: #FAF7F0;
+  padding: 10px;
+  width: 85%;
+  max-height: 30%;
+  overflow: auto;
+  outline-color: #2F2F2F;
+  outline-style: solid;
+  outline-width: 3px;
+  margin-bottom: 117px;    /* 80px vom unteren Rand entfernt */
+  display: flex;          /* Elemente in einer Zeile anordnen */
+  flex-direction: column; 
+}
+
+.ReportPage-PullDownMenus {
+  min-width: 150px;
+  height: 25px;
+  border-color: #2F2F2F;
+  border-width: 1px;
+  background-color: #D8CFC4;
+  border-style: solid;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReportPage-closeButton {
+  width: 25px;
+  height: 25px;
+  border-color: #2F2F2F;
+  border-width: 1px;
+  background-color: #A67C52;
+  border-style: solid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  font-weight: bold;
+}
+.ReportPage-closeButton:hover {
+  background-color: #6D4C41;
+}
+
+.ReportPage-SaveButton {
+  height: 30px;
+  border-radius: 30px;
+  border-color: #2F2F2F;
+  border-width: 1px;
+  background-color: #A67C52;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.ReportPage-SaveButton:hover {
+  background-color: #6D4C41;
+}
+/*================================== PlannerPage-Komponenten ====================================*/
+
+
+.PlannerPage-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.PlannerPage-content {
+pointer-events: auto;
+background-color: #F4F7F5;
+padding: 10px;
+width: 85%;
+max-height: 30%;
+overflow: auto;
+outline-color: #273028;
+outline-style: solid;
+outline-width: 3px;
+margin-bottom: 117px;    /* 80px vom unteren Rand entfernt */
+display: flex;          /* Elemente in einer Zeile anordnen */
+flex-direction: column; 
+}
+
+.PlannerPage-PullDownMenus {
+min-width: 150px;
+height: 25px;
+border-color: #273028;
+border-width: 1px;
+background-color: #c4d8c9;
+border-style: solid;
+margin-left: 10px;
+margin-bottom: 10px;
+justify-content: center;
+align-items: center;
+}
+
+.PlannerPage-closeButton {
+width: 25px;
+height: 25px;
+border-color: #273028;
+border-width: 1px;
+background-color: #227d5a;
+border-style: solid;
+justify-content: center;
+align-items: center;
+margin-top: 0px;
+font-weight: bold;
+}
+.PlannerPage-closeButton:hover {
+  background-color: #AED581;
+}
+
+.PlannerPage-SaveButton {
+height: 30px;
+border-radius: 30px;
+border-color: #273028;
+border-width: 1px;
+background-color: #227d5a;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+border-style: solid;
+padding-left: 10px;
+padding-right: 10px;
+}
+.PlannerPage-SaveButton:hover {
+  background-color: #AED581;
+}

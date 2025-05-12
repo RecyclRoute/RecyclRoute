@@ -91,8 +91,8 @@ export const ReportPage = () => {
             map={map}
             layerMarkers={layerMarkers}
             setLayerMarkers={setLayerMarkers}
+            designConst="ReportPage"
           />
-          <AddMarkerPopupInfo />
         </>
       )}    
     </div>

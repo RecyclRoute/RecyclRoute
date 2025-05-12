@@ -16,6 +16,7 @@ import { ProjectUseMenuPopup } from "./project_manager/ProjectUseMenuPopup.jsx";
 import {PolygonInstructionsPopup} from "./project_manager/new_project/PolygonInstructionsPopup.jsx";
 import {SavePolygonPopup} from "./project_manager/new_project/SavePolygonPopup.jsx";
 import {StartPointInstructionsPopup} from "./project_manager/new_project/StartPointInstructionsPopup.jsx";
+import { MapLayerPopup } from "../map/MapLayerPopup.jsx";
 import { CalculateWaitingPopUp } from "./project_manager/new_project/CalculateWaitingPopUp.jsx";
 import { set } from "ol/transform.js";
 
@@ -36,6 +37,8 @@ export const PlannerPage = () => {
   const [ProjectName, setProjectName] = useState('');
   const [Datum, setDatum] = useState('');
   const [Location, setLocation] = useState('');
+  const [changeLayerMode, setChangeLayerMode] = useState(false);
+  const [layerMarkers, setLayerMarkers] = useState([]);
   
   const navigate = useNavigate();
 
@@ -242,7 +245,12 @@ export const PlannerPage = () => {
 
         {startPageMode && (
           <div className="button-panel">
-            <MapLayerButton classNameMapButtons="PlannerPageMapButtons"/>
+            <MapLayerButton classNameMapButtons="PlannerPageMapButtons"
+              map={map}
+              changeLayerMode={changeLayerMode}
+              setChangeLayerMode={setChangeLayerMode}
+              startPageMode={startPageMode}
+              setStartPageMode={setStartPageMode}/>
             <MapPositionButton classNameMapButtons="PlannerPageMapButtons" map={map} />
             <MapRotationButton classNameMapButtons="PlannerPageMapButtons" map={map} />
           </div>
@@ -322,6 +330,21 @@ export const PlannerPage = () => {
           setProjectUseMenuMode={setProjectUseMenuMode}
         />
       )}
+
+      {changeLayerMode && (
+        <>
+          <MapLayerPopup
+            changeLayerMode={changeLayerMode}
+            setChangeLayerMode={setChangeLayerMode}
+            startPageMode={startPageMode}
+            setStartPageMode={setStartPageMode}
+            map={map}
+            layerMarkers={layerMarkers}
+            setLayerMarkers={setLayerMarkers}
+            designConst="PlannerPage"
+          />
+        </>
+      )}         
     </div>
   );
 };

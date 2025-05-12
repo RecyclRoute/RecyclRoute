@@ -26,7 +26,7 @@ export const MapPositionButton = ({ map, classNameMapButtons = ""}) => {
 
           // Marker erstellen oder aktualisieren
           if (!markerRef.current) {
-            markerRef.current = new maplibregl.Marker({ color: "blue" })
+            markerRef.current = new maplibregl.Marker({ color: "yellow" })
               .setLngLat([longitude, latitude])
               .addTo(map);
           } else {
