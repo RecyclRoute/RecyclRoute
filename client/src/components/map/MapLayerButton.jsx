@@ -1,16 +1,18 @@
 import { ReactComponent as LayerIcon } from "../icons/black/layer_icon.svg";
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import "maplibre-gl/dist/maplibre-gl.css";
 import maplibregl from "maplibre-gl";
 import "./Map.css";
+import { MapLayerPopup } from "./MapLayerPopup.jsx";
 
-export const MapLayerButton = ({ map, classNameMapButtons = ""}) => {
 
-
+export const MapLayerButton = (props,{classNameMapButtons = "" }) => {
 
   return (
-    <button className={classNameMapButtons}>
-      <LayerIcon style={{ width: "30px", height: "30px" }}/>
-    </button>
+    <>
+      <button className={classNameMapButtons} onClick={() => props.setChangeLayerMode(true)}>
+        <LayerIcon style={{ width: "30px", height: "30px" }}/>
+      </button>
+    </>
   );
 };
