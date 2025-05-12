@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/RecyclRoute/assets/images/RecyclRoute_Logo.png" type="image/x-icon">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Einleitung | RecylRoute</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Einleitung" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Webroutenberechung für Recyclingsammlungen" />
+<meta property="og:description" content="Webroutenberechung für Recyclingsammlungen" />
+<link rel="canonical" href="http://localhost:4000/RecyclRoute/einleitung.html" />
+<meta property="og:url" content="http://localhost:4000/RecyclRoute/einleitung.html" />
+<meta property="og:site_name" content="RecylRoute" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Einleitung" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Webroutenberechung für Recyclingsammlungen","headline":"Einleitung","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/RecyclRoute/Bilder/RecyclRoute_Logo.png"}},"url":"http://localhost:4000/RecyclRoute/einleitung.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/RecyclRoute/assets/css/style.css?v=">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/RecyclRoute/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('pre > code').forEach(codeBlock => {
+    const button = document.createElement('button');
+    button.className = 'copy-button';
+    button.type = 'button';
+    button.innerText = '📋 Kopieren';
+
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(codeBlock.innerText).then(() => {
+        button.innerText = '✅ Kopiert!';
+        setTimeout(() => (button.innerText = '📋 Kopieren'), 2000);
+      });
+    });
+
+    const pre = codeBlock.parentNode;
+    pre.appendChild(button); // ⬅ Button INS <pre> einfügen, nicht davor
+  });
+});
+</script>
+<body>
+    <header>
+    
+    <div class="header-content">
+      <img src="/RecyclRoute/assets/images/RecyclRoute_Logo.png" alt="Logo">
+      <h2>
+        <a href="/RecyclRoute/index.html" style="text-decoration: none; color: inherit;">
+          RecyclRoute - Dokumentation RecyclRoute
+        </a>
+      </h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/RecyclRoute/einleitung.html">Einleitung</a></li>
+        <li><a href="/RecyclRoute/installation.html">Installation</a></li>
+        <li><a href="/RecyclRoute/konzept.html">Konzept</a></li>
+        <li class="dropdown">
+          <a href="/RecyclRoute/funktionen.html">Erklärung der Funktionen</a>
+          <div class="dropdown-content">
+            <div><a href="/RecyclRoute/funktionen.html#startpage">Startpage</a></div>
+            <div><a href="/RecyclRoute/funktionen.html#planer">Planner</a></div>
+            <div><a href="/RecyclRoute/funktionen.html#report">Report</a></div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/RecyclRoute/aufbauGDI.html">Aufbau GDI</a>
+          <div class="dropdown-content">
+            <div><a href="/RecyclRoute/aufbauGDI.html#Backend">Backend</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#Grundlagedaten">Grundlagedaten</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#datenbank-und-datenbankschema">Datenbank</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#berechnungen">Berechnungen</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#frontend">Frontend</a></div>
+          </div>
+        </li>
+        <li><a href="/RecyclRoute/ausblick.html">Erweiterungsmöglichkeiten</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content">
+    <p><a id="top"></a></p>
+
+<h1 id="einleitung">Einleitung</h1>
+
+<p>Diese GitHub-Page widmet sich der Geodateninfrastruktur RecyclRoute. Das effiziente einsammeln von Papier und Karton stellt für die Vereine ein mittel dar um Geld in die Vereinskasse zubekommen. Jedoch ist es in den letzten Jahren immer schwieriger geworden genügend freiwillige Helfende zuhaben. Daher ist eine effiziente Planung von Sammelrouten für Papier und Karton um ungünstige Routenführung aber auch vermeidbare Emissionen, Zeitverluste und unnötige Kosten zu mindern von immer grösserer Bedeutung.</p>
+
+<p>RecyclRoute bietet eine Lösung, um Sammelrouten mit Hilfe geografischer Daten zu visualisieren, analysieren. Ähnlich bestehende Anwendungen, sind uns soweit nicht bekannt und es sicht heraus durch die möglichkeit in einem ganzen Gebiet alle gemäss SWISSTLM3D befahrbaren Strassen mindestens einmal zudurchfahren. Durch eine interaktive Webkarte, die GIS-Komponenten, Routing und Visualisierung kann RecyclRoute vorteile bieten:</p>
+
+<ul>
+  <li><strong>Sammelstellen räumlich erfassen:</strong> Visualisiere Standorte von Sammelstellen direkt auf einer interaktiven Karte.</li>
+  <li><strong>Routen nachvollziehen:</strong> Sieh dir die berechneten Routen für Sammelgebiete an und Navigiere dich durch deine Sammelroute</li>
+</ul>
+
+<p>Der aktuelle Prototyp von RecyclRoute konzentriert sich auf die Kartierung und Routenplanung für Recylingsammlung in der Schweiz.</p>
+
+<p>Im Rahmen des Vertiefungsmoduls 4230 „Geoinformatik &amp; Raumanalyse I“ des Bachelorstudiengangs Geomatik an der Fachhochschule Nordwestschweiz (FHNW) wurde RecyclRoute als vollständige Geodateninfrastruktur (GDI) konzipiert und umgesetzt. Das Thema wurde frei gewählt, unter der Bedingung, dass es räumlich-zeitliche Fragestellungen adressiert.</p>
+
+<p>In den folgenden Kapiteln werden alle Funktionen, der Aufbau der Geodateninfrastruktur, das Konzept sowie Erweiterungspotenziale von RecyclRoute vorgestellt.</p>
+
+<p><a href="#top">↑ Zurück zum Beginn der Webseite</a></p>
+
+<div style="display: flex; justify-content: space-between;">
+  <div>
+    <a href="index.html">← RecyclRoute</a>
+  </div>
+  <div>
+    <a href="funktionen.html">Erklärung der Funktionen →</a>
+  </div>
+</div>
+
+  </main>
+  <footer>
+    <p>
+        © RecylRoute - 2025 |
+        <a href="https://github.com/RecyclRoute/RecyclRoute">GitHub Projektseite</a>
+         |
+        <small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
+    </p>
+  </footer>
+
+  <script src="/RecyclRoute/assets/js/scale.fix.js"></script>
+</body>
+</html>

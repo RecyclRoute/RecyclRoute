@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'de-CH' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="{{ '/assets/images/RecyclRoute_Logo.png' | relative_url }}" type="image/x-icon">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  {% include head-custom.html %}
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('pre > code').forEach(codeBlock => {
+    const button = document.createElement('button');
+    button.className = 'copy-button';
+    button.type = 'button';
+    button.innerText = '📋 Kopieren';
+
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(codeBlock.innerText).then(() => {
+        button.innerText = '✅ Kopiert!';
+        setTimeout(() => (button.innerText = '📋 Kopieren'), 2000);
+      });
+    });
+
+    const pre = codeBlock.parentNode;
+    pre.appendChild(button); // ⬅ Button INS <pre> einfügen, nicht davor
+  });
+});
+</script>
+<body>
+    <header>
+    {% if site.show_downloads %}
+      <ul class="downloads">
+        <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
+        <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
+        <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+      </ul>
+    {% endif %}
+    <div class="header-content">
+      <img src="{{ '/assets/images/RecyclRoute_Logo.png' | relative_url }}" alt="Logo">
+      <h2>
+        <a href="{{ '/index.html' | relative_url }}" style="text-decoration: none; color: inherit;">
+          RecyclRoute - Dokumentation RecyclRoute
+        </a>
+      </h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="{{ '/einleitung.html' | relative_url }}">Einleitung</a></li>
+        <li><a href="{{ '/installation.html' | relative_url}}">Installation</a></li>
+        <li><a href="{{ '/konzept.html' | relative_url }}">Konzept</a></li>
+        <li class="dropdown">
+          <a href="{{ '/funktionen.html' | relative_url }}">Erklärung der Funktionen</a>
+          <div class="dropdown-content">
+            <div><a href="{{ '/funktionen.html#startpage' | relative_url }}">Startpage</a></div>
+            <div><a href="{{ '/funktionen.html#planer' | relative_url }}">Planner</a></div>
+            <div><a href="{{ '/funktionen.html#report' | relative_url }}">Report</a></div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="{{ '/aufbauGDI.html' | relative_url }}">Aufbau GDI</a>
+          <div class="dropdown-content">
+            <div><a href="{{ '/aufbauGDI.html#Backend' | relative_url }}">Backend</a></div>
+            <div><a href="{{ '/aufbauGDI.html#Grundlagedaten' | relative_url }}">Grundlagedaten</a></div>
+            <div><a href="{{ '/aufbauGDI.html#datenbank-und-datenbankschema' | relative_url }}">Datenbank</a></div>
+            <div><a href="{{ '/aufbauGDI.html#berechnungen' | relative_url }}">Berechnungen</a></div>
+            <div><a href="{{ '/aufbauGDI.html#frontend' | relative_url }}">Frontend</a></div>
+          </div>
+        </li>
+        <li><a href="{{ '/ausblick.html' | relative_url }}">Erweiterungsmöglichkeiten</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content">
+    {{ content }}
+  </main>
+  <footer>
+    <p>
+        © {{ site.title }} - {{ site.time | date: '%Y' }} |
+        <a href="https://github.com/RecyclRoute/RecyclRoute">GitHub Projektseite</a>
+        {% if site.github.is_project_page %}|
+        <small>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></small>
+        {% endif %} |
+        <small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
+    </p>
+  </footer>
+
+  <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+</body>
+</html>

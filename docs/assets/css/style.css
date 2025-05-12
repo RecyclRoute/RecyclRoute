@@ -1,34 +1,93 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #eaeaea;
-  margin: 0;
-  padding: 0;
   color: #333;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
 }
 
-.site-header, .site-footer {
-  background-color: #9e9e9e;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+header, .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #9E9E9E;
+  padding: 0.8rem 9rem;
+  color: #000000;
+  z-index: 1000;
 }
 
-.site-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.site-main {
-  flex: 1;
+.header-content {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 2rem;
+  gap: 10px;
+  max-width: 960px;
+  margin: 0;
+}
+
+.header-content img {
+  height: 50px;
+}
+
+.header-content h2 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  max-width: 960px;
+}
+nav li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  font-weight: 600;
+  color: #1E1E1E;
+}
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9E9E9E;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+nav li:hover .dropdown-content {
+  display: block;
+}
+
+nav .dropdown-content div {
+  margin: 0.3rem 0;
+}
+main.content {
+  flex: 1;
+  max-width: 960px;
+  margin: 6rem auto 0 auto;
+  padding: 0rem 3rem 5rem 3rem;
   background-color: #f9f9f9;
 }
+
 
 .content-box {
   background-color: white;
@@ -83,6 +142,19 @@ body {
   background-color: #5d4037;
 }
 
+footer, .site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #9E9E9E;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 0.9em;
+  color: #000000;
+  z-index: 999;
+}
+
 .site-footer a {
   color: #e0e0e0;
   text-decoration: underline;
@@ -90,4 +162,48 @@ body {
 
 .site-footer a:hover {
   color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.downloads {
+  list-style: none;
+  padding-left: 0;
+}
+
+.downloads li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.github-fork-ribbon, .gh-header {
+  display: none !important;
+}
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0.25em 0.6em;
+  font-size: 0.8em;
+  background-color: #cecece;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.copy-button:hover {
+  background-color: #1ac411;
+}
+pre {
+  position: relative; /* Ermöglicht absolute Positionierung innerhalb */
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1em;
+  overflow-x: auto;
+  font-size: 0.95em;
 }

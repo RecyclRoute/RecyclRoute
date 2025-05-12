@@ -28,8 +28,7 @@ def translate_start_coord(coord_3857):
 
 def prepare_graph(input_json, input_gpkg):
     UNWANTED_OBJEKTART = ['Ausfahrt', 'Einfahrt', 'Autobahn', 'Raststaette', 'Zufahrt',
-                          'Dienstzufahrt', 'Autozug', 'Faehre', '1m Weg', '1m Wegfragment',
-                          '2m Wegfragment', 'Markierte Spur', 'Autostrasse', 'Klettersteig', 'Provisorium']
+                          'Dienstzufahrt', 'Autozug', 'Faehre','Autostrasse', 'Klettersteig', 'Provisorium']
 
     UNWANTED_WANDERWEG = ['Wanderweg', 'Bergwanderweg', 'Alpinwanderweg', 'andere']
 

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/RecyclRoute/assets/images/RecyclRoute_Logo.png" type="image/x-icon">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Funktionen | RecylRoute</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Funktionen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Webroutenberechung für Recyclingsammlungen" />
+<meta property="og:description" content="Webroutenberechung für Recyclingsammlungen" />
+<link rel="canonical" href="http://localhost:4000/RecyclRoute/funktionen.html" />
+<meta property="og:url" content="http://localhost:4000/RecyclRoute/funktionen.html" />
+<meta property="og:site_name" content="RecylRoute" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Funktionen" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Webroutenberechung für Recyclingsammlungen","headline":"Funktionen","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/RecyclRoute/Bilder/RecyclRoute_Logo.png"}},"url":"http://localhost:4000/RecyclRoute/funktionen.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/RecyclRoute/assets/css/style.css?v=">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/RecyclRoute/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('pre > code').forEach(codeBlock => {
+    const button = document.createElement('button');
+    button.className = 'copy-button';
+    button.type = 'button';
+    button.innerText = '📋 Kopieren';
+
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(codeBlock.innerText).then(() => {
+        button.innerText = '✅ Kopiert!';
+        setTimeout(() => (button.innerText = '📋 Kopieren'), 2000);
+      });
+    });
+
+    const pre = codeBlock.parentNode;
+    pre.appendChild(button); // ⬅ Button INS <pre> einfügen, nicht davor
+  });
+});
+</script>
+<body>
+    <header>
+    
+    <div class="header-content">
+      <img src="/RecyclRoute/assets/images/RecyclRoute_Logo.png" alt="Logo">
+      <h2>
+        <a href="/RecyclRoute/index.html" style="text-decoration: none; color: inherit;">
+          RecyclRoute - Dokumentation RecyclRoute
+        </a>
+      </h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/RecyclRoute/einleitung.html">Einleitung</a></li>
+        <li><a href="/RecyclRoute/installation.html">Installation</a></li>
+        <li><a href="/RecyclRoute/konzept.html">Konzept</a></li>
+        <li class="dropdown">
+          <a href="/RecyclRoute/funktionen.html">Erklärung der Funktionen</a>
+          <div class="dropdown-content">
+            <div><a href="/RecyclRoute/funktionen.html#startpage">Startpage</a></div>
+            <div><a href="/RecyclRoute/funktionen.html#planer">Planner</a></div>
+            <div><a href="/RecyclRoute/funktionen.html#report">Report</a></div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/RecyclRoute/aufbauGDI.html">Aufbau GDI</a>
+          <div class="dropdown-content">
+            <div><a href="/RecyclRoute/aufbauGDI.html#Backend">Backend</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#Grundlagedaten">Grundlagedaten</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#datenbank-und-datenbankschema">Datenbank</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#berechnungen">Berechnungen</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#frontend">Frontend</a></div>
+          </div>
+        </li>
+        <li><a href="/RecyclRoute/ausblick.html">Erweiterungsmöglichkeiten</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content">
+    <h1 id="erklärung-der-funktionen-von-recyclroute">Erklärung der Funktionen von RecyclRoute</h1>
+<p><a id="top"></a>
+In diesem Abschnitt werden die Funktionen und Interaktionen der RecyclRoute beschrieben.</p>
+
+<h1 id="startpage">Startpage</h1>
+<div id="startpage"></div>
+<p>Auf der Startseite muss man sich bereits ein erstesmal entscheiden was man machen möchte. Wenn man Papier- oder Kartonsammlungen organisieren oder deine Route planen möchtest, muss man auf Planner klicken. Wenn du nicht abgeholtes oder falsch deponiertes Material melden möchtest, muss man auf Report klicken. Dann wird man dementsprechend auf die Seite mit den Entsprechenden Seiten geleitet. Die Farbe soll dabei auch gleich aufzeigen wo man ist. So ist der Planner in Grüntönen gehalten wärend der Report in Braun gehalten ist. Beides so, dass es doch auch das man es mit Recycling, Umwelt und Ökologischen Themen direkt assoziert.
+<img src="Bilder/Startpage_1.png" alt="Startseite" /></p>
+
+<h2 id="funktionen-planer">Funktionen Planer:</h2>
+
+<h3 id="projekt-erstellen">Projekt erstellen</h3>
+
+<h4 id="berechnungsalgorithmus">Berechnungsalgorithmus</h4>
+<div id="berechnungsalgorithmus"></div>
+
+<p><strong>Routing- und Optimierungs-Tool für vollständige Wegenetzbefahrung</strong></p>
+
+<p><strong>Zweck</strong></p>
+
+<p>Das ganze ist in einem Python-Skript aufgebaut und soll automatisiert eine optimale Route durch ein definiertes Strassennetz berechnen. Ziel ist es, alle relevanten Strassen in einem Gebiet möglichst effizient und ohne doppelte Befahrung abzufahren – ähnlich zum sogenannten Chinese Postman Problem welches eher Bekannt ist.</p>
+
+<p><strong>Eingaben</strong></p>
+
+<p>Als Eingaben von der App zum das Skript auszuführen folgende Daten benötigt:</p>
+
+<ul>
+  <li>Ein JSON welches das Polygon definiert</li>
+  <li>Ein Geopackage Datei welche mit einem Weiteren Skript vorbereitet werden muss (Preprocessing) und enthält die Geometrien und Eigenschaften der Strassenachsen</li>
+  <li>Die Startkoordinaten welche den Ausgangspunkt der Route dienen</li>
+</ul>
+
+<p><strong>Ausgaben</strong></p>
+
+<p>Als Ausgabe werden mehrere Dateien welche verwendet werden können / in Zukunft verwendet werden könnten.</p>
+<ul>
+  <li>eine Datei mit der gesamten berechneten Route als GeoJSON</li>
+  <li>Eine Datei mit Navigationsanweisungen</li>
+</ul>
+
+<p><strong>Verwendete Module</strong></p>
+
+<p>Das Skript verwendet unter anderem folgende Python-Bibliotheken:</p>
+
+<ul>
+  <li>
+    <p>Für Geodatenverarbeitung: geopandas, shapely, pyproj, networkx</p>
+  </li>
+  <li>
+    <p>Für numerische und graphentheoretische Operationen: numpy, scipy.spatial.cKDTree</p>
+  </li>
+  <li>
+    <p>Für Optimierung: ortools (Google OR-Tools)</p>
+  </li>
+  <li>
+    <p>Für Routing-Anfragen: requests in Verbindung mit einer lokalen Valhalla-Instanz</p>
+  </li>
+  <li>
+    <p>Für allgemeine Dateiverarbeitung: json, os</p>
+  </li>
+</ul>
+
+<p><strong>Ablauf und Mathematische Grundlagen</strong></p>
+
+<p>Zunächst werden die Startkoordinaten vom Koordinatensystem EPSG:3857 (verwendet aufgrund der von <strong>Open Layers</strong>) in das Schweizer Landeskoordinatensystem EPSG:2056 transformiert. Anschliessend wird das Strassennetz im Zielgebiet aufbereitet.</p>
+
+<p>Die Aufbereitung erfolgt durch Einlesen des GeoPackage-Layers und Filtern irrelevanter bzw. unzulässiger Strassen. Dabei werden folgende Eigenschaften ausgeschlossen:</p>
+
+<p>Objektarten wie: Ausfahrt, Einfahrt, Autobahn, Raststätte, Zufahrt, Dienstzufahrt, Autozug, Fähre, Autostrasse, Klettersteig, Provisorium</p>
+
+<ul>
+  <li>
+    <p>Wanderwegtypen wie: Wanderweg, Bergwanderweg, Alpinwanderweg sowie andere</p>
+  </li>
+  <li>
+    <p>Verkehrsbeschränkungen wie: Allgemeines Fahrverbot, Fussweg, Fussgängerzone, Gebührenpflichtig, Gesicherte Kletterpartie, Militärstrasse, Radweg, Radweg und Fussweg, Reitweg, Reitweg und Fussweg, Rennstrecke, Panzerpiste, Teststrecke, Allgemeine Verkehrsbeschränkung, Gesperrt</p>
+  </li>
+  <li>
+    <p>Belagsarten wie: Natur</p>
+  </li>
+</ul>
+
+<p>Danach werden die Liniengeometrien der verbleibenden Strassen analysiert. Einzelne Punkte entlang der Linien werden mittels Punkt-Snapping zusammengeführt, falls sie sich innerhalb einer bestimmten Toleranz (0.5 Meter) befinden. Gerade Strassenabschnitte, die einen Winkel von mehr als 170 Grad zwischen den Segmenten aufweisen, werden automatisch zusammengeführt.</p>
+
+<p>Aus diesen Segmenten wird ein ungerichteter Multigraph erzeugt, in dem die Punkte als Knoten und die Strassenabschnitte als Kanten dargestellt sind. Danach werden zu kleine oder isolierte Komponenten (weniger als drei Knoten) entfernt.</p>
+
+<p>Mit diesem Graphen wird danach das Chinese Postman Problem gelöst. Dazu werden alle Knoten mit ungeradem Knotengrad identifiziert. Diese Knoten werden paarweise so verbunden, dass die zusätzlichen Verbindungen eine minimale Gesamtlänge haben. Diese Minimierung erfolgt durch eine Paarung via gewichteter Matching-Optimierung. Der resultierende Graph enthält ausschliesslich gerade Knotengrade und ist daher eulerisierbar – ein Eulerkreis kann gefunden werden, der alle Kanten exakt einmal durchläuft. Der Pfad wird mit dem Hierholzer-Algorithmus berechnet, beginnend beim der Startposition am nächstgelegenen Knoten.</p>
+
+<p>Optional kann die erzeugte Koordinatenfolge noch gefiltert werden, um Punkte mit zu geringem Abstand (z. B. unter 10 Metern) zu entfernen. Dieser Schritt ist jedoch standardmässig deaktiviert.</p>
+
+<p>Für die weitere Optimierung wird eine Distanzmatrix aufgebaut, welche die realen Wegstrecken zwischen allen Koordinaten enthält. Diese Distanzen werden nicht als Luftlinie, sondern über Valhalla als echte Reisewege berechnet. Dabei erkennt das Skript automatisch, ob Auto- oder Fuss-Routing verwendet werden muss, da dies nicht zwingend Identisch sein muss wie die Daten welche aus dem gpkg SwissTLM3D bezogen wurden. Die Matrixberechnung erfolgt parallelisiert mit mehreren Threads.</p>
+
+<p>Mit dieser Distanzmatrix wird auf eine Art das Traveling Salesman Problem (TSP) gelöst – also die Reihenfolge bestimmt, in der die Punkte mit geringster Gesamtreiselänge besucht werden. Dies geschieht mithilfe der Google OR-Tools mit der Strategie „Pfad mit geringstem Startbogen“.</p>
+
+<p>Im letzten Schritt werden die optimierten Koordinaten in Teilblöcke unterteilt und jeweils bei Valhalla (selber gehostet) angefragt, um echte turn-by-turn-Navigationen zu erhalten. Pro Block werden JSON- und GeoJSON-Dateien erzeugt. Diese werden zu einer Gesamtroute zusammengefügt und als finale GeoJSON-Datei gespeichert. Parallel dazu werden detaillierte Navigationsanweisungen in ausgegeben.</p>
+
+<h2 id="funktionen-report">Funktionen Report:</h2>
+
+<h2 id="funktionen-allgemein">Funktionen allgemein:</h2>
+<ul>
+  <li>X</li>
+  <li>Y</li>
+  <li>
+    <p>Z</p>
+  </li>
+  <li>Möglichkeit das GNSS des Gerätes zur Standortlokalisation zu nutzen</li>
+</ul>
+
+<p><a href="#top">↑ Zurück zum Beginn der Webseite</a></p>
+
+<div style="display: flex; justify-content: space-between;">
+  <div>
+    <a href="einleitung.html">← Einleitung</a>
+  </div>
+  <div>
+    <a href="aufbauGDI.html">Aufbau GDI →</a>
+  </div>
+</div>
+
+  </main>
+  <footer>
+    <p>
+        © RecylRoute - 2025 |
+        <a href="https://github.com/RecyclRoute/RecyclRoute">GitHub Projektseite</a>
+         |
+        <small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
+    </p>
+  </footer>
+
+  <script src="/RecyclRoute/assets/js/scale.fix.js"></script>
+</body>
+</html>
