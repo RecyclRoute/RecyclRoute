@@ -6,6 +6,7 @@ import maplibregl from "maplibre-gl";
 export const MapLayerPopup = (props) => {
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState('');
+  const [activeMarkers, setActiveMarkers] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:8000/getProjects')
@@ -14,31 +15,78 @@ export const MapLayerPopup = (props) => {
       .catch(err => console.error('Fehler beim Laden der Projekte:', err));
   }, []);
 
-  const closePopup = () => props.setChangeLayerMode(false);
+  const closeLayerMode = () => props.setChangeLayerMode(false);
 
   const loadLayer = () => {
-    if (!selectedProject || !props.map) return;
-
+    console.log("Layer anzeigen wurde geklickt");
+  
+    if (!selectedProject) {
+      console.warn("Kein Projekt ausgewählt.");
+      return;
+    }
+  
+    if (!props.map) {
+      console.warn("Karte nicht vorhanden (map).");
+      return;
+    }
+  
+    console.log("Lade Punkte für Projekt:", selectedProject);
+  
+    // ⛔️ Vorherige Marker entfernen
+    props.layerMarkers.forEach(marker => marker.remove());
+    props.setLayerMarkers([]); // Zustand leeren
+  
     fetch(`http://localhost:8000/getPointsByProject/${selectedProject}`)
       .then(res => res.json())
       .then(data => {
+        console.log("Erhaltene Punkte:", data.points);
+  
+        if (!Array.isArray(data.points) || data.points.length === 0) {
+          console.warn("Keine Punkte empfangen oder Liste leer.");
+          return;
+        }
+  
+        const newMarkers = [];
+  
         data.points.forEach((point) => {
-          new maplibregl.Marker({ color: 'blue' })
+          if (point.longitude === undefined || point.latitude === undefined) {
+            console.warn("Ungültiger Punkt:", point);
+            return;
+          }
+  
+          const marker = new maplibregl.Marker({ color: 'blue' })
             .setLngLat([point.longitude, point.latitude])
             .addTo(props.map);
+  
+          newMarkers.push(marker);
         });
+  
+        props.setLayerMarkers(newMarkers); // Neue Marker speichern
+        props.setChangeLayerMode(false);   // Popup schließen
       })
       .catch(err => console.error('Fehler beim Laden der Punkte:', err));
-
-      props.setChangeLayerMode(false);
   };
+  
+  
+  const resetLayer = () => {
+    console.log("Layer wird zurückgesetzt");
+  
+    props.layerMarkers.forEach(marker => marker.remove());
+    props.setLayerMarkers([]);
+    setSelectedProject("");
+    props.setChangeLayerMode(false); // optional
+  };
+  
+  
+  
+
 
   return (
     <div className="addmarker-overlay">
       <div className="addmarker-content">
         <div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-start", height: "45px"}}>
           <h3 style={{marginTop: 0}}>Punktlayer anzeigen</h3>
-          <button className="closeButton" onClick={closePopup}>X</button>
+          <button className="closeButton" onClick={closeLayerMode}>X</button>
         </div>
         <label>
           Projekt wählen:
@@ -49,6 +97,7 @@ export const MapLayerPopup = (props) => {
         </label>
         <div>
           <button className="SaveButton" onClick={loadLayer}>Layer anzeigen</button>
+          <button className="SaveButton" onClick={resetLayer}>Layer zurücksetzen</button>
         </div>
       </div>
     </div>

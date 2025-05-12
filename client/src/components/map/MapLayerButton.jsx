@@ -6,11 +6,11 @@ import "./Map.css";
 import { MapLayerPopup } from "./MapLayerPopup.jsx";
 
 
-export const MapLayerButton = (props,{classNameMapButtons = "" }) => {
+export const MapLayerButton = (props) => {
 
   return (
     <>
-      <button className={classNameMapButtons} onClick={() => props.setChangeLayerMode(true)}>
+      <button className={props.classNameMapButtons} onClick={() => props.setChangeLayerMode(true)}>
         <LayerIcon style={{ width: "30px", height: "30px" }}/>
       </button>
     </>

@@ -1,5 +1,7 @@
 from fastapi import FastAPI, HTTPException, File, UploadFile, Form, Request
 from fastapi.middleware.cors import CORSMiddleware
+from psycopg2.extras import RealDictCursor
+import json
 import psycopg2
 import psycopg2.extras
 from datetime import datetime
@@ -91,11 +93,39 @@ def get_points():
     cur.close()
     conn.close()
 
-    points = [{"id": row[0], "name": row[1], "latitude": row[2], "longitude": row[3]} for row in rows]
+    points = [{"id": row[0], "name": row[1], "longitude": row[2], "latitude": row[3]} for row in rows]
     return {"points": points}
 
+# Endpoint to get points per project from the database
+from fastapi import FastAPI
+from psycopg2.extras import RealDictCursor
+import json
+
+@app.get("/getPointsByProject/{project_id}")
+def get_points_by_project(project_id: int):
+    conn = get_db_connection()
+    cur = conn.cursor(cursor_factory=RealDictCursor)
+
+    cur.execute("""
+        SELECT 
+            id,
+            type,
+            ST_X(geom) AS longitude,
+            ST_Y(geom) AS latitude
+        FROM points
+        WHERE project_id = %s
+    """, (project_id,))
+    rows = cur.fetchall()
+
+    cur.close()
+    conn.close()
+
+    return {"points": rows}
+
+
+
 # Endpoint to add a new point to the database
-VALID_TYPES = {"Recyclingut falsch deponiert", "Recyclingut nicht abgeholt", "Recyclingut enthält Fremdstoffe", "Andere"}
+VALID_TYPES = {"Recyclinggut falsch deponiert", "Recyclinggut nicht abgeholt", "Recyclinggut enthält Fremdstoffe", "Andere"}
 
 @app.post("/addPointWithDetails")
 async def add_point_with_details(
@@ -108,7 +138,7 @@ async def add_point_with_details(
 ):
     # Validate type
     if point_type not in VALID_TYPES:
-        raise HTTPException(status_code=400, detail="Invalid type. Must be one of: Recyclingut falsch deponiert, Recyclingut nicht abgeholt, Recyclingut enthält Fremdstoffe, Andere")
+        raise HTTPException(status_code=400, detail="Invalid type. Must be one of: Recyclinggut falsch deponiert, Recyclinggut nicht abgeholt, Recyclinggut enthält Fremdstoffe, Andere")
 
     # Validate date format
     try:
