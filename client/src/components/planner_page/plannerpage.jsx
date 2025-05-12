@@ -11,7 +11,7 @@ import { ProjectManagerPopup } from "./project_manager/ProjectManagerPopup.jsx";
 import { useNavigate } from "react-router-dom";
 import { BaseMap } from "../map/BaseMap.jsx";
 import useCreatePolygon from "../map/useCreatePolygon.jsx";
-import { NewProjectPopup } from "./project_manager/NewProjectPopup.jsx";
+import { NewProjectPopup } from "./project_manager/new_project/NewProjectPopup.jsx";
 import { ProjectUseMenuPopup } from "./project_manager/ProjectUseMenuPopup.jsx";
 
 export const PlannerPage = () => {
