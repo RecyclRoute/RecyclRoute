@@ -68,9 +68,9 @@ class Project(BaseModel):
 @app.get("/getPointTypes")
 def get_point_types():
     return [
-        "Recyclingut falsch deponiert",
-        "Recyclingut nicht abgeholt",
-        "Recyclingut enthält Fremdstoffe",
+        "Recyclinggut falsch deponiert",
+        "Recyclinggut nicht abgeholt",
+        "Recyclinggut enthält Fremdstoffe",
         "Andere"
     ]
 
