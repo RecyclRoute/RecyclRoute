@@ -11,7 +11,7 @@ export const PlannerpageHeader = (props) => {
       <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
         RecyclRoute
       </Link>{" "}
-      - Report
+      - Planner
     </div>
   </div>
     </header>

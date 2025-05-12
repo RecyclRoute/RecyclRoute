@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../plannerpage.css'; // Modal Styling ist schon drin!
+import '../../plannerpage.css'; // Modal Styling ist schon drin!
 
 export const NewProjectPopup = (props) => {
   
@@ -34,6 +34,16 @@ export const NewProjectPopup = (props) => {
           value={props.Location}
           onChange={(e) => props.setLocation(e.target.value)}
         />
+        <div>
+          <label>
+            Datum:
+            <input 
+              type="date"
+              value={props.Datum}
+              onChange={(e) => props.setDatum(e.target.value)}
+            />
+          </label>
+        </div>
         <div style={{ marginTop: '10px' }}>
           <button onClick={props.checkInputNewProject}>Weiter</button>
         </div>

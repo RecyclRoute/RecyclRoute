@@ -11,7 +11,7 @@ import { ProjectManagerPopup } from "./project_manager/ProjectManagerPopup.jsx";
 import { useNavigate } from "react-router-dom";
 import { BaseMap } from "../map/BaseMap.jsx";
 import useCreatePolygon from "../map/useCreatePolygon.jsx";
-import { NewProjectPopup } from "./project_manager/NewProjectPopup.jsx";
+import { NewProjectPopup } from "./project_manager/new_project/NewProjectPopup.jsx";
 import { ProjectUseMenuPopup } from "./project_manager/ProjectUseMenuPopup.jsx";
 
 export const PlannerPage = () => {
@@ -29,7 +29,7 @@ export const PlannerPage = () => {
   const [ActiveProject, setActiveProject] = useState(null);
   const [projects, setProjects] = useState([]);
   const [ProjectName, setProjectName] = useState('');
-  const [datum, setDatum] = useState('');
+  const [Datum, setDatum] = useState('');
   const [Location, setLocation] = useState('');
   
   const navigate = useNavigate();
@@ -40,6 +40,8 @@ export const PlannerPage = () => {
 
   const handleStartPointConfirmed = (lngLat) => {
     console.log("Startpunkt gesetzt:", lngLat);
+    setCreateStartPointMode(true);
+
     // Do anything you want here — send to backend, enable routing, etc.
   };
   
@@ -255,6 +257,8 @@ export const PlannerPage = () => {
           Location={Location}
           setLocation={setLocation}
           checkInputNewProject={checkInputNewProject}
+          Datum={Datum}
+          setDatum={setDatum}
         />
       )}
 
