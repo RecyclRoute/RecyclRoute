@@ -7,24 +7,24 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647897,
-            47.525163
+            8.30552,
+            47.046164
           ],
           [
-            7.647897,
-            47.525163
+            8.30552,
+            47.046164
           ]
         ]
       },
       "properties": {
         "step": 0,
-        "instruction": "Auf R\u00f6ssligasse Richtung Norden fahren.",
-        "verbal_pre": "Auf R\u00f6ssligasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
+        "instruction": "Auf Habsburgerstrasse Richtung Norden fahren.",
+        "verbal_pre": "Auf Habsburgerstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
         "length_km": 0.0,
         "type": 1,
         "street_names": [
-          "R\u00f6ssligasse"
+          "Habsburgerstrasse"
         ],
         "time_sec": 0.0
       }
@@ -35,30 +35,30 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647897,
-            47.525163
+            8.30552,
+            47.046164
           ],
           [
-            7.648142,
-            47.525654
+            8.305218,
+            47.046543
           ],
           [
-            7.648185,
-            47.52574
+            8.304917,
+            47.046897
           ]
         ]
       },
       "properties": {
         "step": 1,
-        "instruction": "Auf Schulstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung Norden fahren. Dann, in 70 Meter, Das Ziel wird erreicht.",
-        "verbal_post": "70 Meter weiter der Route folgen.",
-        "length_km": 0.068,
+        "instruction": "Auf Dornacherstrasse Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Dornacherstrasse Richtung Nordwesten fahren. Dann, in 90 Meter, Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_post": "90 Meter weiter der Route folgen.",
+        "length_km": 0.094,
         "type": 1,
         "street_names": [
-          "Schulstrasse"
+          "Dornacherstrasse"
         ],
-        "time_sec": 8.224
+        "time_sec": 11.287
       }
     },
     {
@@ -67,26 +67,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648185,
-            47.52574
+            8.304917,
+            47.046897
           ],
           [
-            7.648302,
-            47.525973
+            8.305428,
+            47.047109
+          ],
+          [
+            8.305849,
+            47.047284
+          ],
+          [
+            8.306361,
+            47.047497
           ]
         ]
       },
       "properties": {
         "step": 2,
-        "instruction": "Auf Schulstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "30 Meter weiter der Route folgen.",
-        "length_km": 0.027,
-        "type": 1,
+        "instruction": "Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.127,
+        "type": 10,
         "street_names": [
-          "Schulstrasse"
+          "Murbacherstrasse"
         ],
-        "time_sec": 3.281
+        "time_sec": 20.427
       }
     },
     {
@@ -95,26 +103,42 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648302,
-            47.525973
+            8.306361,
+            47.047497
           ],
           [
-            7.648185,
-            47.52574
+            8.306418,
+            47.047431
+          ],
+          [
+            8.306498,
+            47.047338
+          ],
+          [
+            8.306801,
+            47.046986
+          ],
+          [
+            8.306947,
+            47.046817
+          ],
+          [
+            8.306996,
+            47.04676
           ]
         ]
       },
       "properties": {
         "step": 3,
-        "instruction": "Auf Schulstrasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "30 Meter weiter der Route folgen.",
-        "length_km": 0.027,
-        "type": 1,
+        "instruction": "Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Winkelriedstrasse abbiegen. Dann, in 100 Meter, Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.094,
+        "type": 10,
         "street_names": [
-          "Schulstrasse"
+          "Winkelriedstrasse"
         ],
-        "time_sec": 3.281
+        "time_sec": 17.063
       }
     },
     {
@@ -123,26 +147,26 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648185,
-            47.52574
+            8.306996,
+            47.04676
           ],
           [
-            7.648302,
-            47.525973
+            8.306485,
+            47.046553
           ]
         ]
       },
       "properties": {
         "step": 4,
-        "instruction": "Auf Schulstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "30 Meter weiter der Route folgen.",
-        "length_km": 0.027,
-        "type": 1,
+        "instruction": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Habsburgerstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 10,
         "street_names": [
-          "Schulstrasse"
+          "Habsburgerstrasse"
         ],
-        "time_sec": 3.281
+        "time_sec": 10.794
       }
     },
     {
@@ -151,26 +175,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648302,
-            47.525973
+            8.306485,
+            47.046553
           ],
           [
-            7.648421,
-            47.526208
+            8.306256,
+            47.046816
+          ],
+          [
+            8.306223,
+            47.046855
+          ],
+          [
+            8.305849,
+            47.047284
           ]
         ]
       },
       "properties": {
         "step": 5,
-        "instruction": "Auf Schulstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "30 Meter weiter der Route folgen.",
-        "length_km": 0.027,
+        "instruction": "Auf Kauffmannweg Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung Nordwesten fahren. Dann Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.094,
         "type": 1,
         "street_names": [
-          "Schulstrasse"
+          "Kauffmannweg"
         ],
-        "time_sec": 3.327
+        "time_sec": 11.407
       }
     },
     {
@@ -179,30 +211,26 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648421,
-            47.526208
+            8.305849,
+            47.047284
           ],
           [
-            7.648423,
-            47.526213
-          ],
-          [
-            7.648443,
-            47.526255
+            8.306361,
+            47.047497
           ]
         ]
       },
       "properties": {
         "step": 6,
-        "instruction": "Auf Schulstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
-        "length_km": 0.005,
-        "type": 1,
+        "instruction": "Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Murbacherstrasse abbiegen. Dann Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 10,
         "street_names": [
-          "Schulstrasse"
+          "Murbacherstrasse"
         ],
-        "time_sec": 0.653
+        "time_sec": 10.794
       }
     },
     {
@@ -211,38 +239,42 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648443,
-            47.526255
+            8.306361,
+            47.047497
           ],
           [
-            7.648458,
-            47.526287
+            8.306418,
+            47.047431
           ],
           [
-            7.648476,
-            47.526323
+            8.306498,
+            47.047338
           ],
           [
-            7.648492,
-            47.526347
+            8.306801,
+            47.046986
           ],
           [
-            7.648518,
-            47.526403
+            8.306947,
+            47.046817
+          ],
+          [
+            8.306996,
+            47.04676
           ]
         ]
       },
       "properties": {
         "step": 7,
-        "instruction": "Auf Schulstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "20 Meter weiter der Route folgen.",
-        "length_km": 0.017,
-        "type": 1,
+        "instruction": "Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Winkelriedstrasse abbiegen. Dann, in 100 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.094,
+        "type": 10,
         "street_names": [
-          "Schulstrasse"
+          "Winkelriedstrasse"
         ],
-        "time_sec": 1.757
+        "time_sec": 17.063
       }
     },
     {
@@ -251,26 +283,30 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648518,
-            47.526403
+            8.306996,
+            47.04676
           ],
           [
-            7.64868,
-            47.526777
+            8.30737,
+            47.046317
+          ],
+          [
+            8.307522,
+            47.046137
           ]
         ]
       },
       "properties": {
         "step": 8,
-        "instruction": "Auf Schulstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "40 Meter weiter der Route folgen.",
-        "length_km": 0.043,
+        "instruction": "Auf Winkelriedstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Winkelriedstrasse Richtung S\u00fcdosten fahren. Dann, in 80 Meter, Links auf Waldst\u00e4tterstrasse abbiegen.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.08,
         "type": 1,
         "street_names": [
-          "Schulstrasse"
+          "Winkelriedstrasse"
         ],
-        "time_sec": 4.464
+        "time_sec": 9.62
       }
     },
     {
@@ -279,26 +315,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.64868,
-            47.526777
+            8.307522,
+            47.046137
           ],
           [
-            7.648808,
-            47.527072
+            8.308217,
+            47.046412
+          ],
+          [
+            8.308278,
+            47.046437
+          ],
+          [
+            8.308335,
+            47.046459
           ]
         ]
       },
       "properties": {
         "step": 9,
-        "instruction": "Auf Schulstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "40 Meter weiter der Route folgen.",
-        "length_km": 0.034,
-        "type": 1,
+        "instruction": "Links auf Waldst\u00e4tterstrasse abbiegen.",
+        "verbal_pre": "Links auf Waldst\u00e4tterstrasse abbiegen. Dann Links auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.071,
+        "type": 15,
         "street_names": [
-          "Schulstrasse"
+          "Waldst\u00e4tterstrasse"
         ],
-        "time_sec": 3.558
+        "time_sec": 10.448
       }
     },
     {
@@ -307,26 +351,38 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648808,
-            47.527072
+            8.308335,
+            47.046459
           ],
           [
-            7.64868,
-            47.526777
+            8.308286,
+            47.046515
+          ],
+          [
+            8.308048,
+            47.046789
+          ],
+          [
+            8.307841,
+            47.047027
+          ],
+          [
+            8.307794,
+            47.047082
           ]
         ]
       },
       "properties": {
         "step": 10,
-        "instruction": "Auf Schulstrasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "40 Meter weiter der Route folgen.",
-        "length_km": 0.034,
-        "type": 1,
+        "instruction": "Links auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Links auf Hirschmattstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.079,
+        "type": 15,
         "street_names": [
-          "Schulstrasse"
+          "Hirschmattstrasse"
         ],
-        "time_sec": 3.558
+        "time_sec": 11.74
       }
     },
     {
@@ -335,26 +391,38 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.64868,
-            47.526777
+            8.307794,
+            47.047082
           ],
           [
-            7.648681,
-            47.52678
+            8.307734,
+            47.047151
+          ],
+          [
+            8.307383,
+            47.047555
+          ],
+          [
+            8.3072,
+            47.047765
+          ],
+          [
+            8.307149,
+            47.047824
           ]
         ]
       },
       "properties": {
         "step": 11,
-        "instruction": "Auf Schulstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung Norden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
-        "length_km": 0.0,
+        "instruction": "Auf Hirschmattstrasse Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung Nordwesten fahren. Dann, in 100 Meter, Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.096,
         "type": 1,
         "street_names": [
-          "Schulstrasse"
+          "Hirschmattstrasse"
         ],
-        "time_sec": 0.034
+        "time_sec": 11.555
       }
     },
     {
@@ -363,26 +431,38 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648681,
-            47.52678
+            8.307149,
+            47.047824
           ],
           [
-            7.648717,
-            47.526861
+            8.307238,
+            47.047857
+          ],
+          [
+            8.307317,
+            47.047887
+          ],
+          [
+            8.307884,
+            47.048101
+          ],
+          [
+            8.307916,
+            47.048102
           ]
         ]
       },
       "properties": {
         "step": 12,
-        "instruction": "Auf Schulstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung Norden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
-        "length_km": 0.009,
-        "type": 2,
+        "instruction": "Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Murbacherstrasse abbiegen. Dann Rechts auf Sempacherstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.067,
+        "type": 10,
         "street_names": [
-          "Schulstrasse"
+          "Murbacherstrasse"
         ],
-        "time_sec": 0.966
+        "time_sec": 13.47
       }
     },
     {
@@ -391,26 +471,46 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648717,
-            47.526861
+            8.307916,
+            47.048102
           ],
           [
-            7.648518,
-            47.526403
+            8.307959,
+            47.048085
+          ],
+          [
+            8.307993,
+            47.048045
+          ],
+          [
+            8.308093,
+            47.047928
+          ],
+          [
+            8.308461,
+            47.047499
+          ],
+          [
+            8.308474,
+            47.047487
+          ],
+          [
+            8.308556,
+            47.047389
           ]
         ]
       },
       "properties": {
         "step": 13,
-        "instruction": "Auf Schulstrasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung S\u00fcden fahren. Dann Links auf Lachmattstrasse abbiegen.",
-        "verbal_post": "50 Meter weiter der Route folgen.",
-        "length_km": 0.053,
-        "type": 3,
+        "instruction": "Rechts auf Sempacherstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Sempacherstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "90 Meter weiter der Route folgen.",
+        "length_km": 0.093,
+        "type": 10,
         "street_names": [
-          "Schulstrasse"
+          "Sempacherstrasse"
         ],
-        "time_sec": 5.466
+        "time_sec": 15.072
       }
     },
     {
@@ -419,38 +519,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648518,
-            47.526403
+            8.308556,
+            47.047389
           ],
           [
-            7.648636,
-            47.526386
+            8.308928,
+            47.046963
           ],
           [
-            7.648787,
-            47.526363
+            8.309024,
+            47.046853
           ],
           [
-            7.64912,
-            47.526314
-          ],
-          [
-            7.649335,
-            47.526285
+            8.309103,
+            47.046763
           ]
         ]
       },
       "properties": {
         "step": 14,
-        "instruction": "Links auf Lachmattstrasse abbiegen.",
-        "verbal_pre": "Links auf Lachmattstrasse abbiegen. Dann Links auf Johann Br\u00fcderlin-Strasse abbiegen.",
-        "verbal_post": "60 Meter weiter der Route folgen.",
-        "length_km": 0.063,
-        "type": 15,
+        "instruction": "Auf Sempacherstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Sempacherstrasse Richtung S\u00fcdosten fahren. Dann, in 80 Meter, Links auf Waldst\u00e4tterstrasse abbiegen.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.081,
+        "type": 1,
         "street_names": [
-          "Lachmattstrasse"
+          "Sempacherstrasse"
         ],
-        "time_sec": 10.094
+        "time_sec": 9.737
       }
     },
     {
@@ -459,26 +555,38 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649335,
-            47.526285
+            8.309103,
+            47.046763
           ],
           [
-            7.649501,
-            47.526668
+            8.309596,
+            47.046951
+          ],
+          [
+            8.309645,
+            47.046965
+          ],
+          [
+            8.309739,
+            47.046968
+          ],
+          [
+            8.309811,
+            47.046971
           ]
         ]
       },
       "properties": {
         "step": 15,
-        "instruction": "Links auf Johann Br\u00fcderlin-Strasse abbiegen.",
-        "verbal_pre": "Links auf Johann Br\u00fcderlin-Strasse abbiegen. Dann Das Ziel wird erreicht.",
-        "verbal_post": "40 Meter weiter der Route folgen.",
-        "length_km": 0.044,
+        "instruction": "Links auf Waldst\u00e4tterstrasse abbiegen.",
+        "verbal_pre": "Links auf Waldst\u00e4tterstrasse abbiegen. Dann Links auf Zentralstrasse abbiegen.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.059,
         "type": 15,
         "street_names": [
-          "Johann Br\u00fcderlin-Strasse"
+          "Waldst\u00e4tterstrasse"
         ],
-        "time_sec": 6.339
+        "time_sec": 8.987
       }
     },
     {
@@ -487,26 +595,30 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649501,
-            47.526668
+            8.309811,
+            47.046971
           ],
           [
-            7.649624,
-            47.526952
+            8.309683,
+            47.047714
+          ],
+          [
+            8.309662,
+            47.047836
           ]
         ]
       },
       "properties": {
         "step": 16,
-        "instruction": "Auf Johann Br\u00fcderlin-Strasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Johann Br\u00fcderlin-Strasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "30 Meter weiter der Route folgen.",
-        "length_km": 0.032,
-        "type": 1,
+        "instruction": "Links auf Zentralstrasse abbiegen.",
+        "verbal_pre": "Links auf Zentralstrasse abbiegen. Dann Links auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.097,
+        "type": 15,
         "street_names": [
-          "Johann Br\u00fcderlin-Strasse"
+          "Zentralstrasse"
         ],
-        "time_sec": 3.394
+        "time_sec": 9.316
       }
     },
     {
@@ -515,26 +627,46 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649624,
-            47.526952
+            8.309662,
+            47.047836
           ],
           [
-            7.649501,
-            47.526668
+            8.309588,
+            47.047822
+          ],
+          [
+            8.309558,
+            47.047816
+          ],
+          [
+            8.309524,
+            47.047809
+          ],
+          [
+            8.309364,
+            47.047737
+          ],
+          [
+            8.309315,
+            47.047696
+          ],
+          [
+            8.309209,
+            47.047653
           ]
         ]
       },
       "properties": {
         "step": 17,
-        "instruction": "Auf Johann Br\u00fcderlin-Strasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Johann Br\u00fcderlin-Strasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "30 Meter weiter der Route folgen.",
-        "length_km": 0.032,
-        "type": 1,
+        "instruction": "Links auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Links auf Habsburgerstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "40 Meter weiter der Route folgen.",
+        "length_km": 0.04,
+        "type": 15,
         "street_names": [
-          "Johann Br\u00fcderlin-Strasse"
+          "Habsburgerstrasse"
         ],
-        "time_sec": 3.394
+        "time_sec": 8.138
       }
     },
     {
@@ -543,26 +675,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649501,
-            47.526668
+            8.309209,
+            47.047653
           ],
           [
-            7.649335,
-            47.526285
+            8.30904,
+            47.047585
+          ],
+          [
+            8.308743,
+            47.047465
+          ],
+          [
+            8.308556,
+            47.047389
           ]
         ]
       },
       "properties": {
         "step": 18,
-        "instruction": "Auf Johann Br\u00fcderlin-Strasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Johann Br\u00fcderlin-Strasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "40 Meter weiter der Route folgen.",
-        "length_km": 0.044,
+        "instruction": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren. Dann, in 60 Meter, Links auf Sempacherstrasse abbiegen.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.057,
         "type": 1,
         "street_names": [
-          "Johann Br\u00fcderlin-Strasse"
+          "Habsburgerstrasse"
         ],
-        "time_sec": 4.525
+        "time_sec": 6.94
       }
     },
     {
@@ -571,38 +711,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649335,
-            47.526285
+            8.308556,
+            47.047389
           ],
           [
-            7.64912,
-            47.526314
+            8.308928,
+            47.046963
           ],
           [
-            7.648787,
-            47.526363
+            8.309024,
+            47.046853
           ],
           [
-            7.648636,
-            47.526386
-          ],
-          [
-            7.648518,
-            47.526403
+            8.309103,
+            47.046763
           ]
         ]
       },
       "properties": {
         "step": 19,
-        "instruction": "Auf Lachmattstrasse Richtung Westen fahren.",
-        "verbal_pre": "Auf Lachmattstrasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "60 Meter weiter der Route folgen.",
-        "length_km": 0.063,
-        "type": 1,
+        "instruction": "Links auf Sempacherstrasse abbiegen.",
+        "verbal_pre": "Links auf Sempacherstrasse abbiegen. Dann, in 80 Meter, Links auf Waldst\u00e4tterstrasse abbiegen.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.081,
+        "type": 15,
         "street_names": [
-          "Lachmattstrasse"
+          "Sempacherstrasse"
         ],
-        "time_sec": 7.56
+        "time_sec": 11.842
       }
     },
     {
@@ -611,38 +747,38 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648518,
-            47.526403
+            8.309103,
+            47.046763
           ],
           [
-            7.648636,
-            47.526386
+            8.309596,
+            47.046951
           ],
           [
-            7.648787,
-            47.526363
+            8.309645,
+            47.046965
           ],
           [
-            7.64912,
-            47.526314
+            8.309739,
+            47.046968
           ],
           [
-            7.649335,
-            47.526285
+            8.309811,
+            47.046971
           ]
         ]
       },
       "properties": {
         "step": 20,
-        "instruction": "Auf Lachmattstrasse Richtung Osten fahren.",
-        "verbal_pre": "Auf Lachmattstrasse Richtung Osten fahren. Dann Das Ziel wird erreicht.",
+        "instruction": "Links auf Waldst\u00e4tterstrasse abbiegen.",
+        "verbal_pre": "Links auf Waldst\u00e4tterstrasse abbiegen. Dann Links auf Zentralstrasse abbiegen.",
         "verbal_post": "60 Meter weiter der Route folgen.",
-        "length_km": 0.063,
-        "type": 1,
+        "length_km": 0.059,
+        "type": 15,
         "street_names": [
-          "Lachmattstrasse"
+          "Waldst\u00e4tterstrasse"
         ],
-        "time_sec": 7.56
+        "time_sec": 8.987
       }
     },
     {
@@ -651,30 +787,30 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649335,
-            47.526285
+            8.309811,
+            47.046971
           ],
           [
-            7.649845,
-            47.526191
+            8.309683,
+            47.047714
           ],
           [
-            7.650337,
-            47.526054
+            8.309662,
+            47.047836
           ]
         ]
       },
       "properties": {
         "step": 21,
-        "instruction": "Auf Lachmattstrasse Richtung Osten fahren.",
-        "verbal_pre": "Auf Lachmattstrasse Richtung Osten fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "80 Meter weiter der Route folgen.",
-        "length_km": 0.08,
-        "type": 1,
+        "instruction": "Links auf Zentralstrasse abbiegen.",
+        "verbal_pre": "Links auf Zentralstrasse abbiegen. Dann Links auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.097,
+        "type": 15,
         "street_names": [
-          "Lachmattstrasse"
+          "Zentralstrasse"
         ],
-        "time_sec": 9.6
+        "time_sec": 9.316
       }
     },
     {
@@ -683,30 +819,42 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.650337,
-            47.526054
+            8.309662,
+            47.047836
           ],
           [
-            7.649845,
-            47.526191
+            8.309588,
+            47.047822
           ],
           [
-            7.649335,
-            47.526285
+            8.309558,
+            47.047816
+          ],
+          [
+            8.309524,
+            47.047809
+          ],
+          [
+            8.309364,
+            47.047737
+          ],
+          [
+            8.309315,
+            47.047696
           ]
         ]
       },
       "properties": {
         "step": 22,
-        "instruction": "Auf Lachmattstrasse Richtung Westen fahren.",
-        "verbal_pre": "Auf Lachmattstrasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "80 Meter weiter der Route folgen.",
-        "length_km": 0.08,
-        "type": 1,
+        "instruction": "Links auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Links auf Habsburgerstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "30 Meter weiter der Route folgen.",
+        "length_km": 0.031,
+        "type": 15,
         "street_names": [
-          "Lachmattstrasse"
+          "Habsburgerstrasse"
         ],
-        "time_sec": 9.6
+        "time_sec": 6.988
       }
     },
     {
@@ -715,38 +863,26 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649335,
-            47.526285
+            8.309315,
+            47.047696
           ],
           [
-            7.64912,
-            47.526314
-          ],
-          [
-            7.648787,
-            47.526363
-          ],
-          [
-            7.648636,
-            47.526386
-          ],
-          [
-            7.648518,
-            47.526403
+            8.309209,
+            47.047653
           ]
         ]
       },
       "properties": {
         "step": 23,
-        "instruction": "Auf Lachmattstrasse Richtung Westen fahren.",
-        "verbal_pre": "Auf Lachmattstrasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "60 Meter weiter der Route folgen.",
-        "length_km": 0.063,
+        "instruction": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.009,
         "type": 1,
         "street_names": [
-          "Lachmattstrasse"
+          "Habsburgerstrasse"
         ],
-        "time_sec": 7.56
+        "time_sec": 1.116
       }
     },
     {
@@ -755,38 +891,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648518,
-            47.526403
+            8.309209,
+            47.047653
           ],
           [
-            7.648492,
-            47.526347
+            8.30904,
+            47.047585
           ],
           [
-            7.648476,
-            47.526323
+            8.308743,
+            47.047465
           ],
           [
-            7.648458,
-            47.526287
-          ],
-          [
-            7.648443,
-            47.526255
+            8.308556,
+            47.047389
           ]
         ]
       },
       "properties": {
         "step": 24,
-        "instruction": "Auf Schulstrasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "20 Meter weiter der Route folgen.",
-        "length_km": 0.017,
+        "instruction": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren. Dann, in 60 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.057,
         "type": 1,
         "street_names": [
-          "Schulstrasse"
+          "Habsburgerstrasse"
         ],
-        "time_sec": 1.77
+        "time_sec": 6.94
       }
     },
     {
@@ -795,34 +927,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648443,
-            47.526255
+            8.308556,
+            47.047389
           ],
           [
-            7.647979,
-            47.526308
+            8.308928,
+            47.046963
           ],
           [
-            7.647413,
-            47.52637
+            8.309024,
+            47.046853
           ],
           [
-            7.647279,
-            47.52639
+            8.309103,
+            47.046763
           ]
         ]
       },
       "properties": {
         "step": 25,
-        "instruction": "Auf Tramstrasse Richtung Westen fahren.",
-        "verbal_pre": "Auf Tramstrasse Richtung Westen fahren. Dann, in 90 Meter, Links auf Hauptstrasse abbiegen.",
-        "verbal_post": "90 Meter weiter der Route folgen.",
-        "length_km": 0.087,
+        "instruction": "Auf Sempacherstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Sempacherstrasse Richtung S\u00fcdosten fahren. Dann, in 80 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.081,
         "type": 1,
         "street_names": [
-          "Tramstrasse"
+          "Sempacherstrasse"
         ],
-        "time_sec": 9.058
+        "time_sec": 9.737
       }
     },
     {
@@ -831,26 +963,38 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647279,
-            47.52639
+            8.309103,
+            47.046763
           ],
           [
-            7.647268,
-            47.526365
+            8.309596,
+            47.046951
+          ],
+          [
+            8.309645,
+            47.046965
+          ],
+          [
+            8.309739,
+            47.046968
+          ],
+          [
+            8.309811,
+            47.046971
           ]
         ]
       },
       "properties": {
         "step": 26,
-        "instruction": "Links auf Hauptstrasse abbiegen.",
-        "verbal_pre": "Links auf Hauptstrasse abbiegen. Dann Das Ziel wird erreicht.",
-        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
-        "length_km": 0.003,
-        "type": 15,
+        "instruction": "Auf Waldst\u00e4tterstrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Waldst\u00e4tterstrasse Richtung Nordosten fahren. Dann Links auf Zentralstrasse abbiegen.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.059,
+        "type": 1,
         "street_names": [
-          "Hauptstrasse"
+          "Waldst\u00e4tterstrasse"
         ],
-        "time_sec": 1.767
+        "time_sec": 7.08
       }
     },
     {
@@ -859,50 +1003,30 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647268,
-            47.526365
+            8.309811,
+            47.046971
           ],
           [
-            7.647279,
-            47.52639
+            8.309683,
+            47.047714
           ],
           [
-            7.647299,
-            47.52644
-          ],
-          [
-            7.64731,
-            47.526466
-          ],
-          [
-            7.647334,
-            47.526512
-          ],
-          [
-            7.647376,
-            47.526633
-          ],
-          [
-            7.647466,
-            47.526847
-          ],
-          [
-            7.647512,
-            47.526955
+            8.309662,
+            47.047836
           ]
         ]
       },
       "properties": {
         "step": 27,
-        "instruction": "Auf Hauptstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Hauptstrasse Richtung Norden fahren. Dann, in 70 Meter, Das Ziel wird erreicht.",
-        "verbal_post": "70 Meter weiter der Route folgen.",
-        "length_km": 0.068,
-        "type": 1,
+        "instruction": "Links auf Zentralstrasse abbiegen.",
+        "verbal_pre": "Links auf Zentralstrasse abbiegen. Dann Links auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.097,
+        "type": 15,
         "street_names": [
-          "Hauptstrasse"
+          "Zentralstrasse"
         ],
-        "time_sec": 4.922
+        "time_sec": 9.316
       }
     },
     {
@@ -911,26 +1035,54 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647512,
-            47.526955
+            8.309662,
+            47.047836
           ],
           [
-            7.647667,
-            47.527284
+            8.309588,
+            47.047822
+          ],
+          [
+            8.309558,
+            47.047816
+          ],
+          [
+            8.309524,
+            47.047809
+          ],
+          [
+            8.309364,
+            47.047737
+          ],
+          [
+            8.309315,
+            47.047696
+          ],
+          [
+            8.30904,
+            47.047585
+          ],
+          [
+            8.308743,
+            47.047465
+          ],
+          [
+            8.308556,
+            47.047389
           ]
         ]
       },
       "properties": {
         "step": 28,
-        "instruction": "Auf Hauptstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Hauptstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "40 Meter weiter der Route folgen.",
-        "length_km": 0.038,
-        "type": 1,
+        "instruction": "Links auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Links auf Habsburgerstrasse abbiegen. Dann, in 100 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.098,
+        "type": 15,
         "street_names": [
-          "Hauptstrasse"
+          "Habsburgerstrasse"
         ],
-        "time_sec": 2.736
+        "time_sec": 15.079
       }
     },
     {
@@ -939,26 +1091,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647667,
-            47.527284
+            8.308556,
+            47.047389
           ],
           [
-            7.647512,
-            47.526955
+            8.308206,
+            47.047248
+          ],
+          [
+            8.307919,
+            47.047132
+          ],
+          [
+            8.307794,
+            47.047082
           ]
         ]
       },
       "properties": {
         "step": 29,
-        "instruction": "Auf Hauptstrasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Hauptstrasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "40 Meter weiter der Route folgen.",
-        "length_km": 0.038,
+        "instruction": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren. Dann, in 70 Meter, Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.067,
         "type": 1,
         "street_names": [
-          "Hauptstrasse"
+          "Habsburgerstrasse"
         ],
-        "time_sec": 2.736
+        "time_sec": 8.075
       }
     },
     {
@@ -967,34 +1127,38 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647512,
-            47.526955
+            8.307794,
+            47.047082
           ],
           [
-            7.647305,
-            47.527007
+            8.307734,
+            47.047151
           ],
           [
-            7.647108,
-            47.527067
+            8.307383,
+            47.047555
           ],
           [
-            7.646796,
-            47.527184
+            8.3072,
+            47.047765
+          ],
+          [
+            8.307149,
+            47.047824
           ]
         ]
       },
       "properties": {
         "step": 30,
-        "instruction": "Auf Br\u00fchlweg Richtung Westen fahren.",
-        "verbal_pre": "Auf Br\u00fchlweg Richtung Westen fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "60 Meter weiter der Route folgen.",
-        "length_km": 0.06,
-        "type": 1,
+        "instruction": "Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Hirschmattstrasse abbiegen. Dann, in 100 Meter, Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.096,
+        "type": 10,
         "street_names": [
-          "Br\u00fchlweg"
+          "Hirschmattstrasse"
         ],
-        "time_sec": 7.2
+        "time_sec": 16.707
       }
     },
     {
@@ -1003,34 +1167,38 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.646796,
-            47.527184
+            8.307149,
+            47.047824
           ],
           [
-            7.647108,
-            47.527067
+            8.307238,
+            47.047857
           ],
           [
-            7.647305,
-            47.527007
+            8.307317,
+            47.047887
           ],
           [
-            7.647512,
-            47.526955
+            8.307884,
+            47.048101
+          ],
+          [
+            8.307916,
+            47.048102
           ]
         ]
       },
       "properties": {
         "step": 31,
-        "instruction": "Auf Br\u00fchlweg Richtung S\u00fcdosten fahren.",
-        "verbal_pre": "Auf Br\u00fchlweg Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "60 Meter weiter der Route folgen.",
-        "length_km": 0.06,
-        "type": 1,
+        "instruction": "Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Murbacherstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.067,
+        "type": 10,
         "street_names": [
-          "Br\u00fchlweg"
+          "Murbacherstrasse"
         ],
-        "time_sec": 7.2
+        "time_sec": 13.47
       }
     },
     {
@@ -1039,50 +1207,26 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647512,
-            47.526955
+            8.307916,
+            47.048102
           ],
           [
-            7.647466,
-            47.526847
-          ],
-          [
-            7.647376,
-            47.526633
-          ],
-          [
-            7.647334,
-            47.526512
-          ],
-          [
-            7.64731,
-            47.526466
-          ],
-          [
-            7.647299,
-            47.52644
-          ],
-          [
-            7.647279,
-            47.52639
-          ],
-          [
-            7.647268,
-            47.526365
+            8.307916,
+            47.048102
           ]
         ]
       },
       "properties": {
         "step": 32,
-        "instruction": "Auf Hauptstrasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Hauptstrasse Richtung S\u00fcden fahren. Dann, in 70 Meter, Das Ziel wird erreicht.",
-        "verbal_post": "70 Meter weiter der Route folgen.",
-        "length_km": 0.068,
+        "instruction": "Auf Murbacherstrasse Richtung Norden fahren.",
+        "verbal_pre": "Auf Murbacherstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.0,
         "type": 1,
         "street_names": [
-          "Hauptstrasse"
+          "Murbacherstrasse"
         ],
-        "time_sec": 4.936
+        "time_sec": 0.0
       }
     },
     {
@@ -1091,30 +1235,26 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647268,
-            47.526365
+            8.307916,
+            47.048102
           ],
           [
-            7.647131,
-            47.526397
-          ],
-          [
-            7.646405,
-            47.526594
+            8.307916,
+            47.048102
           ]
         ]
       },
       "properties": {
         "step": 33,
-        "instruction": "Auf Tramstrasse Richtung Westen fahren.",
-        "verbal_pre": "Auf Tramstrasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "70 Meter weiter der Route folgen.",
-        "length_km": 0.07,
+        "instruction": "Auf Murbacherstrasse Richtung Norden fahren.",
+        "verbal_pre": "Auf Murbacherstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.0,
         "type": 1,
         "street_names": [
-          "Tramstrasse"
+          "Murbacherstrasse"
         ],
-        "time_sec": 8.4
+        "time_sec": 0.0
       }
     },
     {
@@ -1123,30 +1263,26 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.646405,
-            47.526594
+            8.307916,
+            47.048102
           ],
           [
-            7.647131,
-            47.526397
-          ],
-          [
-            7.647268,
-            47.526365
+            8.307916,
+            47.048102
           ]
         ]
       },
       "properties": {
         "step": 34,
-        "instruction": "Auf Tramstrasse Richtung Osten fahren.",
-        "verbal_pre": "Auf Tramstrasse Richtung Osten fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "70 Meter weiter der Route folgen.",
-        "length_km": 0.07,
+        "instruction": "Auf Murbacherstrasse Richtung Norden fahren.",
+        "verbal_pre": "Auf Murbacherstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.0,
         "type": 1,
         "street_names": [
-          "Tramstrasse"
+          "Murbacherstrasse"
         ],
-        "time_sec": 8.4
+        "time_sec": 0.0
       }
     },
     {
@@ -1155,38 +1291,46 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647268,
-            47.526365
+            8.307916,
+            47.048102
           ],
           [
-            7.647245,
-            47.526324
+            8.307959,
+            47.048085
           ],
           [
-            7.647169,
-            47.526183
+            8.307993,
+            47.048045
           ],
           [
-            7.647012,
-            47.52588
+            8.308093,
+            47.047928
           ],
           [
-            7.646921,
-            47.525718
+            8.308461,
+            47.047499
+          ],
+          [
+            8.308474,
+            47.047487
+          ],
+          [
+            8.308556,
+            47.047389
           ]
         ]
       },
       "properties": {
         "step": 35,
-        "instruction": "Auf Hauptstrasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Hauptstrasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "80 Meter weiter der Route folgen.",
-        "length_km": 0.076,
+        "instruction": "Auf Sempacherstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Sempacherstrasse Richtung S\u00fcdosten fahren. Dann Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "90 Meter weiter der Route folgen.",
+        "length_km": 0.093,
         "type": 1,
         "street_names": [
-          "Hauptstrasse"
+          "Sempacherstrasse"
         ],
-        "time_sec": 5.508
+        "time_sec": 11.16
       }
     },
     {
@@ -1195,38 +1339,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.646921,
-            47.525718
+            8.308556,
+            47.047389
           ],
           [
-            7.647012,
-            47.52588
+            8.308206,
+            47.047248
           ],
           [
-            7.647169,
-            47.526183
+            8.307919,
+            47.047132
           ],
           [
-            7.647245,
-            47.526324
-          ],
-          [
-            7.647268,
-            47.526365
+            8.307794,
+            47.047082
           ]
         ]
       },
       "properties": {
         "step": 36,
-        "instruction": "Auf Hauptstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Hauptstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "80 Meter weiter der Route folgen.",
-        "length_km": 0.076,
-        "type": 1,
+        "instruction": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Habsburgerstrasse abbiegen. Dann, in 70 Meter, Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.067,
+        "type": 10,
         "street_names": [
-          "Hauptstrasse"
+          "Habsburgerstrasse"
         ],
-        "time_sec": 5.508
+        "time_sec": 13.47
       }
     },
     {
@@ -1235,26 +1375,38 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647268,
-            47.526365
+            8.307794,
+            47.047082
           ],
           [
-            7.647279,
-            47.52639
+            8.307734,
+            47.047151
+          ],
+          [
+            8.307383,
+            47.047555
+          ],
+          [
+            8.3072,
+            47.047765
+          ],
+          [
+            8.307149,
+            47.047824
           ]
         ]
       },
       "properties": {
         "step": 37,
-        "instruction": "Auf Hauptstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Hauptstrasse Richtung Norden fahren. Dann Rechts auf Tramstrasse abbiegen.",
-        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
-        "length_km": 0.003,
-        "type": 1,
+        "instruction": "Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Hirschmattstrasse abbiegen. Dann, in 100 Meter, Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.096,
+        "type": 10,
         "street_names": [
-          "Hauptstrasse"
+          "Hirschmattstrasse"
         ],
-        "time_sec": 0.216
+        "time_sec": 16.707
       }
     },
     {
@@ -1263,34 +1415,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647279,
-            47.52639
+            8.307149,
+            47.047824
           ],
           [
-            7.647413,
-            47.52637
+            8.307238,
+            47.047857
           ],
           [
-            7.647979,
-            47.526308
+            8.307317,
+            47.047887
           ],
           [
-            7.648443,
-            47.526255
+            8.30784,
+            47.048084
           ]
         ]
       },
       "properties": {
         "step": 38,
-        "instruction": "Rechts auf Tramstrasse abbiegen.",
-        "verbal_pre": "Rechts auf Tramstrasse abbiegen. Dann, in 90 Meter, Das Ziel wird erreicht.",
-        "verbal_post": "90 Meter weiter der Route folgen.",
-        "length_km": 0.087,
+        "instruction": "Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Murbacherstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.06,
         "type": 10,
         "street_names": [
-          "Tramstrasse"
+          "Murbacherstrasse"
         ],
-        "time_sec": 13.695
+        "time_sec": 12.673
       }
     },
     {
@@ -1299,30 +1451,30 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648443,
-            47.526255
+            8.30784,
+            47.048084
           ],
           [
-            7.648423,
-            47.526213
+            8.307884,
+            47.048101
           ],
           [
-            7.648421,
-            47.526208
+            8.307916,
+            47.048102
           ]
         ]
       },
       "properties": {
         "step": 39,
-        "instruction": "Auf Schulstrasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
+        "instruction": "Auf Murbacherstrasse Richtung Osten fahren.",
+        "verbal_pre": "Auf Murbacherstrasse Richtung Osten fahren. Dann Rechts auf Sempacherstrasse abbiegen.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
-        "length_km": 0.005,
+        "length_km": 0.006,
         "type": 1,
         "street_names": [
-          "Schulstrasse"
+          "Murbacherstrasse"
         ],
-        "time_sec": 0.653
+        "time_sec": 0.796
       }
     },
     {
@@ -1331,46 +1483,46 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648421,
-            47.526208
+            8.307916,
+            47.048102
           ],
           [
-            7.648423,
-            47.526213
+            8.307959,
+            47.048085
           ],
           [
-            7.648443,
-            47.526255
+            8.307993,
+            47.048045
           ],
           [
-            7.648458,
-            47.526287
+            8.308093,
+            47.047928
           ],
           [
-            7.648476,
-            47.526323
+            8.308461,
+            47.047499
           ],
           [
-            7.648492,
-            47.526347
+            8.308474,
+            47.047487
           ],
           [
-            7.648518,
-            47.526403
+            8.308556,
+            47.047389
           ]
         ]
       },
       "properties": {
         "step": 40,
-        "instruction": "Auf Schulstrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung Norden fahren. Dann Rechts auf Lachmattstrasse abbiegen.",
-        "verbal_post": "20 Meter weiter der Route folgen.",
-        "length_km": 0.022,
-        "type": 1,
+        "instruction": "Rechts auf Sempacherstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Sempacherstrasse abbiegen. Dann Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "90 Meter weiter der Route folgen.",
+        "length_km": 0.093,
+        "type": 10,
         "street_names": [
-          "Schulstrasse"
+          "Sempacherstrasse"
         ],
-        "time_sec": 2.43
+        "time_sec": 15.072
       }
     },
     {
@@ -1379,34 +1531,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648518,
-            47.526403
+            8.308556,
+            47.047389
           ],
           [
-            7.648636,
-            47.526386
+            8.308206,
+            47.047248
           ],
           [
-            7.648787,
-            47.526363
+            8.307919,
+            47.047132
           ],
           [
-            7.649076,
-            47.526321
+            8.307794,
+            47.047082
           ]
         ]
       },
       "properties": {
         "step": 41,
-        "instruction": "Rechts auf Lachmattstrasse abbiegen.",
-        "verbal_pre": "Rechts auf Lachmattstrasse abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
-        "verbal_post": "40 Meter weiter der Route folgen.",
-        "length_km": 0.042,
+        "instruction": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Habsburgerstrasse abbiegen. Dann, in 70 Meter, Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.067,
         "type": 10,
         "street_names": [
-          "Lachmattstrasse"
+          "Habsburgerstrasse"
         ],
-        "time_sec": 9.773
+        "time_sec": 13.47
       }
     },
     {
@@ -1415,34 +1567,38 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649076,
-            47.526321
+            8.307794,
+            47.047082
           ],
           [
-            7.648787,
-            47.526363
+            8.307734,
+            47.047151
           ],
           [
-            7.648636,
-            47.526386
+            8.307383,
+            47.047555
           ],
           [
-            7.648518,
-            47.526403
+            8.3072,
+            47.047765
+          ],
+          [
+            8.307149,
+            47.047824
           ]
         ]
       },
       "properties": {
         "step": 42,
-        "instruction": "Auf Lachmattstrasse Richtung Westen fahren.",
-        "verbal_pre": "Auf Lachmattstrasse Richtung Westen fahren. Dann Links auf Schulstrasse abbiegen.",
-        "verbal_post": "40 Meter weiter der Route folgen.",
-        "length_km": 0.042,
-        "type": 3,
+        "instruction": "Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Hirschmattstrasse abbiegen. Dann, in 100 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.096,
+        "type": 10,
         "street_names": [
-          "Lachmattstrasse"
+          "Hirschmattstrasse"
         ],
-        "time_sec": 5.148
+        "time_sec": 16.707
       }
     },
     {
@@ -1451,50 +1607,62 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648518,
-            47.526403
+            8.307149,
+            47.047824
           ],
           [
-            7.648492,
-            47.526347
+            8.306919,
+            47.048089
           ],
           [
-            7.648476,
-            47.526323
+            8.306889,
+            47.048123
           ],
           [
-            7.648458,
-            47.526287
+            8.30672,
+            47.048317
           ],
           [
-            7.648443,
-            47.526255
+            8.306639,
+            47.04841
           ],
           [
-            7.648423,
-            47.526213
+            8.306524,
+            47.048543
           ],
           [
-            7.648142,
-            47.525654
+            8.306404,
+            47.048681
           ],
           [
-            7.647897,
-            47.525163
+            8.306375,
+            47.048714
+          ],
+          [
+            8.306356,
+            47.048736
+          ],
+          [
+            8.306335,
+            47.048768
+          ],
+          [
+            8.306285,
+            47.048858
           ]
         ]
       },
       "properties": {
         "step": 43,
-        "instruction": "Links auf Schulstrasse abbiegen.",
-        "verbal_pre": "Links auf Schulstrasse abbiegen.",
+        "instruction": "Auf Hirschmattstrasse Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung Nordwesten fahren. Dann, in 100 Meter, Links auf Pilatusstrasse abbiegen.",
         "verbal_post": "100 Meter weiter der Route folgen.",
-        "length_km": 0.146,
-        "type": 15,
+        "length_km": 0.133,
+        "type": 1,
         "street_names": [
-          "Schulstrasse"
+          "Hirschmattstrasse"
         ],
-        "time_sec": 18.828
+        "time_sec": 14.146
       }
     },
     {
@@ -1503,30 +1671,52 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647897,
-            47.525163
+            8.306285,
+            47.048858
           ],
           [
-            7.648617,
-            47.525096
+            8.306225,
+            47.048786
           ],
           [
-            7.648912,
-            47.525069
+            8.306184,
+            47.048759
+          ],
+          [
+            8.306121,
+            47.048719
+          ],
+          [
+            8.306047,
+            47.048682
+          ],
+          [
+            8.305898,
+            47.048618
+          ],
+          [
+            8.305638,
+            47.048507
+          ],
+          [
+            8.305529,
+            47.048461
           ]
         ]
       },
       "properties": {
         "step": 44,
-        "instruction": "Links auf R\u00f6ssligasse abbiegen.",
-        "verbal_pre": "Links auf R\u00f6ssligasse abbiegen. Dann Links abbiegen.",
-        "verbal_post": "80 Meter weiter der Route folgen.",
-        "length_km": 0.077,
+        "instruction": "Links auf Pilatusstrasse/2/4 abbiegen.",
+        "verbal_pre": "Links auf Pilatusstrasse, 2 abbiegen. Dann Links auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.072,
         "type": 15,
         "street_names": [
-          "R\u00f6ssligasse"
+          "Pilatusstrasse",
+          "2",
+          "4"
         ],
-        "time_sec": 12.365
+        "time_sec": 10.649
       }
     },
     {
@@ -1535,32 +1725,38 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648912,
-            47.525069
+            8.305529,
+            47.048461
           ],
           [
-            7.649105,
-            47.525368
+            8.305588,
+            47.048392
           ],
           [
-            7.649148,
-            47.525439
+            8.306075,
+            47.047819
           ],
           [
-            7.649318,
-            47.525717
+            8.306132,
+            47.047755
+          ],
+          [
+            8.306361,
+            47.047497
           ]
         ]
       },
       "properties": {
         "step": 45,
-        "instruction": "Links abbiegen.",
-        "verbal_pre": "Links abbiegen. Dann, in 80 Meter, Das Ziel befindet sich auf der linken Seite.",
-        "verbal_post": "80 Meter weiter der Route folgen.",
-        "length_km": 0.078,
+        "instruction": "Links auf Winkelriedstrasse abbiegen.",
+        "verbal_pre": "Links auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.125,
         "type": 15,
-        "street_names": [],
-        "time_sec": 8.918
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 16.869
       }
     },
     {
@@ -1569,20 +1765,42 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649318,
-            47.525717
+            8.306361,
+            47.047497
+          ],
+          [
+            8.306418,
+            47.047431
+          ],
+          [
+            8.306498,
+            47.047338
+          ],
+          [
+            8.306801,
+            47.046986
+          ],
+          [
+            8.306947,
+            47.046817
+          ],
+          [
+            8.306996,
+            47.04676
           ]
         ]
       },
       "properties": {
         "step": 46,
-        "instruction": "Ziel befindet sich auf der linken Seite.",
-        "verbal_pre": "Ziel befindet sich auf der linken Seite.",
-        "verbal_post": "",
-        "length_km": 0.0,
-        "type": 6,
-        "street_names": [],
-        "time_sec": 0.0
+        "instruction": "Auf Winkelriedstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Winkelriedstrasse Richtung S\u00fcdosten fahren. Dann, in 100 Meter, Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.094,
+        "type": 1,
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 11.441
       }
     },
     {
@@ -1591,32 +1809,26 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649318,
-            47.525717
+            8.306996,
+            47.04676
           ],
           [
-            7.649148,
-            47.525439
-          ],
-          [
-            7.649105,
-            47.525368
-          ],
-          [
-            7.648912,
-            47.525069
+            8.306485,
+            47.046553
           ]
         ]
       },
       "properties": {
         "step": 47,
-        "instruction": "Richtung S\u00fcden fahren.",
-        "verbal_pre": "Richtung S\u00fcden fahren. Dann Rechts auf R\u00f6ssligasse abbiegen.",
-        "verbal_post": "80 Meter weiter der Route folgen.",
-        "length_km": 0.078,
-        "type": 2,
-        "street_names": [],
-        "time_sec": 8.087
+        "instruction": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Habsburgerstrasse abbiegen. Dann Rechts auf Kauffmannweg abbiegen.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 10,
+        "street_names": [
+          "Habsburgerstrasse"
+        ],
+        "time_sec": 10.794
       }
     },
     {
@@ -1625,30 +1837,34 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648912,
-            47.525069
+            8.306485,
+            47.046553
           ],
           [
-            7.648617,
-            47.525096
+            8.306256,
+            47.046816
           ],
           [
-            7.647897,
-            47.525163
+            8.306223,
+            47.046855
+          ],
+          [
+            8.30585,
+            47.047284
           ]
         ]
       },
       "properties": {
         "step": 48,
-        "instruction": "Rechts auf R\u00f6ssligasse abbiegen.",
-        "verbal_pre": "Rechts auf R\u00f6ssligasse abbiegen. Dann Rechts auf Schulstrasse abbiegen.",
-        "verbal_post": "80 Meter weiter der Route folgen.",
-        "length_km": 0.077,
+        "instruction": "Rechts auf Kauffmannweg abbiegen.",
+        "verbal_pre": "Rechts auf Kauffmannweg abbiegen. Dann, in 100 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.094,
         "type": 10,
         "street_names": [
-          "R\u00f6ssligasse"
+          "Kauffmannweg"
         ],
-        "time_sec": 12.287
+        "time_sec": 16.802
       }
     },
     {
@@ -1657,30 +1873,26 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647897,
-            47.525163
+            8.30585,
+            47.047284
           ],
           [
-            7.648142,
-            47.525654
-          ],
-          [
-            7.648302,
-            47.525973
+            8.305568,
+            47.0476
           ]
         ]
       },
       "properties": {
         "step": 49,
-        "instruction": "Rechts auf Schulstrasse abbiegen.",
-        "verbal_pre": "Rechts auf Schulstrasse abbiegen. Dann, in 100 Meter, Das Ziel wird erreicht.",
-        "verbal_post": "100 Meter weiter der Route folgen.",
-        "length_km": 0.095,
-        "type": 10,
+        "instruction": "Auf Kauffmannweg Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "40 Meter weiter der Route folgen.",
+        "length_km": 0.041,
+        "type": 1,
         "street_names": [
-          "Schulstrasse"
+          "Kauffmannweg"
         ],
-        "time_sec": 17.787
+        "time_sec": 4.92
       }
     },
     {
@@ -1689,30 +1901,26 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648302,
-            47.525973
+            8.305568,
+            47.0476
           ],
           [
-            7.648142,
-            47.525654
-          ],
-          [
-            7.647897,
-            47.525163
+            8.305263,
+            47.047949
           ]
         ]
       },
       "properties": {
         "step": 50,
-        "instruction": "Auf Schulstrasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung S\u00fcden fahren. Dann Links auf R\u00f6ssligasse abbiegen.",
-        "verbal_post": "100 Meter weiter der Route folgen.",
-        "length_km": 0.095,
+        "instruction": "Auf Kauffmannweg Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
         "type": 1,
         "street_names": [
-          "Schulstrasse"
+          "Kauffmannweg"
         ],
-        "time_sec": 11.517
+        "time_sec": 5.424
       }
     },
     {
@@ -1721,30 +1929,26 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647897,
-            47.525163
+            8.305263,
+            47.047949
           ],
           [
-            7.648617,
-            47.525096
-          ],
-          [
-            7.648912,
-            47.525069
+            8.305233,
+            47.047984
           ]
         ]
       },
       "properties": {
         "step": 51,
-        "instruction": "Links auf R\u00f6ssligasse abbiegen.",
-        "verbal_pre": "Links auf R\u00f6ssligasse abbiegen. Dann Links abbiegen.",
-        "verbal_post": "80 Meter weiter der Route folgen.",
-        "length_km": 0.077,
-        "type": 15,
+        "instruction": "Auf Kauffmannweg Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.004,
+        "type": 1,
         "street_names": [
-          "R\u00f6ssligasse"
+          "Kauffmannweg"
         ],
-        "time_sec": 12.365
+        "time_sec": 0.541
       }
     },
     {
@@ -1753,32 +1957,30 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648912,
-            47.525069
+            8.305233,
+            47.047984
           ],
           [
-            7.649105,
-            47.525368
+            8.305568,
+            47.0476
           ],
           [
-            7.649148,
-            47.525439
-          ],
-          [
-            7.649318,
-            47.525717
+            8.305849,
+            47.047284
           ]
         ]
       },
       "properties": {
         "step": 52,
-        "instruction": "Links abbiegen.",
-        "verbal_pre": "Links abbiegen. Dann, in 80 Meter, Das Ziel befindet sich auf der linken Seite.",
-        "verbal_post": "80 Meter weiter der Route folgen.",
-        "length_km": 0.078,
-        "type": 15,
-        "street_names": [],
-        "time_sec": 8.918
+        "instruction": "Auf Kauffmannweg Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung S\u00fcdosten fahren. Dann Links auf Murbacherstrasse abbiegen.",
+        "verbal_post": "90 Meter weiter der Route folgen.",
+        "length_km": 0.09,
+        "type": 1,
+        "street_names": [
+          "Kauffmannweg"
+        ],
+        "time_sec": 10.903
       }
     },
     {
@@ -1787,13 +1989,1225 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649318,
-            47.525717
+            8.305849,
+            47.047284
+          ],
+          [
+            8.306361,
+            47.047497
+          ],
+          [
+            8.307091,
+            47.0478
+          ],
+          [
+            8.307149,
+            47.047824
           ]
         ]
       },
       "properties": {
         "step": 53,
+        "instruction": "Links auf Murbacherstrasse abbiegen.",
+        "verbal_pre": "Links auf Murbacherstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.115,
+        "type": 15,
+        "street_names": [
+          "Murbacherstrasse"
+        ],
+        "time_sec": 15.94
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307149,
+            47.047824
+          ],
+          [
+            8.306919,
+            47.048089
+          ],
+          [
+            8.306889,
+            47.048123
+          ],
+          [
+            8.30672,
+            47.048317
+          ],
+          [
+            8.306639,
+            47.04841
+          ],
+          [
+            8.306524,
+            47.048543
+          ],
+          [
+            8.306404,
+            47.048681
+          ],
+          [
+            8.306375,
+            47.048714
+          ],
+          [
+            8.306356,
+            47.048736
+          ],
+          [
+            8.306335,
+            47.048768
+          ],
+          [
+            8.306285,
+            47.048858
+          ]
+        ]
+      },
+      "properties": {
+        "step": 54,
+        "instruction": "Links auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Links auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.133,
+        "type": 15,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 16.251
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306285,
+            47.048858
+          ],
+          [
+            8.306225,
+            47.048786
+          ],
+          [
+            8.306184,
+            47.048759
+          ],
+          [
+            8.306121,
+            47.048719
+          ],
+          [
+            8.306047,
+            47.048682
+          ],
+          [
+            8.305898,
+            47.048618
+          ],
+          [
+            8.305638,
+            47.048507
+          ],
+          [
+            8.305529,
+            47.048461
+          ],
+          [
+            8.305411,
+            47.048413
+          ],
+          [
+            8.305358,
+            47.048391
+          ],
+          [
+            8.305002,
+            47.048245
+          ]
+        ]
+      },
+      "properties": {
+        "step": 55,
+        "instruction": "Links auf Pilatusstrasse/2/4 abbiegen.",
+        "verbal_pre": "Links auf Pilatusstrasse, 2 abbiegen. Dann, in 100 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.119,
+        "type": 15,
+        "street_names": [
+          "Pilatusstrasse",
+          "2",
+          "4"
+        ],
+        "time_sec": 13.998
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305002,
+            47.048245
+          ],
+          [
+            8.305358,
+            47.048391
+          ],
+          [
+            8.305411,
+            47.048413
+          ],
+          [
+            8.305529,
+            47.048461
+          ]
+        ]
+      },
+      "properties": {
+        "step": 56,
+        "instruction": "Auf Pilatusstrasse/2/4 Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Pilatusstrasse, 2 Richtung Nordosten fahren. Dann Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.046,
+        "type": 1,
+        "street_names": [
+          "Pilatusstrasse",
+          "2",
+          "4"
+        ],
+        "time_sec": 3.329
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305529,
+            47.048461
+          ],
+          [
+            8.305588,
+            47.048392
+          ],
+          [
+            8.306075,
+            47.047819
+          ],
+          [
+            8.306132,
+            47.047755
+          ],
+          [
+            8.306361,
+            47.047497
+          ],
+          [
+            8.306418,
+            47.047431
+          ],
+          [
+            8.306498,
+            47.047338
+          ],
+          [
+            8.306801,
+            47.046986
+          ],
+          [
+            8.306947,
+            47.046817
+          ],
+          [
+            8.306996,
+            47.04676
+          ]
+        ]
+      },
+      "properties": {
+        "step": 57,
+        "instruction": "Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "200 Meter weiter der Route folgen.",
+        "length_km": 0.22,
+        "type": 10,
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 32.139
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306996,
+            47.04676
+          ],
+          [
+            8.306485,
+            47.046553
+          ]
+        ]
+      },
+      "properties": {
+        "step": 58,
+        "instruction": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Habsburgerstrasse abbiegen. Dann Rechts auf Kauffmannweg abbiegen.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 10,
+        "street_names": [
+          "Habsburgerstrasse"
+        ],
+        "time_sec": 10.794
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306485,
+            47.046553
+          ],
+          [
+            8.306256,
+            47.046816
+          ],
+          [
+            8.306223,
+            47.046855
+          ],
+          [
+            8.305849,
+            47.047284
+          ],
+          [
+            8.305568,
+            47.0476
+          ],
+          [
+            8.305233,
+            47.047984
+          ]
+        ]
+      },
+      "properties": {
+        "step": 59,
+        "instruction": "Rechts auf Kauffmannweg abbiegen.",
+        "verbal_pre": "Rechts auf Kauffmannweg abbiegen.",
+        "verbal_post": "200 Meter weiter der Route folgen.",
+        "length_km": 0.185,
+        "type": 10,
+        "street_names": [
+          "Kauffmannweg"
+        ],
+        "time_sec": 27.723
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305233,
+            47.047984
+          ],
+          [
+            8.305263,
+            47.047949
+          ]
+        ]
+      },
+      "properties": {
+        "step": 60,
+        "instruction": "Auf Kauffmannweg Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.004,
+        "type": 1,
+        "street_names": [
+          "Kauffmannweg"
+        ],
+        "time_sec": 0.541
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305263,
+            47.047949
+          ],
+          [
+            8.305568,
+            47.0476
+          ]
+        ]
+      },
+      "properties": {
+        "step": 61,
+        "instruction": "Auf Kauffmannweg Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 1,
+        "street_names": [
+          "Kauffmannweg"
+        ],
+        "time_sec": 5.424
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305568,
+            47.0476
+          ],
+          [
+            8.305849,
+            47.047284
+          ]
+        ]
+      },
+      "properties": {
+        "step": 62,
+        "instruction": "Auf Kauffmannweg Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung S\u00fcdosten fahren. Dann Links auf Murbacherstrasse abbiegen.",
+        "verbal_post": "40 Meter weiter der Route folgen.",
+        "length_km": 0.041,
+        "type": 1,
+        "street_names": [
+          "Kauffmannweg"
+        ],
+        "time_sec": 4.92
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305849,
+            47.047284
+          ],
+          [
+            8.306361,
+            47.047497
+          ],
+          [
+            8.307091,
+            47.0478
+          ],
+          [
+            8.307149,
+            47.047824
+          ]
+        ]
+      },
+      "properties": {
+        "step": 63,
+        "instruction": "Links auf Murbacherstrasse abbiegen.",
+        "verbal_pre": "Links auf Murbacherstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.115,
+        "type": 15,
+        "street_names": [
+          "Murbacherstrasse"
+        ],
+        "time_sec": 15.94
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307149,
+            47.047824
+          ],
+          [
+            8.306919,
+            47.048089
+          ],
+          [
+            8.306889,
+            47.048123
+          ],
+          [
+            8.30672,
+            47.048317
+          ],
+          [
+            8.306639,
+            47.04841
+          ],
+          [
+            8.306524,
+            47.048543
+          ],
+          [
+            8.306404,
+            47.048681
+          ],
+          [
+            8.306375,
+            47.048714
+          ],
+          [
+            8.306356,
+            47.048736
+          ],
+          [
+            8.306335,
+            47.048768
+          ],
+          [
+            8.306285,
+            47.048858
+          ]
+        ]
+      },
+      "properties": {
+        "step": 64,
+        "instruction": "Links auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Links auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.133,
+        "type": 15,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 16.251
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306285,
+            47.048858
+          ],
+          [
+            8.306225,
+            47.048786
+          ],
+          [
+            8.306184,
+            47.048759
+          ],
+          [
+            8.306121,
+            47.048719
+          ],
+          [
+            8.306047,
+            47.048682
+          ],
+          [
+            8.305898,
+            47.048618
+          ],
+          [
+            8.305638,
+            47.048507
+          ],
+          [
+            8.305529,
+            47.048461
+          ]
+        ]
+      },
+      "properties": {
+        "step": 65,
+        "instruction": "Links auf Pilatusstrasse/2/4 abbiegen.",
+        "verbal_pre": "Links auf Pilatusstrasse, 2 abbiegen. Dann Links auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.072,
+        "type": 15,
+        "street_names": [
+          "Pilatusstrasse",
+          "2",
+          "4"
+        ],
+        "time_sec": 10.649
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305529,
+            47.048461
+          ],
+          [
+            8.305588,
+            47.048392
+          ],
+          [
+            8.306075,
+            47.047819
+          ]
+        ]
+      },
+      "properties": {
+        "step": 66,
+        "instruction": "Links auf Winkelriedstrasse abbiegen.",
+        "verbal_pre": "Links auf Winkelriedstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.083,
+        "type": 15,
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 11.794
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306075,
+            47.047819
+          ],
+          [
+            8.306132,
+            47.047755
+          ],
+          [
+            8.306361,
+            47.047497
+          ]
+        ]
+      },
+      "properties": {
+        "step": 67,
+        "instruction": "Auf Winkelriedstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Winkelriedstrasse Richtung S\u00fcdosten fahren. Dann, in 40 Meter, Links auf Murbacherstrasse abbiegen.",
+        "verbal_post": "40 Meter weiter der Route folgen.",
+        "length_km": 0.042,
+        "type": 1,
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 5.057
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306361,
+            47.047497
+          ],
+          [
+            8.307091,
+            47.0478
+          ],
+          [
+            8.307149,
+            47.047824
+          ]
+        ]
+      },
+      "properties": {
+        "step": 68,
+        "instruction": "Links auf Murbacherstrasse abbiegen.",
+        "verbal_pre": "Links auf Murbacherstrasse abbiegen. Dann Links auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.07,
+        "type": 15,
+        "street_names": [
+          "Murbacherstrasse"
+        ],
+        "time_sec": 10.522
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307149,
+            47.047824
+          ],
+          [
+            8.306919,
+            47.048089
+          ],
+          [
+            8.306889,
+            47.048123
+          ],
+          [
+            8.30672,
+            47.048317
+          ],
+          [
+            8.306639,
+            47.04841
+          ],
+          [
+            8.306524,
+            47.048543
+          ],
+          [
+            8.306404,
+            47.048681
+          ],
+          [
+            8.306375,
+            47.048714
+          ],
+          [
+            8.306356,
+            47.048736
+          ],
+          [
+            8.306335,
+            47.048768
+          ],
+          [
+            8.306285,
+            47.048858
+          ]
+        ]
+      },
+      "properties": {
+        "step": 69,
+        "instruction": "Links auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Links auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.133,
+        "type": 15,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 16.251
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306285,
+            47.048858
+          ],
+          [
+            8.306225,
+            47.048786
+          ],
+          [
+            8.306184,
+            47.048759
+          ],
+          [
+            8.306121,
+            47.048719
+          ],
+          [
+            8.306047,
+            47.048682
+          ],
+          [
+            8.305898,
+            47.048618
+          ],
+          [
+            8.305638,
+            47.048507
+          ],
+          [
+            8.30553,
+            47.048461
+          ]
+        ]
+      },
+      "properties": {
+        "step": 70,
+        "instruction": "Links auf Pilatusstrasse/2/4 abbiegen.",
+        "verbal_pre": "Links auf Pilatusstrasse, 2 abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.072,
+        "type": 15,
+        "street_names": [
+          "Pilatusstrasse",
+          "2",
+          "4"
+        ],
+        "time_sec": 10.649
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.30553,
+            47.048461
+          ],
+          [
+            8.305638,
+            47.048507
+          ],
+          [
+            8.305898,
+            47.048618
+          ],
+          [
+            8.306047,
+            47.048682
+          ],
+          [
+            8.306121,
+            47.048719
+          ],
+          [
+            8.306132,
+            47.048726
+          ]
+        ]
+      },
+      "properties": {
+        "step": 71,
+        "instruction": "Auf Pilatusstrasse/2/4 Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Pilatusstrasse, 2 Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.054,
+        "type": 1,
+        "street_names": [
+          "Pilatusstrasse",
+          "2",
+          "4"
+        ],
+        "time_sec": 3.891
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306132,
+            47.048726
+          ],
+          [
+            8.306184,
+            47.048759
+          ],
+          [
+            8.306187,
+            47.048761
+          ]
+        ]
+      },
+      "properties": {
+        "step": 72,
+        "instruction": "Auf Pilatusstrasse/2/4 Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Pilatusstrasse, 2 Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.005,
+        "type": 1,
+        "street_names": [
+          "Pilatusstrasse",
+          "2",
+          "4"
+        ],
+        "time_sec": 0.413
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306187,
+            47.048761
+          ],
+          [
+            8.306184,
+            47.048759
+          ],
+          [
+            8.306121,
+            47.048719
+          ],
+          [
+            8.306047,
+            47.048682
+          ],
+          [
+            8.305898,
+            47.048618
+          ],
+          [
+            8.305638,
+            47.048507
+          ],
+          [
+            8.305529,
+            47.048461
+          ]
+        ]
+      },
+      "properties": {
+        "step": 73,
+        "instruction": "Auf Pilatusstrasse/2/4 Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Pilatusstrasse, 2 Richtung S\u00fcdwesten fahren. Dann Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.059,
+        "type": 1,
+        "street_names": [
+          "Pilatusstrasse",
+          "2",
+          "4"
+        ],
+        "time_sec": 4.305
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305529,
+            47.048461
+          ],
+          [
+            8.305422,
+            47.048582
+          ],
+          [
+            8.305169,
+            47.048882
+          ],
+          [
+            8.305017,
+            47.04906
+          ]
+        ]
+      },
+      "properties": {
+        "step": 74,
+        "instruction": "Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Winkelriedstrasse abbiegen. Dann Rechts auf Stadthausstrasse abbiegen.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.078,
+        "type": 10,
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 14.895
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305017,
+            47.04906
+          ],
+          [
+            8.305069,
+            47.049081
+          ],
+          [
+            8.305715,
+            47.049338
+          ],
+          [
+            8.305818,
+            47.049379
+          ]
+        ]
+      },
+      "properties": {
+        "step": 75,
+        "instruction": "Rechts auf Stadthausstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Stadthausstrasse abbiegen. Dann Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.071,
+        "type": 10,
+        "street_names": [
+          "Stadthausstrasse"
+        ],
+        "time_sec": 13.713
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305818,
+            47.049379
+          ],
+          [
+            8.30587,
+            47.049324
+          ],
+          [
+            8.306105,
+            47.049033
+          ],
+          [
+            8.306122,
+            47.049012
+          ],
+          [
+            8.306169,
+            47.048973
+          ],
+          [
+            8.306222,
+            47.04892
+          ]
+        ]
+      },
+      "properties": {
+        "step": 76,
+        "instruction": "Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Hirschmattstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.059,
+        "type": 10,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 12.57
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306222,
+            47.04892
+          ],
+          [
+            8.306169,
+            47.048973
+          ],
+          [
+            8.306122,
+            47.049012
+          ],
+          [
+            8.306105,
+            47.049033
+          ],
+          [
+            8.30587,
+            47.049324
+          ],
+          [
+            8.305818,
+            47.049379
+          ]
+        ]
+      },
+      "properties": {
+        "step": 77,
+        "instruction": "Auf Hirschmattstrasse Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung Nordwesten fahren. Dann Links auf Stadthausstrasse abbiegen.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.059,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 7.195
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305818,
+            47.049379
+          ],
+          [
+            8.305715,
+            47.049338
+          ],
+          [
+            8.305069,
+            47.049081
+          ],
+          [
+            8.305017,
+            47.04906
+          ]
+        ]
+      },
+      "properties": {
+        "step": 78,
+        "instruction": "Links auf Stadthausstrasse abbiegen.",
+        "verbal_pre": "Links auf Stadthausstrasse abbiegen. Dann Links auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.071,
+        "type": 15,
+        "street_names": [
+          "Stadthausstrasse"
+        ],
+        "time_sec": 10.641
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305017,
+            47.04906
+          ],
+          [
+            8.305169,
+            47.048882
+          ],
+          [
+            8.305422,
+            47.048582
+          ],
+          [
+            8.305529,
+            47.048461
+          ]
+        ]
+      },
+      "properties": {
+        "step": 79,
+        "instruction": "Links auf Winkelriedstrasse abbiegen.",
+        "verbal_pre": "Links auf Winkelriedstrasse abbiegen. Dann Links auf Pilatusstrasse abbiegen.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.078,
+        "type": 15,
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 11.306
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305529,
+            47.048461
+          ],
+          [
+            8.305638,
+            47.048507
+          ],
+          [
+            8.305898,
+            47.048618
+          ],
+          [
+            8.306047,
+            47.048682
+          ],
+          [
+            8.306121,
+            47.048719
+          ],
+          [
+            8.306184,
+            47.048759
+          ],
+          [
+            8.306225,
+            47.048786
+          ],
+          [
+            8.306285,
+            47.048858
+          ],
+          [
+            8.306319,
+            47.048925
+          ],
+          [
+            8.306336,
+            47.048943
+          ]
+        ]
+      },
+      "properties": {
+        "step": 80,
+        "instruction": "Links auf Pilatusstrasse/2/4 abbiegen.",
+        "verbal_pre": "Links auf Pilatusstrasse, 2 abbiegen. Dann, in 80 Meter, Das Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.083,
+        "type": 15,
+        "street_names": [
+          "Pilatusstrasse",
+          "2",
+          "4"
+        ],
+        "time_sec": 8.228
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306336,
+            47.048943
+          ]
+        ]
+      },
+      "properties": {
+        "step": 81,
         "instruction": "Ziel befindet sich auf der linken Seite.",
         "verbal_pre": "Ziel befindet sich auf der linken Seite.",
         "verbal_post": "",
@@ -1809,90 +3223,32 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.649318,
-            47.525717
+            8.306336,
+            47.048943
           ],
           [
-            7.649176,
-            47.525484
+            8.306365,
+            47.048976
+          ],
+          [
+            8.306372,
+            47.04898
           ]
         ]
       },
       "properties": {
-        "step": 54,
-        "instruction": "Richtung S\u00fcden fahren.",
-        "verbal_pre": "Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-        "verbal_post": "30 Meter weiter der Route folgen.",
-        "length_km": 0.027,
-        "type": 2,
-        "street_names": [],
-        "time_sec": 2.877
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.649176,
-            47.525484
-          ],
-          [
-            7.649148,
-            47.525439
-          ],
-          [
-            7.649105,
-            47.525368
-          ],
-          [
-            7.648912,
-            47.525069
-          ]
-        ]
-      },
-      "properties": {
-        "step": 55,
-        "instruction": "Richtung S\u00fcden fahren.",
-        "verbal_pre": "Richtung S\u00fcden fahren. Dann Rechts auf R\u00f6ssligasse abbiegen.",
-        "verbal_post": "50 Meter weiter der Route folgen.",
-        "length_km": 0.05,
-        "type": 2,
-        "street_names": [],
-        "time_sec": 5.209
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.648912,
-            47.525069
-          ],
-          [
-            7.648617,
-            47.525096
-          ],
-          [
-            7.647897,
-            47.525163
-          ]
-        ]
-      },
-      "properties": {
-        "step": 56,
-        "instruction": "Rechts auf R\u00f6ssligasse abbiegen.",
-        "verbal_pre": "Rechts auf R\u00f6ssligasse abbiegen. Dann Rechts auf Schulstrasse abbiegen.",
-        "verbal_post": "80 Meter weiter der Route folgen.",
-        "length_km": 0.077,
-        "type": 10,
+        "step": 82,
+        "instruction": "Auf Pilatusstrasse/2/4 Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Pilatusstrasse, 2 Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.004,
+        "type": 3,
         "street_names": [
-          "R\u00f6ssligasse"
+          "Pilatusstrasse",
+          "2",
+          "4"
         ],
-        "time_sec": 12.287
+        "time_sec": 0.357
       }
     },
     {
@@ -1901,30 +3257,40 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.647897,
-            47.525163
+            8.306372,
+            47.04898
           ],
           [
-            7.648142,
-            47.525654
+            8.306417,
+            47.049008
           ],
           [
-            7.648185,
-            47.52574
+            8.30644,
+            47.049019
+          ],
+          [
+            8.306482,
+            47.049038
+          ],
+          [
+            8.306967,
+            47.049259
           ]
         ]
       },
       "properties": {
-        "step": 57,
-        "instruction": "Rechts auf Schulstrasse abbiegen.",
-        "verbal_pre": "Rechts auf Schulstrasse abbiegen. Dann, in 70 Meter, Das Ziel wird erreicht.",
-        "verbal_post": "70 Meter weiter der Route folgen.",
-        "length_km": 0.068,
-        "type": 10,
+        "step": 83,
+        "instruction": "Auf Pilatusstrasse/2/4 Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Pilatusstrasse, 2 Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.054,
+        "type": 1,
         "street_names": [
-          "Schulstrasse"
+          "Pilatusstrasse",
+          "2",
+          "4"
         ],
-        "time_sec": 14.505
+        "time_sec": 4.053
       }
     },
     {
@@ -1933,30 +3299,2240 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648185,
-            47.52574
+            8.306967,
+            47.049259
           ],
           [
-            7.648142,
-            47.525654
-          ],
-          [
-            7.647897,
-            47.525163
+            8.307234,
+            47.049372
           ]
         ]
       },
       "properties": {
-        "step": 58,
-        "instruction": "Auf Schulstrasse Richtung S\u00fcden fahren.",
-        "verbal_pre": "Auf Schulstrasse Richtung S\u00fcden fahren. Dann, in 70 Meter, Das Ziel wird erreicht.",
+        "step": 84,
+        "instruction": "Auf Pilatusstrasse/2/4 Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Pilatusstrasse, 2 Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "20 Meter weiter der Route folgen.",
+        "length_km": 0.024,
+        "type": 1,
+        "street_names": [
+          "Pilatusstrasse",
+          "2",
+          "4"
+        ],
+        "time_sec": 1.728
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307234,
+            47.049372
+          ],
+          [
+            8.306967,
+            47.049259
+          ]
+        ]
+      },
+      "properties": {
+        "step": 85,
+        "instruction": "Auf Pilatusstrasse/2/4 Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Pilatusstrasse, 2 Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "20 Meter weiter der Route folgen.",
+        "length_km": 0.024,
+        "type": 1,
+        "street_names": [
+          "Pilatusstrasse",
+          "2",
+          "4"
+        ],
+        "time_sec": 1.728
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306967,
+            47.049259
+          ],
+          [
+            8.307038,
+            47.049173
+          ],
+          [
+            8.307225,
+            47.048956
+          ],
+          [
+            8.307417,
+            47.048732
+          ]
+        ]
+      },
+      "properties": {
+        "step": 86,
+        "instruction": "Auf Sempacherstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Sempacherstrasse Richtung S\u00fcdosten fahren. Dann, in 70 Meter, Das Ziel wird erreicht.",
         "verbal_post": "70 Meter weiter der Route folgen.",
         "length_km": 0.068,
         "type": 1,
         "street_names": [
-          "Schulstrasse"
+          "Sempacherstrasse"
         ],
-        "time_sec": 8.236
+        "time_sec": 8.198
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307417,
+            47.048732
+          ],
+          [
+            8.307445,
+            47.048743
+          ],
+          [
+            8.307917,
+            47.048939
+          ],
+          [
+            8.308066,
+            47.049001
+          ],
+          [
+            8.308148,
+            47.049036
+          ]
+        ]
+      },
+      "properties": {
+        "step": 87,
+        "instruction": "Auf Frankenstrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Frankenstrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.065,
+        "type": 1,
+        "street_names": [
+          "Frankenstrasse"
+        ],
+        "time_sec": 7.817
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.308148,
+            47.049036
+          ],
+          [
+            8.308204,
+            47.048971
+          ],
+          [
+            8.308682,
+            47.048417
+          ],
+          [
+            8.309315,
+            47.047696
+          ]
+        ]
+      },
+      "properties": {
+        "step": 88,
+        "instruction": "Auf Morgartenstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Morgartenstrasse Richtung S\u00fcdosten fahren. Dann Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "200 Meter weiter der Route folgen.",
+        "length_km": 0.174,
+        "type": 1,
+        "street_names": [
+          "Morgartenstrasse"
+        ],
+        "time_sec": 20.897
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.309315,
+            47.047696
+          ],
+          [
+            8.30904,
+            47.047585
+          ],
+          [
+            8.308743,
+            47.047465
+          ],
+          [
+            8.308556,
+            47.047389
+          ],
+          [
+            8.308206,
+            47.047248
+          ],
+          [
+            8.307919,
+            47.047132
+          ],
+          [
+            8.307794,
+            47.047082
+          ]
+        ]
+      },
+      "properties": {
+        "step": 89,
+        "instruction": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.134,
+        "type": 10,
+        "street_names": [
+          "Habsburgerstrasse"
+        ],
+        "time_sec": 21.545
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307794,
+            47.047082
+          ],
+          [
+            8.307734,
+            47.047151
+          ],
+          [
+            8.307383,
+            47.047555
+          ],
+          [
+            8.3072,
+            47.047765
+          ],
+          [
+            8.307149,
+            47.047824
+          ],
+          [
+            8.306919,
+            47.048089
+          ],
+          [
+            8.306889,
+            47.048123
+          ],
+          [
+            8.30672,
+            47.048317
+          ],
+          [
+            8.306639,
+            47.04841
+          ]
+        ]
+      },
+      "properties": {
+        "step": 90,
+        "instruction": "Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "200 Meter weiter der Route folgen.",
+        "length_km": 0.172,
+        "type": 10,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 25.87
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306639,
+            47.04841
+          ],
+          [
+            8.306719,
+            47.048442
+          ],
+          [
+            8.307032,
+            47.048571
+          ],
+          [
+            8.307417,
+            47.048732
+          ]
+        ]
+      },
+      "properties": {
+        "step": 91,
+        "instruction": "Rechts auf Frankenstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Frankenstrasse abbiegen. Dann, in 70 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.069,
+        "type": 10,
+        "street_names": [
+          "Frankenstrasse"
+        ],
+        "time_sec": 13.926
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307417,
+            47.048732
+          ],
+          [
+            8.307445,
+            47.048743
+          ],
+          [
+            8.307917,
+            47.048939
+          ],
+          [
+            8.308066,
+            47.049001
+          ],
+          [
+            8.308148,
+            47.049036
+          ]
+        ]
+      },
+      "properties": {
+        "step": 92,
+        "instruction": "Auf Frankenstrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Frankenstrasse Richtung Nordosten fahren. Dann Rechts auf Morgartenstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.065,
+        "type": 1,
+        "street_names": [
+          "Frankenstrasse"
+        ],
+        "time_sec": 7.817
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.308148,
+            47.049036
+          ],
+          [
+            8.308204,
+            47.048971
+          ],
+          [
+            8.308682,
+            47.048417
+          ],
+          [
+            8.309315,
+            47.047696
+          ]
+        ]
+      },
+      "properties": {
+        "step": 93,
+        "instruction": "Rechts auf Morgartenstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Morgartenstrasse abbiegen.",
+        "verbal_post": "200 Meter weiter der Route folgen.",
+        "length_km": 0.174,
+        "type": 10,
+        "street_names": [
+          "Morgartenstrasse"
+        ],
+        "time_sec": 26.626
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.309315,
+            47.047696
+          ],
+          [
+            8.30904,
+            47.047585
+          ],
+          [
+            8.308743,
+            47.047465
+          ],
+          [
+            8.308556,
+            47.047389
+          ],
+          [
+            8.308206,
+            47.047248
+          ],
+          [
+            8.307919,
+            47.047132
+          ],
+          [
+            8.307794,
+            47.047082
+          ]
+        ]
+      },
+      "properties": {
+        "step": 94,
+        "instruction": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.134,
+        "type": 10,
+        "street_names": [
+          "Habsburgerstrasse"
+        ],
+        "time_sec": 21.545
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307794,
+            47.047082
+          ],
+          [
+            8.307734,
+            47.047151
+          ],
+          [
+            8.307383,
+            47.047555
+          ],
+          [
+            8.3072,
+            47.047765
+          ],
+          [
+            8.307149,
+            47.047824
+          ],
+          [
+            8.306919,
+            47.048089
+          ],
+          [
+            8.306889,
+            47.048123
+          ],
+          [
+            8.30672,
+            47.048317
+          ],
+          [
+            8.306639,
+            47.04841
+          ]
+        ]
+      },
+      "properties": {
+        "step": 95,
+        "instruction": "Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "200 Meter weiter der Route folgen.",
+        "length_km": 0.172,
+        "type": 10,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 25.87
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306639,
+            47.04841
+          ],
+          [
+            8.30672,
+            47.048317
+          ]
+        ]
+      },
+      "properties": {
+        "step": 96,
+        "instruction": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "10 Meter weiter der Route folgen.",
+        "length_km": 0.012,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 1.44
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.30672,
+            47.048317
+          ],
+          [
+            8.306639,
+            47.04841
+          ]
+        ]
+      },
+      "properties": {
+        "step": 97,
+        "instruction": "Auf Hirschmattstrasse Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "10 Meter weiter der Route folgen.",
+        "length_km": 0.012,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 1.44
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306639,
+            47.04841
+          ],
+          [
+            8.306524,
+            47.048543
+          ],
+          [
+            8.306404,
+            47.048681
+          ],
+          [
+            8.306375,
+            47.048714
+          ],
+          [
+            8.306356,
+            47.048736
+          ],
+          [
+            8.306335,
+            47.048768
+          ],
+          [
+            8.306285,
+            47.048858
+          ],
+          [
+            8.306222,
+            47.04892
+          ]
+        ]
+      },
+      "properties": {
+        "step": 98,
+        "instruction": "Auf Hirschmattstrasse Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung Nordwesten fahren. Dann, in 70 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.065,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 5.984
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306222,
+            47.04892
+          ],
+          [
+            8.306169,
+            47.048973
+          ],
+          [
+            8.306122,
+            47.049012
+          ],
+          [
+            8.306105,
+            47.049033
+          ],
+          [
+            8.30587,
+            47.049324
+          ],
+          [
+            8.305818,
+            47.049379
+          ]
+        ]
+      },
+      "properties": {
+        "step": 99,
+        "instruction": "Auf Hirschmattstrasse Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.059,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 7.195
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305818,
+            47.049379
+          ],
+          [
+            8.30587,
+            47.049324
+          ],
+          [
+            8.306105,
+            47.049033
+          ],
+          [
+            8.306122,
+            47.049012
+          ],
+          [
+            8.306169,
+            47.048973
+          ],
+          [
+            8.306222,
+            47.04892
+          ]
+        ]
+      },
+      "properties": {
+        "step": 100,
+        "instruction": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.059,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 7.176
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306222,
+            47.04892
+          ],
+          [
+            8.306285,
+            47.048858
+          ],
+          [
+            8.306335,
+            47.048768
+          ],
+          [
+            8.306356,
+            47.048736
+          ],
+          [
+            8.306375,
+            47.048714
+          ],
+          [
+            8.306404,
+            47.048681
+          ],
+          [
+            8.306524,
+            47.048543
+          ],
+          [
+            8.306639,
+            47.04841
+          ]
+        ]
+      },
+      "properties": {
+        "step": 101,
+        "instruction": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren. Dann, in 70 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.065,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 5.993
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306639,
+            47.04841
+          ],
+          [
+            8.30672,
+            47.048317
+          ]
+        ]
+      },
+      "properties": {
+        "step": 102,
+        "instruction": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "10 Meter weiter der Route folgen.",
+        "length_km": 0.012,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 1.44
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.30672,
+            47.048317
+          ],
+          [
+            8.306639,
+            47.04841
+          ]
+        ]
+      },
+      "properties": {
+        "step": 103,
+        "instruction": "Auf Hirschmattstrasse Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung Nordwesten fahren. Dann Rechts auf Frankenstrasse abbiegen.",
+        "verbal_post": "10 Meter weiter der Route folgen.",
+        "length_km": 0.012,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 1.44
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306639,
+            47.04841
+          ],
+          [
+            8.306719,
+            47.048442
+          ],
+          [
+            8.307032,
+            47.048571
+          ],
+          [
+            8.307417,
+            47.048732
+          ],
+          [
+            8.307445,
+            47.048743
+          ],
+          [
+            8.307446,
+            47.048744
+          ]
+        ]
+      },
+      "properties": {
+        "step": 104,
+        "instruction": "Rechts auf Frankenstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Frankenstrasse abbiegen. Dann, in 70 Meter, Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.072,
+        "type": 10,
+        "street_names": [
+          "Frankenstrasse"
+        ],
+        "time_sec": 14.342
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307446,
+            47.048744
+          ],
+          [
+            8.307917,
+            47.048939
+          ],
+          [
+            8.308066,
+            47.049001
+          ],
+          [
+            8.308148,
+            47.049036
+          ]
+        ]
+      },
+      "properties": {
+        "step": 105,
+        "instruction": "Auf Frankenstrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Frankenstrasse Richtung Nordosten fahren. Dann Rechts auf Morgartenstrasse abbiegen.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.061,
+        "type": 2,
+        "street_names": [
+          "Frankenstrasse"
+        ],
+        "time_sec": 7.423
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.308148,
+            47.049036
+          ],
+          [
+            8.308204,
+            47.048971
+          ],
+          [
+            8.308682,
+            47.048417
+          ],
+          [
+            8.309315,
+            47.047696
+          ]
+        ]
+      },
+      "properties": {
+        "step": 106,
+        "instruction": "Rechts auf Morgartenstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Morgartenstrasse abbiegen.",
+        "verbal_post": "200 Meter weiter der Route folgen.",
+        "length_km": 0.174,
+        "type": 10,
+        "street_names": [
+          "Morgartenstrasse"
+        ],
+        "time_sec": 26.626
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.309315,
+            47.047696
+          ],
+          [
+            8.30904,
+            47.047585
+          ],
+          [
+            8.308743,
+            47.047465
+          ],
+          [
+            8.308556,
+            47.047389
+          ],
+          [
+            8.308206,
+            47.047248
+          ],
+          [
+            8.307919,
+            47.047132
+          ],
+          [
+            8.307794,
+            47.047082
+          ]
+        ]
+      },
+      "properties": {
+        "step": 107,
+        "instruction": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.134,
+        "type": 10,
+        "street_names": [
+          "Habsburgerstrasse"
+        ],
+        "time_sec": 21.545
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307794,
+            47.047082
+          ],
+          [
+            8.307734,
+            47.047151
+          ],
+          [
+            8.307383,
+            47.047555
+          ],
+          [
+            8.3072,
+            47.047765
+          ],
+          [
+            8.307149,
+            47.047824
+          ],
+          [
+            8.306919,
+            47.048089
+          ],
+          [
+            8.306889,
+            47.048123
+          ],
+          [
+            8.30672,
+            47.048317
+          ]
+        ]
+      },
+      "properties": {
+        "step": 108,
+        "instruction": "Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "200 Meter weiter der Route folgen.",
+        "length_km": 0.16,
+        "type": 10,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 24.412
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.30672,
+            47.048317
+          ],
+          [
+            8.306889,
+            47.048123
+          ],
+          [
+            8.306919,
+            47.048089
+          ],
+          [
+            8.307149,
+            47.047824
+          ]
+        ]
+      },
+      "properties": {
+        "step": 109,
+        "instruction": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren. Dann, in 60 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.064,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 7.697
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307149,
+            47.047824
+          ],
+          [
+            8.3072,
+            47.047765
+          ],
+          [
+            8.307383,
+            47.047555
+          ],
+          [
+            8.307734,
+            47.047151
+          ],
+          [
+            8.307794,
+            47.047082
+          ]
+        ]
+      },
+      "properties": {
+        "step": 110,
+        "instruction": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren. Dann, in 100 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.096,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 11.555
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307794,
+            47.047082
+          ],
+          [
+            8.307841,
+            47.047027
+          ],
+          [
+            8.308048,
+            47.046789
+          ],
+          [
+            8.308286,
+            47.046515
+          ],
+          [
+            8.308335,
+            47.046459
+          ]
+        ]
+      },
+      "properties": {
+        "step": 111,
+        "instruction": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.079,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 9.635
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.308335,
+            47.046459
+          ],
+          [
+            8.308286,
+            47.046515
+          ],
+          [
+            8.308048,
+            47.046789
+          ],
+          [
+            8.307841,
+            47.047027
+          ],
+          [
+            8.307794,
+            47.047082
+          ]
+        ]
+      },
+      "properties": {
+        "step": 112,
+        "instruction": "Auf Hirschmattstrasse Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Hirschmattstrasse Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.079,
+        "type": 1,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 9.635
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307794,
+            47.047082
+          ],
+          [
+            8.307662,
+            47.047028
+          ],
+          [
+            8.307504,
+            47.046964
+          ],
+          [
+            8.306996,
+            47.04676
+          ]
+        ]
+      },
+      "properties": {
+        "step": 113,
+        "instruction": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren. Dann, in 70 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.071,
+        "type": 1,
+        "street_names": [
+          "Habsburgerstrasse"
+        ],
+        "time_sec": 8.537
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306996,
+            47.04676
+          ],
+          [
+            8.30737,
+            47.046317
+          ],
+          [
+            8.307522,
+            47.046137
+          ]
+        ]
+      },
+      "properties": {
+        "step": 114,
+        "instruction": "Auf Winkelriedstrasse Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Winkelriedstrasse Richtung S\u00fcdosten fahren. Dann, in 80 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.08,
+        "type": 1,
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 9.62
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307522,
+            47.046137
+          ],
+          [
+            8.308217,
+            47.046412
+          ],
+          [
+            8.308278,
+            47.046437
+          ],
+          [
+            8.308335,
+            47.046459
+          ]
+        ]
+      },
+      "properties": {
+        "step": 115,
+        "instruction": "Auf Waldst\u00e4tterstrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Waldst\u00e4tterstrasse Richtung Nordosten fahren. Dann Links auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.071,
+        "type": 1,
+        "street_names": [
+          "Waldst\u00e4tterstrasse"
+        ],
+        "time_sec": 8.54
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.308335,
+            47.046459
+          ],
+          [
+            8.308286,
+            47.046515
+          ],
+          [
+            8.308048,
+            47.046789
+          ],
+          [
+            8.307841,
+            47.047027
+          ],
+          [
+            8.307794,
+            47.047082
+          ]
+        ]
+      },
+      "properties": {
+        "step": 116,
+        "instruction": "Links auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Links auf Hirschmattstrasse abbiegen. Dann Links auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.079,
+        "type": 15,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 11.74
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307794,
+            47.047082
+          ],
+          [
+            8.307662,
+            47.047028
+          ],
+          [
+            8.307504,
+            47.046964
+          ],
+          [
+            8.306996,
+            47.04676
+          ]
+        ]
+      },
+      "properties": {
+        "step": 117,
+        "instruction": "Links auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Links auf Habsburgerstrasse abbiegen. Dann, in 70 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.071,
+        "type": 15,
+        "street_names": [
+          "Habsburgerstrasse"
+        ],
+        "time_sec": 10.852
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306996,
+            47.04676
+          ],
+          [
+            8.306485,
+            47.046553
+          ]
+        ]
+      },
+      "properties": {
+        "step": 118,
+        "instruction": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren. Dann Rechts auf Kauffmannweg abbiegen.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 1,
+        "street_names": [
+          "Habsburgerstrasse"
+        ],
+        "time_sec": 5.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306485,
+            47.046553
+          ],
+          [
+            8.306256,
+            47.046816
+          ],
+          [
+            8.306223,
+            47.046855
+          ],
+          [
+            8.305849,
+            47.047284
+          ]
+        ]
+      },
+      "properties": {
+        "step": 119,
+        "instruction": "Rechts auf Kauffmannweg abbiegen.",
+        "verbal_pre": "Rechts auf Kauffmannweg abbiegen. Dann Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.094,
+        "type": 10,
+        "street_names": [
+          "Kauffmannweg"
+        ],
+        "time_sec": 16.802
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305849,
+            47.047284
+          ],
+          [
+            8.306361,
+            47.047497
+          ]
+        ]
+      },
+      "properties": {
+        "step": 120,
+        "instruction": "Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Murbacherstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 10,
+        "street_names": [
+          "Murbacherstrasse"
+        ],
+        "time_sec": 10.794
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306361,
+            47.047497
+          ],
+          [
+            8.307091,
+            47.0478
+          ],
+          [
+            8.307149,
+            47.047824
+          ]
+        ]
+      },
+      "properties": {
+        "step": 121,
+        "instruction": "Auf Murbacherstrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Murbacherstrasse Richtung Nordosten fahren. Dann Links auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.07,
+        "type": 1,
+        "street_names": [
+          "Murbacherstrasse"
+        ],
+        "time_sec": 8.417
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307149,
+            47.047824
+          ],
+          [
+            8.306919,
+            47.048089
+          ],
+          [
+            8.306889,
+            47.048123
+          ],
+          [
+            8.30672,
+            47.048317
+          ],
+          [
+            8.306639,
+            47.04841
+          ],
+          [
+            8.306524,
+            47.048543
+          ],
+          [
+            8.306404,
+            47.048681
+          ],
+          [
+            8.306375,
+            47.048714
+          ],
+          [
+            8.306356,
+            47.048736
+          ],
+          [
+            8.306335,
+            47.048768
+          ],
+          [
+            8.306285,
+            47.048858
+          ]
+        ]
+      },
+      "properties": {
+        "step": 122,
+        "instruction": "Links auf Hirschmattstrasse abbiegen.",
+        "verbal_pre": "Links auf Hirschmattstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.133,
+        "type": 15,
+        "street_names": [
+          "Hirschmattstrasse"
+        ],
+        "time_sec": 16.251
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306285,
+            47.048858
+          ],
+          [
+            8.306225,
+            47.048786
+          ],
+          [
+            8.306184,
+            47.048759
+          ],
+          [
+            8.306121,
+            47.048719
+          ],
+          [
+            8.306047,
+            47.048682
+          ],
+          [
+            8.305898,
+            47.048618
+          ],
+          [
+            8.305638,
+            47.048507
+          ],
+          [
+            8.305529,
+            47.048461
+          ]
+        ]
+      },
+      "properties": {
+        "step": 123,
+        "instruction": "Links auf Pilatusstrasse/2/4 abbiegen.",
+        "verbal_pre": "Links auf Pilatusstrasse, 2 abbiegen. Dann Links auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "70 Meter weiter der Route folgen.",
+        "length_km": 0.072,
+        "type": 15,
+        "street_names": [
+          "Pilatusstrasse",
+          "2",
+          "4"
+        ],
+        "time_sec": 10.649
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305529,
+            47.048461
+          ],
+          [
+            8.305588,
+            47.048392
+          ],
+          [
+            8.306075,
+            47.047819
+          ]
+        ]
+      },
+      "properties": {
+        "step": 124,
+        "instruction": "Links auf Winkelriedstrasse abbiegen.",
+        "verbal_pre": "Links auf Winkelriedstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.083,
+        "type": 15,
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 11.794
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306075,
+            47.047819
+          ],
+          [
+            8.30578,
+            47.047692
+          ],
+          [
+            8.305568,
+            47.0476
+          ]
+        ]
+      },
+      "properties": {
+        "step": 125,
+        "instruction": "Auf Kauffmannweg Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung S\u00fcdwesten fahren. Dann, in 50 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 1,
+        "street_names": [
+          "Kauffmannweg"
+        ],
+        "time_sec": 5.417
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305568,
+            47.0476
+          ],
+          [
+            8.30585,
+            47.047284
+          ]
+        ]
+      },
+      "properties": {
+        "step": 126,
+        "instruction": "Auf Kauffmannweg Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "40 Meter weiter der Route folgen.",
+        "length_km": 0.041,
+        "type": 1,
+        "street_names": [
+          "Kauffmannweg"
+        ],
+        "time_sec": 4.92
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.30585,
+            47.047284
+          ],
+          [
+            8.306361,
+            47.047497
+          ]
+        ]
+      },
+      "properties": {
+        "step": 127,
+        "instruction": "Auf Murbacherstrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Murbacherstrasse Richtung Nordosten fahren. Dann Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 1,
+        "street_names": [
+          "Murbacherstrasse"
+        ],
+        "time_sec": 5.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306361,
+            47.047497
+          ],
+          [
+            8.306418,
+            47.047431
+          ],
+          [
+            8.306498,
+            47.047338
+          ],
+          [
+            8.306801,
+            47.046986
+          ],
+          [
+            8.306947,
+            47.046817
+          ],
+          [
+            8.306996,
+            47.04676
+          ]
+        ]
+      },
+      "properties": {
+        "step": 128,
+        "instruction": "Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Winkelriedstrasse abbiegen. Dann, in 100 Meter, Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.094,
+        "type": 10,
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 17.063
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306996,
+            47.04676
+          ],
+          [
+            8.306485,
+            47.046553
+          ],
+          [
+            8.305866,
+            47.046303
+          ],
+          [
+            8.30552,
+            47.046164
+          ]
+        ]
+      },
+      "properties": {
+        "step": 129,
+        "instruction": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.131,
+        "type": 10,
+        "street_names": [
+          "Habsburgerstrasse"
+        ],
+        "time_sec": 21.15
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.30552,
+            47.046164
+          ],
+          [
+            8.305218,
+            47.046543
+          ],
+          [
+            8.304917,
+            47.046897
+          ]
+        ]
+      },
+      "properties": {
+        "step": 130,
+        "instruction": "Rechts auf Dornacherstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Dornacherstrasse abbiegen. Dann, in 90 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "90 Meter weiter der Route folgen.",
+        "length_km": 0.094,
+        "type": 10,
+        "street_names": [
+          "Dornacherstrasse"
+        ],
+        "time_sec": 16.909
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.304917,
+            47.046897
+          ],
+          [
+            8.305428,
+            47.047109
+          ],
+          [
+            8.30585,
+            47.047284
+          ]
+        ]
+      },
+      "properties": {
+        "step": 131,
+        "instruction": "Auf Murbacherstrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Murbacherstrasse Richtung Nordosten fahren. Dann, in 80 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.082,
+        "type": 1,
+        "street_names": [
+          "Murbacherstrasse"
+        ],
+        "time_sec": 9.857
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.30585,
+            47.047284
+          ],
+          [
+            8.306361,
+            47.047497
+          ]
+        ]
+      },
+      "properties": {
+        "step": 132,
+        "instruction": "Auf Murbacherstrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Murbacherstrasse Richtung Nordosten fahren. Dann Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 1,
+        "street_names": [
+          "Murbacherstrasse"
+        ],
+        "time_sec": 5.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306361,
+            47.047497
+          ],
+          [
+            8.306418,
+            47.047431
+          ],
+          [
+            8.306498,
+            47.047338
+          ],
+          [
+            8.306801,
+            47.046986
+          ],
+          [
+            8.306947,
+            47.046817
+          ],
+          [
+            8.306996,
+            47.04676
+          ]
+        ]
+      },
+      "properties": {
+        "step": 133,
+        "instruction": "Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Winkelriedstrasse abbiegen. Dann, in 100 Meter, Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.094,
+        "type": 10,
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 17.063
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306996,
+            47.04676
+          ],
+          [
+            8.306485,
+            47.046553
+          ]
+        ]
+      },
+      "properties": {
+        "step": 134,
+        "instruction": "Rechts auf Habsburgerstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Habsburgerstrasse abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 10,
+        "street_names": [
+          "Habsburgerstrasse"
+        ],
+        "time_sec": 10.794
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306485,
+            47.046553
+          ],
+          [
+            8.306256,
+            47.046816
+          ],
+          [
+            8.306223,
+            47.046855
+          ],
+          [
+            8.305849,
+            47.047284
+          ]
+        ]
+      },
+      "properties": {
+        "step": 135,
+        "instruction": "Auf Kauffmannweg Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung Nordwesten fahren. Dann Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_post": "100 Meter weiter der Route folgen.",
+        "length_km": 0.094,
+        "type": 1,
+        "street_names": [
+          "Kauffmannweg"
+        ],
+        "time_sec": 11.407
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.305849,
+            47.047284
+          ],
+          [
+            8.306361,
+            47.047497
+          ]
+        ]
+      },
+      "properties": {
+        "step": 136,
+        "instruction": "Rechts auf Murbacherstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Murbacherstrasse abbiegen. Dann Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "50 Meter weiter der Route folgen.",
+        "length_km": 0.045,
+        "type": 10,
+        "street_names": [
+          "Murbacherstrasse"
+        ],
+        "time_sec": 10.794
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306361,
+            47.047497
+          ],
+          [
+            8.306418,
+            47.047431
+          ],
+          [
+            8.306498,
+            47.047338
+          ],
+          [
+            8.306801,
+            47.046986
+          ],
+          [
+            8.306947,
+            47.046817
+          ],
+          [
+            8.306996,
+            47.04676
+          ],
+          [
+            8.30737,
+            47.046317
+          ],
+          [
+            8.307522,
+            47.046137
+          ],
+          [
+            8.307881,
+            47.04571
+          ],
+          [
+            8.308038,
+            47.045523
+          ]
+        ]
+      },
+      "properties": {
+        "step": 137,
+        "instruction": "Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_pre": "Rechts auf Winkelriedstrasse abbiegen.",
+        "verbal_post": "300 Meter weiter der Route folgen.",
+        "length_km": 0.254,
+        "type": 10,
+        "street_names": [
+          "Winkelriedstrasse"
+        ],
+        "time_sec": 36.225
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.308038,
+            47.045523
+          ],
+          [
+            8.307876,
+            47.045476
+          ]
+        ]
+      },
+      "properties": {
+        "step": 138,
+        "instruction": "Rechts auf Bundesplatz abbiegen.",
+        "verbal_pre": "Rechts auf Bundesplatz abbiegen. Dann Leicht nach rechts auf Moosstrasse abbiegen.",
+        "verbal_post": "10 Meter weiter der Route folgen.",
+        "length_km": 0.013,
+        "type": 10,
+        "street_names": [
+          "Bundesplatz"
+        ],
+        "time_sec": 7.05
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307876,
+            47.045476
+          ],
+          [
+            8.307745,
+            47.045472
+          ],
+          [
+            8.307526,
+            47.045487
+          ],
+          [
+            8.307369,
+            47.045499
+          ]
+        ]
+      },
+      "properties": {
+        "step": 139,
+        "instruction": "Leicht nach rechts auf Moosstrasse abbiegen.",
+        "verbal_pre": "Leicht nach rechts auf Moosstrasse abbiegen. Dann Rechts auf Kauffmannweg abbiegen.",
+        "verbal_post": "40 Meter weiter der Route folgen.",
+        "length_km": 0.039,
+        "type": 9,
+        "street_names": [
+          "Moosstrasse"
+        ],
+        "time_sec": 2.904
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.307369,
+            47.045499
+          ],
+          [
+            8.30736,
+            47.045547
+          ],
+          [
+            8.30702,
+            47.045939
+          ]
+        ]
+      },
+      "properties": {
+        "step": 140,
+        "instruction": "Rechts auf Kauffmannweg abbiegen.",
+        "verbal_pre": "Rechts auf Kauffmannweg abbiegen. Dann Das Ziel wird erreicht.",
+        "verbal_post": "60 Meter weiter der Route folgen.",
+        "length_km": 0.056,
+        "type": 10,
+        "street_names": [
+          "Kauffmannweg"
+        ],
+        "time_sec": 10.341
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.30702,
+            47.045939
+          ],
+          [
+            8.306992,
+            47.045971
+          ],
+          [
+            8.306848,
+            47.046136
+          ],
+          [
+            8.306485,
+            47.046553
+          ]
+        ]
+      },
+      "properties": {
+        "step": 141,
+        "instruction": "Auf Kauffmannweg Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Kauffmannweg Richtung Nordwesten fahren. Dann, in 80 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "80 Meter weiter der Route folgen.",
+        "length_km": 0.079,
+        "type": 1,
+        "street_names": [
+          "Kauffmannweg"
+        ],
+        "time_sec": 9.515
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.306485,
+            47.046553
+          ],
+          [
+            8.305866,
+            47.046303
+          ],
+          [
+            8.30552,
+            47.046164
+          ]
+        ]
+      },
+      "properties": {
+        "step": 142,
+        "instruction": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Habsburgerstrasse Richtung S\u00fcdwesten fahren. Dann, in 90 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "90 Meter weiter der Route folgen.",
+        "length_km": 0.086,
+        "type": 1,
+        "street_names": [
+          "Habsburgerstrasse"
+        ],
+        "time_sec": 10.337
       }
     }
   ]

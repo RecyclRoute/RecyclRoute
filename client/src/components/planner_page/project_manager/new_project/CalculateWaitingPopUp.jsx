@@ -1,14 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import 'maplibre-gl/dist/maplibre-gl.css';
 import "../../plannerpage.css";
 
-export const CalculateWaitingPopUp = ({ projectName }) => {
+export const CalculateWaitingPopUp = ({ projectName, setIsLoading }) => {
   const [status, setStatus] = useState("pending");
   const navigate = useNavigate();
+  const hasNavigated = useRef(false);
 
   console.log("🟡 CalculateWaitingPopUp gerendert mit Projekt:", projectName);
   console.log("📌 Aktueller Status:", status);
+
+  useEffect(() => {
+  if (window.location.pathname === "/navigation") {
+    // Sicherstellen, dass wir auf der Zielseite sind
+    setIsLoading(false);
+  }
+}, []);
 
   useEffect(() => {
     console.log("🔁 Starte Statusüberwachung für:", projectName);
@@ -16,22 +24,24 @@ export const CalculateWaitingPopUp = ({ projectName }) => {
     const interval = setInterval(() => {
       console.log("⏱️ Anfrage an /getCalculationStatus für:", projectName);
       fetch(`http://localhost:8000/getCalculationStatus?project_name=${projectName}`)
-        .then(res => {
-          if (!res.ok) {
-            console.error("❌ HTTP-Fehlerstatus:", res.status);
-            throw new Error(`HTTP ${res.status}`);
-          }
-          return res.json();
-        })
-        .then(data => {
-          console.log("✅ Status-Antwort erhalten:", data);
-          if (data.status === "done") {
-            console.log("🎯 Status ist 'done' – navigiere sofort zu /navigation");
-            clearInterval(interval);
-            setStatus("done");
-            navigate("/navigation");  // 🔁 direkt und ohne Delay
-          }
-        })
+      .then(async res => {
+  const data = await res.json();
+  if (!res.ok) {
+    console.error("❌ HTTP-Fehlerstatus:", res.status);
+    throw new Error(`HTTP ${res.status}`);
+  }
+  return data;
+})
+.then(data => {
+  console.log("✅ Status-Antwort erhalten:", data);
+  if (data.status === "done") {
+    console.log("🎯 Status ist 'done' – navigiere sofort zu /navigation");
+    clearInterval(interval);
+    setStatus("done");
+    navigate("/navigation");
+  }
+})
+
         .catch(err => {
           console.error("❌ Fehler beim Statusabruf:", err);
         });
@@ -39,7 +49,6 @@ export const CalculateWaitingPopUp = ({ projectName }) => {
 
     return () => {
       console.log("🧹 Stoppe Intervall für Projekt:", projectName);
-      clearInterval(interval);
     };
   }, [projectName, navigate]);
 
@@ -59,7 +68,6 @@ export const CalculateWaitingPopUp = ({ projectName }) => {
       <div style={{
         backgroundColor: "white",
         padding: "30px 40px",
-        borderRadius: "10px",
         boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
         textAlign: "center"
       }}>

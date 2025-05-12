@@ -1,7 +1,7 @@
 import "./plannerpage_footer/plannerpage_footer.css";
 import "./plannerpage.css";
 import maplibregl from 'maplibre-gl';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { PlannerpageHeader } from "./plannerpage_header/plannerpage_header.jsx";
 import { Footer, PlannerpageFooter } from "./plannerpage_footer/plannerpage_footer.jsx";
 import { MapRotationButton } from "../map/MapRotationButton.jsx";
@@ -39,7 +39,10 @@ export const PlannerPage = () => {
   const [Location, setLocation] = useState('');
   const [changeLayerMode, setChangeLayerMode] = useState(false);
   const [layerMarkers, setLayerMarkers] = useState([]);
-  
+  const [calculationStarted, setCalculationStarted] = useState(false);
+  const calculationTriggered = useRef(false);  // statt State → bleibt stabil auch bei Re-Renders
+
+
   const navigate = useNavigate();
 
   const handleMapLoad = (mapInstance) => {
@@ -47,50 +50,68 @@ export const PlannerPage = () => {
   };
 
   const handleStartPointConfirmed = (lngLat) => {
-    console.log("Startpunkt gesetzt:", lngLat);
-    const coordinates = [lngLat.lng, lngLat.lat];
-    setCreateStartPointMode(false);
-    console.log(ProjectName,coordinates)
-    setIsLoading(true);
-    console.log("Berechnung wird gestartet – Popup sollte jetzt kommen")
-    sendCalculationRequestToBackend(ProjectName, coordinates);
-  };
+  if (calculationStarted) {
+    console.warn("⚠️ Berechnung bereits gestartet, ignoriere weiteren Klick");
+    return;
+  }
+  calculationTriggered.current = true;
+  const coordinates = [lngLat.lng, lngLat.lat];
+  console.log("Startpunkt gesetzt:", coordinates);
+
+  setCreateStartPointMode(false);
+  setIsLoading(true);
+  sendCalculationRequestToBackend(ProjectName, coordinates);
+};
+
   
   const sendCalculationRequestToBackend = async (ProjectName, startPoint) => {
-    if (!startPoint || !ProjectName) {
-      console.error("Missing project name or point coordinates");
-      return;
-    }
-  
-    // Prepare the payload using the state variables
-    const payload = {
-      project_name: ProjectName,  // First include the project_name from your state variable
-      point_geometry: {
-        type: "Point",
-        coordinates: startPoint  // Use state variable for the point coordinates
-      }
-    };
-    
-  
-    try {
-      const response = await fetch(`http://localhost:8000/berechnen?project_name=${ProjectName}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-      });
-  
-      if (response.ok) {
-        const data = await response.json();
-        console.log("Response from backend:", data);
-      } else {
-        console.error("Error from backend:", await response.text());
-      }
-    } catch (error) {
-      console.error("Request error:", error);
+  if (!startPoint || !ProjectName) {
+    console.error("❌ Fehlende Eingaben für Projektname oder Startpunkt");
+    return;
+  }
+
+  const payload = {
+    project_name: ProjectName,
+    point_geometry: {
+      type: "Point",
+      coordinates: startPoint
     }
   };
+
+  try {
+    const response = await fetch(`http://localhost:8000/berechnen?project_name=${ProjectName}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (response.status === 409) {
+      console.warn("⚠️ Berechnung wurde bereits abgeschlossen.");
+      alert("Dieses Projekt wurde bereits berechnet.");
+      return;
+    }
+
+    if (response.status === 202) {
+      console.warn("ℹ️ Berechnung läuft bereits.");
+      alert("Die Berechnung läuft bereits.");
+      return;
+    }
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Serverfehler: ${errorText}`);
+    }
+
+    const data = await response.json();
+    console.log("✅ Antwort vom Backend:", data);
+  } catch (error) {
+    console.error("❌ Anfrage fehlgeschlagen:", error);
+    alert("Die Berechnung konnte nicht gestartet werden.");
+  }
+};
+
   
 
   const isPointInsidePolygon = (lng, lat, polygon) => {
@@ -177,21 +198,23 @@ export const PlannerPage = () => {
   useEffect(() => {
     const heute = new Date().toISOString().split('T')[0];
     setDatum(heute);
-
-    // Fetch projects
-    fetch("http://localhost:8000/getProjects")
-    .then(res => res.json())
-    .then(data => {
-      console.log("FETCH RESPONSE:", data);  // <-- richtig
-      if (Array.isArray(data.projects)) {
-        setProjects(data.projects);
-      } else {
-        console.error("Ungültiges Projektformat:", data);
-      }
-    });
-  
-
   }, []);
+
+  useEffect(() => {
+  if (!isLoading) {
+    fetch("http://localhost:8000/getProjects")
+      .then(res => res.json())
+      .then(data => {
+        console.log("FETCH RESPONSE:", data);
+        if (Array.isArray(data.projects)) {
+          setProjects(data.projects);
+        } else {
+          console.error("Ungültiges Projektformat:", data);
+        }
+      });
+  }
+}, [isLoading]);
+
 
   const checkInputNewProject = () => {
     if (ProjectName && Location) {
@@ -224,6 +247,13 @@ export const PlannerPage = () => {
       alert("Fehler beim Geocoding.");
     }
   };
+  useEffect(() => {
+  if (window.location.pathname === "/navigation") {
+    console.log("🔁 Navigation aktiv – isLoading zurücksetzen");
+    setIsLoading(false);
+  }
+}, []);
+
 
 
   return (
@@ -231,6 +261,7 @@ export const PlannerPage = () => {
       <PlannerpageHeader/>
       <div style={{ zIndex: 0, height: "100%" }}>
         <BaseMap
+          onNavigateToNavigation={handleNavigationToPage}
           map={map}
           setMap={setMap}
           onMapLoad={handleMapLoad}
@@ -240,7 +271,7 @@ export const PlannerPage = () => {
           setPolygonPoints={setPolygonPoints}
           setIsLoading={setIsLoading}
           projectInfo={projectInfo}
-          onNavigateToNavigation={handleNavigationToPage}
+          
         />
 
         {startPageMode && (
@@ -256,10 +287,6 @@ export const PlannerPage = () => {
           </div>
         )}
 
-        {isLoading && projectInfo?.ProjectName && (
-          <CalculateWaitingPopUp projectName={projectInfo.ProjectName} />
-          )}
-
 
       </div>
 
@@ -270,6 +297,9 @@ export const PlannerPage = () => {
         setProjectManagerMode={setProjectManagerMode}
       />
 
+      {isLoading && projectInfo?.ProjectName && (
+        <CalculateWaitingPopUp projectName={projectInfo.ProjectName} setIsLoading={setIsLoading}/>
+      )}
       {polygonMode &&(
         <PolygonInstructionsPopup/>
         
