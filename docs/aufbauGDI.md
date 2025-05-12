@@ -5,9 +5,7 @@ title: Geodateninfrastruktur
 # Aufbau der Geodateninfrastruktur (GDI)
 <a id="top"></a>
 
-Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backend, einem Frontend sowie verschiedenen Bibliotheken und API-Schnittstellen. Die folgende Darstellung zeigt die Systemarchitektur von RecyclRoute:
-
-<div id="gdi-final"></div>
+Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backend, einem Frontend einem laufenden Docker (valhalla) sowie verschiedenen Bibliotheken. Die folgende Darstellung zeigt die momentane Systemarchitektur von RecyclRoute:
 
 ->ToDO Bild erstellen!
 ![GDI Architektur Schema](asstes/images/GDI_Architektur_final.png)
