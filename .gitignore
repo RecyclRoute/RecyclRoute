@@ -46,3 +46,4 @@ ortools_package
 ortools_package
 recyclroute-venv
 valhalla_docker
+polygon.geojson
