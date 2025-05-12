@@ -13,6 +13,9 @@ import { BaseMap } from "../map/BaseMap.jsx";
 import useCreatePolygon from "../map/useCreatePolygon.jsx";
 import { NewProjectPopup } from "./project_manager/new_project/NewProjectPopup.jsx";
 import { ProjectUseMenuPopup } from "./project_manager/ProjectUseMenuPopup.jsx";
+import {PolygonInstructionsPopup} from "./project_manager/new_project/PolygonInstructionsPopup.jsx";
+import {SavePolygonPopup} from "./project_manager/new_project/SavePolygonPopup.jsx";
+import {StartPointInstructionsPopup} from "./project_manager/new_project/StartPointInstructionsPopup.jsx";
 
 export const PlannerPage = () => {
   const [ProjectManagerMode, setProjectManagerMode] = useState(false);
@@ -40,9 +43,46 @@ export const PlannerPage = () => {
 
   const handleStartPointConfirmed = (lngLat) => {
     console.log("Startpunkt gesetzt:", lngLat);
-    setCreateStartPointMode(true);
-
-    // Do anything you want here — send to backend, enable routing, etc.
+    const coordinates = [lngLat.lng, lngLat.lat];
+    setCreateStartPointMode(false);
+    console.log(ProjectName,coordinates)
+    sendCalculationRequestToBackend(ProjectName, coordinates);
+  };
+  
+  const sendCalculationRequestToBackend = async (ProjectName, startPoint) => {
+    if (!startPoint || !ProjectName) {
+      console.error("Missing project name or point coordinates");
+      return;
+    }
+  
+    // Prepare the payload using the state variables
+    const payload = {
+      project_name: ProjectName,  // First include the project_name from your state variable
+      point_geometry: {
+        type: "Point",
+        coordinates: startPoint  // Use state variable for the point coordinates
+      }
+    };
+    
+  
+    try {
+      const response = await fetch(`http://localhost:8000/berechnen?project_name=${ProjectName}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+  
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Response from backend:", data);
+      } else {
+        console.error("Error from backend:", await response.text());
+      }
+    } catch (error) {
+      console.error("Request error:", error);
+    }
   };
   
 
@@ -83,7 +123,7 @@ export const PlannerPage = () => {
     }
   };
 
-  useCreatePolygon({
+  const { finishPolygon } = useCreatePolygon({
     map,
     polygonMode,
     polygonPoints,
@@ -92,6 +132,8 @@ export const PlannerPage = () => {
     setPolygonMode,
     sendPolygonToBackend
   });
+  
+  
 
   useEffect(() => {
     if (!map || !CreateStartPointMode) return;
@@ -164,7 +206,7 @@ export const PlannerPage = () => {
       if (data.length > 0) {
         const { lon, lat } = data[0];
         map.flyTo({ center: [parseFloat(lon), parseFloat(lat)], zoom: 14 });
-        setProjectInfo({ ProjectName, Location });
+        setProjectInfo({ ProjectName, Location, Datum });
         setPolygonMode(true);
         alert(`Projekt "${ProjectName}" gestartet! Bitte zeichne nun das Polygon.`);
       } else {
@@ -226,6 +268,21 @@ export const PlannerPage = () => {
         ProjectManagerMode={ProjectManagerMode}
         setProjectManagerMode={setProjectManagerMode}
       />
+
+      {polygonMode &&(
+        <PolygonInstructionsPopup/>
+        
+      )}
+
+      {polygonMode &&(
+        <SavePolygonPopup finishPolygon={finishPolygon}/>
+        
+      )}
+
+      {CreateStartPointMode &&(
+        <StartPointInstructionsPopup/>
+        
+      )}
 
       {ProjectManagerMode && (
         <ProjectManagerPopup

@@ -11,6 +11,31 @@ const useCreatePolygon = ({
 }) => {
   const [mousePosition, setMousePosition] = useState(null);
 
+  // ✅ Separate reusable logic
+  const finishPolygon = async () => {
+    if (polygonPoints.length >= 3) {
+      const closedPolygon = [...polygonPoints, polygonPoints[0]];
+      setPolygonPoints(closedPolygon);
+
+      if (!projectInfo?.ProjectName || !projectInfo?.Location) {
+        alert("Projektname oder Gemeinde fehlen!");
+        return;
+      }
+
+      const customPolygon = {
+        name: projectInfo.ProjectName,
+        gemeindename: projectInfo.Location,
+        datum: projectInfo.Datum,
+        perimeter: closedPolygon
+      };
+
+      setPolygonMode(false);
+      await sendPolygonToBackend(customPolygon);
+    } else {
+      alert('Mindestens 3 Punkte notwendig!');
+    }
+  };
+
   useEffect(() => {
     if (!map || !polygonMode) return;
 
@@ -21,60 +46,28 @@ const useCreatePolygon = ({
       setPolygonPoints((prev) => [...prev, [lng, lat]]);
     };
 
-    const handlePolygonDoubleClick = async () => {
-      if (polygonPoints.length >= 3) {
-        const closedPolygon = [...polygonPoints, polygonPoints[0]];
-        setPolygonPoints(closedPolygon);
-        if (!projectInfo.ProjectName || !projectInfo.Location) {
-          alert("Projektname oder Gemeinde fehlen!");
-          return;
-        }
-        
-
-        const customPolygon = {
-          name: projectInfo.ProjectName,
-          gemeindename: projectInfo.Location,
-          perimeter: closedPolygon
-        };
-
-        //const blob = new Blob([JSON.stringify(customPolygon, null, 2)], { type: 'application/json' });
-        //const url = URL.createObjectURL(blob);
-        //const link = document.createElement('a');
-        //link.href = url;
-        //link.download = 'polygon_custom.json';
-        //document.body.appendChild(link);
-        //link.click();
-        //document.body.removeChild(link);
-        setPolygonMode(false);
-        await sendPolygonToBackend(customPolygon);
-        
-      } else {
-        alert('Mindestens 3 Punkte notwendig!');
-      }
-    };
-
     const handleMouseMove = (e) => {
       setMousePosition([e.lngLat.lng, e.lngLat.lat]);
     };
 
     map.on("click", handlePolygonClick);
-    map.on("dblclick", handlePolygonDoubleClick);
     map.on("mousemove", handleMouseMove);
+
+    // ⛔️ Removed double-click to prevent conflict with button-based calls
 
     return () => {
       map.off("click", handlePolygonClick);
-      map.off("dblclick", handlePolygonDoubleClick);
       map.off("mousemove", handleMouseMove);
       map.doubleClickZoom.enable();
     };
-  }, [map, polygonMode, polygonPoints, projectInfo, setPolygonPoints, setPolygonMode, sendPolygonToBackend]);
+  }, [map, polygonMode]);
 
   useEffect(() => {
     if (!map || !polygonMode) return;
 
     const pointsLength = polygonPoints.length;
 
-    // Aufräumen bei 0 Punkten
+    // Clear layers if no points
     if (pointsLength === 0) {
       ["polygon-line", "polygon-points-layer", "polygon-live-line-layer"].forEach(layerId => {
         if (map.getLayer(layerId)) map.removeLayer(layerId);
@@ -98,26 +91,20 @@ const useCreatePolygon = ({
       ]
     };
 
-    // Hauptlinie / Polygon
+    // Draw polygon or line
     if (map.getSource('polygon-line')) {
       map.getSource('polygon-line').setData(polygonGeoJSON);
     } else {
-      map.addSource('polygon-line', {
-        type: 'geojson',
-        data: polygonGeoJSON
-      });
+      map.addSource('polygon-line', { type: 'geojson', data: polygonGeoJSON });
       map.addLayer({
         id: 'polygon-line',
         type: 'line',
         source: 'polygon-line',
-        paint: {
-          'line-color': '#FF0000',
-          'line-width': 3
-        }
+        paint: { 'line-color': '#FF0000', 'line-width': 3 }
       });
     }
 
-    // Punkte
+    // Draw points
     const pointsGeoJSON = {
       type: 'FeatureCollection',
       features: polygonPoints.map(point => ({
@@ -129,10 +116,7 @@ const useCreatePolygon = ({
     if (map.getSource('polygon-points')) {
       map.getSource('polygon-points').setData(pointsGeoJSON);
     } else {
-      map.addSource('polygon-points', {
-        type: 'geojson',
-        data: pointsGeoJSON
-      });
+      map.addSource('polygon-points', { type: 'geojson', data: pointsGeoJSON });
       map.addLayer({
         id: 'polygon-points-layer',
         type: 'circle',
@@ -146,7 +130,7 @@ const useCreatePolygon = ({
       });
     }
 
-    // Vorschau-Linie zum Cursor
+    // Draw live line
     if (pointsLength > 0 && mousePosition) {
       const liveLineGeoJSON = {
         type: 'FeatureCollection',
@@ -155,10 +139,7 @@ const useCreatePolygon = ({
             type: 'Feature',
             geometry: {
               type: 'LineString',
-              coordinates: [
-                polygonPoints[pointsLength - 1],
-                mousePosition
-              ]
+              coordinates: [polygonPoints[pointsLength - 1], mousePosition]
             }
           }
         ]
@@ -167,10 +148,7 @@ const useCreatePolygon = ({
       if (map.getSource('polygon-live-line')) {
         map.getSource('polygon-live-line').setData(liveLineGeoJSON);
       } else {
-        map.addSource('polygon-live-line', {
-          type: 'geojson',
-          data: liveLineGeoJSON
-        });
+        map.addSource('polygon-live-line', { type: 'geojson', data: liveLineGeoJSON });
         map.addLayer({
           id: 'polygon-live-line-layer',
           type: 'line',
@@ -189,6 +167,11 @@ const useCreatePolygon = ({
       }
     }
   }, [polygonPoints, map, polygonMode, mousePosition]);
+
+  // ✅ Return the function you want to use in SavePolygonPopup
+  return {
+    finishPolygon
+  };
 };
 
 export default useCreatePolygon;

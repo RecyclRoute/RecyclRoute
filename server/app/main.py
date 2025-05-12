@@ -65,6 +65,7 @@ class Point(BaseModel):
 class Project(BaseModel):
     name: str
     gemeindename: str
+    datum:datetime
     perimeter: List[List[float]]
 
 @app.get("/getPointTypes")
@@ -198,6 +199,7 @@ def add_project(project: Project):
     try:
         coords = project.perimeter
         name = project.name
+        date = project.datum
         gemeindename = project.gemeindename
 
         logging.debug(f"Received project: {name}, {gemeindename}")
@@ -213,10 +215,10 @@ def add_project(project: Project):
 
         cur.execute(
             """
-            INSERT INTO project (name, gemeindename, perimeter)
-            VALUES (%s, %s, ST_GeomFromText(%s, 3857))
+            INSERT INTO project (name, gemeindename, date, perimeter)
+            VALUES (%s, %s, %s, ST_GeomFromText(%s, 3857))
             """,
-            (name, gemeindename, polygon_wkt)
+            (name, gemeindename, date, polygon_wkt)
         )
         conn.commit()
 
@@ -284,49 +286,50 @@ def get_projects():
         cur.close()
         conn.close()
 
-
-
-
-
 @app.post("/berechnen")
-async def call_dummy(request: Request, project_name: str):
+async def call_calculate(request: Request, project_name: str):
     try:
-        # Debug: print the raw request body to see what's coming in
         request_body = await request.json()
-        print(f"Received request body: {request_body}")
-
         point_geometry = request_body.get("point_geometry", None)
 
-        # Ensure point_geometry is not None and has the correct structure
         if not point_geometry or 'type' not in point_geometry or 'coordinates' not in point_geometry:
             raise HTTPException(status_code=400, detail="Invalid point geometry data. Ensure 'type' and 'coordinates' are present.")
-        
-        print(f"Point geometry: {point_geometry}")
 
-        # Try to convert the point geometry to a Shapely Point object
-        point = shape(point_geometry)  # Convert the point geometry to a Shapely Point object
-
-        # Fetch the project geometry from the DB (assuming this logic is working correctly)
+        # Fetch geometry from DB
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute("SELECT ST_AsGeoJSON(perimeter) FROM project WHERE name = %s", (project_name,))
+        cur.execute("SELECT ST_AsGeoJSON(perimeter), gemeindename FROM project WHERE name = %s", (project_name,))
         project_row = cur.fetchone()
 
         if not project_row:
             raise HTTPException(status_code=404, detail=f"Project with name {project_name} not found")
 
-        project_geometry = json.loads(project_row[0])  # Convert the GeoJSON string to a Python dict
+        perimeter_geojson = json.loads(project_row['st_asgeojson'])
+        gemeindename = project_row['gemeindename']
+
+        # Extract coordinates from the Polygon (assumes single-ring polygon)
+        coordinates = perimeter_geojson.get("coordinates", [[]])[0]  # Outer ring
+
+        # Ensure polygon is closed (first and last point the same)
+        if coordinates[0] != coordinates[-1]:
+            coordinates.append(coordinates[0])
+
+        # Build the payload including point_geometry
+        payload = {
+            "name": project_name,
+            "gemeindename": gemeindename,
+            "perimeter": coordinates,
+            "point_geometry": point_geometry  # Adding the point_geometry to the payload
+        }
+
         cur.close()
         conn.close()
 
-        # Now send the point and polygon to the API on 7999
+        # Send to second API
         async with httpx.AsyncClient() as client:
-            response = await client.post(
-                "http://localhost:7999/dummy",
-                json={"point": point_geometry, "polygon": project_geometry}
-            )
+            response = await client.post("http://localhost:7999/calculate", json=payload)
             response.raise_for_status()
-            return {"dummy_response": response.json()}
+            return {"calculate_response": response.json()}
 
     except httpx.RequestError as exc:
         raise HTTPException(status_code=500, detail=f"Request error: {exc}")

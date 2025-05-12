@@ -29,27 +29,44 @@ def read_root():
 
 
 
-@app.post("/dummy")
-async def dummy_endpoint(request: Request):
+@app.post("/calculate")
+async def calculate(request: Request):
     data = await request.json()
 
-    # Extract geometries from request
-    polygon_geojson = data.get("polygon_geometry")
+    # Debug print
+    print("Received data:", data)
+
+    # Extract geometries
+    polygon_geojson = data.get("perimeter")
     point = data.get("point_geometry", {}).get("coordinates")
+    print(polygon_geojson)
+    print(point)
 
     if not polygon_geojson or not point:
         return {"error": "Missing polygon or point geometry in the request."}
 
-    # Save polygon to temporary GeoJSON file
+    # Wrap polygon in expected structure
+    wrapped_polygon = {
+        "perimeter": polygon_geojson
+    }
+    print(wrapped_polygon)
+
+    # Write wrapped structure to JSON file
     with tempfile.NamedTemporaryFile(delete=False, suffix=".json", mode="w") as tmp_file:
-        json.dump(polygon_geojson, tmp_file)
+        json.dump(wrapped_polygon, tmp_file)
         tmp_file_path = tmp_file.name
 
-    # Call routing function with dynamic input
+    print(f"Saved polygon file to: {tmp_file_path}")
+
+    # Optional: print file contents for debug
+    with open(tmp_file_path, "r") as f:
+        print("Written JSON content:", f.read())
+
+    # Now call your routing function
     result = run_routing(
         input_json=tmp_file_path,
         input_gpkg="client/src/data/SWISSTLM3D_no_height.gpkg",
-        start_node_coord_3857=tuple(point),  # expecting (x, y)
+        start_node_coord_3857=point,
         output_dir="client/public/data"
     )
 
@@ -57,7 +74,7 @@ async def dummy_endpoint(request: Request):
         "status": "Routing completed",
         "input_polygon_file": tmp_file_path,
         "point_used": point,
-        "routing_result": result  # optional, if run_routing returns anything
+        "routing_result": result
     }
 
 @app.get("/test")
@@ -72,5 +89,3 @@ async def run_default_routing():
     return {
         "status": "done",
     }
-
-

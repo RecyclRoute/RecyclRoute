@@ -1,17 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { MapSwissimage} from "../../map/MapSwissimage.jsx";
-import "./add_marker.css";
-import maplibregl from 'maplibre-gl';
-import 'maplibre-gl/dist/maplibre-gl.css';
+import React, { useState, useEffect } from "react";
+import "../../plannerpage.css"
 
-export const SavePolygonPopup = (props) => {
-
+export const SavePolygonPopup = ({finishPolygon}) => {
   
+
   return (
-    <div className="addmarkerInfo_Overlay">
-    <div className="addmarkerInfo_Content">
-      <h4>Position durch klicken auf Karte bestätigen!</h4>
+    <div className="addpolygon-overlay">
+      <div className="addpolygon-content">
+        <div className="mt-4 flex justify-center">
+          <button onClick={finishPolygon}>
+            Perimeter speichern
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
   );
+  
 };
+
