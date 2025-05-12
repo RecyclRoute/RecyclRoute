@@ -12,6 +12,7 @@ from typing import List
 from shapely.geometry import Polygon, mapping
 from fastapi.responses import JSONResponse
 import httpx
+from typing import List, Literal
 
 
 
@@ -58,13 +59,11 @@ class Point(BaseModel):
     latitude: float
     longitude: float
 
-# Pydantic model for Project input data
+
 class Project(BaseModel):
     name: str
     gemeindename: str
-    perimeter: List[List[float]]  # list of [lon, lat] pairs forming the polygon
-
-
+    perimeter: List[List[float]]
 
 @app.get("/getPointTypes")
 def get_point_types():
@@ -167,51 +166,46 @@ def add_project(project: Project):
     cur = conn.cursor()
 
     try:
-        logging.debug(f"Received project data: {project}")
+        coords = project.perimeter
+        name = project.name
+        gemeindename = project.gemeindename
 
-        # Convert perimeter coordinates to WKT string
-        coord_str = ", ".join([f"{lon} {lat}" for lon, lat in project.perimeter])
+        logging.debug(f"Received project: {name}, {gemeindename}")
+        logging.debug(f"Coordinates: {coords}")
 
         # Ensure polygon is closed
-        if project.perimeter[0] != project.perimeter[-1]:
-            coord_str += f", {project.perimeter[0][0]} {project.perimeter[0][1]}"
+        if coords[0] != coords[-1]:
+            coords.append(coords[0])
 
+        # WKT format for PostGIS
+        coord_str = ", ".join([f"{lon} {lat}" for lon, lat in coords])
         polygon_wkt = f"POLYGON(({coord_str}))"
 
-        # Insert into DB
         cur.execute(
             """
             INSERT INTO project (name, gemeindename, perimeter)
             VALUES (%s, %s, ST_GeomFromText(%s, 3857))
             """,
-            (project.name, project.gemeindename, polygon_wkt)
+            (name, gemeindename, polygon_wkt)
         )
         conn.commit()
 
-        # SHAPELY polygon + export to GeoJSON
-        shapely_polygon = Polygon(project.perimeter)
+        shapely_polygon = Polygon(coords)
         area = shapely_polygon.area
-        coords = list(shapely_polygon.exterior.coords)
 
-        logging.debug(f"Polygon area: {area}")
-        logging.debug(f"Polygon coordinates: {coords}")
-
-        # Export to GeoJSON
         geojson_data = {
             "type": "FeatureCollection",
             "features": [
                 {
                     "type": "Feature",
                     "properties": {},
-                    "geometry": mapping(shapely_polygon)
+                    "geometry": mapping(shapely_polygon)  # 🔁 Corrected key from "perimeter"
                 }
             ]
         }
 
-        geojson_path = "polygon.geojson"
-        with open(geojson_path, "w") as f:
+        with open("polygon.geojson", "w") as f:
             json.dump(geojson_data, f)
-
 
         cur.close()
         conn.close()
@@ -219,7 +213,7 @@ def add_project(project: Project):
         return JSONResponse(content={
             "message": "Project added successfully",
             "area": area,
-            "route": coords
+            "route": list(shapely_polygon.exterior.coords)
         })
 
     except Exception as e:
@@ -227,7 +221,6 @@ def add_project(project: Project):
         cur.close()
         conn.close()
         raise HTTPException(status_code=500, detail=f"Error adding project: {e}")
-    
 
 @app.get("/getProjects")
 def get_projects():

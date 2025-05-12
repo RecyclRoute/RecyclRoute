@@ -25,30 +25,29 @@ const useCreatePolygon = ({
       if (polygonPoints.length >= 3) {
         const closedPolygon = [...polygonPoints, polygonPoints[0]];
         setPolygonPoints(closedPolygon);
-
-        if (!projectInfo) {
-          alert("Projektinformationen fehlen!");
+        if (!projectInfo.ProjectName || !projectInfo.Location) {
+          alert("Projektname oder Gemeinde fehlen!");
           return;
         }
+        
 
         const customPolygon = {
-          name: projectInfo.projectName,
-          gemeindename: projectInfo.municipality,
+          name: projectInfo.ProjectName,
+          gemeindename: projectInfo.Location,
           perimeter: closedPolygon
         };
 
-        const blob = new Blob([JSON.stringify(customPolygon, null, 2)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'polygon_custom.json';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-
-        alert('Das Gebiet ist gespeichert! Nun wird die Route berechnet, bitte kurz Geduld haben...');
-        await sendPolygonToBackend(customPolygon);
+        //const blob = new Blob([JSON.stringify(customPolygon, null, 2)], { type: 'application/json' });
+        //const url = URL.createObjectURL(blob);
+        //const link = document.createElement('a');
+        //link.href = url;
+        //link.download = 'polygon_custom.json';
+        //document.body.appendChild(link);
+        //link.click();
+        //document.body.removeChild(link);
         setPolygonMode(false);
+        await sendPolygonToBackend(customPolygon);
+        
       } else {
         alert('Mindestens 3 Punkte notwendig!');
       }
