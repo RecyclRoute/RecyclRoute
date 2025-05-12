@@ -5,7 +5,7 @@ import json
 import psycopg2
 import psycopg2.extras
 from datetime import datetime
-import os
+import base64
 from shapely.geometry import shape
 import logging
 import json
@@ -111,6 +111,8 @@ def get_points_by_project(project_id: int):
         SELECT 
             id,
             type,
+            date,
+            picture,
             ST_X(geom) AS longitude,
             ST_Y(geom) AS latitude
         FROM points
@@ -121,7 +123,23 @@ def get_points_by_project(project_id: int):
     cur.close()
     conn.close()
 
-    return {"points": rows}
+    # Bild konvertieren (falls vorhanden)
+    points = []
+    for row in rows:
+        point = dict(row)  # wandelt RealDictRow in dict um
+
+        if point["picture"]:
+            point["picture"] = base64.b64encode(point["picture"]).decode("utf-8")
+        else:
+            point["picture"] = None  # explizit, falls kein Bild vorhanden
+
+        # Optional: Datum konvertieren in ISO-Format (für saubere Anzeige im Frontend)
+        if point["date"]:
+            point["date"] = point["date"].isoformat()
+
+        points.append(point)
+
+    return {"points": points}
 
 
 

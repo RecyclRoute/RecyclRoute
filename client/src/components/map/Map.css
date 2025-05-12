@@ -33,3 +33,7 @@
 .PlannerPageMapButtons:hover {
     background-color: #AED581;
 }
+
+.maplibregl-popup-close-button {
+    display: none !important;
+  }
