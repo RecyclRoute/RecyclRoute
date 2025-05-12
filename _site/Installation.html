@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/RecyclRoute/assets/images/RecyclRoute_Logo.png" type="image/x-icon">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Installation | RecylRoute</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Installation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Webroutenberechung für Recyclingsammlungen" />
+<meta property="og:description" content="Webroutenberechung für Recyclingsammlungen" />
+<link rel="canonical" href="http://localhost:4000/RecyclRoute/Installation.html" />
+<meta property="og:url" content="http://localhost:4000/RecyclRoute/Installation.html" />
+<meta property="og:site_name" content="RecylRoute" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Installation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Webroutenberechung für Recyclingsammlungen","headline":"Installation","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/RecyclRoute/Bilder/RecyclRoute_Logo.png"}},"url":"http://localhost:4000/RecyclRoute/Installation.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/RecyclRoute/assets/css/style.css?v=">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/RecyclRoute/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('pre > code').forEach(codeBlock => {
+    const button = document.createElement('button');
+    button.className = 'copy-button';
+    button.type = 'button';
+    button.innerText = '📋 Kopieren';
+
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(codeBlock.innerText).then(() => {
+        button.innerText = '✅ Kopiert!';
+        setTimeout(() => (button.innerText = '📋 Kopieren'), 2000);
+      });
+    });
+
+    const pre = codeBlock.parentNode;
+    pre.appendChild(button); // ⬅ Button INS <pre> einfügen, nicht davor
+  });
+});
+</script>
+<body>
+    <header>
+    
+    <div class="header-content">
+      <img src="/RecyclRoute/assets/images/RecyclRoute_Logo.png" alt="Logo">
+      <h2>
+        <a href="/RecyclRoute/index.html" style="text-decoration: none; color: inherit;">
+          RecyclRoute - Dokumentation RecyclRoute
+        </a>
+      </h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/RecyclRoute/einleitung.html">Einleitung</a></li>
+        <li><a href="/RecyclRoute/installation.html">Installation</a></li>
+        <li><a href="/RecyclRoute/konzept.html">Konzept</a></li>
+        <li class="dropdown">
+          <a href="/RecyclRoute/funktionen.html">Erklärung der Funktionen</a>
+          <div class="dropdown-content">
+            <div><a href="/RecyclRoute/funktionen.html#startpage">Startpage</a></div>
+            <div><a href="/RecyclRoute/funktionen.html#planer">Planner</a></div>
+            <div><a href="/RecyclRoute/funktionen.html#report">Report</a></div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="/RecyclRoute/aufbauGDI.html">Aufbau GDI</a>
+          <div class="dropdown-content">
+            <div><a href="/RecyclRoute/aufbauGDI.html#Backend">Backend</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#Grundlagedaten">Grundlagedaten</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#datenbank-und-datenbankschema">Datenbank</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#berechnungen">Berechnungen</a></div>
+            <div><a href="/RecyclRoute/aufbauGDI.html#frontend">Frontend</a></div>
+          </div>
+        </li>
+        <li><a href="/RecyclRoute/ausblick.html">Erweiterungsmöglichkeiten</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content">
+    <p><a id="top"></a></p>
+
+<h1 id="installation-der-applikation">Installation der Applikation</h1>
+
+<p>Hier findest du eine Schritt-für-Schritt-Anleitung zur Installation der Applikation. Der gesamte Quellcode ist auf GitHub verfügbar.</p>
+
+<h2 id="voraussetzungen">Voraussetzungen</h2>
+
+<p>Bitte installiere vorab die folgenden Tools. Die jeweils getesteten Versionen sind angegeben:</p>
+
+<ul>
+  <li><a href="https://www.python.org/downloads/release/python-3117/">Python 3.11.7</a></li>
+  <li><a href="https://code.visualstudio.com/">Visual Studio Code 1.99.3</a></li>
+  <li><a href="https://docs.docker.com/desktop/setup/install/windows-install/">Docker</a></li>
+  <li><a href="https://www.postgresql.org/ftp/pgadmin/pgadmin4/v9.1/windows/">pgAdmin 4 (Version 9.1)</a></li>
+  <li>Valhalla 3.5.1</li>
+  <li>Weitere Python-Abhängigkeiten: <a href="assets/downloads/requirements.txt">requirements.txt</a></li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+<h3 id="repository-klonen">Repository klonen</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /Pfad/zum/Verzeichnis
+git clone https://github.com/RecyclRoute/RecyclRoute.git
+</code></pre></div></div>
+
+<h3 id="datenbank-einrichten">Datenbank einrichten</h3>
+
+<ol>
+  <li>In pgAdmin eine neue Datenbank mit dem Namen <code class="language-plaintext highlighter-rouge">gis_database</code> anlegen.</li>
+  <li>Das Projekt erwartet folgende Einstellungen:
+    <ul>
+      <li>Host: <code class="language-plaintext highlighter-rouge">localhost</code></li>
+      <li>Port: <code class="language-plaintext highlighter-rouge">5432</code></li>
+      <li>Benutzer: <code class="language-plaintext highlighter-rouge">postgis</code></li>
+      <li>Passwort: Manuell in server/app/main.py in den Zeilen 36–40 eintragen (Standardwert: ADMIN).</li>
+    </ul>
+  </li>
+  <li>Anschliessend im Query-Tool von pgAdmin den folgenden SQL-Code ausführen, um die notwendigen Tabellen und Erweiterungen anzulegen:</li>
+</ol>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="n">EXTENSION</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">postgis</span><span class="p">;</span>
+
+<span class="k">CREATE</span> <span class="n">SEQUENCE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">project_id_seq</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="n">SEQUENCE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">points_id_seq</span><span class="p">;</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="k">public</span><span class="p">.</span><span class="n">project</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="n">nextval</span><span class="p">(</span><span class="s1">'project_id_seq'</span><span class="p">::</span><span class="n">regclass</span><span class="p">),</span>
+    <span class="n">name</span> <span class="nb">text</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="nb">date</span> <span class="nb">date</span><span class="p">,</span>
+    <span class="n">gemeindename</span> <span class="nb">text</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">perimeter</span> <span class="n">geometry</span><span class="p">(</span><span class="n">Polygon</span><span class="p">,</span> <span class="mi">3857</span><span class="p">),</span>
+    <span class="k">CONSTRAINT</span> <span class="n">project_pkey</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">public</span><span class="p">.</span><span class="n">project</span> <span class="k">OWNER</span> <span class="k">TO</span> <span class="n">postgres</span><span class="p">;</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="k">public</span><span class="p">.</span><span class="n">points</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="n">nextval</span><span class="p">(</span><span class="s1">'points_id_seq'</span><span class="p">::</span><span class="n">regclass</span><span class="p">),</span>
+    <span class="n">project_id</span> <span class="nb">integer</span><span class="p">,</span>
+    <span class="k">type</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+    <span class="nb">date</span> <span class="nb">date</span><span class="p">,</span>
+    <span class="n">picture</span> <span class="n">bytea</span><span class="p">,</span>
+    <span class="n">geom</span> <span class="n">geometry</span><span class="p">(</span><span class="n">Point</span><span class="p">,</span> <span class="mi">4326</span><span class="p">),</span>
+    <span class="k">CONSTRAINT</span> <span class="n">points_pkey</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id</span><span class="p">),</span>
+    <span class="k">CONSTRAINT</span> <span class="n">points_project_id_fkey</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">project_id</span><span class="p">)</span>
+        <span class="k">REFERENCES</span> <span class="k">public</span><span class="p">.</span><span class="n">project</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">NO</span> <span class="n">ACTION</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="k">CONSTRAINT</span> <span class="n">points_type_check</span> <span class="k">CHECK</span> <span class="p">(</span>
+        <span class="k">type</span> <span class="k">IN</span> <span class="p">(</span>
+            <span class="s1">'Recyclingut falsch deponiert'</span><span class="p">,</span>
+            <span class="s1">'Recyclingut nicht abgeholt'</span><span class="p">,</span>
+            <span class="s1">'Recyclingut enthält Fremdstoffe'</span><span class="p">,</span>
+            <span class="s1">'Andere'</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">);</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">public</span><span class="p">.</span><span class="n">points</span> <span class="k">OWNER</span> <span class="k">TO</span> <span class="n">postgres</span><span class="p">;</span>
+
+<span class="k">DO</span> <span class="err">$$</span>
+<span class="k">BEGIN</span>
+    <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="p">(</span>
+        <span class="k">SELECT</span> <span class="mi">1</span> <span class="k">FROM</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">tables</span> 
+        <span class="k">WHERE</span> <span class="n">table_schema</span> <span class="o">=</span> <span class="s1">'public'</span> <span class="k">AND</span> <span class="k">table_name</span> <span class="o">=</span> <span class="s1">'spatial_ref_sys'</span>
+    <span class="p">)</span> <span class="k">THEN</span>
+        <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">public</span><span class="p">.</span><span class="n">spatial_ref_sys</span> <span class="p">(</span>
+            <span class="n">srid</span> <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+            <span class="n">auth_name</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">256</span><span class="p">),</span>
+            <span class="n">auth_srid</span> <span class="nb">integer</span><span class="p">,</span>
+            <span class="n">srtext</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">2048</span><span class="p">),</span>
+            <span class="n">proj4text</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">2048</span><span class="p">),</span>
+            <span class="k">CONSTRAINT</span> <span class="n">spatial_ref_sys_pkey</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">srid</span><span class="p">),</span>
+            <span class="k">CONSTRAINT</span> <span class="n">spatial_ref_sys_srid_check</span> <span class="k">CHECK</span> <span class="p">(</span><span class="n">srid</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">AND</span> <span class="n">srid</span> <span class="o">&lt;=</span> <span class="mi">998999</span><span class="p">)</span>
+        <span class="p">);</span>
+        <span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">public</span><span class="p">.</span><span class="n">spatial_ref_sys</span> <span class="k">OWNER</span> <span class="k">TO</span> <span class="n">postgres</span><span class="p">;</span>
+    <span class="k">END</span> <span class="n">IF</span><span class="p">;</span>
+<span class="k">END</span> <span class="err">$$</span><span class="p">;</span>
+
+<span class="k">REVOKE</span> <span class="k">ALL</span> <span class="k">ON</span> <span class="k">TABLE</span> <span class="k">public</span><span class="p">.</span><span class="n">spatial_ref_sys</span> <span class="k">FROM</span> <span class="k">PUBLIC</span><span class="p">;</span>
+<span class="k">GRANT</span> <span class="k">SELECT</span> <span class="k">ON</span> <span class="k">TABLE</span> <span class="k">public</span><span class="p">.</span><span class="n">spatial_ref_sys</span> <span class="k">TO</span> <span class="k">PUBLIC</span><span class="p">;</span>
+<span class="k">GRANT</span> <span class="k">ALL</span> <span class="k">ON</span> <span class="k">TABLE</span> <span class="k">public</span><span class="p">.</span><span class="n">spatial_ref_sys</span> <span class="k">TO</span> <span class="n">postgres</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="virtuelle-umgebung-einrichten">Virtuelle Umgebung einrichten</h3>
+
+<p>Falls sich Python 3.11.7 nicht unter dem untenstehenden Pfad befindet, bitte entsprechend anpassen:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&amp; <span class="s2">"C:</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\P</span><span class="s2">ython311</span><span class="se">\p</span><span class="s2">ython.exe"</span> <span class="nt">-m</span> venv recyclroute-venv
+<span class="nb">.</span>
+recyclroute-venv<span class="se">\S</span>cripts activate
+python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+<span class="nb">.</span>
+recyclroute-venv<span class="se">\S</span>cripts<span class="se">\p</span>ython.exe <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+</code></pre></div></div>
+
+<h3 id="valhalla-mit-docker-installieren">Valhalla mit Docker installieren</h3>
+
+<p>Der Pfad zum Valhalla-Verzeichnis muss angepasst werden, sodass folgende Struktur entsteht: RecyclRoute/valhalla_docker/valhalla_data.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-dt</span> <span class="nt">--name</span> valhalla_server <span class="nt">-p</span> 8002:8002 <span class="nt">-v</span> C:/Pfad/zum/verzeichnis/valhalla_docker/valhalla_data:/custom_files <span class="nt">-e</span> <span class="nv">tile_urls</span><span class="o">=</span>https://download.geofabrik.de/europe/switzerland-latest.osm.pbf ghcr.io/nilsnolde/docker-valhalla/valhalla:latest
+</code></pre></div></div>
+
+<p>Die Installation kann bis zu 40 Minuten dauern und läuft im Hintergrund. Den Fortschritt kann man mit folgendem Befehl überprüfen:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker logs <span class="nt">-f</span> valhalla_server
+</code></pre></div></div>
+
+<h3 id="preprocessing-ausführen">Preprocessing ausführen</h3>
+
+<p>Herunterladen des SwissTLM3D und vorbereiten für die berechnung im Hintergrund:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python preprocessing/Preprocessing_swisstlm3d_2025-03_Data.py
+</code></pre></div></div>
+
+<h2 id="starten-der-anwendung">Starten der Anwendung</h2>
+<p>Die folgenden Komponenten müssen parallel in jeweils eigenen Terminalfenstern oder Tabs gestartet werden:</p>
+<h3 id="docker-starten">Docker starten</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker start valhalla_server
+</code></pre></div></div>
+<h3 id="frontend-starten">Frontend starten</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>RecyclRoute/client
+npm <span class="nb">install
+</span>npm start
+</code></pre></div></div>
+
+<h3 id="backend-starten">Backend starten</h3>
+
+<p>Backend 1 (Port 8000)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uvicorn server.app.main:app <span class="nt">--reload</span> <span class="nt">--port</span> 8000
+</code></pre></div></div>
+
+<p>Backend 2 (Port 7999)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uvicorn server.app.main2:app <span class="nt">--reload</span> <span class="nt">--port</span> 7999
+</code></pre></div></div>
+
+<p>Achte darauf, dass für jeden der letzten vier Befehle ein neues Terminal verwendet wird, damit die Prozesse parallel laufen können.</p>
+
+<div style="margin-top: 3em;"></div>
+
+<p>Die Gründe für 2 Backend sind im <a href="AufbauGDI.html">Aufbau GDI </a> detailiert dargelegt.</p>
+
+<div style="margin-top: 3em;"></div>
+
+<p><a href="#top">↑ Zurück zum Beginn der Webseite</a></p>
+
+<div style="display: flex; justify-content: space-between;">
+  <div>
+    <a href="aufbauGDI.html">← Aufbau GDI</a>
+  </div>
+  <div>
+    <a href="konzept.html">Erklärung des Konzepts →</a>
+  </div>
+</div>
+
+  </main>
+  <footer>
+    <p>
+        © RecylRoute - 2025 |
+        <a href="https://github.com/RecyclRoute/RecyclRoute">GitHub Projektseite</a>
+         |
+        <small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
+    </p>
+  </footer>
+
+  <script src="/RecyclRoute/assets/js/scale.fix.js"></script>
+</body>
+</html>

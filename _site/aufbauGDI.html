@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="de-CH">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/RecyclRoute/assets/images/RecyclRoute_Logo.png" type="image/x-icon">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>RecyclRoute – Geodateninfrastruktur | RecylRoute</title>
+<title>Geodateninfrastruktur | RecylRoute</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="RecyclRoute – Geodateninfrastruktur" />
+<meta property="og:title" content="Geodateninfrastruktur" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Webroutenberechung für Recyclingsammlungen" />
 <meta property="og:description" content="Webroutenberechung für Recyclingsammlungen" />
@@ -17,9 +17,9 @@
 <meta property="og:site_name" content="RecylRoute" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="RecyclRoute – Geodateninfrastruktur" />
+<meta property="twitter:title" content="Geodateninfrastruktur" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Webroutenberechung für Recyclingsammlungen","headline":"RecyclRoute – Geodateninfrastruktur","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/RecyclRoute/Bilder/RecyclRoute_Logo.png"}},"url":"http://localhost:4000/RecyclRoute/aufbauGDI.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Webroutenberechung für Recyclingsammlungen","headline":"Geodateninfrastruktur","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/RecyclRoute/Bilder/RecyclRoute_Logo.png"}},"url":"http://localhost:4000/RecyclRoute/aufbauGDI.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link rel="stylesheet" href="/RecyclRoute/assets/css/style.css?v=">
@@ -34,14 +34,30 @@
 
 <!-- end custom head snippets -->
 
-  
 </head>
-<body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('pre > code').forEach(codeBlock => {
+    const button = document.createElement('button');
+    button.className = 'copy-button';
+    button.type = 'button';
+    button.innerText = '📋 Kopieren';
 
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(codeBlock.innerText).then(() => {
+        button.innerText = '✅ Kopiert!';
+        setTimeout(() => (button.innerText = '📋 Kopieren'), 2000);
+      });
+    });
+
+    const pre = codeBlock.parentNode;
+    pre.appendChild(button); // ⬅ Button INS <pre> einfügen, nicht davor
+  });
+});
+</script>
+<body>
     <header>
     
-
-    <!-- Logo und Titel -->
     <div class="header-content">
       <img src="/RecyclRoute/assets/images/RecyclRoute_Logo.png" alt="Logo">
       <h2>
@@ -50,11 +66,10 @@
         </a>
       </h2>
     </div>
-
-    <!-- Navigation -->
     <nav>
       <ul>
         <li><a href="/RecyclRoute/einleitung.html">Einleitung</a></li>
+        <li><a href="/RecyclRoute/installation.html">Installation</a></li>
         <li><a href="/RecyclRoute/konzept.html">Konzept</a></li>
         <li class="dropdown">
           <a href="/RecyclRoute/funktionen.html">Erklärung der Funktionen</a>
@@ -82,15 +97,16 @@
     <h1 id="aufbau-der-geodateninfrastruktur-gdi">Aufbau der Geodateninfrastruktur (GDI)</h1>
 <p><a id="top"></a></p>
 
-<p>Die Geodateninfrastruktur von <strong>RecyclRoute</strong> besteht aus einem Backend, einem Frontend sowie verschiedenen Bibliotheken und API-Schnittstellen. Die folgende Darstellung zeigt die Systemarchitektur von RecyclRoute:</p>
+<p>Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backend, einem Frontend sowie verschiedenen Bibliotheken und API-Schnittstellen. Die folgende Darstellung zeigt die Systemarchitektur von RecyclRoute:</p>
 
 <div id="gdi-final"></div>
 
-<p><img src="Bilder/GDI_Architektur_final.png" alt="GDI Architektur Schema" /></p>
+<p>-&gt;ToDO Bild erstellen!
+<img src="asstes/images/GDI_Architektur_final.png" alt="GDI Architektur Schema" /></p>
 
 <h2 id="backend">Backend</h2>
 
-<p>Das Backend umfasst sämtliche Server-seitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript automatisiert mit Geo- und Routendaten befüllt. Der <strong>GeoServer</strong> stellt dabei die zentrale Schnittstelle dar, um die Daten aus der Datenbank als Webdienste (WMS/WFS) bereitzustellen. Über das Frontend wird via HTTP (z. B. Axios) auf diese Dienste zugegriffen.</p>
+<p>Das Backend umfasst sämtliche Serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript automatisiert mit Geo- und Routendaten befüllt. Der <strong>GeoServer</strong> stellt dabei die zentrale Schnittstelle dar, um die Daten aus der Datenbank als Webdienste (WMS/WFS) bereitzustellen. Über das Frontend wird via HTTP (z. B. Axios) auf diese Dienste zugegriffen.</p>
 
 <h3 id="grundlagedaten">Grundlagedaten</h3>
 <div id="grundlagedaten"></div>

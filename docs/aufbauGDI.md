@@ -1,19 +1,20 @@
 ---
 layout: default
-title: RecyclRoute – Geodateninfrastruktur
+title: Geodateninfrastruktur
 ---
 # Aufbau der Geodateninfrastruktur (GDI)
 <a id="top"></a>
 
-Die Geodateninfrastruktur von **RecyclRoute** besteht aus einem Backend, einem Frontend sowie verschiedenen Bibliotheken und API-Schnittstellen. Die folgende Darstellung zeigt die Systemarchitektur von RecyclRoute:
+Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backend, einem Frontend sowie verschiedenen Bibliotheken und API-Schnittstellen. Die folgende Darstellung zeigt die Systemarchitektur von RecyclRoute:
 
 <div id="gdi-final"></div>
 
-![GDI Architektur Schema](Bilder/GDI_Architektur_final.png)
+->ToDO Bild erstellen!
+![GDI Architektur Schema](asstes/images/GDI_Architektur_final.png)
 
 ## Backend
 
-Das Backend umfasst sämtliche Server-seitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript automatisiert mit Geo- und Routendaten befüllt. Der **GeoServer** stellt dabei die zentrale Schnittstelle dar, um die Daten aus der Datenbank als Webdienste (WMS/WFS) bereitzustellen. Über das Frontend wird via HTTP (z. B. Axios) auf diese Dienste zugegriffen.
+Das Backend umfasst sämtliche Serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript automatisiert mit Geo- und Routendaten befüllt. Der **GeoServer** stellt dabei die zentrale Schnittstelle dar, um die Daten aus der Datenbank als Webdienste (WMS/WFS) bereitzustellen. Über das Frontend wird via HTTP (z. B. Axios) auf diese Dienste zugegriffen.
 
 ### Grundlagedaten
 <div id="grundlagedaten"></div>

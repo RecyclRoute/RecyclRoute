@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="de-CH">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/RecyclRoute/assets/images/RecyclRoute_Logo.png" type="image/x-icon">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>RecyclRoute – Ausblick | RecylRoute</title>
+<title>Ausblick | RecylRoute</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="RecyclRoute – Ausblick" />
+<meta property="og:title" content="Ausblick" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Webroutenberechung für Recyclingsammlungen" />
 <meta property="og:description" content="Webroutenberechung für Recyclingsammlungen" />
@@ -17,9 +17,9 @@
 <meta property="og:site_name" content="RecylRoute" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="RecyclRoute – Ausblick" />
+<meta property="twitter:title" content="Ausblick" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Webroutenberechung für Recyclingsammlungen","headline":"RecyclRoute – Ausblick","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/RecyclRoute/Bilder/RecyclRoute_Logo.png"}},"url":"http://localhost:4000/RecyclRoute/ausblick.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Webroutenberechung für Recyclingsammlungen","headline":"Ausblick","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/RecyclRoute/Bilder/RecyclRoute_Logo.png"}},"url":"http://localhost:4000/RecyclRoute/ausblick.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link rel="stylesheet" href="/RecyclRoute/assets/css/style.css?v=">
@@ -34,14 +34,30 @@
 
 <!-- end custom head snippets -->
 
-  
 </head>
-<body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('pre > code').forEach(codeBlock => {
+    const button = document.createElement('button');
+    button.className = 'copy-button';
+    button.type = 'button';
+    button.innerText = '📋 Kopieren';
 
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(codeBlock.innerText).then(() => {
+        button.innerText = '✅ Kopiert!';
+        setTimeout(() => (button.innerText = '📋 Kopieren'), 2000);
+      });
+    });
+
+    const pre = codeBlock.parentNode;
+    pre.appendChild(button); // ⬅ Button INS <pre> einfügen, nicht davor
+  });
+});
+</script>
+<body>
     <header>
     
-
-    <!-- Logo und Titel -->
     <div class="header-content">
       <img src="/RecyclRoute/assets/images/RecyclRoute_Logo.png" alt="Logo">
       <h2>
@@ -50,11 +66,10 @@
         </a>
       </h2>
     </div>
-
-    <!-- Navigation -->
     <nav>
       <ul>
         <li><a href="/RecyclRoute/einleitung.html">Einleitung</a></li>
+        <li><a href="/RecyclRoute/installation.html">Installation</a></li>
         <li><a href="/RecyclRoute/konzept.html">Konzept</a></li>
         <li class="dropdown">
           <a href="/RecyclRoute/funktionen.html">Erklärung der Funktionen</a>
@@ -83,6 +98,7 @@
 
 <h1 id="erweiterungsmöglichkeiten">Erweiterungsmöglichkeiten</h1>
 <div id="erweiterungsmöglichkeiten"></div>
+<p>Im folgenden Abschnitt werden für jede Seite und Funktion Verbesserungs- und Erweiterungsvorschläge genannt, welche Vorteile für die User Experience (User Erfahrung) bieten oder die Funktionen der RecyleRoute erweitern.</p>
 
 <h3 id="allgemein">Allgemein</h3>
 <div id="allgemein"></div>

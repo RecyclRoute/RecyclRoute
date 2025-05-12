@@ -181,3 +181,29 @@ img {
 .github-fork-ribbon, .gh-header {
   display: none !important;
 }
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0.25em 0.6em;
+  font-size: 0.8em;
+  background-color: #cecece;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.copy-button:hover {
+  background-color: #1ac411;
+}
+pre {
+  position: relative; /* Ermöglicht absolute Positionierung innerhalb */
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1em;
+  overflow-x: auto;
+  font-size: 0.95em;
+}

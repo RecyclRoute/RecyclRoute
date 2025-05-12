@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RecyclRoute – Startseite
+title: Startseite
 ---
 
 ## Willkommen

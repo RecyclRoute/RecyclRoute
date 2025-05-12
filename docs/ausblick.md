@@ -1,15 +1,16 @@
 ---
 layout: default
-title: RecyclRoute – Ausblick
+title: Ausblick
 ---
 <a id="top"></a>
 
 # Erweiterungsmöglichkeiten
 <div id="erweiterungsmöglichkeiten"></div>
-
+Im folgenden Abschnitt werden für jede Seite und Funktion Verbesserungs- und Erweiterungsvorschläge genannt, welche Vorteile für die User Experience (User Erfahrung) bieten oder die Funktionen der RecyleRoute erweitern.
 
 ### Allgemein
 <div id="allgemein"></div>
+
 
 ### Startpage
 

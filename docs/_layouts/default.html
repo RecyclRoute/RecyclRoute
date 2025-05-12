@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en-US' }}">
+<html lang="{{ site.lang | default: 'de-CH' }}">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,28 @@
   {% seo %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   {% include head-custom.html %}
-  
 </head>
-<body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('pre > code').forEach(codeBlock => {
+    const button = document.createElement('button');
+    button.className = 'copy-button';
+    button.type = 'button';
+    button.innerText = '📋 Kopieren';
 
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(codeBlock.innerText).then(() => {
+        button.innerText = '✅ Kopiert!';
+        setTimeout(() => (button.innerText = '📋 Kopieren'), 2000);
+      });
+    });
+
+    const pre = codeBlock.parentNode;
+    pre.appendChild(button); // ⬅ Button INS <pre> einfügen, nicht davor
+  });
+});
+</script>
+<body>
     <header>
     {% if site.show_downloads %}
       <ul class="downloads">
@@ -20,8 +38,6 @@
         <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
       </ul>
     {% endif %}
-
-    <!-- Logo und Titel -->
     <div class="header-content">
       <img src="{{ '/assets/images/RecyclRoute_Logo.png' | relative_url }}" alt="Logo">
       <h2>
@@ -30,11 +46,10 @@
         </a>
       </h2>
     </div>
-
-    <!-- Navigation -->
     <nav>
       <ul>
         <li><a href="{{ '/einleitung.html' | relative_url }}">Einleitung</a></li>
+        <li><a href="{{ '/installation.html' | relative_url}}">Installation</a></li>
         <li><a href="{{ '/konzept.html' | relative_url }}">Konzept</a></li>
         <li class="dropdown">
           <a href="{{ '/funktionen.html' | relative_url }}">Erklärung der Funktionen</a>

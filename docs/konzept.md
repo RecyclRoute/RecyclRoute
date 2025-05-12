@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RecyclRoute – Ursprüngliches Konzept
+title: Ursprüngliches Konzept
 ---
 
 #  GIS-Konzept zur Papier- und Kartonsammlung, 4230 Geoinformatik & Raumanalyse vor Projektbeginn

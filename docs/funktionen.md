@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RecyclRoute – Funktionen
+title: Funktionen
 ---
 # Erklärung der Funktionen von RecyclRoute
 <a id="top"></a>
