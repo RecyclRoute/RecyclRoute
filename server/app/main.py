@@ -344,10 +344,21 @@ async def call_calculate(request: Request, project_name: str):
         conn.close()
 
         # Send to second API
-        async with httpx.AsyncClient() as client:
-            response = await client.post("http://localhost:7999/calculate", json=payload)
-            response.raise_for_status()
-            return {"calculate_response": response.json()}
+        async with httpx.AsyncClient(timeout=20000) as client:
+            try:
+                response = await client.post("http://localhost:7999/calculate", json=payload)
+                response.raise_for_status()
+                try:
+                    return {"calculate_response": response.json()}
+                except Exception as decode_error:
+                    logging.error(f"⚠️ JSON-Fehler: {decode_error}")
+                    return {"calculate_response": response.text}
+                logging.error(f"❌ HTTP-Fehler von 7999: {exc.response.status_code} – {exc.response.text}")
+                raise HTTPException(status_code=exc.response.status_code, detail=f"HTTP error: {exc.response.text}")
+            except httpx.RequestError as exc:
+                logging.error(f"❌ Request-Fehler zu 7999: {exc}")
+                raise HTTPException(status_code=500, detail=f"Request error: {exc}")
+
 
     except httpx.RequestError as exc:
         raise HTTPException(status_code=500, detail=f"Request error: {exc}")
@@ -355,3 +366,19 @@ async def call_calculate(request: Request, project_name: str):
         raise HTTPException(status_code=exc.response.status_code, detail=f"HTTP error: {exc.response.text}")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+
+project_status = {}
+
+@app.post("/notifyCalculationDone")
+async def notify_calculation_done(data: dict):
+    project_name = data.get("project_name")
+    print(f"✔️ Berechnung für Projekt '{project_name}' erfolgreich abgeschlossen.")
+    project_status[project_name] = "done"
+    return {"message": "Benachrichtigung empfangen"}
+
+@app.get("/getCalculationStatus")
+def get_calculation_status(project_name: str):
+    status = project_status.get(project_name, "pending")
+    return {"project_name": project_name, "status": status}
+
+

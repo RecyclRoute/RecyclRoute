@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from server.app.script_py.routing import run_routing
 import json
 import tempfile
+import httpx
 
 # Initialize FastAPI app
 # use Command "uvicorn server.app.main2:app --reload --port 7999" to startup
@@ -33,36 +34,26 @@ def read_root():
 async def calculate(request: Request):
     data = await request.json()
 
-    # Debug print
     print("Received data:", data)
 
-    # Extract geometries
     polygon_geojson = data.get("perimeter")
     point = data.get("point_geometry", {}).get("coordinates")
-    print(polygon_geojson)
-    print(point)
+    project_name = data.get("name")  # ⬅️ Projektname für Benachrichtigung
 
     if not polygon_geojson or not point:
         return {"error": "Missing polygon or point geometry in the request."}
 
-    # Wrap polygon in expected structure
-    wrapped_polygon = {
-        "perimeter": polygon_geojson
-    }
-    print(wrapped_polygon)
+    wrapped_polygon = { "perimeter": polygon_geojson }
 
-    # Write wrapped structure to JSON file
     with tempfile.NamedTemporaryFile(delete=False, suffix=".json", mode="w") as tmp_file:
         json.dump(wrapped_polygon, tmp_file)
         tmp_file_path = tmp_file.name
 
     print(f"Saved polygon file to: {tmp_file_path}")
 
-    # Optional: print file contents for debug
     with open(tmp_file_path, "r") as f:
         print("Written JSON content:", f.read())
 
-    # Now call your routing function
     result = run_routing(
         input_json=tmp_file_path,
         input_gpkg="client/src/data/SWISSTLM3D_no_height.gpkg",
@@ -70,12 +61,26 @@ async def calculate(request: Request):
         output_dir="client/public/data"
     )
 
+    
+    try:
+        async with httpx.AsyncClient() as client:
+            notify_response = await client.post(
+                "http://localhost:8000/notifyCalculationDone",
+                json={"project_name": project_name}
+            )
+            print(f"Benachrichtigung gesendet: {notify_response.status_code}")
+    except Exception as e:
+        print(f"Fehler beim Benachrichtigen: {e}")
+
     return {
         "status": "Routing completed",
         "input_polygon_file": tmp_file_path,
         "point_used": point,
         "routing_result": result
     }
+    
+
+
 
 @app.get("/test")
 async def run_default_routing():

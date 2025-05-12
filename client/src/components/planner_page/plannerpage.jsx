@@ -16,6 +16,8 @@ import { ProjectUseMenuPopup } from "./project_manager/ProjectUseMenuPopup.jsx";
 import {PolygonInstructionsPopup} from "./project_manager/new_project/PolygonInstructionsPopup.jsx";
 import {SavePolygonPopup} from "./project_manager/new_project/SavePolygonPopup.jsx";
 import {StartPointInstructionsPopup} from "./project_manager/new_project/StartPointInstructionsPopup.jsx";
+import { CalculateWaitingPopUp } from "./project_manager/new_project/CalculateWaitingPopUp.jsx";
+import { set } from "ol/transform.js";
 
 export const PlannerPage = () => {
   const [ProjectManagerMode, setProjectManagerMode] = useState(false);
@@ -46,6 +48,8 @@ export const PlannerPage = () => {
     const coordinates = [lngLat.lng, lngLat.lat];
     setCreateStartPointMode(false);
     console.log(ProjectName,coordinates)
+    setIsLoading(true);
+    console.log("Berechnung wird gestartet – Popup sollte jetzt kommen")
     sendCalculationRequestToBackend(ProjectName, coordinates);
   };
   
@@ -218,6 +222,7 @@ export const PlannerPage = () => {
     }
   };
 
+
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
       <PlannerpageHeader/>
@@ -243,23 +248,11 @@ export const PlannerPage = () => {
           </div>
         )}
 
-        {isLoading && (
-          <div style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            zIndex: 1000,
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-            color: "white",
-            padding: "20px 40px",
-            borderRadius: "8px",
-            textAlign: "center"
-          }}>
-            <div className="loader" style={{ marginBottom: "10px" }}></div>
-            Route wird berechnet, bitte kurz Geduld haben...
-          </div>
-        )}
+        {isLoading && projectInfo?.ProjectName && (
+          <CalculateWaitingPopUp projectName={projectInfo.ProjectName} />
+          )}
+
+
       </div>
 
       <PlannerpageFooter

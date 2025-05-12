@@ -15,9 +15,9 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  z-index: 999;
+  z-index: 9999;
   align-items: flex-end;
-  pointer-events: none;
+  pointer-events: auto;
 }
 .addpolygon-overlay {
   position: fixed;
