@@ -19,6 +19,8 @@ export const ReportPage = () => {
   const [markerMode, setMarkerMode] = useState(false);
   const [marker, setMarker] = useState(null);
   const [changeLayerMode, setChangeLayerMode] = useState(false);
+  const [layerMarkers, setLayerMarkers] = useState([]);
+
 
   const handleMapLoad = (mapInstance) => {
     setMap(mapInstance);
@@ -86,6 +88,9 @@ export const ReportPage = () => {
             setChangeLayerMode={setChangeLayerMode}
             startPageMode={startPageMode}
             setStartPageMode={setStartPageMode}
+            map={map}
+            layerMarkers={layerMarkers}
+            setLayerMarkers={setLayerMarkers}
           />
           <AddMarkerPopupInfo />
         </>
