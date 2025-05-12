@@ -6,7 +6,6 @@ import maplibregl from "maplibre-gl";
 export const MapLayerPopup = (props) => {
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState('');
-  const [activeMarkers, setActiveMarkers] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:8000/getProjects')
@@ -32,7 +31,7 @@ export const MapLayerPopup = (props) => {
   
     console.log("Lade Punkte für Projekt:", selectedProject);
   
-    // ⛔️ Vorherige Marker entfernen
+    // Vorherige Marker entfernen
     props.layerMarkers.forEach(marker => marker.remove());
     props.setLayerMarkers([]); // Zustand leeren
   
@@ -49,17 +48,34 @@ export const MapLayerPopup = (props) => {
         const newMarkers = [];
   
         data.points.forEach((point) => {
-          if (point.longitude === undefined || point.latitude === undefined) {
-            console.warn("Ungültiger Punkt:", point);
-            return;
-          }
-  
-          const marker = new maplibregl.Marker({ color: 'blue' })
-            .setLngLat([point.longitude, point.latitude])
-            .addTo(props.map);
-  
-          newMarkers.push(marker);
-        });
+            if (point.longitude === undefined || point.latitude === undefined) {
+              console.warn("Ungültiger Punkt:", point);
+              return;
+            }
+          
+            const dateFormatted = point.date
+            ? new Date(point.date).toLocaleDateString('de-CH')
+            : "–";
+          
+          const imageHTML = point.picture
+            ? `<img src="data:image/jpeg;base64,${point.picture}" alt="Bild" style="max-width: 200px; max-height: 150px; margin-top: 8px;" />`
+            : "<em>Kein Bild verfügbar</em>";
+          
+          const popup = new maplibregl.Popup({ offset: 25 }).setHTML(`
+            <strong>Typ:</strong> ${point.type || "Unbekannt"}<br/>
+            <strong>Datum:</strong> ${dateFormatted}<br/>
+            ${imageHTML}
+          `);
+          
+          
+            const marker = new maplibregl.Marker({ color: 'blue' })
+              .setLngLat([point.longitude, point.latitude])
+              .setPopup(popup) // ← das ist entscheidend!
+              .addTo(props.map);
+          
+            newMarkers.push(marker);
+          });
+          
   
         props.setLayerMarkers(newMarkers); // Neue Marker speichern
         props.setChangeLayerMode(false);   // Popup schließen
