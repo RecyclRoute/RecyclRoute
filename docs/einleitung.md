@@ -6,7 +6,7 @@ title: Einleitung
 
 # Einleitung
 
-Diese GitHub-Page widmet sich der Geodateninfrastruktur RecyclRoute. Das effiziente einsammeln von Papier und Karton stellt für die Vereine ein mittel dar um Geld in die Vereinskasse zubekommen. Jedoch ist es in den letzten Jahren immer schwieriger geworden genügend freiwillige Helfende zuhaben. Daher ist eine effiziente Planung von Sammelrouten für Papier und Karton um ungünstige Routenführung aber auch vermeidbare Emissionen, Zeitverluste und unnötige Kosten zu mindern von immer grösserer Bedeutung. 
+Diese GitHub-Page widmet sich der Geodateninfrastruktur RecyclRoute. Das effiziente Einsammeln von Papier und Karton stellt für die Vereine ein mittel dar um Geld in die Vereinskasse zubekommen. Jedoch ist es in den letzten Jahren immer schwieriger geworden genügend freiwillige Helfende zuhaben. Daher ist eine effiziente Planung von Sammelrouten für Papier und Karton um ungünstige Routenführung aber auch vermeidbare Emissionen, Zeitverluste und unnötige Kosten zu mindern von immer grösserer Bedeutung. 
 
 RecyclRoute bietet eine Lösung, um Sammelrouten mit Hilfe geografischer Daten zu visualisieren, analysieren. Ähnlich bestehende Anwendungen, sind uns soweit nicht bekannt und es sicht heraus durch die möglichkeit in einem ganzen Gebiet alle gemäss SWISSTLM3D befahrbaren Strassen mindestens einmal zudurchfahren. Durch eine interaktive Webkarte, die GIS-Komponenten, Routing und Visualisierung kann RecyclRoute vorteile bieten:
 
@@ -19,13 +19,15 @@ Im Rahmen des Vertiefungsmoduls 4230 „Geoinformatik & Raumanalyse I“ des Bac
 
 In den folgenden Kapiteln werden alle Funktionen, der Aufbau der Geodateninfrastruktur, das Konzept sowie Erweiterungspotenziale von RecyclRoute vorgestellt.
 
+![Video](assets/video/ablauf_video.mp4){: style="max-width: 100%; height: auto;" }
+
 [↑ Zurück zum Beginn der Webseite](#top) 
 
 <div style="display: flex; justify-content: space-between;">
   <div>
-    <a href="index.html">← RecyclRoute</a>
+    <a href="index.html">← Startseite</a>
   </div>
   <div>
-    <a href="funktionen.html">Erklärung der Funktionen →</a>
+    <a href="installation.html">Erklärung der Installation der Anwendung →</a>
   </div>
 </div>

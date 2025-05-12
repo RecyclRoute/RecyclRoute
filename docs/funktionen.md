@@ -8,8 +8,9 @@ In diesem Abschnitt werden die Funktionen und Interaktionen der RecyclRoute besc
 
 # Startpage
 <div id="startpage"></div>
-Auf der Startseite muss man sich bereits ein erstesmal entscheiden was man machen möchte. Wenn man Papier- oder Kartonsammlungen organisieren oder deine Route planen möchtest, muss man auf Planner klicken. Wenn du nicht abgeholtes oder falsch deponiertes Material melden möchtest, muss man auf Report klicken. Dann wird man dementsprechend auf die Seite mit den Entsprechenden Seiten geleitet. Die Farbe soll dabei auch gleich aufzeigen wo man ist. So ist der Planner in Grüntönen gehalten wärend der Report in Braun gehalten ist. Beides so, dass es doch auch das man es mit Recycling, Umwelt und Ökologischen Themen direkt assoziert.
-![Startseite](Bilder/Startpage_1.png)
+Auf der Startseite muss man sich bereits ein erstesmal entscheiden was man machen möchte. Wenn man Papier- oder Kartonsammlungen organisieren oder deine Route planen möchtest, muss man auf Planner klicken. Wenn du nicht abgeholtes oder falsch deponiertes Material melden möchtest, muss man auf Report klicken. Dann wird man dementsprechend auf die Seite mit den Entsprechenden Seiten geleitet. 
+
+![Startseite](assets/images/Startpage_1.png)
 
 ## Funktionen Planer:
 
@@ -82,6 +83,8 @@ Mit dieser Distanzmatrix wird auf eine Art das Traveling Salesman Problem (TSP) 
 Im letzten Schritt werden die optimierten Koordinaten in Teilblöcke unterteilt und jeweils bei Valhalla (selber gehostet) angefragt, um echte turn-by-turn-Navigationen zu erhalten. Pro Block werden JSON- und GeoJSON-Dateien erzeugt. Diese werden zu einer Gesamtroute zusammengefügt und als finale GeoJSON-Datei gespeichert. Parallel dazu werden detaillierte Navigationsanweisungen in ausgegeben.
 
 ## Funktionen Report:
+
+Nach dem Klicken auf Report wird man auf die Report Seite (brauntöne) weitergeleitet. Auf welcher die Standartfunktionen GNSS, Norden der Karte, Anzeigen der Punkte des Projektes
 
 
 ## Funktionen allgemein:

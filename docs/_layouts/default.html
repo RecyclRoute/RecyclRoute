@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const pre = codeBlock.parentNode;
-    pre.appendChild(button); // ⬅ Button INS <pre> einfügen, nicht davor
+    pre.appendChild(button);
   });
 });
 
@@ -50,7 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
     <nav>
       <ul>
         <li><a href="{{ '/einleitung.html' | relative_url }}">Einleitung</a></li>
-        <li><a href="{{ '/installation.html' | relative_url}}">Installation</a></li>
+         <li class="dropdown">
+          <a href="{{ '/installation.html' | relative_url }}">Installation</a>
+          <div class="dropdown-content">
+            <div><a href="{{ '/installation.html#starten-der-anwendung' | relative_url }}">Starten der Applikation</a></div>
+        </li>
         <li><a href="{{ '/konzept.html' | relative_url }}">Konzept</a></li>
         <li class="dropdown">
           <a href="{{ '/funktionen.html' | relative_url }}">Erklärung der Funktionen</a>

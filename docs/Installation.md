@@ -70,11 +70,11 @@ CREATE TABLE IF NOT EXISTS public.points (
         REFERENCES public.project (id) ON UPDATE NO ACTION ON DELETE CASCADE,
     CONSTRAINT points_type_check CHECK (
         type IN (
-            'Recyclingut falsch deponiert',
-            'Recyclingut nicht abgeholt',
-            'Recyclingut enthält Fremdstoffe',
+            'Recyclinggut falsch deponiert',
+            'Recyclinggut nicht abgeholt',
+            'Recyclinggut enthält Fremdstoffe',
             'Andere'
-        )
+)
     )
 );
 ALTER TABLE public.points OWNER TO postgres;

@@ -180,9 +180,9 @@ Der Arbeitsaufwand wird laufend erfasst damit am ende vom Projekt eine Analyse z
 
 <div style="display: flex; justify-content: space-between;">
   <div>
-    <a href="aufbauGDI.html">← Aufbau GDI</a>
+    <a href="installation.html">← Erklärung der Installation</a>
   </div>
   <div>
-    <a href="Erweiterungsmöglichkeiten.html">Erweiterungsmöglichkeiten →</a>
+    <a href="aufbauGDI.html">Aufbau GDI →</a>
   </div>
 </div>

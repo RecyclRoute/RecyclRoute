@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const pre = codeBlock.parentNode;
-    pre.appendChild(button); // ⬅ Button INS <pre> einfügen, nicht davor
+    pre.appendChild(button);
   });
 });
 
@@ -70,7 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
     <nav>
       <ul>
         <li><a href="/RecyclRoute/einleitung.html">Einleitung</a></li>
-        <li><a href="/RecyclRoute/installation.html">Installation</a></li>
+         <li class="dropdown">
+          <a href="/RecyclRoute/installation.html">Installation</a>
+          <div class="dropdown-content">
+            <div><a href="/RecyclRoute/installation.html#starten-der-anwendung">Starten der Applikation</a></div>
+        </li>
         <li><a href="/RecyclRoute/konzept.html">Konzept</a></li>
         <li class="dropdown">
           <a href="/RecyclRoute/funktionen.html">Erklärung der Funktionen</a>
