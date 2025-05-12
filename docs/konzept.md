@@ -141,9 +141,9 @@ https://www.swisstopo.admin.ch/de/landschaftsmodell-swissboundaries3d
 
 ### 4.2 Github Valhalla Chinesepostman Problem
 
-Routing Problem: Das Problem des Routings soll mittels der Lösung der Firma camptocamp welches den Code unter https://github.com/valhalla/valhalla/pull/3428 abgelegt hat verwendet werden. Die Firma hat ein Routing auf Grundlage der 3 Algorithmen Floyd-Warshall, Hungarian Method und Hier-holzer Methode erstellt, welches das Problem für die Firma Armasuisse versuchte anzugehen. Ge-mäss Dokumentation sollte auch eine Integration der Swisstopodaten anstatt OSM möglich sein. 
+Routing Problem: Das Problem des Routings soll mittels der Lösung der Firma camptocamp welches den Code unter https://github.com/valhalla/valhalla/pull/3428 abgelegt hat verwendet werden. Die Firma hat ein Routing auf Grundlage der 3 Algorithmen Floyd-Warshall, Hungarian Method und Hierholzer Methode erstellt, welches das Problem für die Firma Armasuisse versuchte anzugehen. Gemäss Dokumentation sollte auch eine Integration der Swisstopodaten anstatt OSM möglich sein. 
 ### 4.3 OpenStreetMap API
-OpenStreetMap: Von den OpenstreetMap Daten beziehen wir die Strassenachsen für die Berech-nung der Routen. Die OSM-Daten stehen zur Freien Nutzung und ohne Einschränkungen zur Verfü-gung. https://wiki.openstreetmap.org/wiki/API#Terms_of_use
+OpenStreetMap: Von den OpenstreetMap Daten beziehen wir die Strassenachsen für die Berech-nung der Routen. Die OSM-Daten stehen zur Freien Nutzung und ohne Einschränkungen zur Verfügung. https://wiki.openstreetmap.org/wiki/API#Terms_of_use
 
 ### 4.4	Amtliches Strassenverzeichnis API (Swisstopo) [optional]
 Strassenverzeichnis: Anstatt OSM Daten könnte man zu einem späteren Zeitpunkt versuchen die Strassenachsen aus dem amtlichen Strassenverzeichnis zu exportieren. Und via API einbinden:
@@ -174,7 +174,7 @@ Die ToDo’s werden in einem an Scrum angelehnten Board in MSTeams geführt, dam
 ### 5.2	Zeitplan
 Es wurde ein Zeitplan erstellt, welcher nach und nach ergänzt wird. Dieser dient als Ergänzung zum Task Board in MS Teams.
 ### 5.3	Rapport
-Der Arbeitsaufwand wird laufend erfasst damit am ende vom Projekt eine Analyse zwischen dem geplanten und effektiven Zeitaufwand gemacht werden kann. Dafür wird in einer Excel Tabelle je-weils der Aufwand erfasst und es wird automatisch eine Statistik mit den Aufwandsummen pro Person oder pro Tätigkeit erstellt.
+Der Arbeitsaufwand wird laufend erfasst damit am ende vom Projekt eine Analyse zwischen dem geplanten und effektiven Zeitaufwand gemacht werden kann. Dafür wird in einer Excel Tabelle jeweils der Aufwand erfasst und es wird automatisch eine Statistik mit den Aufwandsummen pro Person oder pro Tätigkeit erstellt.
 
 # Abweichungen vom Konzept
 Aus diversen Gründen wurden verschiedene Details welche im Konzept überlegt wurden während dem Aufbau der Applikation geändert. Seid dies weil es so nicht praktikabel war oder auch weil man durch gezieltes aufschreiben des Nutzendenworkflows verbesserungen herausarbeiten konnte und diese sogleich umgesetzt hat. Die aktuellen Details & der Geodateninfrastruktur sind im Kapitel <a href="aufbauGDI.html">Aufbau GDI </a>erklärt.
