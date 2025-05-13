@@ -62,11 +62,31 @@ export const PlannerPage = () => {
   setCalculationStarted(true);
   const coordinates = [lngLat.lng, lngLat.lat];
   console.log("Startpunkt gesetzt:", coordinates);
+<<<<<<< HEAD
+    if (calculationCompleted && !userConfirmedRecalculation) {
+      const userWantsToRecalculate = window.confirm(
+        "Dieses Projekt wurde bereits berechnet. Möchten Sie die Berechnung erneut starten?"
+      );
+      if (!userWantsToRecalculate) {
+        console.log("✅ Nutzer hat Berechnung nicht erneut ausgelöst.");
+        return;
+      }
+      setUserConfirmedRecalculation(true);
+    }
+
+    
+
+    setCreateStartPointMode(false);
+    setIsLoading(true);
+    sendCalculationRequestToBackend(ProjectName, coordinates);
+  };
+=======
 
   setCreateStartPointMode(false);
   setIsLoading(true);
   sendCalculationRequestToBackend(ProjectName, coordinates);
 };
+>>>>>>> parent of 4c2976f (20250513-WP_4)
 
   
   const sendCalculationRequestToBackend = async (ProjectName, startPoint) => {
@@ -74,6 +94,13 @@ export const PlannerPage = () => {
     console.error("Fehlende Eingaben für Projektname oder Startpunkt");
     return;
   }
+<<<<<<< HEAD
+    if (!startPoint || !ProjectName) {
+      console.error("❌ Fehlende Eingaben für Projektname oder Startpunkt");
+      return;
+    }
+=======
+>>>>>>> parent of 4c2976f (20250513-WP_4)
 
   const payload = {
     project_name: ProjectName,
@@ -111,7 +138,7 @@ export const PlannerPage = () => {
 
     const data = await response.json();
     console.log("Antwort vom Backend:", data);
-  } catch (error) {
+  }catch (error) {
     console.error("Anfrage fehlgeschlagen:", error);
     alert("Die Berechnung konnte nicht gestartet werden.");
   }
@@ -272,6 +299,42 @@ export const PlannerPage = () => {
       alert("Fehler beim Geocoding.");
     }
   };
+<<<<<<< HEAD
+useEffect(() => {
+  if (!projectInfo?.ProjectName) return;
+
+  const socket = new WebSocket(`ws://localhost:8000/ws/${projectInfo.ProjectName}`);
+
+  socket.onopen = () => {
+    console.log("📡 WebSocket verbunden");
+    socket.send("hello"); // optional
+  };
+
+  socket.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    console.log("📬 WebSocket-Nachricht empfangen:", data);
+
+    if (data.status === "done" && data.project === projectInfo.ProjectName) {
+      setIsLoading(false);
+      alert(`✅ Berechnung für Projekt "${data.project}" abgeschlossen.`);
+    }
+  };
+
+  socket.onclose = () => {
+    console.log("🔌 WebSocket getrennt");
+  };
+
+  socket.onerror = (error) => {
+    console.error("❌ WebSocket Fehler:", error);
+  };
+
+  return () => {
+    socket.close();
+  };
+}, [projectInfo?.ProjectName]);
+
+=======
+>>>>>>> parent of 4c2976f (20250513-WP_4)
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
