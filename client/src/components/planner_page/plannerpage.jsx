@@ -51,7 +51,7 @@ export const PlannerPage = () => {
 
   const handleStartPointConfirmed = (lngLat) => {
   if (calculationStarted) {
-    console.warn("⚠️ Berechnung bereits gestartet, ignoriere weiteren Klick");
+    console.warn("Berechnung bereits gestartet, ignoriere weiteren Klick");
     return;
   }
   calculationTriggered.current = true;
@@ -67,7 +67,7 @@ export const PlannerPage = () => {
   
   const sendCalculationRequestToBackend = async (ProjectName, startPoint) => {
   if (!startPoint || !ProjectName) {
-    console.error("❌ Fehlende Eingaben für Projektname oder Startpunkt");
+    console.error("Fehlende Eingaben für Projektname oder Startpunkt");
     return;
   }
 
@@ -89,13 +89,13 @@ export const PlannerPage = () => {
     });
 
     if (response.status === 409) {
-      console.warn("⚠️ Berechnung wurde bereits abgeschlossen.");
+      console.warn("Berechnung wurde bereits abgeschlossen.");
       alert("Dieses Projekt wurde bereits berechnet.");
       return;
     }
 
     if (response.status === 202) {
-      console.warn("ℹ️ Berechnung läuft bereits.");
+      console.warn("Berechnung läuft bereits.");
       alert("Die Berechnung läuft bereits.");
       return;
     }
@@ -106,9 +106,9 @@ export const PlannerPage = () => {
     }
 
     const data = await response.json();
-    console.log("✅ Antwort vom Backend:", data);
+    console.log("Antwort vom Backend:", data);
   } catch (error) {
-    console.error("❌ Anfrage fehlgeschlagen:", error);
+    console.error("Anfrage fehlgeschlagen:", error);
     alert("Die Berechnung konnte nicht gestartet werden.");
   }
 };
@@ -248,7 +248,7 @@ export const PlannerPage = () => {
   };
   useEffect(() => {
   if (window.location.pathname === "/navigation") {
-    console.log("🔁 Navigation aktiv – isLoading zurücksetzen");
+    console.log("Navigation aktiv – isLoading zurücksetzen");
     setIsLoading(false);
   }
 }, []);

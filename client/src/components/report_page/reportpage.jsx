@@ -20,6 +20,7 @@ export const ReportPage = () => {
   const [marker, setMarker] = useState(null);
   const [changeLayerMode, setChangeLayerMode] = useState(false);
   const [layerMarkers, setLayerMarkers] = useState([]);
+  const [SearchLocation, setSearchLocation] = useState('');
 
 
   const handleMapLoad = (mapInstance) => {
@@ -27,6 +28,22 @@ export const ReportPage = () => {
   };
 
   useCreateMarker(map, markerMode, marker, setMarker);
+
+  const searchLocationClick = async () => {
+    try {
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(SearchLocation)}&country=Switzerland&format=json`
+      );
+      const data = await response.json();
+      if (data.length > 0) {
+        const { lon, lat } = data[0];
+        map.flyTo({ center: [parseFloat(lon), parseFloat(lat)], zoom: 14 });
+      }
+    } catch (error) {
+      console.error("Geocoding Fehler:", error);
+      alert("Fehler beim Geocoding.");
+    }
+  };
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
@@ -65,6 +82,9 @@ export const ReportPage = () => {
         startPageMode={startPageMode}
         setStartPageMode={setStartPageMode}
         useCreateMarker={useCreateMarker}
+        SearchLocation={SearchLocation}
+        setSearchLocation={setSearchLocation}
+        searchLocationClick={searchLocationClick}
       />
 
       {addMarkerOpen && (

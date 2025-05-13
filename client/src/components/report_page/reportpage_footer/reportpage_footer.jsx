@@ -8,14 +8,18 @@ import useCreateMarker from "../../map/useCreateMarker";
 
 export const ReportpageFooter = (props) => {
 
-
-
   return (
     <footer position= "static" className="footer">
         <div className="footer_content">
-        <SearchButton/>
-        <SearchBar/>
-        <DeleteButton/>
+        <SearchButton
+        searchLocationClick={props.searchLocationClick}/>
+        <SearchBar
+        SearchLocation={props.SearchLocation}
+        setSearchLocation={props.setSearchLocation}
+        />
+        <DeleteButton
+        SearchLocation={props.SearchLocation}
+        setSearchLocation={props.setSearchLocation}/>
         </div>
         <AddMarkerButton
           markerMode={props.markerMode}
