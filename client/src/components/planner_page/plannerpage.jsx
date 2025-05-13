@@ -45,7 +45,8 @@ export const PlannerPage = () => {
   const [SearchLocation, setSearchLocation] = useState('');
   const [calculationStarted, setCalculationStarted] = useState(false);
   const calculationTriggered = useRef(false);  // statt State → bleibt stabil auch bei Re-Renders
-
+  const [calculationCompleted, setCalculationCompleted] = useState(false);
+  const [userConfirmedRecalculation, setUserConfirmedRecalculation] = useState(false);
 
   const navigate = useNavigate();
 
@@ -62,7 +63,6 @@ export const PlannerPage = () => {
   setCalculationStarted(true);
   const coordinates = [lngLat.lng, lngLat.lat];
   console.log("Startpunkt gesetzt:", coordinates);
-<<<<<<< HEAD
     if (calculationCompleted && !userConfirmedRecalculation) {
       const userWantsToRecalculate = window.confirm(
         "Dieses Projekt wurde bereits berechnet. Möchten Sie die Berechnung erneut starten?"
@@ -80,13 +80,6 @@ export const PlannerPage = () => {
     setIsLoading(true);
     sendCalculationRequestToBackend(ProjectName, coordinates);
   };
-=======
-
-  setCreateStartPointMode(false);
-  setIsLoading(true);
-  sendCalculationRequestToBackend(ProjectName, coordinates);
-};
->>>>>>> parent of 4c2976f (20250513-WP_4)
 
   
   const sendCalculationRequestToBackend = async (ProjectName, startPoint) => {
@@ -94,13 +87,10 @@ export const PlannerPage = () => {
     console.error("Fehlende Eingaben für Projektname oder Startpunkt");
     return;
   }
-<<<<<<< HEAD
     if (!startPoint || !ProjectName) {
       console.error("❌ Fehlende Eingaben für Projektname oder Startpunkt");
       return;
     }
-=======
->>>>>>> parent of 4c2976f (20250513-WP_4)
 
   const payload = {
     project_name: ProjectName,
@@ -299,7 +289,6 @@ export const PlannerPage = () => {
       alert("Fehler beim Geocoding.");
     }
   };
-<<<<<<< HEAD
 useEffect(() => {
   if (!projectInfo?.ProjectName) return;
 
@@ -333,8 +322,6 @@ useEffect(() => {
   };
 }, [projectInfo?.ProjectName]);
 
-=======
->>>>>>> parent of 4c2976f (20250513-WP_4)
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
