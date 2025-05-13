@@ -1,8 +1,6 @@
-import { Routes, Route } from "react-router-dom";
 import { StartpageHeader } from "../start_page/startpage_header";
 import { StartpageFooter } from "../start_page/startpage_footer";
-import backgroundimage from "../icons/karton.png";
-import { AutoFitText } from "./AutoFitText";
+import backgroundimage from "../icons/errorpage_karton.png";
 
 export const ErrorPage = () => {
   return (
@@ -23,12 +21,9 @@ export const ErrorPage = () => {
           src={backgroundimage}
           style={{
             maxWidth: "98%",
+            maxHeight: "70%",
             objectFit: "contain",
           }}
-        />
-        <AutoFitText
-          text="ERROR 404 – THIS SITE DOES NOT EXIST"
-          maxFontSize={60}
         />
       </div>
 

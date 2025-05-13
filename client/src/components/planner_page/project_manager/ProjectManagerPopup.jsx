@@ -22,8 +22,8 @@ export const ProjectManagerPopup = (props) => {
  
 
   return (
-    <div className="PlannerPopup-overlay">
-      <div className="PlannerPopup-content">
+    <div className="ProjectManagerPopup-overlay">
+      <div className="ProjectManagerPopup-content">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold">Projektmanager</h2>
           <button

@@ -12,18 +12,21 @@ import { useNavigate } from "react-router-dom";
 import { BaseMap } from "../map/BaseMap.jsx";
 import useCreatePolygon from "../map/useCreatePolygon.jsx";
 import { NewProjectPopup } from "./project_manager/new_project/NewProjectPopup.jsx";
-import { ProjectUseMenuPopup } from "./project_manager/ProjectUseMenuPopup.jsx";
+import { ProjectUseMenuPopup } from "./project_manager/project_use_menu/ProjectUseMenuPopup.jsx";
 import {PolygonInstructionsPopup} from "./project_manager/new_project/PolygonInstructionsPopup.jsx";
 import {SavePolygonPopup} from "./project_manager/new_project/SavePolygonPopup.jsx";
 import {StartPointInstructionsPopup} from "./project_manager/new_project/StartPointInstructionsPopup.jsx";
 import { MapLayerPopup } from "../map/MapLayerPopup.jsx";
 import { CalculateWaitingPopUp } from "./project_manager/new_project/CalculateWaitingPopUp.jsx";
-import { set } from "ol/transform.js";
+import { ProjectStatisticsPopup } from "./project_manager/project_use_menu/ProjectStatisticsPopup.jsx";
+import { ProjectDeleteCallbackPopup } from"./project_manager/project_use_menu/ProjectDeleteCallbackPopup.jsx";
 
 export const PlannerPage = () => {
   const [ProjectManagerMode, setProjectManagerMode] = useState(false);
   const [NewProjectMode, setNewProjectMode] = useState(false);
   const [ProjectUseMenuMode, setProjectUseMenuMode] = useState(false);
+  const [ProjectStatisticMode, setProjectStatisticMode] = useState(false);
+  const [ProjectDeleteCallbackMode, setProjectDeleteCallbackMode] = useState(false);
   const [polygonMode, setPolygonMode] = useState(false);
   const [CreateStartPointMode, setCreateStartPointMode]= useState(false);
   const [startPoint, setStartPoint] = useState(null);
@@ -31,14 +34,15 @@ export const PlannerPage = () => {
   const [map, setMap] = useState(null);
   const [startPageMode, setStartPageMode] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [projects, setProjects] = useState([]);
   const [projectInfo, setProjectInfo] = useState(null);
   const [ActiveProject, setActiveProject] = useState(null);
-  const [projects, setProjects] = useState([]);
   const [ProjectName, setProjectName] = useState('');
   const [Datum, setDatum] = useState('');
   const [Location, setLocation] = useState('');
   const [changeLayerMode, setChangeLayerMode] = useState(false);
   const [layerMarkers, setLayerMarkers] = useState([]);
+  const [SearchLocation, setSearchLocation] = useState('');
   const [calculationStarted, setCalculationStarted] = useState(false);
   const calculationTriggered = useRef(false);  // statt State → bleibt stabil auch bei Re-Renders
 
@@ -51,7 +55,7 @@ export const PlannerPage = () => {
 
   const handleStartPointConfirmed = (lngLat) => {
   if (calculationStarted) {
-    console.warn("⚠️ Berechnung bereits gestartet, ignoriere weiteren Klick");
+    console.warn("Berechnung bereits gestartet, ignoriere weiteren Klick");
     return;
   }
   calculationTriggered.current = true;
@@ -67,7 +71,7 @@ export const PlannerPage = () => {
   
   const sendCalculationRequestToBackend = async (ProjectName, startPoint) => {
   if (!startPoint || !ProjectName) {
-    console.error("❌ Fehlende Eingaben für Projektname oder Startpunkt");
+    console.error("Fehlende Eingaben für Projektname oder Startpunkt");
     return;
   }
 
@@ -89,13 +93,13 @@ export const PlannerPage = () => {
     });
 
     if (response.status === 409) {
-      console.warn("⚠️ Berechnung wurde bereits abgeschlossen.");
+      console.warn("Berechnung wurde bereits abgeschlossen.");
       alert("Dieses Projekt wurde bereits berechnet.");
       return;
     }
 
     if (response.status === 202) {
-      console.warn("ℹ️ Berechnung läuft bereits.");
+      console.warn("Berechnung läuft bereits.");
       alert("Die Berechnung läuft bereits.");
       return;
     }
@@ -106,9 +110,9 @@ export const PlannerPage = () => {
     }
 
     const data = await response.json();
-    console.log("✅ Antwort vom Backend:", data);
+    console.log("Antwort vom Backend:", data);
   } catch (error) {
-    console.error("❌ Anfrage fehlgeschlagen:", error);
+    console.error("Anfrage fehlgeschlagen:", error);
     alert("Die Berechnung konnte nicht gestartet werden.");
   }
 };
@@ -248,12 +252,26 @@ export const PlannerPage = () => {
   };
   useEffect(() => {
   if (window.location.pathname === "/navigation") {
-    console.log("🔁 Navigation aktiv – isLoading zurücksetzen");
+    console.log("Navigation aktiv – isLoading zurücksetzen");
     setIsLoading(false);
   }
 }, []);
 
-
+  const searchLocationClick = async () => {
+    try {
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(SearchLocation)}&country=Switzerland&format=json`
+      );
+      const data = await response.json();
+      if (data.length > 0) {
+        const { lon, lat } = data[0];
+        map.flyTo({ center: [parseFloat(lon), parseFloat(lat)], zoom: 14, duration: 1000 });
+      }
+    } catch (error) {
+      console.error("Geocoding Fehler:", error);
+      alert("Fehler beim Geocoding.");
+    }
+  };
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
@@ -294,6 +312,13 @@ export const PlannerPage = () => {
         setStartPageMode={setStartPageMode}
         ProjectManagerMode={ProjectManagerMode}
         setProjectManagerMode={setProjectManagerMode}
+        SearchLocation={SearchLocation}
+        setSearchLocation={setSearchLocation}
+        searchLocationClick={searchLocationClick}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
+        projects={projects}
+        setProjects={setProjects}
       />
 
       {isLoading && projectInfo?.ProjectName && (
@@ -357,6 +382,14 @@ export const PlannerPage = () => {
           setActiveProject={setActiveProject}
           ProjectUseMenuMode={ProjectUseMenuMode}
           setProjectUseMenuMode={setProjectUseMenuMode}
+          ProjectStatisticMode={ProjectStatisticMode}
+          setProjectStatisticMode={setProjectStatisticMode}
+          ProjectDeleteCallbackMode={ProjectDeleteCallbackMode}
+          setProjectDeleteCallbackMode={setProjectDeleteCallbackMode}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+          projects={projects}
+          setProjects={setProjects}
         />
       )}
 
@@ -373,7 +406,35 @@ export const PlannerPage = () => {
             designConst="PlannerPage"
           />
         </>
-      )}         
+      )}
+
+      {ProjectStatisticMode && (
+        <>
+          <ProjectStatisticsPopup
+          ProjectUseMenuMode={ProjectUseMenuMode}
+          setProjectUseMenuMode={setProjectUseMenuMode}
+          ProjectStatisticMode={ProjectStatisticMode}
+          setProjectStatisticMode={setProjectStatisticMode}
+          />
+        </>
+      )}
+
+      {ProjectDeleteCallbackMode && (
+        <>
+          <ProjectDeleteCallbackPopup
+          ProjectUseMenuMode={ProjectUseMenuMode}
+          setProjectUseMenuMode={setProjectUseMenuMode}
+          ProjectDeleteCallbackMode={ProjectDeleteCallbackMode}
+          setProjectDeleteCallbackMode={setProjectDeleteCallbackMode}
+          ActiveProject={ActiveProject}
+          setActiveProject={setActiveProject}
+          ProjectManagerMode={ProjectManagerMode}
+          setProjectManagerMode={setProjectManagerMode}
+          startPageMode={startPageMode}
+          setStartPageMode={setStartPageMode}
+          />
+        </>
+      )}        
     </div>
   );
 };

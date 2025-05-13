@@ -381,4 +381,27 @@ def get_calculation_status(project_name: str):
     status = project_status.get(project_name, "pending")
     return {"project_name": project_name, "status": status}
 
+@app.delete("/deleteProject/{project_id}")
+def delete_project(project_id: int):
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    try:
+        # Prüfen, ob das Projekt existiert
+        cur.execute("SELECT id FROM project WHERE id = %s", (project_id,))
+        if cur.fetchone() is None:
+            raise HTTPException(status_code=404, detail=f"Projekt mit ID {project_id} wurde nicht gefunden.")
+
+        # Projekt löschen (alle zugehörigen Punkte werden durch ON DELETE CASCADE entfernt)
+        cur.execute("DELETE FROM project WHERE id = %s", (project_id,))
+        conn.commit()
+
+        return {"message": f"Projekt mit ID {project_id} erfolgreich gelöscht."}
+    
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Fehler beim Löschen des Projekts: {e}")
+    
+    finally:
+        cur.close()
+        conn.close()
 
