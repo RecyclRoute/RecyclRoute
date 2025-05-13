@@ -12,14 +12,16 @@ export const ReportpageFooter = (props) => {
     <footer position= "static" className="footer">
         <div className="footer_content">
         <SearchButton
-        searchLocationClick={props.searchLocationClick}/>
+          searchLocationClick={props.searchLocationClick}
+        />
         <SearchBar
-        SearchLocation={props.SearchLocation}
-        setSearchLocation={props.setSearchLocation}
+          SearchLocation={props.SearchLocation}
+          setSearchLocation={props.setSearchLocation}
         />
         <DeleteButton
-        SearchLocation={props.SearchLocation}
-        setSearchLocation={props.setSearchLocation}/>
+          SearchLocation={props.SearchLocation}
+          setSearchLocation={props.setSearchLocation}
+        />
         </div>
         <AddMarkerButton
           markerMode={props.markerMode}

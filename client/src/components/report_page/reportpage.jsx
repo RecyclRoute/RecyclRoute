@@ -37,7 +37,7 @@ export const ReportPage = () => {
       const data = await response.json();
       if (data.length > 0) {
         const { lon, lat } = data[0];
-        map.flyTo({ center: [parseFloat(lon), parseFloat(lat)], zoom: 14 });
+        map.flyTo({ center: [parseFloat(lon), parseFloat(lat)], zoom: 14, duration: 1000 });
       }
     } catch (error) {
       console.error("Geocoding Fehler:", error);

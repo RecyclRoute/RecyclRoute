@@ -8,13 +8,13 @@ export const DeleteButton = (props) => {
     props.setSearchLocation("");
   };
 
-    return (
-      <button
+  return (
+    <button
       className="SearchBarButtons"
       style={{fontSize: "30px", }}
       onClick={deleteButtonClick}
-      >
-        <CrossIcon className="Icons"/>
-      </button>
-    );
-  };
+    >
+      <CrossIcon className="Icons"/>
+    </button>
+  );
+};

@@ -39,6 +39,7 @@ export const PlannerPage = () => {
   const [Location, setLocation] = useState('');
   const [changeLayerMode, setChangeLayerMode] = useState(false);
   const [layerMarkers, setLayerMarkers] = useState([]);
+  const [SearchLocation, setSearchLocation] = useState('');
   const [calculationStarted, setCalculationStarted] = useState(false);
   const calculationTriggered = useRef(false);  // statt State → bleibt stabil auch bei Re-Renders
 
@@ -253,7 +254,21 @@ export const PlannerPage = () => {
   }
 }, []);
 
-
+  const searchLocationClick = async () => {
+    try {
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(SearchLocation)}&country=Switzerland&format=json`
+      );
+      const data = await response.json();
+      if (data.length > 0) {
+        const { lon, lat } = data[0];
+        map.flyTo({ center: [parseFloat(lon), parseFloat(lat)], zoom: 14, duration: 1000 });
+      }
+    } catch (error) {
+      console.error("Geocoding Fehler:", error);
+      alert("Fehler beim Geocoding.");
+    }
+  };
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
@@ -294,6 +309,9 @@ export const PlannerPage = () => {
         setStartPageMode={setStartPageMode}
         ProjectManagerMode={ProjectManagerMode}
         setProjectManagerMode={setProjectManagerMode}
+        SearchLocation={SearchLocation}
+        setSearchLocation={setSearchLocation}
+        searchLocationClick={searchLocationClick}
       />
 
       {isLoading && projectInfo?.ProjectName && (

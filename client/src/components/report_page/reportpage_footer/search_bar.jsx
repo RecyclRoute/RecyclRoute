@@ -8,7 +8,6 @@ export const SearchBar = (props) => {
         placeholder="Suche (Ortschaft, Adressen)"
         value={props.SearchLocation}
           onChange={(e) => props.setSearchLocation(e.target.value)}
-        >
-      </input>
+      />
     );
   };

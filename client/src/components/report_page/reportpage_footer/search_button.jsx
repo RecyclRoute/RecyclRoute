@@ -3,7 +3,10 @@ import "./reportpage_footer.css";
 
 export const SearchButton = (props) => {
     return (
-      <button className="SearchBarButtons" onClick={props.searchLocationClick}>
+      <button
+        className="SearchBarButtons"
+        onClick={props.searchLocationClick}
+      >
         <SearchIcon className="Icons"/>
       </button>
     );

@@ -11,9 +11,17 @@ export const PlannerpageFooter = (props) => {
   return (
     <footer position= "static" className="PlannerpageFooter">
         <div className="PlannerpageFooter_content">
-        <SearchButton/>
-        <SearchBar/>
-        <DeleteButton/>
+        <SearchButton
+          searchLocationClick={props.searchLocationClick}
+        />
+        <SearchBar
+          SearchLocation={props.SearchLocation}
+          setSearchLocation={props.setSearchLocation}
+        />
+        <DeleteButton
+          SearchLocation={props.SearchLocation}
+          setSearchLocation={props.setSearchLocation}
+        />
         </div>
           <ProjectManagerButton
             startPageMode={props.startPageMode}
