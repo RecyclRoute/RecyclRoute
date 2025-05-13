@@ -5,14 +5,14 @@ title: Geodateninfrastruktur
 # Aufbau der Geodateninfrastruktur (GDI)
 <a id="top"></a>
 
-Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backend, einem Frontend einem laufenden Docker (valhalla) sowie verschiedenen Bibliotheken. Die folgende Darstellung zeigt die momentane Systemarchitektur von RecyclRoute:
+Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backends, einem Frontend sowie einem weiteren backend Docker server (valhalla). Die folgende Darstellung zeigt die momentane Systemarchitektur von RecyclRoute:
 
 ->ToDO Bild erstellen!
 ![GDI Architektur Schema](asstes/images/GDI_Architektur_final.png)
 
 ## Backend
 
-Das Backend umfasst sämtliche Serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript automatisiert mit Geo- und Routendaten befüllt. Der **GeoServer** stellt dabei die zentrale Schnittstelle dar, um die Daten aus der Datenbank als Webdienste (WMS/WFS) bereitzustellen. Über das Frontend wird via HTTP (z. B. Axios) auf diese Dienste zugegriffen.
+Das Backend umfasst sämtliche Serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript automatisiert mit Geo- und Routendaten befüllt. Das Backend interagiert dabei direkt mit der PostgreSQL/PostGIS-Datenbank um neue Informationen abzuspeichern, um bestehende Informationen abzufragen oder um bestehende Informationen zu löschen.
 
 ### Grundlagedaten
 <div id="grundlagedaten"></div>
@@ -33,11 +33,7 @@ Zur Visualisierung wurden **Views** erstellt, z. B.:
 - `vw_sammelpunkte` – aufbereitete Standorte
 - `vw_routenabschnitte` – segmentweise Darstellung mit Zustandsattributen
 
-Die Daten werden über den GeoServer veröffentlicht und im Frontend genutzt.
-
-## Geoserver
-
-Die vorbereiteten Datenbank-Views werden im **GeoServer** als WMS- oder WFS-Dienste publiziert. Diese werden im Frontend per OpenLayers eingebunden, wodurch interaktive Kartenvisualisierung, Routenhighlighting und Layersteuerung möglich sind.
+Die Daten werden via das Backend abgefragt und im Frontend genutzt.
 
 ## Frontend
 <div id="frontend"></div>
