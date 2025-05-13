@@ -13,6 +13,7 @@ Auf der Startseite muss man sich bereits ein erstesmal entscheiden was man mache
 ![Startseite](assets/images/Startpage_1.png){: style="max-width: 75%; height: auto;" }
 
 # Funktionen Report:
+<div id="report"></div>
 Nach dem Klicken auf Report wird man auf die Report Seite (brauntöne) weitergeleitet. Auf welcher die Standartfunktionen GNSS, Norden der Karte, Anzeigen der Punkte des Projektes funktionieren, sowie der Report erstellen.
 
 ![Startseite Report](assets/GIFs/report_page.gif){: style="max-width: 75%; height: auto;" }
@@ -23,6 +24,7 @@ Mit dem klicken auf den Button unten rechts, kann ein neuer Report erstellt werd
 ![Report erstellen](assets/GIFs/report_erstellen.gif){: style="max-width: 75%; height: auto;" }
 
 # Funktionen allgemein:
+<div id="funktionenallgemein"></div>
 Folgende vier Funktionen sind sowohl im Report als auch im Planner enthalten:
 
 ## Ort Suche
@@ -46,6 +48,7 @@ Mit dieser Funktion kann die Karte wieder nach Norden ausgerichtet werden wenn d
 ![Norden](assets/GIFs/north.gif){: style="max-width: 75%; height: auto;" }
 
 # Funktionen Planner:
+<div id="planner"></div>
 Nach dem Klicken auf Planner wird man auf die Planner Seite (grüntöne) weitergeleitet. Auf welcher die Standartfunktionen GNSS, Norden der Karte, Anzeigen der Punkte des Projektes sowie das Planen der Route sowie das Managen der Projekte implementiert ist.
 
 ![Startseite Planer](assets/GIFs/planner_page.gif){: style="max-width: 75%; height: auto;" }
@@ -81,6 +84,7 @@ Nachfolgend ist der ganze Berechnungsalgorithmus erklärt, wie er aufgebaut ist.
 ![Berechnung_alles](assets/GIFs/berechnung.gif){: style="max-width: 75%; height: auto;" }
 
 #### **Routing- und Optimierungs-Tool für vollständige Wegenetzbefahrung**
+
 
 Das ganze ist in einem Python-Skript aufgebaut und soll automatisiert eine optimale Route durch ein definiertes Strassennetz berechnen. Ziel ist es, alle relevanten Strassen in einem Gebiet möglichst effizient und ohne doppelte Befahrung abzufahren – ähnlich zum sogenannten Chinese Postman Problem welches eher Bekannt ist.
 
@@ -142,6 +146,7 @@ Mit dieser Distanzmatrix wird auf eine Art das Traveling Salesman Problem (TSP) 
 Im letzten Schritt werden die optimierten Koordinaten in Teilblöcke unterteilt und jeweils bei Valhalla (selber gehostet) angefragt, um echte turn-by-turn Navigationen zu erhalten. Pro Block werden JSON- und GeoJSON-Dateien erzeugt. Diese werden zu einer Gesamtroute zusammengefügt und als finale GeoJSON-Datei gespeichert. Parallel dazu werden detaillierte Navigationsanweisungen in ausgegeben.
 
 ## Navigationpage
+<div id="navigation"></div>
 Nach der Berechnung kommt man auf die Navigationseite, auf welcher man durch die Navigation der berechneten Route geführt wird. Dabei wird man step by step durch die Navigation geleitet.
 
 Geplant ist auch das die Abschnitte, erledigt, aktueller Abschnitt, als nächster folgend, als übernächster folgend, unterschiedlich eingefärbt werden, so das ein klarerer Überblick vorhanden ist.
