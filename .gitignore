@@ -47,3 +47,5 @@ ortools_package
 recyclroute-venv
 valhalla_docker
 polygon.geojson
+routing-valhalla.zip
+valhalla_custom_image.tar

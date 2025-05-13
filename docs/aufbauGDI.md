@@ -8,7 +8,7 @@ title: Geodateninfrastruktur
 Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backends, einem Frontend sowie einem weiteren backend Docker server (valhalla). Die folgende Darstellung zeigt die momentane Systemarchitektur von RecyclRoute:
 
 ->ToDO Bild erstellen!
-![GDI Architektur Schema](asstes/images/GDI_Architektur_final.png)
+![GDI Architektur Schema](asstes/images/GDI_Architektur_final.png){: style="max-width: 100%; height: auto;" }
 
 ## Backend
 
