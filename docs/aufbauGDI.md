@@ -5,21 +5,14 @@ title: Geodateninfrastruktur
 # Aufbau der Geodateninfrastruktur (GDI)
 <a id="top"></a>
 
-Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backends, einem Frontend sowie einem weiteren backend Docker server (valhalla). Die folgende Darstellung zeigt die momentane Systemarchitektur von RecyclRoute:
+Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backends, einem Frontend sowie einem weiteren Backend-Docker-Server (Valhalla). Die folgende Darstellung zeigt die momentane Systemarchitektur von RecyclRoute:
 
 
 ![GDI Architektur Schema](assets/images/GDI_Architektur_final.png){: style="max-width: 100%; height: auto;" }
 
 ## Backend
 
-Das Backend umfasst sämtliche Serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript automatisiert mit Geo- und Routendaten befüllt. Das Backend interagiert dabei direkt mit der PostgreSQL/PostGIS-Datenbank um neue Informationen abzuspeichern, um bestehende Informationen abzufragen oder um bestehende Informationen zu löschen. Das Backend is in 3 verschiedene Server unterteilt. Der Hauptserver wird auf einem RaspberryPi gehostet und umfasst alle Anfragen an die Datenbank sowie an den zweiten Server. Da der RaspberryPi nicht viel Rechenleistung bietet, wird ein zweiter Server auf einem Laptop gehostet, dieser umfasst den gesamten Berechnungsprozess. Da der zweite Server auf eine API-Schnitstelle von dem Repository Valhalla zugreifen muss wird ein Docker Container mit entsprechendem Image von Valhalla ebenfalls auf einem Laptop gehostet. 
-
-### Grundlagedaten
-<div id="grundlagedaten"></div>
-
-Die Grundlagedaten bestehen aus dem  **Straßennetzen**  ergänzt durch eigens berechnete Routen. Die Strassendaten stammen aus der [swissTLM3D](https://www.swisstopo.admin.ch/de/geodata/landscape/tlm3d.html), die Routen werden durch ein angepasstes Python-Routing-Skript (basierend auf dem Chinese Postman Problem) generiert. Die Ergebnisse werden in GeoJSONs gespeichert.
-
-Die Datenstruktur ist so aufgebaut, dass neue Regionen, Fraktionen oder Sammelarten (z. B. Glas, PET) leicht integriert werden können. Die Skripte zur Datenverarbeitung befinden sich im Repository unter `preprocessing/`.
+Das Backend umfasst sämtliche serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript (API-Abfragen) automatisiert mit Geodaten und Routen befüllt. Das Backend interagiert dabei direkt mit der PostgreSQL/PostGIS-Datenbank um neue Informationen abzuspeichern, um bestehende Informationen abzufragen oder um bestehende Informationen zu löschen. Das Backend ist in 3 verschiedene Server unterteilt. Der Hauptserver wird auf einem RaspberryPi gehostet und umfasst alle Anfragen an die Datenbank sowie an den zweiten Server. Da der RaspberryPi nur eine geringe Rechenleistung bietet, wird ein zweiter Server auf einem Laptop gehostet, dieser umfasst den gesamten Berechnungsprozess. Da der zweite Server auf eine API-Schnitstelle vom Repository Valhalla zugreifen muss, wird ein Docker-Container mit entsprechendem Image von Valhalla ebenfalls auf einem Laptop gehostet. 
 
 ## Datenbank
 
@@ -28,11 +21,11 @@ Die Datenbank wurde in PostgreSQL/PostGIS aufgebaut. Sie enthält u. a. folgen
 - `points` (ID, ProjektID, Typ, Datum, Foto, Geometrie (Punkt))
 
 Die folgenden Tabellen wurden nicht wie im geplanten Logischen Datenmodell erstellt:
-- `material`: die Tabelle Material wurde noch nicht eingebunden da diese Tabelle nicht unabdinglcih ist und in der minimal working product nicht benötigt wird.
-- `hintergrund`: die Tabelle Hintergrund wurde nicht eingebunden da auf die Funktionalität den Hintergrund zu ändern verzichtet wurde. Dies wurde so entschieden damit die gesamte Anwendung einfacher zu benutzen ist.
-- `user` : Die Tabelle User wurde nicht eingebunden da auf die gesamte User Identifikation aus komplexitätsgründen verzichtet wurde. Dies wurde ebenfalls an während einer Besprechung entschieden.
+- `material`: die Tabelle Material wurde noch nicht eingebunden da diese Tabelle nicht zwingend nötig ist und im "minimal working product" noch nicht benötigt wird.
+- `hintergrund`: die Tabelle Hintergrund wurde nicht eingebunden da auf die Funktionalität den Hintergrund zu ändern verzichtet wurde und dies sowieso Frontend-technisch gelöst werden würde. Es wird auf die Funktion verzichtet, damit die gesamte Anwendung einfacher zu benutzen ist.
+- `user` : Die Tabelle User wurde nicht eingebunden da auf die gesamte User-Identifikation aus komplexitätsgründen verzichtet wurde..
 - `role` : Die Tabelle Role wurde nicht eingebunden da sie abhängig von der Tabelle User ist und somit nicht benötigt wird. 
-- `chinese_postman_polygon` : Die Tabelle Chinese_Postman_Polygon wurde nicht eingebunden da diese Funktionalität der Routenberechnung im Backend noch nicht vollständig Funktionstüchtig ist. 
+- `chinese_postman_polygon` : Die Tabelle Chinese_Postman_Polygon wurde noch nicht eingebunden da diese Funktionalität der Routenberechnung im Backend noch nicht vollständig Funktionstüchtig ist. 
 - `route` : Die Tabelle Route wurde nicht eingebunden da sie abhängig von der Tabelle Chinese_Postman_Polygon ist und somit nicht benötigt wird. 
 - `kanten` : Die Tabelle Kanten wurde nicht eingebunden da sie abhängig von der Tabelle Chinese_Postman_Polygon ist und somit nicht benötigt wird. 
 
