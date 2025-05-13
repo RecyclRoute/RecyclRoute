@@ -15,20 +15,25 @@ Auf der Startseite muss man sich bereits ein erstesmal entscheiden was man mache
 # Funktionen Report:
 Nach dem Klicken auf Report wird man auf die Report Seite (brauntöne) weitergeleitet. Auf welcher die Standartfunktionen GNSS, Norden der Karte, Anzeigen der Punkte des Projektes funktionieren, sowie der Report erstellen.
 
-![Startseite Report](assets/gifs/report_page.gif){: style="max-width: 75%; height: auto;" }
+![Startseite Report](assets/GIFs/report_page.gif){: style="max-width: 75%; height: auto;" }
 
 ## Report erstellen
 Mit dem klicken auf den Button unten rechts, kann ein neuer Report erstellt werden. Dazu muss vorab aber schon ein Projekt erstellt worden sein, damit man auch den Report auch einem Projekt zuweisen kann. Mit auswählen des Projektes einer Bemerkung (nur Dropdown möglichkeiten) ein Datum eingegeben werden sowie ein Foto hochgeladen werden. Ebenso muss zwingend ein Punkt abgesetzt werden mit klicken auf die Karte. Dieser kann verschoben werden durch nochmaliges klicken. Mit Punkt speichern wird der Punkt in die Datenbank gespeichert und das Popup schliesst sich automatisch.
 
-![Report erstellen](assets/gifs/report_erstellen.gif){: style="max-width: 75%; height: auto;" }
+![Report erstellen](assets/GIFs/report_erstellen.gif){: style="max-width: 75%; height: auto;" }
 
 # Funktionen allgemein:
-Folgende drei Funktionen sind sowohl im Report als auch im Planner enthalten:
+Folgende vier Funktionen sind sowohl im Report als auch im Planner enthalten:
+
+## Ort Suche
+Damit kann ein spezifischer Ort gesucht und abgerufen werden.
+
+![Suche](assets/GIFs/Suche.gif){: style="max-width: 75%; height: auto;" }
 
 ## Reportpunkte des Projektes anzeigen
 Damit kann ein Projekt ausgewählt werden und alle dem Projekt zugeordneten Projektpunkte angezeigt werden.
 
-![Projektpunkte einblenden](assets/gifs/projektpunkte.gif){: style="max-width: 75%; height: auto;" }
+![Projektpunkte einblenden](assets/GIFs/projektpunkte.gif){: style="max-width: 75%; height: auto;" }
 
 ## Aktueller Standort anzeigen
 Mit der Funktion wird die GNSS Position des Gerätes abgegriffen, wenn eingeschalten & die Karte Zoom auf diesen Standort und zeigt die Position als Blauen Marker. 
@@ -43,10 +48,10 @@ Mit dieser Funktion kann die Karte wieder nach Norden ausgerichtet werden wenn d
 # Funktionen Planner:
 Nach dem Klicken auf Planner wird man auf die Planner Seite (grüntöne) weitergeleitet. Auf welcher die Standartfunktionen GNSS, Norden der Karte, Anzeigen der Punkte des Projektes sowie das Planen der Route sowie das Managen der Projekte implementiert ist.
 
-![Startseite Planer](assets/gifs/planner_page.gif.gif){: style="max-width: 75%; height: auto;" }
+![Startseite Planer](assets/GIFs/planner_page.gif){: style="max-width: 75%; height: auto;" }
 
 ## Projektmanager
-Um den Projektmanager abzurufen, kann auf den Button unten rechts geklickt werden. Sobald dieser gestartet ist sieht man alle Projekte welche in der DB gespecihert sind. Durch klicken auf ein bestimmtes Projekt kommt ein weiteres Popup, welches vier Buttons aufweist und als Titel die Projektbezeichnung enthält.
+Um den Projektmanager abzurufen, kann auf den Button unten rechts geklickt werden. Sobald dieser gestartet ist sieht man alle Projekte welche in der DB gespeichert sind. Durch klicken auf ein bestimmtes Projekt kommt ein weiteres Popup, welches vier Buttons aufweist und als Titel die Projektbezeichnung enthält.
 
 - Route berechnen; damit kann die Route des Projektes neugerechnet werden
 - Routing starten; damit kann man wenn ein Routing vorhanden ist dieses starten
@@ -54,13 +59,13 @@ Um den Projektmanager abzurufen, kann auf den Button unten rechts geklickt werde
 - Projekt löschen; damit kann das Projekt aus der DB gelöscht werden.
 
 Mit dem kleinen x kann man den Projektmanager wieder schliessen.
-
-![Projektmanager](assets/GIFs/projektmanager.gif){: style="max-width: 75%; height: auto;" }
+#ToDo
+![Projektmanager](assets/GIFs/projectmanager.gif){: style="max-width: 75%; height: auto;" }
 
 ### Neues Projekt erstellen
 Im Projektmanager ganz unten gibt es den Button **Neues Projekt erstellen**. Damit kann ein neues Projekt erstellt werden. Es erscheint ein neues Popup, in welchem man den Projektnamen, die Gemeinde, sowie ein Sammeldatum auswählen kann.
 
-![neues Projekt](assets/GIFs/neues_projekt.gif){: style="max-width: 75%; height: auto;" }
+![neues Projekt](assets/GIFs/new_project.gif){: style="max-width: 75%; height: auto;" }
 
 ### Polygon definieren & Startpunkt setzen
 Mit klick auf **Weiter** bestätigt man die Eingaben und man kommt auf die Karte wo man ein Polygon definieren muss welches das ganze Gebiet exakt umschliesst. Mit Doppelklick oder klick auf den Button **Perimeter speichern** bestätigt man die Eingabe. Danach muss man noch der Startpunkt der Routensammlung definieren durch klicken auf einen Standort innerhalb des gewählten Polygons.
@@ -71,7 +76,9 @@ Anschliessend kommt eine Meldung, dass die Berechnung der Route im Hintergrund p
 
 ### Berechnungsalgorithmus
 <div id="berechnungsalgorithmus"></div>
-Nachfolgend ist der ganze Berechnungsalgorithmus erklärt, wie er aufgebaut ist. Zuerst werden grundlegende Punkte erklärt und anschliessend der Ablauf und die theoretischen Grundlagen dahinter versucht zuerläutern. 
+Nachfolgend ist der ganze Berechnungsalgorithmus erklärt, wie er aufgebaut ist. Zuerst werden grundlegende Punkte erklärt und anschliessend der Ablauf und die theoretischen Grundlagen dahinter versucht zuerläutern.
+
+![Berechnung_alles](assets/GIFs/berechnung.gif){: style="max-width: 75%; height: auto;" }
 
 #### **Routing- und Optimierungs-Tool für vollständige Wegenetzbefahrung**
 
@@ -133,6 +140,13 @@ Für die weitere Optimierung wird eine Distanzmatrix aufgebaut, welche die reale
 Mit dieser Distanzmatrix wird auf eine Art das Traveling Salesman Problem (TSP) gelöst – also die Reihenfolge bestimmt, in der die Punkte mit geringster Gesamtreiselänge besucht werden. Dies geschieht mithilfe der Google OR-Tools mit der Strategie „Pfad mit geringstem Startbogen“.
 
 Im letzten Schritt werden die optimierten Koordinaten in Teilblöcke unterteilt und jeweils bei Valhalla (selber gehostet) angefragt, um echte turn-by-turn Navigationen zu erhalten. Pro Block werden JSON- und GeoJSON-Dateien erzeugt. Diese werden zu einer Gesamtroute zusammengefügt und als finale GeoJSON-Datei gespeichert. Parallel dazu werden detaillierte Navigationsanweisungen in ausgegeben.
+
+## Navigationpage
+Nach der Berechnung kommt man auf die Navigationseite, auf welcher man durch die Navigation der berechneten Route geführt wird. Dabei wird man step by step durch die Navigation geleitet.
+
+Geplant ist auch das die Abschnitte, erledigt, aktueller Abschnitt, als nächster folgend, als übernächster folgend, unterschiedlich eingefärbt werden, so das ein klarerer Überblick vorhanden ist.
+
+![Naviagtion](navigation.gif){: style="max-width: 75%; height: auto;" }
 
 [↑ Zurück zum Beginn der Webseite](#top) 
 

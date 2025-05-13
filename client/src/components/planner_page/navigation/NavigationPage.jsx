@@ -8,8 +8,6 @@ import { NavigationGuidePopup } from "./NavigationGuidePopup.jsx";
 export const NavigationPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [routeLength, setRouteLength] = useState(0);
-  const [calculationCompleted, setCalculationCompleted] = useState(false);
-  const [userConfirmedRecalculation, setUserConfirmedRecalculation] = useState(false);
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev < routeLength - 1 ? prev + 1 : prev));
