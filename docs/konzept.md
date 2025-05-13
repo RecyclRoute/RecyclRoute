@@ -177,7 +177,7 @@ Es wurde ein Zeitplan erstellt, welcher nach und nach ergänzt wird. Dieser dien
 Der Arbeitsaufwand wird laufend erfasst damit am ende vom Projekt eine Analyse zwischen dem geplanten und effektiven Zeitaufwand gemacht werden kann. Dafür wird in einer Excel Tabelle jeweils der Aufwand erfasst und es wird automatisch eine Statistik mit den Aufwandsummen pro Person oder pro Tätigkeit erstellt.
 
 # Abweichungen vom Konzept
-Aus diversen Gründen wurden verschiedene Details welche im Konzept überlegt wurden während dem Aufbau der Applikation geändert. Seid dies weil es so nicht praktikabel war oder auch weil man durch gezieltes aufschreiben des Nutzendenworkflows verbesserungen herausarbeiten konnte und diese sogleich umgesetzt hat. Die aktuellen Details & der Geodateninfrastruktur sind im Kapitel <a href="aufbauGDI.html">Aufbau GDI </a>erklärt.
+Aus diversen Gründen wurden verschiedene Details, welche im Konzept überlegt wurden, während dem Aufbau der Applikation geändert. Sei dies weil es nicht praktikabel war oder auch weil man durch gezieltes aufschreiben des Nutzendenworkflows Verbesserungen herausarbeiten konnte und diese sogleich umgesetzt hat. Die aktuellen Details der Geodateninfrastruktur sind im Kapitel <a href="aufbauGDI.html">Aufbau GDI </a>erklärt.
 
 
 [↑ Zurück zum Beginn der Webseite](#top) 
