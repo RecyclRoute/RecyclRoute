@@ -27,6 +27,15 @@ Die Datenbank wurde in PostgreSQL/PostGIS aufgebaut. Sie enthält u. a. folgen
 - `project` (ID, Name, Datum, Gemeindename, Geometrie (Polygon))
 - `points` (ID, ProjektID, Typ, Datum, Foto, Geometrie (Punkt))
 
+Die folgenden Tabellen wurden nicht wie im geplanten Logischen Datenmodell erstellt:
+- `material`: die Tabelle Material wurde noch nicht eingebunden da diese Tabelle nicht unabdinglcih ist und in der minimal working product nicht benötigt wird.
+- `hintergrund`: die Tabelle Hintergrund wurde nicht eingebunden da auf die Funktionalität den Hintergrund zu ändern verzichtet wurde. Dies wurde so entschieden damit die gesamte Anwendung einfacher zu benutzen ist.
+- `user` : Die Tabelle User wurde nicht eingebunden da auf die gesamte User Identifikation aus komplexitätsgründen verzichtet wurde. Dies wurde ebenfalls an während einer Besprechung entschieden.
+- `role` : Die Tabelle Role wurde nicht eingebunden da sie abhängig von der Tabelle User ist und somit nicht benötigt wird. 
+- `chinese_postman_polygon` : Die Tabelle Chinese_Postman_Polygon wurde nicht eingebunden da diese Funktionalität der Routenberechnung im Backend noch nicht vollständig Funktionstüchtig ist. 
+- `route` : Die Tabelle Route wurde nicht eingebunden da sie abhängig von der Tabelle Chinese_Postman_Polygon ist und somit nicht benötigt wird. 
+- `kanten` : Die Tabelle Kanten wurde nicht eingebunden da sie abhängig von der Tabelle Chinese_Postman_Polygon ist und somit nicht benötigt wird. 
+
 Die Daten werden via den Hauptserver im Backend abgefragt und im Frontend genutzt oder vom Frontend über den Hauptserver in die Datenbank geschrieben.
 
 
