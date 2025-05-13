@@ -55,6 +55,7 @@ export const PlannerPage = () => {
     return;
   }
   calculationTriggered.current = true;
+  setCalculationStarted(true);
   const coordinates = [lngLat.lng, lngLat.lat];
   console.log("Startpunkt gesetzt:", coordinates);
 
