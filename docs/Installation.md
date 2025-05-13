@@ -169,7 +169,7 @@ Achte darauf, dass für jeden der letzten vier Befehle ein neues Terminal verwen
 
 <div style="margin-top: 3em;"></div>
 
-Die Gründe für 2 Backend sind im <a href="AufbauGDI.html">Aufbau GDI </a> detailiert dargelegt. 
+Die Gründe für 2 Backend sind im <a href="aufbauGDI.html">Aufbau GDI </a> detailiert dargelegt. 
 
 <div style="margin-top: 3em;"></div>
 
