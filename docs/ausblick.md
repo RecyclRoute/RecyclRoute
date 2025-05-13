@@ -6,19 +6,19 @@ title: Ausblick
 
 # Erweiterungsmöglichkeiten
 <div id="erweiterungsmöglichkeiten"></div>
-Im folgenden Abschnitt werden für gewisse Seiten und Funktion Verbesserungs- und Erweiterungsvorschläge genannt, welche Vorteile für die User Experience (User Erfahrung) bieten oder die Funktionen der RecyleRoute erweitern.
+Im folgenden Abschnitt werden für gewisse Seiten und Funktionen Verbesserungs- und Erweiterungsvorschläge genannt, die Vorteile für die User Experience bieten oder die Funktionen der Applikation RecyleRoute erweitern.
 
 ### Allgemein
 <div id="allgemein"></div>
-Die Materialauswahl könnte hinzugefügt werden, um somit jedem Projekt und/oder Point of interest ein Materialtyp zuzuweisen. Dies erlaubt es weiteren Nutzenden die Verwendung der Anwendung zu ermöglichen.
+Die Materialauswahl könnte hinzugefügt werden, um somit jedem Projekt und/oder Point of Interest ein Materialtyp zuzuweisen. Dies erlaubt es mehr Details den Projekten oder POI's zuweisen zu können und so auch bessere Statistiken zu berechnen.
 
 ### Startpage
 <div id="startpage"></div>
-In einer Besprechung wurde festgestellt, dass der Erklärungstext für die Planner- und Reportseite aufgeteilt werden könnte, um somit die gesamte Startseite übersichtlicher zu gestalten. Der Erklärungstext sollte ebenfalls vertikal in zwei Spalten unterteilt werden damit er jeweils zu einem Button zuordbar ist. 
+In einer Besprechung wurde festgestellt, dass der Erklärungstext für die Planner- und Reportseite aufgeteilt werden könnte, um somit die gesamte Startseite übersichtlicher zu gestalten. Der Erklärungstext sollte ebenfalls vertikal in zwei Spalten unterteilt werden damit er jeweils zu einem Button zuordenbar ist. 
 
 ### Planner
 <div id="planner"></div>
-Diverse Statistiken, zu verschiedenen Themen, im Bereich Recycling, könnten in einem weiteren Popup erstellt werden. Diese umfassen zum Beispiel: Heatmaps, Bottleneck-Analysen oder Punkttyp-Analysen zu den Point of interests. 
+Diverse Statistiken, zu verschiedenen Themen, im Bereich Recycling, könnten in einem weiteren Popup erstellt werden. Diese umfassen zum Beispiel: Heatmaps, Bottleneck-Analysen oder Punkttyp-Analysen zu den Point of Interests. 
 
 ### Report
 <div id="report"></div>
