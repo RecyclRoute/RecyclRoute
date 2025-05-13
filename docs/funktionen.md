@@ -146,7 +146,7 @@ Nach der Berechnung kommt man auf die Navigationseite, auf welcher man durch die
 
 Geplant ist auch das die Abschnitte, erledigt, aktueller Abschnitt, als nächster folgend, als übernächster folgend, unterschiedlich eingefärbt werden, so das ein klarerer Überblick vorhanden ist.
 
-![Naviagtion](navigation.gif){: style="max-width: 75%; height: auto;" }
+![Navigation](navigation.gif){: style="max-width: 75%; height: auto;" }
 
 [↑ Zurück zum Beginn der Webseite](#top) 
 
