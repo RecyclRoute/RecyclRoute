@@ -7,33 +7,28 @@ title: Geodateninfrastruktur
 
 Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backends, einem Frontend sowie einem weiteren backend Docker server (valhalla). Die folgende Darstellung zeigt die momentane Systemarchitektur von RecyclRoute:
 
-->ToDO Bild erstellen!
-![GDI Architektur Schema](asstes/images/GDI_Architektur_final.png){: style="max-width: 100%; height: auto;" }
+
+![GDI Architektur Schema](assets/images/GDI_Architektur_final.png){: style="max-width: 100%; height: auto;" }
 
 ## Backend
 
-Das Backend umfasst sämtliche Serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript automatisiert mit Geo- und Routendaten befüllt. Das Backend interagiert dabei direkt mit der PostgreSQL/PostGIS-Datenbank um neue Informationen abzuspeichern, um bestehende Informationen abzufragen oder um bestehende Informationen zu löschen.
+Das Backend umfasst sämtliche Serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript automatisiert mit Geo- und Routendaten befüllt. Das Backend interagiert dabei direkt mit der PostgreSQL/PostGIS-Datenbank um neue Informationen abzuspeichern, um bestehende Informationen abzufragen oder um bestehende Informationen zu löschen. Das Backend is in 3 verschiedene Server unterteilt. Der Hauptserver wird auf einem RaspberryPi gehostet und umfasst alle Anfragen an die Datenbank sowie an den zweiten Server. Da der RaspberryPi nicht viel Rechenleistung bietet, wird ein zweiter Server auf einem Laptop gehostet, dieser umfasst den gesamten Berechnungsprozess. Da der zweite Server auf eine API-Schnitstelle von dem Repository Valhalla zugreifen muss wird ein Docker Container mit entsprechendem Image von Valhalla ebenfalls auf einem Laptop gehostet. 
 
 ### Grundlagedaten
 <div id="grundlagedaten"></div>
 
-Die Grundlagedaten bestehen aus **Recycling-Sammelstellen**, **Straßennetzen** und **Einzugsgebieten**, ergänzt durch eigens berechnete Routen. Die Straßendaten stammen aus der [swissTLM3D](https://www.swisstopo.admin.ch/de/geodata/landscape/tlm3d.html), die Routen werden durch ein angepasstes Python-Routing-Skript (basierend auf dem Chinese Postman Problem) generiert. Die Ergebnisse werden in GeoJSONs gespeichert und in die Datenbank importiert.
+Die Grundlagedaten bestehen aus dem  **Straßennetzen**  ergänzt durch eigens berechnete Routen. Die Strassendaten stammen aus der [swissTLM3D](https://www.swisstopo.admin.ch/de/geodata/landscape/tlm3d.html), die Routen werden durch ein angepasstes Python-Routing-Skript (basierend auf dem Chinese Postman Problem) generiert. Die Ergebnisse werden in GeoJSONs gespeichert.
 
 Die Datenstruktur ist so aufgebaut, dass neue Regionen, Fraktionen oder Sammelarten (z. B. Glas, PET) leicht integriert werden können. Die Skripte zur Datenverarbeitung befinden sich im Repository unter `preprocessing/`.
 
 ## Datenbank
 
 Die Datenbank wurde in PostgreSQL/PostGIS aufgebaut. Sie enthält u. a. folgende Tabellen:
-- `route` (berechnete Linien als Geometrie mit Reihenfolge und Attributen)
-- `sammelstellen` (Punkte mit Adresse, Fraktion, Erfassungszeitraum)
-- `netzwerk` (zugrunde liegendes Straßennetz aus swissTLM3D)
+- `project` (ID, Name, Datum, Gemeindename, Geometrie (Polygon))
+- `points` (ID, ProjektID, Typ, Datum, Foto, Geometrie (Punkt))
 
-Zur Visualisierung wurden **Views** erstellt, z. B.:
-- `vw_route_vollständig` – vollständige Route inklusive Wiederholungen
-- `vw_sammelpunkte` – aufbereitete Standorte
-- `vw_routenabschnitte` – segmentweise Darstellung mit Zustandsattributen
+Die Daten werden via den Hauptserver im Backend abgefragt und im Frontend genutzt oder vom Frontend über den Hauptserver in die Datenbank geschrieben.
 
-Die Daten werden via das Backend abgefragt und im Frontend genutzt.
 
 ## Frontend
 <div id="frontend"></div>
@@ -48,7 +43,7 @@ Das Frontend von RecyclRoute ist eine interaktive Webanwendung, die auf [React](
 
 Der [Node Package Manager (npm)](https://www.npmjs.com/) wird verwendet, um alle benötigten Bibliotheken und Abhängigkeiten (z. B. OpenLayers, Axios, Zustand) zu verwalten und das Frontend zu bauen.
 
-### OpenLayers
+### MapLibre
 
 [OpenLayers](https://openlayers.org/) ist für die Darstellung und Interaktion mit der Karte zuständig. Layer aus dem GeoServer (WMS/WFS) werden eingebunden, Streckenabschnitte hervorgehoben und Benutzerinteraktionen ermöglicht. Die Abfrage von Features (z. B. aktuell bearbeiteter Routenabschnitt) erfolgt dynamisch via `getSource().getFeatures()`.
 
