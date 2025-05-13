@@ -7,20 +7,6 @@ import { ProjectManagerButton } from "../project_manager/ProjectManagerButton.js
 
 export const PlannerpageFooter = (props) => {
 
-  useEffect(() => {
-    fetch("http://localhost:8000/getProjects")
-      .then(res => res.json())
-      .then(data => {
-        console.log("FETCH RESPONSE:", data);
-        if (Array.isArray(data.projects)) {
-          props.setProjects(data.projects);
-        } else {
-          console.error("Ungültiges Projektformat:", data);
-        }
-      });
-  }
-);
-
   return (
     <footer position= "static" className="PlannerpageFooter">
         <div className="PlannerpageFooter_content">

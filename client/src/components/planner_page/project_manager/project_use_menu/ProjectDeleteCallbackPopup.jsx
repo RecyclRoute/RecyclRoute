@@ -37,7 +37,7 @@ export const ProjectDeleteCallbackPopup = (props) => {
 
 
   const GoBackToUseMenu = () => {
-    props.setProjectManagerMode(true);
+    props.setStartPageMode(true)
     props.setProjectDeleteCallbackMode(false)
   };
 

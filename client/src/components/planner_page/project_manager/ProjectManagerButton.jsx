@@ -5,28 +5,27 @@ import "../plannerpage.css";
 
 export const ProjectManagerButton = (props) => {
 
-  useEffect(() => {
-    fetch("http://localhost:8000/getProjects")
-      .then(res => res.json())
-      .then(data => {
-        console.log("FETCH RESPONSE:", data);
-        if (Array.isArray(data.projects)) {
-          props.setProjects(data.projects);
-        } else {
-          console.error("Ungültiges Projektformat:", data);
-        }
-      });
-  }
-);
+const ProjectManagerClick = () => {
+  fetch("http://localhost:8000/getProjects")
+    .then(res => res.json())
+    .then(data => {
+      console.log("FETCH RESPONSE:", data);
+      if (Array.isArray(data.projects)) {
+        props.setProjects(data.projects);
+        props.setProjectManagerMode(true);
+        props.setStartPageMode(false);
+      } else {
+        console.error("Ungültiges Projektformat:", data);
+      }
+    })
+    .catch(err => {
+      console.error("Fehler beim Laden der Projekte:", err);
+    });
+};
 
-
-  const ProjectManagerClick = () => {
-    props.setProjectManagerMode(true);
-    props.setStartPageMode(false);
-  }
 
   return (
-    <button id= "ProjectManagerButton" onClick={ProjectManagerClick}>
+    <button id="ProjectManagerButton" onClick={ProjectManagerClick}>
       <FolderIcon style={{ width: "30px", height: "30px" }} />
     </button>
   );
