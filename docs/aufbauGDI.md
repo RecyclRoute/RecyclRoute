@@ -42,33 +42,33 @@ Die Daten werden via den Hauptserver im Backend abgefragt und im Frontend genutz
 ## Frontend
 <div id="frontend"></div>
 
-Das Frontend von RecyclRoute ist eine interaktive Webanwendung, die auf [React](https://react.dev/), [OpenLayers](https://openlayers.org/) und [Axios](https://axios-http.com/docs/intro) basiert. Es besteht aus mehreren Komponenten:
+Das Frontend von RecyclRoute ist eine interaktive Webanwendung, die auf [React](https://react.dev/) und [MapLibre](https://maplibre.org/) basiert. Es besteht aus mehreren Komponenten:
 
 ### React
 
-[React](https://react.dev/) dient dem Aufbau der Benutzeroberfläche. Es wird verwendet, um interaktive Elemente wie die Kartenansicht, Navigation, Filterfunktionen und Infoboxen umzusetzen. Der Zustand der Anwendung (z. B. „aktueller Streckenabschnitt“) wird komponentenbasiert verwaltet.
+[React](https://react.dev/) dient dem Aufbau der Benutzeroberfläche. Es wird verwendet, um interaktive Elemente wie die Kartenansicht, Navigation, Suchfunktionen, Eingabeboxen und Infoboxen umzusetzen. Der Zustand der Anwendung (z. B. „neues Projekt erstellen“) wird komponentenbasiert verwaltet und mit Popup-Fenstern angesteuert.
 
 ### npm
 
-Der [Node Package Manager (npm)](https://www.npmjs.com/) wird verwendet, um alle benötigten Bibliotheken und Abhängigkeiten (z. B. OpenLayers, Axios, Zustand) zu verwalten und das Frontend zu bauen.
+Der [Node Package Manager (npm)](https://www.npmjs.com/) wird verwendet, um alle benötigten Bibliotheken und Abhängigkeiten (z.B. MapLibre, React, etc.) zu verwalten und das Frontend zu bauen.
 
 ### MapLibre
 
-[OpenLayers](https://openlayers.org/) ist für die Darstellung und Interaktion mit der Karte zuständig. Layer aus dem GeoServer (WMS/WFS) werden eingebunden, Streckenabschnitte hervorgehoben und Benutzerinteraktionen ermöglicht. Die Abfrage von Features (z. B. aktuell bearbeiteter Routenabschnitt) erfolgt dynamisch via `getSource().getFeatures()`.
+[MapLibre](https://maplibre.org/) ist für die Darstellung und Interaktion mit der Karte zuständig. Layer aus der Datenbank werden via API (WMS/WFS) eingebunden, Routen dargestellt, Polygone und Punkte erfasst und Benutzerinteraktionen ermöglicht. Die Abfrage von Features (z. B. aktiviertes Projekt / Layer darstellen) erfolgt dynamisch.
 
 ### UI Design
 <div id="ui-design"></div>
 
-Das Design von RecyclRoute ist bewusst **minimalistisch und funktional** gehalten. Die Farben Grün, Beige und Dunkelbraun spiegeln das Thema Nachhaltigkeit und Orientierung wider. Buttons und Kartenlayer sind einheitlich gestaltet und reagieren auf Mausbewegungen durch Hover- und Fokuszustände.
+Das Design von RecyclRoute ist bewusst **minimalistisch und funktional** gehalten. Die Farben Grün, Beige und Dunkelbraun spiegeln das Thema Nachhaltigkeit und Orientierung wider. Buttons und Kartenlayer sind einheitlich gestaltet und reagieren auf Mausbewegungen durch Hover- und Fokuszustände. Die Plannerpage und die Reportpage wurden bewusst farblich getrennt, um dem User bewusst zu machen, dass dies zwei unterschiedliche Funktionen für unterschiedliche Anwender sind.
 
-Alle UI-Komponenten wurden manuell mit [HTML](https://developer.mozilla.org/de/docs/Web/HTML) und [CSS](https://developer.mozilla.org/de/docs/Web/CSS) gestaltet. Dropdowns und interaktive Felder wurden mit [Material UI](https://mui.com/) realisiert.
+Alle UI-Komponenten, wie auch Dropdowns und andere interaktive Felder wurden manuell mit [HTML](https://developer.mozilla.org/de/docs/Web/HTML) und [CSS](https://developer.mozilla.org/de/docs/Web/CSS) gestaltet. Es wurde bewusst auf die Verwendung von Material UI verzichtet, um so die gewünschten Visualisierungen besser umsezten zu können und die Komponenten von Null auf aufgebaut werden konnten.
 
 ### UX Design
 <div id="ux-design"></div>
 
-Im Zentrum steht eine **intuitive Nutzerführung**: Sammelstellen, Routen und Status lassen sich einfach erkunden, bearbeiten und aktualisieren. Die Anwendung wurde im Rahmen eines UX-Tests mit 6 Testpersonen auf Bedienbarkeit überprüft. Feedback floss in die Gestaltung der Navigationsstruktur, Buttonplatzierung und Interaktionsrückmeldungen ein.
+Im Zentrum der **User Experience (UX)** steht eine **intuitive Nutzerführung**: Points of Interest (POI) oder Projekte sowie die dazugehörige Navigation lassen sich einfach erkunden, bearbeiten und aktualisieren. Die Anwendung wurde mit dem durchspielen eines gewöhnlichen Userpfades auf eine einfache Bedienbarkeit überprüft und optimiert.
 
-Die meisten Aktionen erfordern **maximal zwei Klicks**, um von einer Sammelstelle zur vollständigen Route zu navigieren oder den Bearbeitungsstatus einer Straße zu aktualisieren.
+Das gesamte Frontend wurde so programmiert, dass die meisten Aktionen in möglichst wenigen Klicks und mit einem geleiteten Pfad angewendet werden können, um entweder einen POI abzusetzen oder ein neues Projekt zu erstellen bis hin zur Routennavigaiton.
 
 ---
 
