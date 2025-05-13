@@ -14,6 +14,7 @@ Auf der Startseite muss man sich bereits ein erstesmal entscheiden was man mache
 
 # Funktionen Report:
 Nach dem Klicken auf Report wird man auf die Report Seite (brauntöne) weitergeleitet. Auf welcher die Standartfunktionen GNSS, Norden der Karte, Anzeigen der Punkte des Projektes funktionieren, sowie der Report erstellen.
+
 ![Startseite Report](assets/gifs/report_page.gif){: style="max-width: 75%; height: auto;" }
 
 ## Report erstellen
