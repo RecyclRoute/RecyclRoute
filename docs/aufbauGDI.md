@@ -11,10 +11,12 @@ Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backends, einem Front
 ![GDI Architektur Schema](assets/images/GDI_Architektur_final.png){: style="max-width: 100%; height: auto;" }
 
 ## Backend
+<a id="backend"></a>
 
 Das Backend umfasst sämtliche serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript (API-Abfragen) automatisiert mit Geodaten und Routen befüllt. Das Backend interagiert dabei direkt mit der PostgreSQL/PostGIS-Datenbank um neue Informationen abzuspeichern, um bestehende Informationen abzufragen oder um bestehende Informationen zu löschen. Das Backend ist in 3 verschiedene Server unterteilt. Der Hauptserver wird auf einem RaspberryPi gehostet und umfasst alle Anfragen an die Datenbank sowie an den zweiten Server. Da der RaspberryPi nur eine geringe Rechenleistung bietet, wird ein zweiter Server auf einem Laptop gehostet, dieser umfasst den gesamten Berechnungsprozess. Da der zweite Server auf eine API-Schnitstelle vom Repository Valhalla zugreifen muss, wird ein Docker-Container mit entsprechendem Image von Valhalla ebenfalls auf einem Laptop gehostet. 
 
 ## Datenbank
+<a id="datenbank"></a>
 
 Die Datenbank wurde in PostgreSQL/PostGIS aufgebaut. Sie enthält u. a. folgende Tabellen:
 - `project` (ID, Name, Datum, Gemeindename, Geometrie (Polygon))
@@ -72,6 +74,6 @@ Das gesamte Frontend wurde so programmiert, dass die meisten Aktionen in möglic
     <a href="funktionen.html">← Erklärung der Funktionen</a>
   </div>
   <div>
-    <a href="konzept.html">Konzept und Ideen →</a>
+    <a href="ausblick.html">Ausblick →</a>
   </div>
 </div>

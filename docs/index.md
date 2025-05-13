@@ -14,7 +14,7 @@ Hier findest du alle vorhandenen Funktionen und Informationen zur Erarbeitung de
 
 ### Ansicht der Startseite
 
-![GDI Projekt Screenshot](assets/images/Startpage_1.png){: style="max-width: 100%; height: auto;" }
+![Main](assets/GIFs/main.gif){: style="max-width: 100%; height: auto;" }
 
 
 ---
