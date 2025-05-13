@@ -12,18 +12,21 @@ import { useNavigate } from "react-router-dom";
 import { BaseMap } from "../map/BaseMap.jsx";
 import useCreatePolygon from "../map/useCreatePolygon.jsx";
 import { NewProjectPopup } from "./project_manager/new_project/NewProjectPopup.jsx";
-import { ProjectUseMenuPopup } from "./project_manager/ProjectUseMenuPopup.jsx";
+import { ProjectUseMenuPopup } from "./project_manager/project_use_menu/ProjectUseMenuPopup.jsx";
 import {PolygonInstructionsPopup} from "./project_manager/new_project/PolygonInstructionsPopup.jsx";
 import {SavePolygonPopup} from "./project_manager/new_project/SavePolygonPopup.jsx";
 import {StartPointInstructionsPopup} from "./project_manager/new_project/StartPointInstructionsPopup.jsx";
 import { MapLayerPopup } from "../map/MapLayerPopup.jsx";
 import { CalculateWaitingPopUp } from "./project_manager/new_project/CalculateWaitingPopUp.jsx";
-import { set } from "ol/transform.js";
+import { ProjectStatisticsPopup } from "./project_manager/project_use_menu/ProjectStatisticsPopup.jsx";
+import { ProjectDeleteCallbackPopup } from"./project_manager/project_use_menu/ProjectDeleteCallbackPopup.jsx";
 
 export const PlannerPage = () => {
   const [ProjectManagerMode, setProjectManagerMode] = useState(false);
   const [NewProjectMode, setNewProjectMode] = useState(false);
   const [ProjectUseMenuMode, setProjectUseMenuMode] = useState(false);
+  const [ProjectStatisticMode, setProjectStatisticMode] = useState(false);
+  const [ProjectDeleteCallbackMode, setProjectDeleteCallbackMode] = useState(false);
   const [polygonMode, setPolygonMode] = useState(false);
   const [CreateStartPointMode, setCreateStartPointMode]= useState(false);
   const [startPoint, setStartPoint] = useState(null);
@@ -31,9 +34,9 @@ export const PlannerPage = () => {
   const [map, setMap] = useState(null);
   const [startPageMode, setStartPageMode] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [projects, setProjects] = useState([]);
   const [projectInfo, setProjectInfo] = useState(null);
   const [ActiveProject, setActiveProject] = useState(null);
-  const [projects, setProjects] = useState([]);
   const [ProjectName, setProjectName] = useState('');
   const [Datum, setDatum] = useState('');
   const [Location, setLocation] = useState('');
@@ -312,6 +315,10 @@ export const PlannerPage = () => {
         SearchLocation={SearchLocation}
         setSearchLocation={setSearchLocation}
         searchLocationClick={searchLocationClick}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
+        projects={projects}
+        setProjects={setProjects}
       />
 
       {isLoading && projectInfo?.ProjectName && (
@@ -375,6 +382,14 @@ export const PlannerPage = () => {
           setActiveProject={setActiveProject}
           ProjectUseMenuMode={ProjectUseMenuMode}
           setProjectUseMenuMode={setProjectUseMenuMode}
+          ProjectStatisticMode={ProjectStatisticMode}
+          setProjectStatisticMode={setProjectStatisticMode}
+          ProjectDeleteCallbackMode={ProjectDeleteCallbackMode}
+          setProjectDeleteCallbackMode={setProjectDeleteCallbackMode}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+          projects={projects}
+          setProjects={setProjects}
         />
       )}
 
@@ -391,7 +406,35 @@ export const PlannerPage = () => {
             designConst="PlannerPage"
           />
         </>
-      )}         
+      )}
+
+      {ProjectStatisticMode && (
+        <>
+          <ProjectStatisticsPopup
+          ProjectUseMenuMode={ProjectUseMenuMode}
+          setProjectUseMenuMode={setProjectUseMenuMode}
+          ProjectStatisticMode={ProjectStatisticMode}
+          setProjectStatisticMode={setProjectStatisticMode}
+          />
+        </>
+      )}
+
+      {ProjectDeleteCallbackMode && (
+        <>
+          <ProjectDeleteCallbackPopup
+          ProjectUseMenuMode={ProjectUseMenuMode}
+          setProjectUseMenuMode={setProjectUseMenuMode}
+          ProjectDeleteCallbackMode={ProjectDeleteCallbackMode}
+          setProjectDeleteCallbackMode={setProjectDeleteCallbackMode}
+          ActiveProject={ActiveProject}
+          setActiveProject={setActiveProject}
+          ProjectManagerMode={ProjectManagerMode}
+          setProjectManagerMode={setProjectManagerMode}
+          startPageMode={startPageMode}
+          setStartPageMode={setStartPageMode}
+          />
+        </>
+      )}        
     </div>
   );
 };
