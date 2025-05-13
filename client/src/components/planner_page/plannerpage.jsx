@@ -180,12 +180,10 @@ export const PlannerPage = () => {
           .addTo(map);
   
         setStartPoint(newMarker);
-  
-        // Callback to handle further logic
-        handleStartPointConfirmed({ lng, lat });
-  
-        // Optional: disable further clicks
         setCreateStartPointMode(false);
+
+        handleStartPointConfirmed({ lng, lat });
+        
       } else {
         alert('Bitte klicken Sie auf einen Punkt innerhalb des Polygons.');
       }
