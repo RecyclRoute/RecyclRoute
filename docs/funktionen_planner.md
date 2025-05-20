@@ -27,9 +27,9 @@ Damit kann ein Projekt ausgewählt werden und alle dem Projekt zugeordneten Proj
 ![Projektpunkte einblenden](assets/GIFs/projektpunkte.gif){: style="max-width: 75%; height: auto;" }
 
 ## Aktueller Standort anzeigen
-Mit der Funktion wird die GNSS Position des Gerätes abgegriffen, wenn eingeschalten & die Karte Zoom auf diesen Standort und zeigt die Position als Blauen Marker. 
+Mit der Funktion wird die GNss Position des Gerätes abgegriffen, wenn eingeschalten & die Karte Zoom auf diesen Standort und zeigt die Position als Blauen Marker. 
 
-![GNSS](assets/GIFs/GNSS_Punkt.gif){: style="max-width: 75%; height: auto;" }
+![GNss](assets/GIFs/GNss_Punkt.gif){: style="max-width: 75%; height: auto;" }
 
 ## Karte nach Norden ausrichten
 Mit dieser Funktion kann die Karte wieder nach Norden ausgerichtet werden wenn die Karte verdreht ist. 
@@ -38,7 +38,7 @@ Mit dieser Funktion kann die Karte wieder nach Norden ausgerichtet werden wenn d
 
 # Funktionen Planner:
 <div id="planner"></div>
-Nach dem Klicken auf Planner wird man auf die Planner Seite (grüntöne) weitergeleitet. Auf welcher die Standartfunktionen GNSS, Norden der Karte, Anzeigen der Punkte des Projektes sowie das Planen der Route sowie das Managen der Projekte implementiert ist.
+Nach dem Klicken auf Planner wird man auf die Planner Seite (grüntöne) weitergeleitet. Auf welcher die Standartfunktionen GNss, Norden der Karte, Anzeigen der Punkte des Projektes sowie das Planen der Route sowie das Managen der Projekte implementiert ist.
 
 ![Startseite Planer](assets/GIFs/planner_page.gif){: style="max-width: 75%; height: auto;" }
 
