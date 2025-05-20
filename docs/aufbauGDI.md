@@ -15,6 +15,39 @@ Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backends, einem Front
 
 Das Backend umfasst sämtliche serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript (API-Abfragen) automatisiert mit Geodaten und Routen befüllt. Das Backend interagiert dabei direkt mit der PostgreSQL/PostGIS-Datenbank um neue Informationen abzuspeichern, um bestehende Informationen abzufragen oder um bestehende Informationen zu löschen. Das Backend ist in 3 verschiedene Server unterteilt. Der Hauptserver wird auf einem RaspberryPi gehostet und umfasst alle Anfragen an die Datenbank sowie an den zweiten Server. Da der RaspberryPi nur eine geringe Rechenleistung bietet, wird ein zweiter Server auf einem Laptop gehostet, dieser umfasst den gesamten Berechnungsprozess. Da der zweite Server auf eine API-Schnitstelle vom Repository Valhalla zugreifen muss, wird ein Docker-Container mit entsprechendem Image von Valhalla ebenfalls auf einem Laptop gehostet. 
 
+# Hauptserver Punktverwaltung
+
+| Endpunkt                          | Funktion                                                                 | Verwendung                                                                                           |
+|----------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| GET /getPointTypes               | Gibt eine Liste von vordefinierten Punkt-Typen (z. B. „falsch deponiert“) zurück. | add_marker_popup.jsx: greift alle möglichen Punkttypen ab                                           |
+| GET /getPointsByProject/{project_id} | Holt alle Punkte, die einem bestimmten Projekt zugeordnet sind. Enthält Typ, Datum, Bild (als Base64), Koordinaten. | MapLayerPopup.jsx : erstellt für jeden Punkt aus der Datenbank ein Marker mit zugehörigem Popup     |
+| POST /addPointWithDetails       | Fügt einen neuen Punkt zu einem Projekt hinzu. Übergibt Punkt-Typ, Datum, Koordinaten und ein Bild (Dateiupload per FormData). | add_marker_popup.jsx: schickt einen neuen Punkt mit allen notwendigen informationen an die Datenbank um diesen dort zu speichern |
+| DELETE /deletePoint/{point_id}  | Löscht einen Punkt anhand seiner ID aus der Datenbank.                   | Wurde noch nicht im Frontend Implementiert                                                           |
+
+# Hauptserver Projektverwaltung
+
+| Endpunkt                         | Funktion                                                                 | Verwendung                                                                                           |
+|----------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| POST /addProject                 | Fügt ein neues Projekt hinzu mit Name, Gemeinde, Datum und Perimeter (Polygon). Berechnet Fläche und speichert GeoJSON. | plannerpage.jsx und MapSwissimage.jsx : Sendet ein neues Projekt mit zugehöriger Geometrie in die Datenbank, um diese zu speichern. |
+| GET /getProjects                 | Holt alle Projekte aus der Datenbank, inklusive Geometrie (als GeoJSON) und Metadaten. | plannerpage.jsx, add_marker_popup.jsx, ProjectManagerButton.jsxund MapLayerPopup.jsx: schreibt alle verfügbaren Projekte in eine Statevariabel |
+| DELETE /deleteProject/{project_id} | Löscht ein Projekt anhand der ID. Alle zugehörigen Punkte werden durch ON DELETE CASCADE mitgelöscht. | ProjectDeleteCallbackPopup.jsx: Löscht das ausgewählte projekt und alle abhängigkeiten in der DB     |
+
+# Hauptserver Berechnungen
+
+| Endpunkt                         | Funktion                                                                 | Verwendung                                                                                           |
+|----------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| POST /berechnen                  | Sendet Projekt-Perimeter und eine Punktgeometrie an einen zweiten Dienst (localhost:7999/calculate) zur Berechnung/Analyse. | plannerpage.jsx : sendet das aktive Projekt mitsamt einem startpunkt um die Berechnung zu starten   |
+| POST /notifyCalculationDone     | Wird vom externen Dienst aufgerufen, sobald eine Berechnung abgeschlossen ist. Aktualisiert den internen Status. | Main2.py (Berechnungsserver) : Der zweite Server schickt eine Nachricht an den ersten Server damit dieser weiss die Berechnung ist fertig. |
+| GET /getCalculationStatus       | Gibt zurück, ob die Berechnung für ein bestimmtes Projekt abgeschlossen ist (pending oder done). | CalculateWaitingPopUp.jsx : fragt periodisch ab ob die Berechnung beendet ist.                      |
+
+# Berechnungsserver: Berechnungen
+
+| Endpunkt                         | Funktion                                                                 | Verwendung                                                                                           |
+|----------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| POST /calculate                  | Führt eine Routing-Berechnung durch, basierend auf einem Polygon (Projekt-Perimeter) und einem Startpunkt. | Main.py (Hauptserver) : Schickt eine anfrage mit Polygon und Startpunkt sowie Projekt ID an den Berechnungsserver, um die Berechnung zu starten. |
+| GET /test                        | Führt eine Test-Routing-Berechnung mit statischen, vordefinierten Daten aus. | Wird lediglich für Debugging und Testzwecke verwendet.                                               |
+
+
 ## Datenbank
 <a id="datenbank"></a>
 
