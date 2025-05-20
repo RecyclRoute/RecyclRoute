@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { MapSwissimage} from "../../map/MapSwissimage.jsx";
 import "./add_marker.css";
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';

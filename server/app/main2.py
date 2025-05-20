@@ -23,9 +23,6 @@ app.add_middleware(
     allow_headers=["*"],  # Allow all headers
 )
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello from FastAPI!"}
 
 
 
