@@ -7,12 +7,12 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.648761,
-            47.52319
+            7.648426,
+            47.523006
           ],
           [
-            7.648761,
-            47.52319
+            7.648426,
+            47.523006
           ]
         ]
       },
@@ -35,6 +35,38 @@
         "type": "LineString",
         "coordinates": [
           [
+            7.648426,
+            47.523006
+          ],
+          [
+            7.648702,
+            47.523157
+          ],
+          [
+            7.648761,
+            47.52319
+          ]
+        ]
+      },
+      "properties": {
+        "step": 1,
+        "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann, in 30 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "30 Meter weiter der Route folgen.",
+        "length_km": 0.032,
+        "type": 1,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 3.947
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
             7.648761,
             47.52319
           ],
@@ -45,7 +77,7 @@
         ]
       },
       "properties": {
-        "step": 1,
+        "step": 2,
         "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -73,7 +105,7 @@
         ]
       },
       "properties": {
-        "step": 2,
+        "step": 3,
         "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -101,7 +133,7 @@
         ]
       },
       "properties": {
-        "step": 3,
+        "step": 4,
         "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -133,7 +165,7 @@
         ]
       },
       "properties": {
-        "step": 4,
+        "step": 5,
         "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -161,7 +193,7 @@
         ]
       },
       "properties": {
-        "step": 5,
+        "step": 6,
         "instruction": "Auf Breitestrasse Richtung Norden fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -189,7 +221,7 @@
         ]
       },
       "properties": {
-        "step": 6,
+        "step": 7,
         "instruction": "Auf Scheibenmattweg Richtung Norden fahren.",
         "verbal_pre": "Auf Scheibenmattweg Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -229,7 +261,7 @@
         ]
       },
       "properties": {
-        "step": 7,
+        "step": 8,
         "instruction": "Auf Scheibenmattweg Richtung Norden fahren.",
         "verbal_pre": "Auf Scheibenmattweg Richtung Norden fahren. Dann, in 100 Meter, Das Ziel wird erreicht.",
         "verbal_post": "100 Meter weiter der Route folgen.",
@@ -261,7 +293,7 @@
         ]
       },
       "properties": {
-        "step": 8,
+        "step": 9,
         "instruction": "Auf R\u00f6ssligasse Richtung Westen fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Westen fahren. Dann, in 80 Meter, Das Ziel wird erreicht.",
         "verbal_post": "80 Meter weiter der Route folgen.",
@@ -293,7 +325,7 @@
         ]
       },
       "properties": {
-        "step": 9,
+        "step": 10,
         "instruction": "Richtung Nordosten fahren.",
         "verbal_pre": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "50 Meter weiter der Route folgen.",
@@ -323,7 +355,7 @@
         ]
       },
       "properties": {
-        "step": 10,
+        "step": 11,
         "instruction": "Richtung Osten fahren.",
         "verbal_pre": "Richtung Osten fahren. Dann, in 50 Meter, Das Ziel wird erreicht.",
         "verbal_post": "50 Meter weiter der Route folgen.",
@@ -353,7 +385,7 @@
         ]
       },
       "properties": {
-        "step": 11,
+        "step": 12,
         "instruction": "Richtung Westen fahren.",
         "verbal_pre": "Richtung Westen fahren. Dann, in 50 Meter, Das Ziel wird erreicht.",
         "verbal_post": "50 Meter weiter der Route folgen.",
@@ -379,7 +411,7 @@
         ]
       },
       "properties": {
-        "step": 12,
+        "step": 13,
         "instruction": "Richtung Norden fahren.",
         "verbal_pre": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "80 Meter weiter der Route folgen.",
@@ -405,7 +437,7 @@
         ]
       },
       "properties": {
-        "step": 13,
+        "step": 14,
         "instruction": "Richtung S\u00fcden fahren.",
         "verbal_pre": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "80 Meter weiter der Route folgen.",
@@ -435,7 +467,7 @@
         ]
       },
       "properties": {
-        "step": 14,
+        "step": 15,
         "instruction": "Richtung S\u00fcden fahren.",
         "verbal_pre": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "50 Meter weiter der Route folgen.",
@@ -465,7 +497,7 @@
         ]
       },
       "properties": {
-        "step": 15,
+        "step": 16,
         "instruction": "Auf R\u00f6ssligasse Richtung Westen fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "80 Meter weiter der Route folgen.",
@@ -497,7 +529,7 @@
         ]
       },
       "properties": {
-        "step": 16,
+        "step": 17,
         "instruction": "Auf R\u00f6ssligasse Richtung Osten fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Osten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "80 Meter weiter der Route folgen.",
@@ -529,7 +561,7 @@
         ]
       },
       "properties": {
-        "step": 17,
+        "step": 18,
         "instruction": "Auf R\u00f6ssligasse Richtung Osten fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Osten fahren. Dann, in 80 Meter, Das Ziel wird erreicht.",
         "verbal_post": "80 Meter weiter der Route folgen.",
@@ -561,7 +593,7 @@
         ]
       },
       "properties": {
-        "step": 18,
+        "step": 19,
         "instruction": "Auf R\u00f6ssligasse Richtung Osten fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Osten fahren. Dann, in 60 Meter, Das Ziel wird erreicht.",
         "verbal_post": "60 Meter weiter der Route folgen.",
@@ -589,7 +621,7 @@
         ]
       },
       "properties": {
-        "step": 19,
+        "step": 20,
         "instruction": "Auf R\u00f6ssligasse Richtung Osten fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Osten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -613,7 +645,7 @@
         ]
       },
       "properties": {
-        "step": 20,
+        "step": 21,
         "instruction": "Ziel befindet sich auf der linken Seite.",
         "verbal_pre": "Ziel befindet sich auf der linken Seite.",
         "verbal_post": "",
@@ -639,7 +671,7 @@
         ]
       },
       "properties": {
-        "step": 21,
+        "step": 22,
         "instruction": "Auf R\u00f6ssligasse Richtung Westen fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Westen fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -687,7 +719,7 @@
         ]
       },
       "properties": {
-        "step": 22,
+        "step": 23,
         "instruction": "Auf R\u00f6ssligasse Richtung Osten fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Osten fahren. Dann Links auf Breitestrasse abbiegen.",
         "verbal_post": "100 Meter weiter der Route folgen.",
@@ -719,7 +751,7 @@
         ]
       },
       "properties": {
-        "step": 23,
+        "step": 24,
         "instruction": "Links auf Breitestrasse abbiegen.",
         "verbal_pre": "Links auf Breitestrasse abbiegen. Dann Links auf Obrechtstrasse abbiegen.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -771,7 +803,7 @@
         ]
       },
       "properties": {
-        "step": 24,
+        "step": 25,
         "instruction": "Links auf Obrechtstrasse abbiegen.",
         "verbal_pre": "Links auf Obrechtstrasse abbiegen.",
         "verbal_post": "200 Meter weiter der Route folgen.",
@@ -799,7 +831,7 @@
         ]
       },
       "properties": {
-        "step": 25,
+        "step": 26,
         "instruction": "Links abbiegen.",
         "verbal_pre": "Links abbiegen. Dann Das Ziel befindet sich auf der linken Seite.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -821,7 +853,7 @@
         ]
       },
       "properties": {
-        "step": 26,
+        "step": 27,
         "instruction": "Ziel befindet sich auf der linken Seite.",
         "verbal_pre": "Ziel befindet sich auf der linken Seite.",
         "verbal_post": "",
@@ -851,7 +883,7 @@
         ]
       },
       "properties": {
-        "step": 27,
+        "step": 28,
         "instruction": "Richtung Norden fahren.",
         "verbal_pre": "Richtung Norden fahren. Dann Rechts auf Obrechtstrasse abbiegen.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -877,7 +909,7 @@
         ]
       },
       "properties": {
-        "step": 28,
+        "step": 29,
         "instruction": "Rechts auf Obrechtstrasse abbiegen.",
         "verbal_pre": "Rechts auf Obrechtstrasse abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -905,7 +937,7 @@
         ]
       },
       "properties": {
-        "step": 29,
+        "step": 30,
         "instruction": "Auf Obrechtstrasse Richtung Westen fahren.",
         "verbal_pre": "Auf Obrechtstrasse Richtung Westen fahren. Dann Links abbiegen.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -933,7 +965,7 @@
         ]
       },
       "properties": {
-        "step": 30,
+        "step": 31,
         "instruction": "Links abbiegen.",
         "verbal_pre": "Links abbiegen. Dann Das Ziel befindet sich auf der linken Seite.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -955,7 +987,7 @@
         ]
       },
       "properties": {
-        "step": 31,
+        "step": 32,
         "instruction": "Ziel befindet sich auf der linken Seite.",
         "verbal_pre": "Ziel befindet sich auf der linken Seite.",
         "verbal_post": "",
@@ -981,7 +1013,7 @@
         ]
       },
       "properties": {
-        "step": 32,
+        "step": 33,
         "instruction": "Richtung Norden fahren.",
         "verbal_pre": "Richtung Norden fahren. Dann Rechts auf Obrechtstrasse abbiegen.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -1007,7 +1039,7 @@
         ]
       },
       "properties": {
-        "step": 33,
+        "step": 34,
         "instruction": "Rechts auf Obrechtstrasse abbiegen.",
         "verbal_pre": "Rechts auf Obrechtstrasse abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -1035,7 +1067,7 @@
         ]
       },
       "properties": {
-        "step": 34,
+        "step": 35,
         "instruction": "Auf Obrechtstrasse Richtung Westen fahren.",
         "verbal_pre": "Auf Obrechtstrasse Richtung Westen fahren. Dann Links abbiegen.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -1063,7 +1095,7 @@
         ]
       },
       "properties": {
-        "step": 35,
+        "step": 36,
         "instruction": "Links abbiegen.",
         "verbal_pre": "Links abbiegen. Dann Das Ziel befindet sich auf der linken Seite.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -1085,7 +1117,7 @@
         ]
       },
       "properties": {
-        "step": 36,
+        "step": 37,
         "instruction": "Ziel befindet sich auf der linken Seite.",
         "verbal_pre": "Ziel befindet sich auf der linken Seite.",
         "verbal_post": "",
@@ -1115,7 +1147,7 @@
         ]
       },
       "properties": {
-        "step": 37,
+        "step": 38,
         "instruction": "Richtung Norden fahren.",
         "verbal_pre": "Richtung Norden fahren. Dann Rechts auf Obrechtstrasse abbiegen.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -1141,7 +1173,7 @@
         ]
       },
       "properties": {
-        "step": 38,
+        "step": 39,
         "instruction": "Rechts auf Obrechtstrasse abbiegen.",
         "verbal_pre": "Rechts auf Obrechtstrasse abbiegen. Dann Rechts abbiegen.",
         "verbal_post": "50 Meter weiter der Route folgen.",
@@ -1169,7 +1201,7 @@
         ]
       },
       "properties": {
-        "step": 39,
+        "step": 40,
         "instruction": "Rechts abbiegen.",
         "verbal_pre": "Rechts abbiegen. Dann Das Ziel wird erreicht.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -1195,7 +1227,7 @@
         ]
       },
       "properties": {
-        "step": 40,
+        "step": 41,
         "instruction": "Richtung Norden fahren.",
         "verbal_pre": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -1221,7 +1253,7 @@
         ]
       },
       "properties": {
-        "step": 41,
+        "step": 42,
         "instruction": "Richtung S\u00fcden fahren.",
         "verbal_pre": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -1247,7 +1279,7 @@
         ]
       },
       "properties": {
-        "step": 42,
+        "step": 43,
         "instruction": "Richtung Norden fahren.",
         "verbal_pre": "Richtung Norden fahren. Dann Links auf Obrechtstrasse abbiegen.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -1281,7 +1313,7 @@
         ]
       },
       "properties": {
-        "step": 43,
+        "step": 44,
         "instruction": "Links auf Obrechtstrasse abbiegen.",
         "verbal_pre": "Links auf Obrechtstrasse abbiegen.",
         "verbal_post": "200 Meter weiter der Route folgen.",
@@ -1317,7 +1349,7 @@
         ]
       },
       "properties": {
-        "step": 44,
+        "step": 45,
         "instruction": "Links abbiegen.",
         "verbal_pre": "Links abbiegen.",
         "verbal_post": "100 Meter weiter der Route folgen.",
@@ -1355,7 +1387,7 @@
         ]
       },
       "properties": {
-        "step": 45,
+        "step": 46,
         "instruction": "Links auf R\u00f6ssligasse abbiegen.",
         "verbal_pre": "Links auf R\u00f6ssligasse abbiegen.",
         "verbal_post": "200 Meter weiter der Route folgen.",
@@ -1379,7 +1411,7 @@
         ]
       },
       "properties": {
-        "step": 46,
+        "step": 47,
         "instruction": "Ziel befindet sich auf der linken Seite.",
         "verbal_pre": "Ziel befindet sich auf der linken Seite.",
         "verbal_post": "",
@@ -1405,7 +1437,7 @@
         ]
       },
       "properties": {
-        "step": 47,
+        "step": 48,
         "instruction": "Auf R\u00f6ssligasse Richtung Westen fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Westen fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -1433,7 +1465,7 @@
         ]
       },
       "properties": {
-        "step": 48,
+        "step": 49,
         "instruction": "Auf R\u00f6ssligasse Richtung Westen fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -1461,7 +1493,7 @@
         ]
       },
       "properties": {
-        "step": 49,
+        "step": 50,
         "instruction": "Auf R\u00f6ssligasse Richtung Osten fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Osten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "50 Meter weiter der Route folgen.",
@@ -1505,7 +1537,7 @@
         ]
       },
       "properties": {
-        "step": 50,
+        "step": 51,
         "instruction": "Auf R\u00f6ssligasse Richtung Osten fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Osten fahren. Dann Links auf Breitestrasse abbiegen.",
         "verbal_post": "60 Meter weiter der Route folgen.",
@@ -1537,7 +1569,7 @@
         ]
       },
       "properties": {
-        "step": 51,
+        "step": 52,
         "instruction": "Links auf Breitestrasse abbiegen.",
         "verbal_pre": "Links auf Breitestrasse abbiegen. Dann Links auf Obrechtstrasse abbiegen.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -1585,7 +1617,7 @@
         ]
       },
       "properties": {
-        "step": 52,
+        "step": 53,
         "instruction": "Links auf Obrechtstrasse abbiegen.",
         "verbal_pre": "Links auf Obrechtstrasse abbiegen.",
         "verbal_post": "200 Meter weiter der Route folgen.",
@@ -1617,7 +1649,7 @@
         ]
       },
       "properties": {
-        "step": 53,
+        "step": 54,
         "instruction": "Links abbiegen.",
         "verbal_pre": "Links abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
         "verbal_post": "60 Meter weiter der Route folgen.",
@@ -1647,7 +1679,7 @@
         ]
       },
       "properties": {
-        "step": 54,
+        "step": 55,
         "instruction": "Richtung Osten fahren.",
         "verbal_pre": "Richtung Osten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -1673,7 +1705,7 @@
         ]
       },
       "properties": {
-        "step": 55,
+        "step": 56,
         "instruction": "Richtung Westen fahren.",
         "verbal_pre": "Richtung Westen fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -1699,7 +1731,7 @@
         ]
       },
       "properties": {
-        "step": 56,
+        "step": 57,
         "instruction": "Richtung Westen fahren.",
         "verbal_pre": "Richtung Westen fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -1725,7 +1757,7 @@
         ]
       },
       "properties": {
-        "step": 57,
+        "step": 58,
         "instruction": "Richtung Norden fahren.",
         "verbal_pre": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -1751,7 +1783,7 @@
         ]
       },
       "properties": {
-        "step": 58,
+        "step": 59,
         "instruction": "Richtung Norden fahren.",
         "verbal_pre": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -1777,7 +1809,7 @@
         ]
       },
       "properties": {
-        "step": 59,
+        "step": 60,
         "instruction": "Richtung Norden fahren.",
         "verbal_pre": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -1799,32 +1831,6 @@
           [
             7.651304,
             47.525264
-          ]
-        ]
-      },
-      "properties": {
-        "step": 60,
-        "instruction": "Richtung S\u00fcden fahren.",
-        "verbal_pre": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "40 Meter weiter der Route folgen.",
-        "length_km": 0.039,
-        "type": 1,
-        "street_names": [],
-        "time_sec": 5.625
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.651304,
-            47.525264
-          ],
-          [
-            7.651282,
-            47.525215
           ]
         ]
       },
@@ -1832,11 +1838,11 @@
         "step": 61,
         "instruction": "Richtung S\u00fcden fahren.",
         "verbal_pre": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
-        "length_km": 0.005,
+        "verbal_post": "40 Meter weiter der Route folgen.",
+        "length_km": 0.039,
         "type": 1,
         "street_names": [],
-        "time_sec": 0.854
+        "time_sec": 5.625
       }
     },
     {
@@ -1845,8 +1851,8 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.651282,
-            47.525215
+            7.651304,
+            47.525264
           ],
           [
             7.651282,
@@ -1856,6 +1862,32 @@
       },
       "properties": {
         "step": 62,
+        "instruction": "Richtung S\u00fcden fahren.",
+        "verbal_pre": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.005,
+        "type": 1,
+        "street_names": [],
+        "time_sec": 0.854
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.651282,
+            47.525215
+          ],
+          [
+            7.651282,
+            47.525215
+          ]
+        ]
+      },
+      "properties": {
+        "step": 63,
         "instruction": "Richtung Norden fahren.",
         "verbal_pre": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -1881,7 +1913,7 @@
         ]
       },
       "properties": {
-        "step": 63,
+        "step": 64,
         "instruction": "Richtung Osten fahren.",
         "verbal_pre": "Richtung Osten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -1907,7 +1939,7 @@
         ]
       },
       "properties": {
-        "step": 64,
+        "step": 65,
         "instruction": "Richtung Osten fahren.",
         "verbal_pre": "Richtung Osten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -1937,7 +1969,7 @@
         ]
       },
       "properties": {
-        "step": 65,
+        "step": 66,
         "instruction": "Richtung Westen fahren.",
         "verbal_pre": "Richtung Westen fahren. Dann Das Ziel befindet sich auf der linken Seite.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -1959,7 +1991,7 @@
         ]
       },
       "properties": {
-        "step": 66,
+        "step": 67,
         "instruction": "Ziel befindet sich auf der linken Seite.",
         "verbal_pre": "Ziel befindet sich auf der linken Seite.",
         "verbal_post": "",
@@ -1989,7 +2021,7 @@
         ]
       },
       "properties": {
-        "step": 67,
+        "step": 68,
         "instruction": "Richtung Westen fahren.",
         "verbal_pre": "Richtung Westen fahren. Dann Links auf Obrechtstrasse abbiegen.",
         "verbal_post": "60 Meter weiter der Route folgen.",
@@ -2023,7 +2055,7 @@
         ]
       },
       "properties": {
-        "step": 68,
+        "step": 69,
         "instruction": "Links auf Obrechtstrasse abbiegen.",
         "verbal_pre": "Links auf Obrechtstrasse abbiegen.",
         "verbal_post": "200 Meter weiter der Route folgen.",
@@ -2059,7 +2091,7 @@
         ]
       },
       "properties": {
-        "step": 69,
+        "step": 70,
         "instruction": "Links abbiegen.",
         "verbal_pre": "Links abbiegen.",
         "verbal_post": "100 Meter weiter der Route folgen.",
@@ -2097,7 +2129,7 @@
         ]
       },
       "properties": {
-        "step": 70,
+        "step": 71,
         "instruction": "Links auf R\u00f6ssligasse abbiegen.",
         "verbal_pre": "Links auf R\u00f6ssligasse abbiegen.",
         "verbal_post": "200 Meter weiter der Route folgen.",
@@ -2129,7 +2161,7 @@
         ]
       },
       "properties": {
-        "step": 71,
+        "step": 72,
         "instruction": "Auf R\u00f6ssligasse Richtung Osten fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Osten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -2161,7 +2193,7 @@
         ]
       },
       "properties": {
-        "step": 72,
+        "step": 73,
         "instruction": "Auf R\u00f6ssligasse Richtung S\u00fcdosten fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "10 Meter weiter der Route folgen.",
@@ -2189,7 +2221,7 @@
         ]
       },
       "properties": {
-        "step": 73,
+        "step": 74,
         "instruction": "Auf R\u00f6ssligasse Richtung Norden fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -2221,7 +2253,7 @@
         ]
       },
       "properties": {
-        "step": 74,
+        "step": 75,
         "instruction": "Auf R\u00f6ssligasse Richtung S\u00fcdosten fahren.",
         "verbal_pre": "Auf R\u00f6ssligasse Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -2253,7 +2285,7 @@
         ]
       },
       "properties": {
-        "step": 75,
+        "step": 76,
         "instruction": "Auf Breitestrasse Richtung Osten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Osten fahren. Dann, in 40 Meter, Das Ziel wird erreicht.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -2285,7 +2317,7 @@
         ]
       },
       "properties": {
-        "step": 76,
+        "step": 77,
         "instruction": "Auf Breitestrasse Richtung Osten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Osten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "10 Meter weiter der Route folgen.",
@@ -2317,7 +2349,7 @@
         ]
       },
       "properties": {
-        "step": 77,
+        "step": 78,
         "instruction": "Auf Breitestrasse Richtung Osten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Osten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -2369,7 +2401,7 @@
         ]
       },
       "properties": {
-        "step": 78,
+        "step": 79,
         "instruction": "Auf Breitestrasse Richtung Osten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Osten fahren. Dann, in 200 Meter, Das Ziel wird erreicht.",
         "verbal_post": "200 Meter weiter der Route folgen.",
@@ -2421,7 +2453,7 @@
         ]
       },
       "properties": {
-        "step": 79,
+        "step": 80,
         "instruction": "Auf Breitestrasse Richtung Westen fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Westen fahren. Dann, in 200 Meter, Das Ziel wird erreicht.",
         "verbal_post": "200 Meter weiter der Route folgen.",
@@ -2453,7 +2485,7 @@
         ]
       },
       "properties": {
-        "step": 80,
+        "step": 81,
         "instruction": "Auf Breitestrasse Richtung Westen fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -2485,7 +2517,7 @@
         ]
       },
       "properties": {
-        "step": 81,
+        "step": 82,
         "instruction": "Auf Breitestrasse Richtung Westen fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "10 Meter weiter der Route folgen.",
@@ -2521,7 +2553,7 @@
         ]
       },
       "properties": {
-        "step": 82,
+        "step": 83,
         "instruction": "Auf Rainstrasse Richtung S\u00fcden fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "10 Meter weiter der Route folgen.",
@@ -2553,7 +2585,7 @@
         ]
       },
       "properties": {
-        "step": 83,
+        "step": 84,
         "instruction": "Auf Rainstrasse Richtung S\u00fcdosten fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -2581,7 +2613,7 @@
         ]
       },
       "properties": {
-        "step": 84,
+        "step": 85,
         "instruction": "Auf Rainstrasse Richtung S\u00fcdosten fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -2629,7 +2661,7 @@
         ]
       },
       "properties": {
-        "step": 85,
+        "step": 86,
         "instruction": "Auf Rainstrasse Richtung Osten fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung Osten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "100 Meter weiter der Route folgen.",
@@ -2657,7 +2689,7 @@
         ]
       },
       "properties": {
-        "step": 86,
+        "step": 87,
         "instruction": "Auf Rainstrasse Richtung S\u00fcdosten fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "10 Meter weiter der Route folgen.",
@@ -2689,7 +2721,7 @@
         ]
       },
       "properties": {
-        "step": 87,
+        "step": 88,
         "instruction": "Auf Rainstrasse Richtung S\u00fcden fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -2717,7 +2749,7 @@
         ]
       },
       "properties": {
-        "step": 88,
+        "step": 89,
         "instruction": "Auf Rainstrasse Richtung S\u00fcden fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -2745,7 +2777,7 @@
         ]
       },
       "properties": {
-        "step": 89,
+        "step": 90,
         "instruction": "Auf Rainstrasse Richtung Norden fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -2777,7 +2809,7 @@
         ]
       },
       "properties": {
-        "step": 90,
+        "step": 91,
         "instruction": "Auf Rainstrasse Richtung Norden fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -2805,7 +2837,7 @@
         ]
       },
       "properties": {
-        "step": 91,
+        "step": 92,
         "instruction": "Auf Rainstrasse Richtung Nordwesten fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "10 Meter weiter der Route folgen.",
@@ -2853,7 +2885,7 @@
         ]
       },
       "properties": {
-        "step": 92,
+        "step": 93,
         "instruction": "Auf Rainstrasse Richtung Nordwesten fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "100 Meter weiter der Route folgen.",
@@ -2881,7 +2913,7 @@
         ]
       },
       "properties": {
-        "step": 93,
+        "step": 94,
         "instruction": "Auf Rainstrasse Richtung Nordwesten fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -2913,7 +2945,7 @@
         ]
       },
       "properties": {
-        "step": 94,
+        "step": 95,
         "instruction": "Auf Rainstrasse Richtung Nordwesten fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -2949,7 +2981,7 @@
         ]
       },
       "properties": {
-        "step": 95,
+        "step": 96,
         "instruction": "Auf Rainstrasse Richtung Norden fahren.",
         "verbal_pre": "Auf Rainstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "10 Meter weiter der Route folgen.",
@@ -2977,7 +3009,7 @@
         ]
       },
       "properties": {
-        "step": 96,
+        "step": 97,
         "instruction": "Auf Obrechtstrasse Richtung Norden fahren.",
         "verbal_pre": "Auf Obrechtstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -3009,7 +3041,7 @@
         ]
       },
       "properties": {
-        "step": 97,
+        "step": 98,
         "instruction": "Auf Obrechtstrasse Richtung Norden fahren.",
         "verbal_pre": "Auf Obrechtstrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "80 Meter weiter der Route folgen.",
@@ -3019,32 +3051,6 @@
           "Obrechtstrasse"
         ],
         "time_sec": 8.537
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.652647,
-            47.525303
-          ],
-          [
-            7.652647,
-            47.525303
-          ]
-        ]
-      },
-      "properties": {
-        "step": 98,
-        "instruction": "Richtung Norden fahren.",
-        "verbal_pre": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
-        "length_km": 0.0,
-        "type": 1,
-        "street_names": [],
-        "time_sec": 0.0
       }
     },
     {
@@ -3083,6 +3089,32 @@
             47.525303
           ],
           [
+            7.652647,
+            47.525303
+          ]
+        ]
+      },
+      "properties": {
+        "step": 100,
+        "instruction": "Richtung Norden fahren.",
+        "verbal_pre": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.0,
+        "type": 1,
+        "street_names": [],
+        "time_sec": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.652647,
+            47.525303
+          ],
+          [
             7.65231,
             47.524681
           ],
@@ -3093,7 +3125,7 @@
         ]
       },
       "properties": {
-        "step": 100,
+        "step": 101,
         "instruction": "Auf Obrechtstrasse Richtung S\u00fcden fahren.",
         "verbal_pre": "Auf Obrechtstrasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "80 Meter weiter der Route folgen.",
@@ -3121,7 +3153,7 @@
         ]
       },
       "properties": {
-        "step": 101,
+        "step": 102,
         "instruction": "Auf Obrechtstrasse Richtung S\u00fcden fahren.",
         "verbal_pre": "Auf Obrechtstrasse Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -3153,7 +3185,7 @@
         ]
       },
       "properties": {
-        "step": 102,
+        "step": 103,
         "instruction": "Auf Breitestrasse Richtung Westen fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Westen fahren. Dann, in 40 Meter, Das Ziel wird erreicht.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -3185,7 +3217,7 @@
         ]
       },
       "properties": {
-        "step": 103,
+        "step": 104,
         "instruction": "Auf Breitestrasse Richtung Osten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Osten fahren. Dann, in 40 Meter, Rechts auf Rainstrasse abbiegen.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -3249,7 +3281,7 @@
         ]
       },
       "properties": {
-        "step": 104,
+        "step": 105,
         "instruction": "Rechts auf Rainstrasse abbiegen.",
         "verbal_pre": "Rechts auf Rainstrasse abbiegen.",
         "verbal_post": "100 Meter weiter der Route folgen.",
@@ -3289,7 +3321,7 @@
         ]
       },
       "properties": {
-        "step": 105,
+        "step": 106,
         "instruction": "Rechts auf Brunnrainstrasse abbiegen.",
         "verbal_pre": "Rechts auf Brunnrainstrasse abbiegen.",
         "verbal_post": "100 Meter weiter der Route folgen.",
@@ -3329,7 +3361,7 @@
         ]
       },
       "properties": {
-        "step": 106,
+        "step": 107,
         "instruction": "Auf Brunnrainstrasse Richtung Nordosten fahren.",
         "verbal_pre": "Auf Brunnrainstrasse Richtung Nordosten fahren. Dann Links auf Rainstrasse abbiegen.",
         "verbal_post": "100 Meter weiter der Route folgen.",
@@ -3393,7 +3425,7 @@
         ]
       },
       "properties": {
-        "step": 107,
+        "step": 108,
         "instruction": "Links auf Rainstrasse abbiegen.",
         "verbal_pre": "Links auf Rainstrasse abbiegen.",
         "verbal_post": "100 Meter weiter der Route folgen.",
@@ -3425,7 +3457,7 @@
         ]
       },
       "properties": {
-        "step": 108,
+        "step": 109,
         "instruction": "Links auf Breitestrasse abbiegen.",
         "verbal_pre": "Links auf Breitestrasse abbiegen. Dann, in 40 Meter, Das Ziel wird erreicht.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -3453,7 +3485,7 @@
         ]
       },
       "properties": {
-        "step": 109,
+        "step": 110,
         "instruction": "Auf Breitestrasse Richtung Westen fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "50 Meter weiter der Route folgen.",
@@ -3481,7 +3513,7 @@
         ]
       },
       "properties": {
-        "step": 110,
+        "step": 111,
         "instruction": "Richtung S\u00fcden fahren.",
         "verbal_pre": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -3507,7 +3539,7 @@
         ]
       },
       "properties": {
-        "step": 111,
+        "step": 112,
         "instruction": "Richtung Osten fahren.",
         "verbal_pre": "Richtung Osten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -3533,7 +3565,7 @@
         ]
       },
       "properties": {
-        "step": 112,
+        "step": 113,
         "instruction": "Richtung Westen fahren.",
         "verbal_pre": "Richtung Westen fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -3563,7 +3595,7 @@
         ]
       },
       "properties": {
-        "step": 113,
+        "step": 114,
         "instruction": "Richtung S\u00fcden fahren.",
         "verbal_pre": "Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der linken Seite.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -3585,7 +3617,7 @@
         ]
       },
       "properties": {
-        "step": 114,
+        "step": 115,
         "instruction": "Ziel befindet sich auf der linken Seite.",
         "verbal_pre": "Ziel befindet sich auf der linken Seite.",
         "verbal_post": "",
@@ -3615,7 +3647,7 @@
         ]
       },
       "properties": {
-        "step": 115,
+        "step": 116,
         "instruction": "Richtung Nordosten fahren.",
         "verbal_pre": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -3641,7 +3673,7 @@
         ]
       },
       "properties": {
-        "step": 116,
+        "step": 117,
         "instruction": "Richtung Norden fahren.",
         "verbal_pre": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -3671,7 +3703,7 @@
         ]
       },
       "properties": {
-        "step": 117,
+        "step": 118,
         "instruction": "Auf Breitestrasse Richtung Westen fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "80 Meter weiter der Route folgen.",
@@ -3699,7 +3731,7 @@
         ]
       },
       "properties": {
-        "step": 118,
+        "step": 119,
         "instruction": "Richtung S\u00fcdosten fahren.",
         "verbal_pre": "Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -3725,7 +3757,7 @@
         ]
       },
       "properties": {
-        "step": 119,
+        "step": 120,
         "instruction": "Richtung Nordwesten fahren.",
         "verbal_pre": "Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "30 Meter weiter der Route folgen.",
@@ -3755,7 +3787,7 @@
         ]
       },
       "properties": {
-        "step": 120,
+        "step": 121,
         "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -3783,7 +3815,7 @@
         ]
       },
       "properties": {
-        "step": 121,
+        "step": 122,
         "instruction": "Auf Breitestrasse Richtung Norden fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -3815,7 +3847,7 @@
         ]
       },
       "properties": {
-        "step": 122,
+        "step": 123,
         "instruction": "Auf Scheibenmattweg Richtung S\u00fcden fahren.",
         "verbal_pre": "Auf Scheibenmattweg Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "60 Meter weiter der Route folgen.",
@@ -3837,222 +3869,22 @@
             47.52334
           ],
           [
-            7.649825,
-            47.52374
-          ],
-          [
-            7.64982,
-            47.523802
-          ]
-        ]
-      },
-      "properties": {
-        "step": 123,
-        "instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren.",
-        "verbal_pre": "Auf Scheibenmattweg Richtung Nordwesten fahren. Dann Links auf Breitestrasse abbiegen.",
-        "verbal_post": "60 Meter weiter der Route folgen.",
-        "length_km": 0.059,
-        "type": 1,
-        "street_names": [
-          "Scheibenmattweg"
-        ],
-        "time_sec": 6.068
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.64982,
-            47.523802
-          ],
-          [
-            7.64975,
-            47.523763
-          ],
-          [
-            7.648996,
-            47.523318
-          ],
-          [
-            7.648702,
-            47.523157
-          ],
-          [
-            7.648426,
-            47.523006
-          ],
-          [
-            7.647943,
-            47.522716
-          ],
-          [
-            7.647695,
-            47.522553
-          ],
-          [
-            7.647599,
-            47.522504
-          ],
-          [
-            7.647501,
-            47.522477
-          ],
-          [
-            7.647497,
-            47.522444
-          ],
-          [
-            7.647468,
-            47.522408
-          ],
-          [
-            7.646845,
-            47.521923
+            7.650253,
+            47.523243
           ]
         ]
       },
       "properties": {
         "step": 124,
-        "instruction": "Links auf Breitestrasse abbiegen.",
-        "verbal_pre": "Links auf Breitestrasse abbiegen.",
-        "verbal_post": "300 Meter weiter der Route folgen.",
-        "length_km": 0.309,
-        "type": 15,
-        "street_names": [
-          "Breitestrasse"
-        ],
-        "time_sec": 42.142
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.646845,
-            47.521923
-          ],
-          [
-            7.647429,
-            47.521921
-          ],
-          [
-            7.647757,
-            47.521975
-          ]
-        ]
-      },
-      "properties": {
-        "step": 125,
-        "instruction": "Links auf Burggasse abbiegen.",
-        "verbal_pre": "Links auf Burggasse abbiegen. Dann Leicht nach links auf St. Arbogast-Strasse abbiegen.",
-        "verbal_post": "70 Meter weiter der Route folgen.",
-        "length_km": 0.069,
-        "type": 15,
-        "street_names": [
-          "Burggasse"
-        ],
-        "time_sec": 13.563
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.647757,
-            47.521975
-          ],
-          [
-            7.647807,
-            47.522047
-          ],
-          [
-            7.648106,
-            47.522184
-          ],
-          [
-            7.64903,
-            47.522618
-          ],
-          [
-            7.649127,
-            47.522662
-          ],
-          [
-            7.649562,
-            47.522843
-          ],
-          [
-            7.649755,
-            47.522914
-          ],
-          [
-            7.649986,
-            47.522975
-          ],
-          [
-            7.650177,
-            47.523018
-          ],
-          [
-            7.650415,
-            47.523058
-          ]
-        ]
-      },
-      "properties": {
-        "step": 126,
-        "instruction": "Leicht nach links auf St. Arbogast-Strasse abbiegen.",
-        "verbal_pre": "Leicht nach links auf St. Arbogast-Strasse abbiegen.",
-        "verbal_post": "200 Meter weiter der Route folgen.",
-        "length_km": 0.237,
-        "type": 16,
-        "street_names": [
-          "St. Arbogast-Strasse"
-        ],
-        "time_sec": 24.511
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.650415,
-            47.523058
-          ],
-          [
-            7.650474,
-            47.523064
-          ],
-          [
-            7.651606,
-            47.523169
-          ],
-          [
-            7.652012,
-            47.523207
-          ]
-        ]
-      },
-      "properties": {
-        "step": 127,
-        "instruction": "Auf St. Arbogast-Strasse Richtung Osten fahren.",
-        "verbal_pre": "Auf St. Arbogast-Strasse Richtung Osten fahren. Dann Leicht nach links auf Brunnrainstrasse abbiegen.",
-        "verbal_post": "100 Meter weiter der Route folgen.",
-        "length_km": 0.122,
+        "instruction": "Auf Scheibenmattweg Richtung S\u00fcdosten fahren.",
+        "verbal_pre": "Auf Scheibenmattweg Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "10 Meter weiter der Route folgen.",
+        "length_km": 0.012,
         "type": 1,
         "street_names": [
-          "St. Arbogast-Strasse"
+          "Scheibenmattweg"
         ],
-        "time_sec": 12.583
+        "time_sec": 1.234
       }
     },
     {
@@ -4061,176 +3893,8 @@
         "type": "LineString",
         "coordinates": [
           [
-            7.652012,
-            47.523207
-          ],
-          [
-            7.652243,
-            47.523343
-          ],
-          [
-            7.652325,
-            47.523382
-          ],
-          [
-            7.653115,
-            47.523754
-          ],
-          [
-            7.65323,
-            47.523792
-          ],
-          [
-            7.653447,
-            47.523821
-          ],
-          [
-            7.653801,
-            47.523851
-          ]
-        ]
-      },
-      "properties": {
-        "step": 128,
-        "instruction": "Leicht nach links auf Brunnrainstrasse abbiegen.",
-        "verbal_pre": "Leicht nach links auf Brunnrainstrasse abbiegen.",
-        "verbal_post": "200 Meter weiter der Route folgen.",
-        "length_km": 0.156,
-        "type": 16,
-        "street_names": [
-          "Brunnrainstrasse"
-        ],
-        "time_sec": 16.131
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.653801,
-            47.523851
-          ],
-          [
-            7.653745,
-            47.523948
-          ],
-          [
-            7.653635,
-            47.524022
-          ],
-          [
-            7.653541,
-            47.524071
-          ],
-          [
-            7.65334,
-            47.524133
-          ],
-          [
-            7.65264,
-            47.524325
-          ],
-          [
-            7.652501,
-            47.524361
-          ],
-          [
-            7.652412,
-            47.52439
-          ],
-          [
-            7.65235,
-            47.524439
-          ],
-          [
-            7.652332,
-            47.524493
-          ],
-          [
-            7.652322,
-            47.524524
-          ]
-        ]
-      },
-      "properties": {
-        "step": 129,
-        "instruction": "Links auf Rainstrasse abbiegen.",
-        "verbal_pre": "Links auf Rainstrasse abbiegen.",
-        "verbal_post": "100 Meter weiter der Route folgen.",
-        "length_km": 0.141,
-        "type": 15,
-        "street_names": [
-          "Rainstrasse"
-        ],
-        "time_sec": 18.876
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.652322,
-            47.524524
-          ],
-          [
-            7.652177,
-            47.524484
-          ],
-          [
-            7.651879,
-            47.524402
-          ],
-          [
-            7.651314,
-            47.524245
-          ],
-          [
-            7.650528,
-            47.524034
-          ],
-          [
-            7.650324,
-            47.523968
-          ],
-          [
-            7.649956,
-            47.523854
-          ],
-          [
-            7.64982,
-            47.523802
-          ]
-        ]
-      },
-      "properties": {
-        "step": 130,
-        "instruction": "Links auf Breitestrasse abbiegen.",
-        "verbal_pre": "Links auf Breitestrasse abbiegen.",
-        "verbal_post": "200 Meter weiter der Route folgen.",
-        "length_km": 0.205,
-        "type": 15,
-        "street_names": [
-          "Breitestrasse"
-        ],
-        "time_sec": 26.788
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.64982,
-            47.523802
-          ],
-          [
-            7.649825,
-            47.52374
+            7.650253,
+            47.523243
           ],
           [
             7.650175,
@@ -4239,16 +3903,16 @@
         ]
       },
       "properties": {
-        "step": 131,
-        "instruction": "Links auf Scheibenmattweg abbiegen.",
-        "verbal_pre": "Links auf Scheibenmattweg abbiegen. Dann Das Ziel wird erreicht.",
-        "verbal_post": "60 Meter weiter der Route folgen.",
-        "length_km": 0.059,
-        "type": 15,
+        "step": 125,
+        "instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren.",
+        "verbal_pre": "Auf Scheibenmattweg Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "10 Meter weiter der Route folgen.",
+        "length_km": 0.012,
+        "type": 1,
         "street_names": [
           "Scheibenmattweg"
         ],
-        "time_sec": 7.315
+        "time_sec": 1.234
       }
     },
     {
@@ -4267,7 +3931,7 @@
         ]
       },
       "properties": {
-        "step": 132,
+        "step": 126,
         "instruction": "Richtung Nordosten fahren.",
         "verbal_pre": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "90 Meter weiter der Route folgen.",
@@ -4293,7 +3957,7 @@
         ]
       },
       "properties": {
-        "step": 133,
+        "step": 127,
         "instruction": "Richtung S\u00fcdwesten fahren.",
         "verbal_pre": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "90 Meter weiter der Route folgen.",
@@ -4301,6 +3965,32 @@
         "type": 1,
         "street_names": [],
         "time_sec": 13.104
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.650175,
+            47.52334
+          ],
+          [
+            7.650175,
+            47.52334
+          ]
+        ]
+      },
+      "properties": {
+        "step": 128,
+        "instruction": "Richtung Norden fahren.",
+        "verbal_pre": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.0,
+        "type": 1,
+        "street_names": [],
+        "time_sec": 0.0
       }
     },
     {
@@ -4323,7 +4013,7 @@
         ]
       },
       "properties": {
-        "step": 134,
+        "step": 129,
         "instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren.",
         "verbal_pre": "Auf Scheibenmattweg Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "60 Meter weiter der Route folgen.",
@@ -4333,34 +4023,6 @@
           "Scheibenmattweg"
         ],
         "time_sec": 6.068
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.64982,
-            47.523802
-          ],
-          [
-            7.64982,
-            47.523802
-          ]
-        ]
-      },
-      "properties": {
-        "step": 135,
-        "instruction": "Auf Breitestrasse Richtung Norden fahren.",
-        "verbal_pre": "Auf Breitestrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
-        "length_km": 0.0,
-        "type": 1,
-        "street_names": [
-          "Breitestrasse"
-        ],
-        "time_sec": 0.0
       }
     },
     {
@@ -4383,7 +4045,7 @@
         ]
       },
       "properties": {
-        "step": 136,
+        "step": 130,
         "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -4411,7 +4073,7 @@
         ]
       },
       "properties": {
-        "step": 137,
+        "step": 131,
         "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -4439,7 +4101,7 @@
         ]
       },
       "properties": {
-        "step": 138,
+        "step": 132,
         "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -4471,7 +4133,7 @@
         ]
       },
       "properties": {
-        "step": 139,
+        "step": 133,
         "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Rechts auf Scheibenmattweg abbiegen.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -4503,7 +4165,7 @@
         ]
       },
       "properties": {
-        "step": 140,
+        "step": 134,
         "instruction": "Rechts auf Scheibenmattweg abbiegen.",
         "verbal_pre": "Rechts auf Scheibenmattweg abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -4535,7 +4197,7 @@
         ]
       },
       "properties": {
-        "step": 141,
+        "step": 135,
         "instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren.",
         "verbal_pre": "Auf Scheibenmattweg Richtung Nordwesten fahren. Dann Links auf Breitestrasse abbiegen.",
         "verbal_post": "40 Meter weiter der Route folgen.",
@@ -4567,7 +4229,7 @@
         ]
       },
       "properties": {
-        "step": 142,
+        "step": 136,
         "instruction": "Links auf Breitestrasse abbiegen.",
         "verbal_pre": "Links auf Breitestrasse abbiegen. Dann Das Ziel befindet sich auf der linken Seite.",
         "verbal_post": "60 Meter weiter der Route folgen.",
@@ -4591,7 +4253,7 @@
         ]
       },
       "properties": {
-        "step": 143,
+        "step": 137,
         "instruction": "Ziel befindet sich auf der linken Seite.",
         "verbal_pre": "Ziel befindet sich auf der linken Seite.",
         "verbal_post": "",
@@ -4617,7 +4279,7 @@
         ]
       },
       "properties": {
-        "step": 144,
+        "step": 138,
         "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -4645,7 +4307,7 @@
         ]
       },
       "properties": {
-        "step": 145,
+        "step": 139,
         "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "20 Meter weiter der Route folgen.",
@@ -4673,7 +4335,7 @@
         ]
       },
       "properties": {
-        "step": 146,
+        "step": 140,
         "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -4701,7 +4363,7 @@
         ]
       },
       "properties": {
-        "step": 147,
+        "step": 141,
         "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
         "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
         "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
@@ -4723,22 +4385,898 @@
             47.523318
           ],
           [
-            7.648761,
-            47.52319
+            7.648965,
+            47.523301
+          ]
+        ]
+      },
+      "properties": {
+        "step": 142,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.002,
+        "type": 1,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.307
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648965,
+            47.523301
+          ],
+          [
+            7.648962,
+            47.5233
+          ]
+        ]
+      },
+      "properties": {
+        "step": 143,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.0,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.028
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648962,
+            47.5233
+          ],
+          [
+            7.64882,
+            47.523222
+          ]
+        ]
+      },
+      "properties": {
+        "step": 144,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "10 Meter weiter der Route folgen.",
+        "length_km": 0.013,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 1.654
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.64882,
+            47.523222
+          ],
+          [
+            7.648732,
+            47.523173
+          ]
+        ]
+      },
+      "properties": {
+        "step": 145,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.008,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 1.024
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648732,
+            47.523173
+          ],
+          [
+            7.64882,
+            47.523222
+          ]
+        ]
+      },
+      "properties": {
+        "step": 146,
+        "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.008,
+        "type": 3,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 1.024
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.64882,
+            47.523222
+          ]
+        ]
+      },
+      "properties": {
+        "step": 147,
+        "instruction": "Ziel befindet sich auf der linken Seite.",
+        "verbal_pre": "Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "",
+        "length_km": 0.0,
+        "type": 6,
+        "street_names": [],
+        "time_sec": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.64882,
+            47.523222
+          ],
+          [
+            7.648775,
+            47.523197
           ]
         ]
       },
       "properties": {
         "step": 148,
         "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.004,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.519
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648775,
+            47.523197
+          ],
+          [
+            7.648702,
+            47.523157
+          ],
+          [
+            7.648697,
+            47.523154
+          ]
+        ]
+      },
+      "properties": {
+        "step": 149,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann, in weniger als 10 Meter, Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.007,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.96
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648697,
+            47.523154
+          ],
+          [
+            7.648674,
+            47.523142
+          ]
+        ]
+      },
+      "properties": {
+        "step": 150,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.002,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.27
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648674,
+            47.523142
+          ],
+          [
+            7.64862,
+            47.523112
+          ]
+        ]
+      },
+      "properties": {
+        "step": 151,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.005,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.626
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.64862,
+            47.523112
+          ],
+          [
+            7.648597,
+            47.523099
+          ]
+        ]
+      },
+      "properties": {
+        "step": 152,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.002,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.266
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648597,
+            47.523099
+          ],
+          [
+            7.648551,
+            47.523075
+          ]
+        ]
+      },
+      "properties": {
+        "step": 153,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.004,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.528
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648551,
+            47.523075
+          ],
+          [
+            7.648513,
+            47.523053
+          ]
+        ]
+      },
+      "properties": {
+        "step": 154,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.003,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.447
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648513,
+            47.523053
+          ],
+          [
+            7.648551,
+            47.523075
+          ]
+        ]
+      },
+      "properties": {
+        "step": 155,
+        "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.003,
+        "type": 3,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.447
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648551,
+            47.523075
+          ]
+        ]
+      },
+      "properties": {
+        "step": 156,
+        "instruction": "Ziel befindet sich auf der linken Seite.",
+        "verbal_pre": "Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "",
+        "length_km": 0.0,
+        "type": 6,
+        "street_names": [],
+        "time_sec": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648551,
+            47.523075
+          ],
+          [
+            7.648597,
+            47.523099
+          ]
+        ]
+      },
+      "properties": {
+        "step": 157,
+        "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.004,
+        "type": 3,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.528
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648597,
+            47.523099
+          ]
+        ]
+      },
+      "properties": {
+        "step": 158,
+        "instruction": "Ziel befindet sich auf der linken Seite.",
+        "verbal_pre": "Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "",
+        "length_km": 0.0,
+        "type": 6,
+        "street_names": [],
+        "time_sec": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648597,
+            47.523099
+          ],
+          [
+            7.64862,
+            47.523112
+          ]
+        ]
+      },
+      "properties": {
+        "step": 159,
+        "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.002,
+        "type": 3,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.266
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.64862,
+            47.523112
+          ]
+        ]
+      },
+      "properties": {
+        "step": 160,
+        "instruction": "Ziel befindet sich auf der linken Seite.",
+        "verbal_pre": "Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "",
+        "length_km": 0.0,
+        "type": 6,
+        "street_names": [],
+        "time_sec": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.64862,
+            47.523112
+          ],
+          [
+            7.648674,
+            47.523142
+          ]
+        ]
+      },
+      "properties": {
+        "step": 161,
+        "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.005,
+        "type": 3,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.626
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648674,
+            47.523142
+          ]
+        ]
+      },
+      "properties": {
+        "step": 162,
+        "instruction": "Ziel befindet sich auf der linken Seite.",
+        "verbal_pre": "Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "",
+        "length_km": 0.0,
+        "type": 6,
+        "street_names": [],
+        "time_sec": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648674,
+            47.523142
+          ],
+          [
+            7.648697,
+            47.523154
+          ]
+        ]
+      },
+      "properties": {
+        "step": 163,
+        "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.002,
+        "type": 3,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.27
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648697,
+            47.523154
+          ]
+        ]
+      },
+      "properties": {
+        "step": 164,
+        "instruction": "Ziel befindet sich auf der linken Seite.",
+        "verbal_pre": "Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "",
+        "length_km": 0.0,
+        "type": 6,
+        "street_names": [],
+        "time_sec": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648697,
+            47.523154
+          ],
+          [
+            7.648702,
+            47.523157
+          ],
+          [
+            7.648775,
+            47.523197
+          ]
+        ]
+      },
+      "properties": {
+        "step": 165,
+        "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann, in weniger als 10 Meter, Das Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.007,
+        "type": 3,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.96
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648775,
+            47.523197
+          ]
+        ]
+      },
+      "properties": {
+        "step": 166,
+        "instruction": "Ziel befindet sich auf der linken Seite.",
+        "verbal_pre": "Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "",
+        "length_km": 0.0,
+        "type": 6,
+        "street_names": [],
+        "time_sec": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648775,
+            47.523197
+          ],
+          [
+            7.64882,
+            47.523222
+          ]
+        ]
+      },
+      "properties": {
+        "step": 167,
+        "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.004,
+        "type": 3,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.519
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.64882,
+            47.523222
+          ]
+        ]
+      },
+      "properties": {
+        "step": 168,
+        "instruction": "Ziel befindet sich auf der linken Seite.",
+        "verbal_pre": "Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "",
+        "length_km": 0.0,
+        "type": 6,
+        "street_names": [],
+        "time_sec": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.64882,
+            47.523222
+          ],
+          [
+            7.648962,
+            47.5233
+          ]
+        ]
+      },
+      "properties": {
+        "step": 169,
+        "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "10 Meter weiter der Route folgen.",
+        "length_km": 0.013,
+        "type": 3,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 1.654
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648962,
+            47.5233
+          ]
+        ]
+      },
+      "properties": {
+        "step": 170,
+        "instruction": "Ziel befindet sich auf der linken Seite.",
+        "verbal_pre": "Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "",
+        "length_km": 0.0,
+        "type": 6,
+        "street_names": [],
+        "time_sec": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648962,
+            47.5233
+          ],
+          [
+            7.648965,
+            47.523301
+          ]
+        ]
+      },
+      "properties": {
+        "step": 171,
+        "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.0,
+        "type": 3,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.028
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648965,
+            47.523301
+          ]
+        ]
+      },
+      "properties": {
+        "step": 172,
+        "instruction": "Ziel befindet sich auf der linken Seite.",
+        "verbal_pre": "Ziel befindet sich auf der linken Seite.",
+        "verbal_post": "",
+        "length_km": 0.0,
+        "type": 6,
+        "street_names": [],
+        "time_sec": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648965,
+            47.523301
+          ],
+          [
+            7.64881,
+            47.523216
+          ]
+        ]
+      },
+      "properties": {
+        "step": 173,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
         "verbal_post": "20 Meter weiter der Route folgen.",
-        "length_km": 0.022,
+        "length_km": 0.014,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 1.799
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.64881,
+            47.523216
+          ],
+          [
+            7.648761,
+            47.52319
+          ]
+        ]
+      },
+      "properties": {
+        "step": 174,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+        "verbal_post": "weniger als 10 Meter weiter der Route folgen.",
+        "length_km": 0.004,
+        "type": 2,
+        "street_names": [
+          "Breitestrasse"
+        ],
+        "time_sec": 0.563
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.648761,
+            47.52319
+          ],
+          [
+            7.648702,
+            47.523157
+          ],
+          [
+            7.648426,
+            47.523006
+          ]
+        ]
+      },
+      "properties": {
+        "step": 175,
+        "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+        "verbal_pre": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann, in 30 Meter, Das Ziel wird erreicht.",
+        "verbal_post": "30 Meter weiter der Route folgen.",
+        "length_km": 0.032,
         "type": 1,
         "street_names": [
           "Breitestrasse"
         ],
-        "time_sec": 2.67
+        "time_sec": 3.947
       }
     }
   ]

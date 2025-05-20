@@ -1,56 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import 'maplibre-gl/dist/maplibre-gl.css';
 import "../../plannerpage.css";
 
 export const CalculateWaitingPopUp = ({ projectName, setIsLoading }) => {
-  const [status, setStatus] = useState("pending");
-  const navigate = useNavigate();
-  const hasNavigated = useRef(false);
-
-  console.log("🟡 CalculateWaitingPopUp gerendert mit Projekt:", projectName);
-  console.log("📌 Aktueller Status:", status);
-
   useEffect(() => {
-  if (window.location.pathname === "/navigation") {
-    // Sicherstellen, dass wir auf der Zielseite sind
-    setIsLoading(false);
-  }
-}, []);
-
-  useEffect(() => {
-    console.log("🔁 Starte Statusüberwachung für:", projectName);
-
-    const interval = setInterval(() => {
-      console.log("⏱️ Anfrage an /getCalculationStatus für:", projectName);
-      fetch(`http://localhost:8000/getCalculationStatus?project_name=${projectName}`)
-      .then(async res => {
-  const data = await res.json();
-  if (!res.ok) {
-    console.error("❌ HTTP-Fehlerstatus:", res.status);
-    throw new Error(`HTTP ${res.status}`);
-  }
-  return data;
-})
-.then(data => {
-  console.log("✅ Status-Antwort erhalten:", data);
-  if (data.status === "done") {
-    console.log("🎯 Status ist 'done' – navigiere sofort zu /navigation");
-    clearInterval(interval);
-    setStatus("done");
-    navigate("/navigation");
-  }
-})
-
-        .catch(err => {
-          console.error("❌ Fehler beim Statusabruf:", err);
-        });
-    }, 1000);
-
-    return () => {
-      console.log("🧹 Stoppe Intervall für Projekt:", projectName);
-    };
-  }, [projectName, navigate]);
+    console.log("🟡 CalculateWaitingPopUp angezeigt für Projekt:", projectName);
+  }, [projectName, setIsLoading]);
 
   return (
     <div style={{

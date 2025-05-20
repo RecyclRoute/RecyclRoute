@@ -5,6 +5,7 @@ import json
 import tempfile
 import httpx
 import os
+from fastapi.responses import JSONResponse
 
 # Initialize FastAPI app
 # use Command "uvicorn server.app.main2:app --reload --port 7999" to startup
@@ -36,7 +37,7 @@ async def calculate(request: Request):
 
     polygon_geojson = data.get("perimeter")
     point = data.get("point_geometry", {}).get("coordinates")
-    project_name = data.get("name")  # Projektname für Benachrichtigung
+    project_name = data.get("name")  # Projektname für Speicherung
 
     if not polygon_geojson or not point:
         return {"error": "Missing polygon or point geometry in the request."}
@@ -69,13 +70,6 @@ async def calculate(request: Request):
 
     try:
         async with httpx.AsyncClient() as client:
-            # Notify calculation completion
-            notify_response = await client.post(
-                "http://localhost:8000/notifyCalculationDone",
-                json={"project_name": project_name}
-            )
-            print(f"Benachrichtigung gesendet: {notify_response.status_code}")
-
             # Send routing result to addRouting endpoint
             save_response = await client.post(
                 "http://localhost:8000/addRouting",
@@ -86,13 +80,16 @@ async def calculate(request: Request):
             )
             print(f"Speichern in DB Antwort: {save_response.status_code}")
     except Exception as e:
-        print(f"Fehler beim Senden oder Speichern: {e}")
+        print(f"Fehler beim Speichern: {e}")
 
-    return {
+    return JSONResponse(
+    status_code=200,
+    content={
         "status": "Routing completed",
         "point_used": point,
         "routing_result_file": result_file_path
     }
+)
 
 
 @app.get("/test")
