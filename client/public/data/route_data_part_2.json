@@ -3,193 +3,78 @@
     "locations": [
       {
         "type": "break",
-        "lat": 47.521927,
-        "lon": 7.64685,
+        "lat": 47.523787,
+        "lon": 7.649788,
         "original_index": 0
       },
       {
         "type": "break",
-        "lat": 47.521927,
-        "lon": 7.64685,
+        "lat": 47.523787,
+        "lon": 7.649788,
         "original_index": 1
       },
       {
         "type": "break",
-        "lat": 47.521824,
-        "lon": 7.645953,
+        "lat": 47.523594,
+        "lon": 7.649448,
         "original_index": 2
       },
       {
         "type": "break",
-        "lat": 47.521457,
-        "lon": 7.646154,
+        "lat": 47.523461,
+        "lon": 7.649217,
         "original_index": 3
       },
       {
         "type": "break",
-        "lat": 47.521551,
-        "lon": 7.646809,
-        "side_of_street": "right",
+        "lat": 47.523594,
+        "lon": 7.649448,
         "original_index": 4
       },
       {
         "type": "break",
-        "lat": 47.521471,
-        "lon": 7.64682,
+        "lat": 47.52337,
+        "lon": 7.649721,
+        "side_of_street": "right",
         "original_index": 5
       },
       {
         "type": "break",
-        "lat": 47.521432,
-        "lon": 7.647076,
+        "lat": 47.52324,
+        "lon": 7.649494,
+        "side_of_street": "left",
         "original_index": 6
       },
       {
         "type": "break",
-        "lat": 47.521288,
-        "lon": 7.647676,
+        "lat": 47.523461,
+        "lon": 7.649217,
         "original_index": 7
       },
       {
         "type": "break",
-        "lat": 47.521432,
-        "lon": 7.647076,
+        "lat": 47.523312,
+        "lon": 7.64896,
         "original_index": 8
       },
       {
         "type": "break",
-        "lat": 47.520976,
-        "lon": 7.647071,
+        "lat": 47.523372,
+        "lon": 7.648878,
         "side_of_street": "right",
         "original_index": 9
       },
       {
         "type": "break",
-        "lat": 47.520953,
-        "lon": 7.646415,
+        "lat": 47.523312,
+        "lon": 7.64896,
         "original_index": 10
       },
       {
         "type": "break",
-        "lat": 47.520857,
-        "lon": 7.646455,
+        "lat": 47.523194,
+        "lon": 7.648755,
         "original_index": 11
-      },
-      {
-        "type": "break",
-        "lat": 47.520717,
-        "lon": 7.646501,
-        "original_index": 12
-      },
-      {
-        "type": "break",
-        "lat": 47.520857,
-        "lon": 7.646455,
-        "original_index": 13
-      },
-      {
-        "type": "break",
-        "lat": 47.520763,
-        "lon": 7.646126,
-        "side_of_street": "right",
-        "original_index": 14
-      },
-      {
-        "type": "break",
-        "lat": 47.520741,
-        "lon": 7.646104,
-        "side_of_street": "right",
-        "original_index": 15
-      },
-      {
-        "type": "break",
-        "lat": 47.520725,
-        "lon": 7.646099,
-        "side_of_street": "right",
-        "original_index": 16
-      },
-      {
-        "type": "break",
-        "lat": 47.52061,
-        "lon": 7.646018,
-        "side_of_street": "right",
-        "original_index": 17
-      },
-      {
-        "type": "break",
-        "lat": 47.520393,
-        "lon": 7.645716,
-        "original_index": 18
-      },
-      {
-        "type": "break",
-        "lat": 47.520443,
-        "lon": 7.646553,
-        "original_index": 19
-      },
-      {
-        "type": "break",
-        "lat": 47.520166,
-        "lon": 7.64659,
-        "original_index": 20
-      },
-      {
-        "type": "break",
-        "lat": 47.520443,
-        "lon": 7.646553,
-        "original_index": 21
-      },
-      {
-        "type": "break",
-        "lat": 47.520717,
-        "lon": 7.646501,
-        "original_index": 22
-      },
-      {
-        "type": "break",
-        "lat": 47.520763,
-        "lon": 7.646951,
-        "side_of_street": "left",
-        "original_index": 23
-      },
-      {
-        "type": "break",
-        "lat": 47.520759,
-        "lon": 7.646996,
-        "side_of_street": "left",
-        "original_index": 24
-      },
-      {
-        "type": "break",
-        "lat": 47.520742,
-        "lon": 7.647069,
-        "side_of_street": "left",
-        "original_index": 25
-      },
-      {
-        "type": "break",
-        "lat": 47.520701,
-        "lon": 7.647201,
-        "original_index": 26
-      },
-      {
-        "type": "break",
-        "lat": 47.520378,
-        "lon": 7.647192,
-        "original_index": 27
-      },
-      {
-        "type": "break",
-        "lat": 47.520171,
-        "lon": 7.647467,
-        "original_index": 28
-      },
-      {
-        "type": "break",
-        "lat": 47.519713,
-        "lon": 7.647396,
-        "side_of_street": "right",
-        "original_index": 29
       }
     ],
     "legs": [
@@ -207,7 +92,7 @@
             "bearing_after": 0,
             "time": 0.0,
             "length": 0.0,
-            "cost": 0.0,
+            "cost": -0.0,
             "begin_shape_index": 0,
             "end_shape_index": 1,
             "verbal_multi_cue": true,
@@ -234,722 +119,33 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.521923,
-          "min_lon": 7.646844,
-          "max_lat": 47.521923,
-          "max_lon": 7.646844,
+          "min_lat": 47.523802,
+          "min_lon": 7.649819,
+          "max_lat": 47.523802,
+          "max_lon": 7.649819,
           "time": 0.0,
           "length": 0.0,
-          "cost": 0.0
+          "cost": -0.0
         },
-        "shape": "egosyAyfvqM??"
+        "shape": "s|rsyAw`|qM??"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Burggasse Richtung Westen fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Westen fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Burggasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "70 Meter weiter der Route folgen.",
-            "street_names": [
-              "Burggasse"
-            ],
-            "bearing_after": 263,
-            "time": 8.187,
-            "length": 0.068,
-            "cost": 11.76,
-            "begin_shape_index": 0,
-            "end_shape_index": 4,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 258,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 4,
-            "end_shape_index": 4,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.521817,
-          "min_lon": 7.645961,
-          "max_lat": 47.521923,
-          "max_lon": 7.646844,
-          "time": 8.187,
-          "length": 0.068,
-          "cost": 11.76
-        },
-        "shape": "egosyAyfvqMh@tNl@hKjB~VNdB"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Oberdorf Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
+            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
             "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
             "street_names": [
-              "Oberdorf"
+              "Breitestrasse"
             ],
-            "bearing_after": 159,
-            "time": 4.8,
-            "length": 0.04,
-            "cost": 4.799,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 160,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 2,
-            "end_shape_index": 2,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.521482,
-          "min_lon": 7.645961,
-          "max_lat": 47.521817,
-          "max_lon": 7.646147,
-          "time": 4.8,
-          "length": 0.04,
-          "cost": 4.799
-        },
-        "shape": "q`osyAsotqMfM_GrEsB"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Oberdorf Richtung Norden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Norden fahren. Dann Rechts auf Burggasse abbiegen.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung Norden fahren. Dann Rechts auf Burggasse abbiegen.",
-            "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 340,
-            "time": 4.8,
-            "length": 0.04,
-            "cost": 4.8,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 10,
-            "instruction": "Rechts auf Burggasse abbiegen.",
-            "verbal_transition_alert_instruction": "Rechts auf Burggasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Rechts abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Rechts auf Burggasse abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
-            "street_names": [
-              "Burggasse"
-            ],
-            "bearing_before": 339,
-            "bearing_after": 77,
-            "time": 13.464,
-            "length": 0.06,
-            "cost": 24.835,
-            "begin_shape_index": 2,
-            "end_shape_index": 6,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 83,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 6,
-            "end_shape_index": 6,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.521482,
-          "min_lon": 7.645962,
-          "max_lat": 47.521914,
-          "max_lon": 7.646743,
-          "time": 18.264,
-          "length": 0.1,
-          "cost": 29.635
-        },
-        "shape": "uknsyAg{tqMsErBgM~FOeBkB_Wm@iKWiH"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Burggasse Richtung Westen fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Westen fahren. Dann Links auf Oberdorf abbiegen.",
-            "verbal_pre_transition_instruction": "Auf Burggasse Richtung Westen fahren. Dann Links auf Oberdorf abbiegen.",
-            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
-            "street_names": [
-              "Burggasse"
-            ],
-            "bearing_after": 263,
-            "time": 7.262,
-            "length": 0.06,
-            "cost": 10.835,
-            "begin_shape_index": 0,
-            "end_shape_index": 4,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 15,
-            "instruction": "Links auf Oberdorf abbiegen.",
-            "verbal_transition_alert_instruction": "Links auf Oberdorf abbiegen.",
-            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Links abbiegen.",
-            "verbal_pre_transition_instruction": "Links auf Oberdorf abbiegen. Dann Links abbiegen.",
-            "verbal_post_transition_instruction": "90 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_before": 257,
-            "bearing_after": 159,
-            "time": 13.45,
-            "length": 0.087,
-            "cost": 20.84,
-            "begin_shape_index": 4,
-            "end_shape_index": 9,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 15,
-            "instruction": "Links abbiegen.",
-            "verbal_transition_alert_instruction": "Links abbiegen.",
-            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Links abbiegen. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
-            "bearing_before": 162,
-            "bearing_after": 80,
-            "time": 5.143,
-            "length": 0.026,
-            "cost": 94.543,
-            "begin_shape_index": 9,
-            "end_shape_index": 11,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 79,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 11,
-            "end_shape_index": 11,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.521082,
-          "min_lon": 7.645962,
-          "max_lat": 47.521914,
-          "max_lon": 7.646743,
-          "time": 25.857,
-          "length": 0.173,
-          "cost": 126.219
-        },
-        "shape": "sfosyAm`vqMVhHl@hKjB~VNdBfM_GrEqBtGwCdLkEdBs@MoBiA{P"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Richtung Westen fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Westen fahren. Dann Rechts auf Oberdorf abbiegen.",
-            "verbal_pre_transition_instruction": "Richtung Westen fahren. Dann Rechts auf Oberdorf abbiegen.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
-            "bearing_after": 259,
-            "time": 3.763,
-            "length": 0.026,
-            "cost": 10.944,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 10,
-            "instruction": "Rechts auf Oberdorf abbiegen.",
-            "verbal_transition_alert_instruction": "Rechts auf Oberdorf abbiegen.",
-            "verbal_succinct_transition_instruction": "Rechts abbiegen. Dann Rechts auf Burggasse abbiegen.",
-            "verbal_pre_transition_instruction": "Rechts auf Oberdorf abbiegen. Dann Rechts auf Burggasse abbiegen.",
-            "verbal_post_transition_instruction": "90 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_before": 260,
-            "bearing_after": 342,
-            "time": 14.803,
-            "length": 0.087,
-            "cost": 26.239,
-            "begin_shape_index": 2,
-            "end_shape_index": 7,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 10,
-            "instruction": "Rechts auf Burggasse abbiegen.",
-            "verbal_transition_alert_instruction": "Rechts auf Burggasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Rechts abbiegen. Dann Rechts auf Rebgasse abbiegen.",
-            "verbal_pre_transition_instruction": "Rechts auf Burggasse abbiegen. Dann Rechts auf Rebgasse abbiegen.",
-            "verbal_post_transition_instruction": "100 Meter weiter der Route folgen.",
-            "street_names": [
-              "Burggasse"
-            ],
-            "bearing_before": 339,
-            "bearing_after": 77,
-            "time": 18.945,
-            "length": 0.112,
-            "cost": 32.085,
-            "begin_shape_index": 7,
-            "end_shape_index": 12,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 10,
-            "instruction": "Rechts auf Rebgasse abbiegen.",
-            "verbal_transition_alert_instruction": "Rechts auf Rebgasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Rechts abbiegen. Dann Rechts abbiegen.",
-            "verbal_pre_transition_instruction": "Rechts auf Rebgasse abbiegen. Dann Rechts abbiegen.",
-            "verbal_post_transition_instruction": "100 Meter weiter der Route folgen.",
-            "street_names": [
-              "Rebgasse"
-            ],
-            "bearing_before": 90,
-            "bearing_after": 165,
-            "time": 13.523,
-            "length": 0.099,
-            "cost": 31.382,
-            "begin_shape_index": 12,
-            "end_shape_index": 15,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 10,
-            "instruction": "Rechts abbiegen.",
-            "verbal_transition_alert_instruction": "Rechts abbiegen.",
-            "verbal_succinct_transition_instruction": "Rechts abbiegen. Dann, in 50 Meter, Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Rechts abbiegen. Dann, in 50 Meter, Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "50 Meter weiter der Route folgen.",
-            "bearing_before": 164,
-            "bearing_after": 278,
-            "time": 14.535,
-            "length": 0.052,
-            "cost": 101.287,
-            "begin_shape_index": 15,
-            "end_shape_index": 19,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 356,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 19,
-            "end_shape_index": 19,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.521059,
-          "min_lon": 7.645962,
-          "max_lat": 47.521923,
-          "max_lon": 7.647773,
-          "time": 65.571,
-          "length": 0.375,
-          "cost": 201.94
-        },
-        "shape": "kumsyAi}uqMhAzPLnBeBr@eLjEuGvCsEpBgM~FOeBkB_Wm@iKi@uNBoc@td@uMZKhNmEGvAkAtZoB|AyCw@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Links auf Rebgasse abbiegen.",
-            "verbal_pre_transition_instruction": "Richtung S\u00fcden fahren. Dann Links auf Rebgasse abbiegen.",
-            "verbal_post_transition_instruction": "50 Meter weiter der Route folgen.",
-            "bearing_after": 176,
-            "time": 7.508,
-            "length": 0.052,
-            "cost": 9.288,
-            "begin_shape_index": 0,
-            "end_shape_index": 4,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 15,
-            "instruction": "Links auf Rebgasse abbiegen.",
-            "verbal_transition_alert_instruction": "Links auf Rebgasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Links auf Rebgasse abbiegen. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
-            "street_names": [
-              "Rebgasse"
-            ],
-            "bearing_before": 98,
-            "bearing_after": 344,
-            "time": 7.729,
-            "length": 0.028,
-            "cost": 11.48,
-            "begin_shape_index": 4,
-            "end_shape_index": 5,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 344,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 5,
-            "end_shape_index": 5,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.521059,
-          "min_lon": 7.647239,
-          "max_lat": 47.521303,
-          "max_lon": 7.647773,
-          "time": 15.238,
-          "length": 0.079,
-          "cost": 20.768
-        },
-        "shape": "c|msyAeawqMxCv@nB}AjAuZFwAiNlE"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Rebgasse Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Rechts abbiegen.",
-            "verbal_pre_transition_instruction": "Auf Rebgasse Richtung S\u00fcden fahren. Dann Rechts abbiegen.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
-            "street_names": [
-              "Rebgasse"
-            ],
-            "bearing_after": 164,
-            "time": 2.88,
-            "length": 0.028,
-            "cost": 2.88,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 10,
-            "instruction": "Rechts abbiegen.",
-            "verbal_transition_alert_instruction": "Rechts abbiegen.",
-            "verbal_succinct_transition_instruction": "Rechts abbiegen. Dann, in 50 Meter, Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Rechts abbiegen. Dann, in 50 Meter, Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "50 Meter weiter der Route folgen.",
-            "bearing_before": 164,
-            "bearing_after": 278,
-            "time": 14.535,
-            "length": 0.052,
-            "cost": 101.287,
-            "begin_shape_index": 1,
-            "end_shape_index": 5,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 356,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 5,
-            "end_shape_index": 5,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.521059,
-          "min_lon": 7.647239,
-          "max_lat": 47.521303,
-          "max_lon": 7.647773,
-          "time": 17.415,
-          "length": 0.08,
-          "cost": 104.167
-        },
-        "shape": "o`nsyAkzwqMhNmEGvAkAtZoB|AyCw@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
-            "bearing_after": 176,
-            "time": 2.221,
-            "length": 0.015,
-            "cost": 2.221,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 173,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 2,
-            "end_shape_index": 2,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.5211,
-          "min_lon": 7.647239,
-          "max_lat": 47.521233,
-          "max_lon": 7.647285,
-          "time": 2.221,
-          "length": 0.015,
-          "cost": 2.221
-        },
-        "shape": "c|msyAeawqMxCv@nB}A"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Richtung Osten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Osten fahren. Dann Links auf Rebgasse abbiegen.",
-            "verbal_pre_transition_instruction": "Richtung Osten fahren. Dann Links auf Rebgasse abbiegen.",
-            "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
-            "bearing_after": 97,
-            "time": 5.286,
+            "bearing_after": 230,
+            "time": 4.339,
             "length": 0.036,
-            "cost": 7.066,
+            "cost": 4.339,
             "begin_shape_index": 0,
-            "end_shape_index": 3,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 15,
-            "instruction": "Links auf Rebgasse abbiegen.",
-            "verbal_transition_alert_instruction": "Links auf Rebgasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Links auf Burggasse abbiegen.",
-            "verbal_pre_transition_instruction": "Links auf Rebgasse abbiegen. Dann Links auf Burggasse abbiegen.",
-            "verbal_post_transition_instruction": "100 Meter weiter der Route folgen.",
-            "street_names": [
-              "Rebgasse"
-            ],
-            "bearing_before": 98,
-            "bearing_after": 344,
-            "time": 15.053,
-            "length": 0.099,
-            "cost": 25.982,
-            "begin_shape_index": 3,
-            "end_shape_index": 6,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 15,
-            "instruction": "Links auf Burggasse abbiegen.",
-            "verbal_transition_alert_instruction": "Links auf Burggasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Links auf Oberdorf abbiegen.",
-            "verbal_pre_transition_instruction": "Links auf Burggasse abbiegen. Dann Links auf Oberdorf abbiegen.",
-            "verbal_post_transition_instruction": "100 Meter weiter der Route folgen.",
-            "street_names": [
-              "Burggasse"
-            ],
-            "bearing_before": 345,
-            "bearing_after": 270,
-            "time": 13.659,
-            "length": 0.112,
-            "cost": 26.685,
-            "begin_shape_index": 6,
-            "end_shape_index": 11,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 15,
-            "instruction": "Links auf Oberdorf abbiegen.",
-            "verbal_transition_alert_instruction": "Links auf Oberdorf abbiegen.",
-            "verbal_succinct_transition_instruction": "Links abbiegen.",
-            "verbal_pre_transition_instruction": "Links auf Oberdorf abbiegen.",
-            "verbal_post_transition_instruction": "100 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_before": 257,
-            "bearing_after": 159,
-            "time": 15.278,
-            "length": 0.102,
-            "cost": 24.459,
-            "begin_shape_index": 11,
-            "end_shape_index": 17,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 161,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 17,
-            "end_shape_index": 17,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520953,
-          "min_lon": 7.645962,
-          "max_lat": 47.521923,
-          "max_lon": 7.647773,
-          "time": 49.278,
-          "length": 0.349,
-          "cost": 84.194
-        },
-        "shape": "ysmsyAkbwqM??jAuZFwAiNlE[Jud@tMCnc@h@tNl@hKjB~VNdBfM_GrEqBtGwCdLkEdBs@~FaC"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Oberdorf Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 161,
-            "time": 1.18,
-            "length": 0.009,
-            "cost": 1.18,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
+            "end_shape_index": 2,
             "verbal_multi_cue": true,
             "travel_mode": "drive",
             "travel_type": "car"
@@ -959,12 +155,12 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 161,
+            "bearing_before": 229,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
+            "begin_shape_index": 2,
+            "end_shape_index": 2,
             "travel_mode": "drive",
             "travel_type": "car"
           }
@@ -974,31 +170,31 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.520869,
-          "min_lon": 7.646416,
-          "max_lat": 47.520953,
-          "max_lon": 7.646459,
-          "time": 1.18,
-          "length": 0.009,
-          "cost": 1.18
+          "min_lat": 47.523588,
+          "min_lon": 7.649455,
+          "max_lat": 47.523802,
+          "max_lon": 7.649819,
+          "time": 4.339,
+          "length": 0.036,
+          "cost": 4.339
         },
-        "shape": "sjmsyA_luqMfDuA"
+        "shape": "s|rsyAw`|qMlAjCzIlQ"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Oberdorf Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
+            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
             "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
             "street_names": [
-              "Oberdorf"
+              "Breitestrasse"
             ],
-            "bearing_after": 169,
-            "time": 2.039,
-            "length": 0.017,
-            "cost": 2.04,
+            "bearing_after": 229,
+            "time": 2.74,
+            "length": 0.022,
+            "cost": 2.74,
             "begin_shape_index": 0,
             "end_shape_index": 1,
             "verbal_multi_cue": true,
@@ -1010,7 +206,7 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 169,
+            "bearing_before": 229,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
@@ -1025,31 +221,31 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.520716,
-          "min_lon": 7.646459,
-          "max_lat": 47.520869,
-          "max_lon": 7.646501,
-          "time": 2.039,
-          "length": 0.017,
-          "cost": 2.04
+          "min_lat": 47.523453,
+          "min_lon": 7.649226,
+          "max_lat": 47.523588,
+          "max_lon": 7.649455,
+          "time": 2.74,
+          "length": 0.022,
+          "cost": 2.74
         },
-        "shape": "kemsyAunuqMpHsA"
+        "shape": "iorsyA}i{qMlGhM"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Oberdorf Richtung Norden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung Norden fahren. Dann Das Ziel wird erreicht.",
+            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
             "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
             "street_names": [
-              "Oberdorf"
+              "Breitestrasse"
             ],
-            "bearing_after": 349,
-            "time": 2.039,
-            "length": 0.017,
-            "cost": 2.04,
+            "bearing_after": 49,
+            "time": 2.74,
+            "length": 0.022,
+            "cost": 2.74,
             "begin_shape_index": 0,
             "end_shape_index": 1,
             "verbal_multi_cue": true,
@@ -1061,7 +257,7 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 349,
+            "bearing_before": 49,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
@@ -1076,203 +272,53 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.520716,
-          "min_lon": 7.646459,
-          "max_lat": 47.520869,
-          "max_lon": 7.646501,
-          "time": 2.039,
-          "length": 0.017,
-          "cost": 2.04
+          "min_lat": 47.523453,
+          "min_lon": 7.649226,
+          "max_lat": 47.523588,
+          "max_lon": 7.649455,
+          "time": 2.74,
+          "length": 0.022,
+          "cost": 2.74
         },
-        "shape": "y{lsyAiquqMqHrA"
+        "shape": "{frsyAs{zqMmGiM"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Oberdorf Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 169,
-            "time": 0.813,
-            "length": 0.006,
-            "cost": 0.813,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 169,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520807,
-          "min_lon": 7.646459,
-          "max_lat": 47.520869,
-          "max_lon": 7.646476,
-          "time": 0.813,
-          "length": 0.006,
-          "cost": 0.813
-        },
-        "shape": "kemsyAunuqM|Ba@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Oberdorf Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 169,
-            "time": 0.247,
-            "length": 0.002,
-            "cost": 0.247,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 169,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520789,
-          "min_lon": 7.646476,
-          "max_lat": 47.520807,
-          "max_lon": 7.646481,
-          "time": 0.247,
-          "length": 0.002,
-          "cost": 0.247
-        },
-        "shape": "mamsyAwouqMb@I"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Oberdorf Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 169,
-            "time": 0.21,
-            "length": 0.001,
-            "cost": 0.21,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 169,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520773,
-          "min_lon": 7.646481,
-          "max_lat": 47.520789,
-          "max_lon": 7.646485,
-          "time": 0.21,
-          "length": 0.001,
-          "cost": 0.21
-        },
-        "shape": "i`msyAapuqM\\G"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Oberdorf Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Rechts abbiegen.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung S\u00fcden fahren. Dann Rechts abbiegen.",
+            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Rechts auf Scheibenmattweg abbiegen.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Rechts auf Scheibenmattweg abbiegen.",
             "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
             "street_names": [
-              "Oberdorf"
+              "Breitestrasse"
             ],
-            "bearing_after": 169,
-            "time": 4.386,
+            "bearing_after": 49,
+            "time": 4.339,
             "length": 0.036,
-            "cost": 6.168,
+            "cost": 4.339,
             "begin_shape_index": 0,
-            "end_shape_index": 3,
+            "end_shape_index": 2,
             "verbal_multi_cue": true,
             "travel_mode": "drive",
             "travel_type": "car"
           },
           {
             "type": 10,
-            "instruction": "Rechts abbiegen.",
-            "verbal_transition_alert_instruction": "Rechts abbiegen.",
+            "instruction": "Rechts auf Scheibenmattweg abbiegen.",
+            "verbal_transition_alert_instruction": "Rechts auf Scheibenmattweg abbiegen.",
             "verbal_succinct_transition_instruction": "Rechts abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Rechts abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
+            "verbal_pre_transition_instruction": "Rechts auf Scheibenmattweg abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
             "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
-            "bearing_before": 173,
-            "bearing_after": 264,
-            "time": 11.184,
+            "street_names": [
+              "Scheibenmattweg"
+            ],
+            "bearing_before": 50,
+            "bearing_after": 162,
+            "time": 10.986,
             "length": 0.038,
-            "cost": 97.563,
-            "begin_shape_index": 3,
+            "cost": 17.947,
+            "begin_shape_index": 2,
             "end_shape_index": 4,
             "verbal_multi_cue": true,
             "travel_mode": "drive",
@@ -1283,7 +329,7 @@
             "instruction": "Ziel befindet sich auf der rechten Seite.",
             "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
             "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 264,
+            "bearing_before": 149,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
@@ -1298,28 +344,31 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.520415,
-          "min_lon": 7.646049,
-          "max_lat": 47.520773,
-          "max_lon": 7.64656,
-          "time": 15.571,
-          "length": 0.075,
-          "cost": 103.732
+          "min_lat": 47.523496,
+          "min_lon": 7.649455,
+          "max_lat": 47.523801,
+          "max_lon": 7.650037,
+          "time": 15.326,
+          "length": 0.074,
+          "cost": 22.286
         },
-        "shape": "k_msyAipuqMpB_@vI_BvDUhA|^"
+        "shape": "iorsyA}i{qM{ImQmAkCzBIdNiL"
       },
       {
         "maneuvers": [
           {
-            "type": 2,
-            "instruction": "Richtung Westen fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Westen fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Richtung Westen fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
-            "bearing_after": 264,
-            "time": 3.652,
-            "length": 0.025,
-            "cost": 3.652,
+            "type": 3,
+            "instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Nordwesten fahren. Dann Links auf Breitestrasse abbiegen.",
+            "verbal_pre_transition_instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren. Dann Links auf Breitestrasse abbiegen.",
+            "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
+            "street_names": [
+              "Scheibenmattweg"
+            ],
+            "bearing_after": 329,
+            "time": 3.947,
+            "length": 0.038,
+            "cost": 3.947,
             "begin_shape_index": 0,
             "end_shape_index": 2,
             "verbal_multi_cue": true,
@@ -1327,253 +376,22 @@
             "travel_type": "car"
           },
           {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 263,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 2,
-            "end_shape_index": 2,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520389,
-          "min_lon": 7.645709,
-          "max_lat": 47.520415,
-          "max_lon": 7.646049,
-          "time": 3.652,
-          "length": 0.025,
-          "cost": 3.652
-        },
-        "shape": "_ilsyAautqM\\|KThG"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Richtung Osten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Osten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Richtung Osten fahren. Dann Das Ziel wird erreicht.",
+            "type": 15,
+            "instruction": "Links auf Breitestrasse abbiegen.",
+            "verbal_transition_alert_instruction": "Links auf Breitestrasse abbiegen.",
+            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Das Ziel befindet sich auf der linken Seite.",
+            "verbal_pre_transition_instruction": "Links auf Breitestrasse abbiegen. Dann Das Ziel befindet sich auf der linken Seite.",
             "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
-            "bearing_after": 83,
-            "time": 9.216,
-            "length": 0.064,
-            "cost": 9.216,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 84,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_before": 342,
+            "bearing_after": 230,
+            "time": 11.982,
+            "length": 0.059,
+            "cost": 15.733,
             "begin_shape_index": 2,
-            "end_shape_index": 2,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520389,
-          "min_lon": 7.645709,
-          "max_lat": 47.520452,
-          "max_lon": 7.646559,
-          "time": 9.216,
-          "length": 0.064,
-          "cost": 9.216
-        },
-        "shape": "kglsyAy_tqMUiGgB{k@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Oberdorf Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 175,
-            "time": 3.6,
-            "length": 0.03,
-            "cost": 3.6,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 175,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520182,
-          "min_lon": 7.646559,
-          "max_lat": 47.520452,
-          "max_lon": 7.646591,
-          "time": 3.6,
-          "length": 0.03,
-          "cost": 3.6
-        },
-        "shape": "iklsyA_uuqM|O_A"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Oberdorf Richtung Norden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 355,
-            "time": 3.6,
-            "length": 0.03,
-            "cost": 3.6,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 355,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520182,
-          "min_lon": 7.646559,
-          "max_lat": 47.520452,
-          "max_lon": 7.646591,
-          "time": 3.6,
-          "length": 0.03,
-          "cost": 3.6
-        },
-        "shape": "kzksyA_wuqM}O~@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Oberdorf Richtung Norden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 354,
-            "time": 3.6,
-            "length": 0.03,
-            "cost": 3.599,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 349,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 2,
-            "end_shape_index": 2,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520452,
-          "min_lon": 7.646501,
-          "max_lat": 47.520716,
-          "max_lon": 7.646559,
-          "time": 3.6,
-          "length": 0.03,
-          "cost": 3.599
-        },
-        "shape": "iklsyA_uuqMwDTwI~A"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Oberdorf Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 170,
-            "time": 0.173,
-            "length": 0.001,
-            "cost": 0.172,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
+            "end_shape_index": 4,
             "verbal_multi_cue": true,
             "travel_mode": "drive",
             "travel_type": "car"
@@ -1583,12 +401,12 @@
             "instruction": "Ziel befindet sich auf der linken Seite.",
             "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
             "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 170,
+            "bearing_before": 229,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
+            "begin_shape_index": 4,
+            "end_shape_index": 4,
             "travel_mode": "drive",
             "travel_type": "car"
           }
@@ -1598,240 +416,31 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.520706,
-          "min_lon": 7.646501,
-          "max_lat": 47.520716,
-          "max_lon": 7.646503,
-          "time": 0.173,
-          "length": 0.001,
-          "cost": 0.172
+          "min_lat": 47.523451,
+          "min_lon": 7.649221,
+          "max_lat": 47.523801,
+          "max_lon": 7.650037,
+          "time": 15.929,
+          "length": 0.097,
+          "cost": 19.68
         },
-        "shape": "y{lsyAiquqMTE"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Oberdorf Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 169,
-            "time": 0.121,
-            "length": 0.001,
-            "cost": 0.121,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 169,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520697,
-          "min_lon": 7.646503,
-          "max_lat": 47.520706,
-          "max_lon": 7.646506,
-          "time": 0.121,
-          "length": 0.001,
-          "cost": 0.121
-        },
-        "shape": "c{lsyAoquqMPC"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Oberdorf Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung S\u00fcden fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 169,
-            "time": 0.349,
-            "length": 0.002,
-            "cost": 0.349,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 169,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520671,
-          "min_lon": 7.646506,
-          "max_lat": 47.520697,
-          "max_lon": 7.646513,
-          "time": 0.349,
-          "length": 0.002,
-          "cost": 0.349
-        },
-        "shape": "qzlsyAsquqMp@O"
+        "shape": "qirsyAkn|qMeNhL{BHlAjCnR~_@"
       },
       {
         "maneuvers": [
           {
             "type": 2,
-            "instruction": "Auf Oberdorf Richtung Norden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Norden fahren. Dann, in 100 Meter, Rechts auf Burggasse abbiegen.",
-            "verbal_pre_transition_instruction": "Auf Oberdorf Richtung Norden fahren. Dann, in 100 Meter, Rechts auf Burggasse abbiegen.",
-            "verbal_post_transition_instruction": "100 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_after": 349,
-            "time": 16.193,
-            "length": 0.134,
-            "cost": 23.324,
-            "begin_shape_index": 0,
-            "end_shape_index": 8,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 10,
-            "instruction": "Rechts auf Burggasse abbiegen.",
-            "verbal_transition_alert_instruction": "Rechts auf Burggasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Rechts abbiegen. Dann Rechts auf Rebgasse abbiegen.",
-            "verbal_pre_transition_instruction": "Rechts auf Burggasse abbiegen. Dann Rechts auf Rebgasse abbiegen.",
-            "verbal_post_transition_instruction": "100 Meter weiter der Route folgen.",
-            "street_names": [
-              "Burggasse"
-            ],
-            "bearing_before": 339,
-            "bearing_after": 77,
-            "time": 18.945,
-            "length": 0.112,
-            "cost": 32.085,
-            "begin_shape_index": 8,
-            "end_shape_index": 13,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 10,
-            "instruction": "Rechts auf Rebgasse abbiegen.",
-            "verbal_transition_alert_instruction": "Rechts auf Rebgasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Rechts abbiegen.",
-            "verbal_pre_transition_instruction": "Rechts auf Rebgasse abbiegen.",
-            "verbal_post_transition_instruction": "200 Meter weiter der Route folgen.",
-            "street_names": [
-              "Rebgasse"
-            ],
-            "bearing_before": 90,
-            "bearing_after": 165,
-            "time": 20.738,
-            "length": 0.168,
-            "cost": 42.182,
-            "begin_shape_index": 13,
-            "end_shape_index": 19,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 10,
-            "instruction": "Rechts abbiegen.",
-            "verbal_transition_alert_instruction": "Rechts abbiegen.",
-            "verbal_succinct_transition_instruction": "Rechts abbiegen. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Rechts abbiegen. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
-            "bearing_before": 167,
-            "bearing_after": 273,
-            "time": 10.391,
-            "length": 0.025,
-            "cost": 95.599,
-            "begin_shape_index": 19,
-            "end_shape_index": 20,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 273,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 20,
-            "end_shape_index": 20,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520451,
-          "min_lon": 7.645962,
-          "max_lat": 47.521923,
-          "max_lon": 7.648015,
-          "time": 66.269,
-          "length": 0.44,
-          "cost": 193.192
-        },
-        "shape": "_ylsyAcruqMyAXqHrAgLvEeBr@eLjEuGvCsEpBgM~FOeBkB_Wm@iKi@uNBoc@td@uMZKhNmE|WkIpFeBnDq@YdT"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Richtung Norden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
+            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
             "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "bearing_after": 0,
-            "time": 0.0,
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 49,
+            "time": 0.053,
             "length": 0.0,
-            "cost": 0.0,
+            "cost": 0.053,
             "begin_shape_index": 0,
             "end_shape_index": 1,
             "verbal_multi_cue": true,
@@ -1843,7 +452,7 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 0,
+            "bearing_before": 49,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
@@ -1858,160 +467,84 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.520463,
-          "min_lon": 7.647675,
-          "max_lat": 47.520463,
-          "max_lon": 7.647675,
-          "time": 0.0,
+          "min_lat": 47.523451,
+          "min_lon": 7.649221,
+          "max_lat": 47.523453,
+          "max_lon": 7.649226,
+          "time": 0.053,
           "length": 0.0,
-          "cost": 0.0
+          "cost": 0.053
         },
-        "shape": "_llsyAwzwqM??"
+        "shape": "ufrsyAk{zqMEG"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Richtung Norden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
+            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 229,
+            "time": 2.759,
+            "length": 0.022,
+            "cost": 2.759,
+            "begin_shape_index": 0,
+            "end_shape_index": 1,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 4,
+            "instruction": "Ziel erreicht.",
+            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Ziel erreicht.",
+            "bearing_before": 229,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 1,
+            "end_shape_index": 1,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 47.523317,
+          "min_lon": 7.648995,
+          "max_lat": 47.523453,
+          "max_lon": 7.649226,
+          "time": 2.759,
+          "length": 0.022,
+          "cost": 2.759
+        },
+        "shape": "{frsyAs{zqMnGjM"
+      },
+      {
+        "maneuvers": [
+          {
+            "type": 1,
+            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
             "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "bearing_after": 0,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 231,
+            "time": 0.307,
+            "length": 0.002,
+            "cost": 0.307,
             "begin_shape_index": 0,
             "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 0,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.520463,
-          "min_lon": 7.647675,
-          "max_lat": 47.520463,
-          "max_lon": 7.647675,
-          "time": 0.0,
-          "length": 0.0,
-          "cost": 0.0
-        },
-        "shape": "_llsyAwzwqM??"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Richtung Osten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Osten fahren. Dann Links auf Rebgasse abbiegen.",
-            "verbal_pre_transition_instruction": "Richtung Osten fahren. Dann Links auf Rebgasse abbiegen.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
-            "bearing_after": 93,
-            "time": 3.6,
-            "length": 0.025,
-            "cost": 3.6,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 15,
-            "instruction": "Links auf Rebgasse abbiegen.",
-            "verbal_transition_alert_instruction": "Links auf Rebgasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Links abbiegen.",
-            "verbal_pre_transition_instruction": "Links auf Rebgasse abbiegen.",
-            "verbal_post_transition_instruction": "200 Meter weiter der Route folgen.",
-            "street_names": [
-              "Rebgasse"
-            ],
-            "bearing_before": 93,
-            "bearing_after": 347,
-            "time": 21.567,
-            "length": 0.169,
-            "cost": 36.782,
-            "begin_shape_index": 1,
-            "end_shape_index": 7,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 15,
-            "instruction": "Links auf Burggasse abbiegen.",
-            "verbal_transition_alert_instruction": "Links auf Burggasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Links auf Oberdorf abbiegen.",
-            "verbal_pre_transition_instruction": "Links auf Burggasse abbiegen. Dann Links auf Oberdorf abbiegen.",
-            "verbal_post_transition_instruction": "100 Meter weiter der Route folgen.",
-            "street_names": [
-              "Burggasse"
-            ],
-            "bearing_before": 345,
-            "bearing_after": 270,
-            "time": 13.659,
-            "length": 0.112,
-            "cost": 26.685,
-            "begin_shape_index": 7,
-            "end_shape_index": 12,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 15,
-            "instruction": "Links auf Oberdorf abbiegen.",
-            "verbal_transition_alert_instruction": "Links auf Oberdorf abbiegen.",
-            "verbal_succinct_transition_instruction": "Links abbiegen.",
-            "verbal_pre_transition_instruction": "Links auf Oberdorf abbiegen.",
-            "verbal_post_transition_instruction": "400 Meter weiter der Route folgen.",
-            "street_names": [
-              "Oberdorf"
-            ],
-            "bearing_before": 257,
-            "bearing_after": 159,
-            "time": 47.148,
-            "length": 0.367,
-            "cost": 69.556,
-            "begin_shape_index": 12,
-            "end_shape_index": 29,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 15,
-            "instruction": "Links auf M\u00fchlackerstrasse abbiegen.",
-            "verbal_transition_alert_instruction": "Links auf M\u00fchlackerstrasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Links auf M\u00fchlackerstrasse abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "100 Meter weiter der Route folgen.",
-            "street_names": [
-              "M\u00fchlackerstrasse"
-            ],
-            "bearing_before": 147,
-            "bearing_after": 17,
-            "time": 18.172,
-            "length": 0.114,
-            "cost": 26.374,
-            "begin_shape_index": 29,
-            "end_shape_index": 36,
             "verbal_multi_cue": true,
             "travel_mode": "drive",
             "travel_type": "car"
@@ -2021,12 +554,12 @@
             "instruction": "Ziel befindet sich auf der rechten Seite.",
             "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
             "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 348,
+            "bearing_before": 231,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
-            "begin_shape_index": 36,
-            "end_shape_index": 36,
+            "begin_shape_index": 1,
+            "end_shape_index": 1,
             "travel_mode": "drive",
             "travel_type": "car"
           }
@@ -2036,15 +569,117 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.518688,
-          "min_lon": 7.645962,
-          "max_lat": 47.521923,
-          "max_lon": 7.648015,
-          "time": 104.148,
-          "length": 0.787,
-          "cost": 162.999
+          "min_lat": 47.5233,
+          "min_lon": 7.648964,
+          "max_lat": 47.523317,
+          "max_lon": 7.648995,
+          "time": 0.307,
+          "length": 0.002,
+          "cost": 0.307
         },
-        "shape": "_llsyAwzwqMXeToDp@qFdB}WjIiNlE[Jud@tMCnc@h@tNl@hKjB~VNdBfM_GrEqBtGwCdLkEdBs@fLwEpHsAvI_BvDU|O_A~^}I`Ba@pGyBjFaC|a@sUlCgC|AyAgCeAiDeAmCRsDtAmc@|LaDn@WF"
+        "shape": "k~qsyAgmzqM`@|@"
+      },
+      {
+        "maneuvers": [
+          {
+            "type": 3,
+            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 51,
+            "time": 0.307,
+            "length": 0.002,
+            "cost": 0.307,
+            "begin_shape_index": 0,
+            "end_shape_index": 1,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 4,
+            "instruction": "Ziel erreicht.",
+            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Ziel erreicht.",
+            "bearing_before": 51,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 1,
+            "end_shape_index": 1,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 47.5233,
+          "min_lon": 7.648964,
+          "max_lat": 47.523317,
+          "max_lon": 7.648995,
+          "time": 0.307,
+          "length": 0.002,
+          "cost": 0.307
+        },
+        "shape": "i}qsyAikzqMa@}@"
+      },
+      {
+        "maneuvers": [
+          {
+            "type": 1,
+            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 231,
+            "time": 2.67,
+            "length": 0.022,
+            "cost": 2.67,
+            "begin_shape_index": 0,
+            "end_shape_index": 1,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 4,
+            "instruction": "Ziel erreicht.",
+            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Ziel erreicht.",
+            "bearing_before": 231,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 1,
+            "end_shape_index": 1,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 47.523189,
+          "min_lon": 7.648761,
+          "max_lat": 47.523317,
+          "max_lon": 7.648995,
+          "time": 2.67,
+          "length": 0.022,
+          "cost": 2.67
+        },
+        "shape": "k~qsyAgmzqM~FtM"
       }
     ],
     "summary": {
@@ -2052,13 +687,13 @@
       "has_toll": false,
       "has_highway": false,
       "has_ferry": false,
-      "min_lat": 47.518688,
-      "min_lon": 7.645709,
-      "max_lat": 47.521923,
-      "max_lon": 7.648015,
-      "time": 423.668,
-      "length": 2.824,
-      "cost": 1076.477
+      "min_lat": 47.523189,
+      "min_lon": 7.648761,
+      "max_lat": 47.523802,
+      "max_lon": 7.650037,
+      "time": 47.174,
+      "length": 0.305,
+      "cost": 57.886
     },
     "status_message": "Found route between points",
     "status": 0,
