@@ -24,8 +24,8 @@ export const ProjectManagerPopup = (props) => {
   return (
     <div className="ProjectManagerPopup-overlay">
       <div className="ProjectManagerPopup-content">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="">Projektmanager</h2>
+        <div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-start", height: "45px"}}>
+          <h3 style={{marginTop: "0px", alignItems: "flex-start"}} className="">Projektmanager</h3>
           <button
             onClick={CloseButtonClick}
             className="ProjectManagerPopup-closeButton"
@@ -60,7 +60,7 @@ export const ProjectManagerPopup = (props) => {
         </div>
 
         <div className="mt-4 flex justify-center">
-          <button className="bg-cyan-800 text-white hover:bg-cyan-700 px-4 py-2 rounded-full"
+          <button className="ProjectManagerPopup-Button"
           onClick={NewProjectButtonClick}>
             Neues Projekt erstellen
           </button>
