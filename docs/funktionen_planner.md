@@ -620,6 +620,6 @@ Geplant ist auch das die Abschnitte, erledigt, aktueller Abschnitt, als nächste
     <a href="einleitung.html">← Einleitung</a>
   </div>
   <div>
-    <a href="funktionen_planner.html">Funktionen Planner →</a>
+    <a href="funktionen_report.html">Funktionen Report →</a>
   </div>
 </div>

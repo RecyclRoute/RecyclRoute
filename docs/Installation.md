@@ -177,9 +177,9 @@ Die Gründe für 2 Backend sind im <a href="aufbauGDI.html">Aufbau GDI </a> darg
 
 <div style="display: flex; justify-content: space-between;">
   <div>
-    <a href="aufbauGDI.html">← Aufbau GDI</a>
+    <a href="funktionen_report.html">← Funktionen Report</a>
   </div>
   <div>
-    <a href="konzept.html">Erklärung des Konzepts →</a>
+    <a href="ausblick.html">Erweiterungsmöglichkeiten →</a>
   </div>
 </div>
