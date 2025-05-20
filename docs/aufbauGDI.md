@@ -15,7 +15,7 @@ Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backends, einem Front
 
 Das Backend umfasst sämtliche serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript (API-Abfragen) automatisiert mit Geodaten und Routen befüllt. Das Backend interagiert dabei direkt mit der PostgreSQL/PostGIS-Datenbank um neue Informationen abzuspeichern, um bestehende Informationen abzufragen oder um bestehende Informationen zu löschen. Das Backend ist in 3 verschiedene Server unterteilt. Der Hauptserver wird auf einem RaspberryPi gehostet und umfasst alle Anfragen an die Datenbank sowie an den zweiten Server. Da der RaspberryPi nur eine geringe Rechenleistung bietet, wird ein zweiter Server auf einem Laptop gehostet, dieser umfasst den gesamten Berechnungsprozess. Da der zweite Server auf eine API-Schnitstelle vom Repository Valhalla zugreifen muss, wird ein Docker-Container mit entsprechendem Image von Valhalla ebenfalls auf einem Laptop gehostet. 
 
-# Hauptserver Punktverwaltung
+### Hauptserver Punktverwaltung
 
 | Endpunkt                          | Funktion                                                                 | Verwendung                                                                                           |
 |----------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
@@ -24,7 +24,7 @@ Das Backend umfasst sämtliche serverseitigen Prozesse und Daten. Die zugrundeli
 | POST /addPointWithDetails       | Fügt einen neuen Punkt zu einem Projekt hinzu. Übergibt Punkt-Typ, Datum, Koordinaten und ein Bild (Dateiupload per FormData). | add_marker_popup.jsx: schickt einen neuen Punkt mit allen notwendigen informationen an die Datenbank um diesen dort zu speichern |
 | DELETE /deletePoint/{point_id}  | Löscht einen Punkt anhand seiner ID aus der Datenbank.                   | Wurde noch nicht im Frontend Implementiert                                                           |
 
-# Hauptserver Projektverwaltung
+### Hauptserver Projektverwaltung
 
 | Endpunkt                         | Funktion                                                                 | Verwendung                                                                                           |
 |----------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
@@ -32,7 +32,7 @@ Das Backend umfasst sämtliche serverseitigen Prozesse und Daten. Die zugrundeli
 | GET /getProjects                 | Holt alle Projekte aus der Datenbank, inklusive Geometrie (als GeoJSON) und Metadaten. | plannerpage.jsx, add_marker_popup.jsx, ProjectManagerButton.jsxund MapLayerPopup.jsx: schreibt alle verfügbaren Projekte in eine Statevariabel |
 | DELETE /deleteProject/{project_id} | Löscht ein Projekt anhand der ID. Alle zugehörigen Punkte werden durch ON DELETE CASCADE mitgelöscht. | ProjectDeleteCallbackPopup.jsx: Löscht das ausgewählte projekt und alle abhängigkeiten in der DB     |
 
-# Hauptserver Berechnungen
+### Hauptserver Berechnungen
 
 | Endpunkt                         | Funktion                                                                 | Verwendung                                                                                           |
 |----------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
@@ -40,12 +40,45 @@ Das Backend umfasst sämtliche serverseitigen Prozesse und Daten. Die zugrundeli
 | POST /notifyCalculationDone     | Wird vom externen Dienst aufgerufen, sobald eine Berechnung abgeschlossen ist. Aktualisiert den internen Status. | Main2.py (Berechnungsserver) : Der zweite Server schickt eine Nachricht an den ersten Server damit dieser weiss die Berechnung ist fertig. |
 | GET /getCalculationStatus       | Gibt zurück, ob die Berechnung für ein bestimmtes Projekt abgeschlossen ist (pending oder done). | CalculateWaitingPopUp.jsx : fragt periodisch ab ob die Berechnung beendet ist.                      |
 
-# Berechnungsserver: Berechnungen
+### Berechnungsserver: Berechnungen
 
 | Endpunkt                         | Funktion                                                                 | Verwendung                                                                                           |
 |----------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
 | POST /calculate                  | Führt eine Routing-Berechnung durch, basierend auf einem Polygon (Projekt-Perimeter) und einem Startpunkt. | Main.py (Hauptserver) : Schickt eine anfrage mit Polygon und Startpunkt sowie Projekt ID an den Berechnungsserver, um die Berechnung zu starten. |
 | GET /test                        | Führt eine Test-Routing-Berechnung mit statischen, vordefinierten Daten aus. | Wird lediglich für Debugging und Testzwecke verwendet.                                               |
+
+# Grundlagedaten
+<a id="grundlagedaten"></a>
+
+| **Name**          | **Herkunft**                          | **Verwendung**                          |
+|--------------------|---------------------------------------|-----------------------------------------|
+| **swissTLM3D**     | Bundesamt für Landestopografie (swisstopo) | Bereitstellung der Strassengeometrie (Linien, Knoten, Topologie) für Routing und Kartenvisualisierung. |
+| **SwissImage**     | Bundesamt für Landestopografie (swisstopo) | Hochaufgelöster Bildhintergrund (Orthofoto) für die Kartenbasis. |
+| **Nominatim** (OpenStreetMap) | OpenStreetMap-Community (nominatim.openstreetmap.org) | Suchfunktion (Geocoding) zur Adress- und Ortsnamenssuche. |
+
+---
+
+## Datenquellen-Details
+
+### swissTLM3D
+- **Format**: Vektordaten (3D)
+- **Aktualität**: Jährliche Updates  
+- **Bezug**: [swisstopo Shop](https://www.swisstopo.admin.ch/)  
+- **Nutzung**: Strassennetz für Routing, Höhendaten für Geländedarstellung.
+
+### SwissImage
+- **Auflösung**: 10 cm (HD), 25 cm (Standard)  
+- **Spektral**: RGB/Infrarot  
+- **Bezug**: [swisstopo Shop](https://www.swisstopo.admin.ch/)  
+- **Nutzung**: Realistische Kartenhintergründe.
+
+### Nominatim (OSM)
+- **API**: OpenStreetMap-basierter Geocoding-Dienst  
+- **Funktion**: Umwandlung von Adressen in Koordinaten (und umgekehrt)  
+- **Nutzung**: Suchfunktion im Frontend.  
+- **Hinweis**: Nutzungsbedingungen beachten (z.B. Attribution).  
+
+
 
 
 ## Datenbank
