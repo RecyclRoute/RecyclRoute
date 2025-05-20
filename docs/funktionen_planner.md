@@ -4,73 +4,45 @@ title: Funktionen Planner
 ---
 # Erklärung der Funktionen von RecyclRoute
 <a id="top"></a>
-In diesem Abschnitt werden die Funktionen und Interaktionen der RecyclRoute-Planner beschrieben.
-
-# Startpage
-<div id="startpage"></div>
-Auf der Startseite muss man sich bereits ein erstesmal entscheiden was man machen möchte. Wenn man Papier- oder Kartonsammlungen organisieren oder deine Route planen möchtest, muss man auf Planner klicken. Wenn du nicht abgeholtes oder falsch deponiertes Material melden möchtest, muss man auf Report klicken. Dann wird man dementsprechend auf die Seite mit den Entsprechenden Seiten geleitet. 
-
-![Startseite](assets/images/Startpage_1.png){: style="max-width: 75%; height: auto;" }
-
-# Funktionen allgemein:
-<div id="funktionenallgemein"></div>
-Folgende vier Funktionen sind sowohl im Report als auch im Planner enthalten:
-
-## Ort Suche
-Damit kann ein spezifischer Ort gesucht und abgerufen werden.
-
-![Suche](assets/GIFs/Suche.gif){: style="max-width: 75%; height: auto;" }
-
-## Reportpunkte des Projektes anzeigen
-Damit kann ein Projekt ausgewählt werden und alle dem Projekt zugeordneten Projektpunkte angezeigt werden.
-
-![Projektpunkte einblenden](assets/GIFs/projektpunkte.gif){: style="max-width: 75%; height: auto;" }
-
-## Aktueller Standort anzeigen
-Mit der Funktion wird die GNss Position des Gerätes abgegriffen, wenn eingeschalten & die Karte Zoom auf diesen Standort und zeigt die Position als Blauen Marker. 
-
-![GNss](assets/GIFs/GNss_Punkt.gif){: style="max-width: 75%; height: auto;" }
-
-## Karte nach Norden ausrichten
-Mit dieser Funktion kann die Karte wieder nach Norden ausgerichtet werden wenn die Karte verdreht ist. 
-
-![Norden](assets/GIFs/north.gif){: style="max-width: 75%; height: auto;" }
+In diesem Abschnitt werden die Funktionen und Interaktionen des RecyclRoute-Planner beschrieben.
 
 # Funktionen Planner:
 <div id="planner"></div>
-Nach dem Klicken auf Planner wird man auf die Planner Seite (grüntöne) weitergeleitet. Auf welcher die Standartfunktionen GNss, Norden der Karte, Anzeigen der Punkte des Projektes sowie das Planen der Route sowie das Managen der Projekte implementiert ist.
+Nach der Wahl der Planer-Page auf der Startpage wird man auf die in Grüntönen gehaltene Planner-Page weitergeleitet. Auf dieser Seite können die Standartfunktionen "Aktuelle Position", " nach Norden ausrichten" und "Layer-Manager" (Punkte eines Projektes anzeigen), ebenfalls genutzt werden. Die Hauptfunktion ist jedoch das Erstellen und Bearbeiten von Projekten und dem dazugehörigen Erstellen von Routen sowie dem Navigieren durch die Route.
 
 ![Startseite Planer](assets/GIFs/planner_page.gif){: style="max-width: 75%; height: auto;" }
 
 ## Projektmanager
-Um den Projektmanager abzurufen, kann auf den Button unten rechts geklickt werden. Sobald dieser gestartet ist sieht man alle Projekte welche in der DB gespeichert sind. Durch klicken auf ein bestimmtes Projekt kommt ein weiteres Popup, welches vier Buttons aufweist und als Titel die Projektbezeichnung enthält.
+Um den Projektmanager aufrufen zu können, muss auf den Button in der Fusszeile unten rechts geklickt werden und es öffnet sich ein neues Popup-Fenster. Hier sieht man alle Projekte, welche in der Datenbank gespeichert sind. Durch Klicken auf ein bestimmtes Projekt öffnet sich ein neues Popup, in dem man die einzelnen Funktionen im ausgewählten Projekt ausführen kann. Insgesamt hat es vier Buttons, die jeweils folgende Funktionen ausführen:
 
-- Route berechnen; damit kann die Route des Projektes neugerechnet werden
-- Routing starten; damit kann man wenn ein Routing vorhanden ist dieses starten
-- Statistiken; damit können Statistiken abgerufen werden
-- Projekt löschen; damit kann das Projekt aus der DB gelöscht werden.
+- Route berechnen - Neue Berechnung der Route
+- Routing starten - Navigation durch eine bestehende Route starten
+- Statistiken - Erstellen von diversen Statistiken über das Projekt
+- Projekt löschen - Das ausgewählte Projekt und die dazugehörigen Reports werden gelöscht
 
-Mit dem kleinen x kann man den Projektmanager wieder schliessen.
-#ToDo
 ![Projektmanager](assets/GIFs/projectmanager.gif){: style="max-width: 75%; height: auto;" }
 
 ### Neues Projekt erstellen
-Im Projektmanager ganz unten gibt es den Button **Neues Projekt erstellen**. Damit kann ein neues Projekt erstellt werden. Es erscheint ein neues Popup, in welchem man den Projektnamen, die Gemeinde, sowie ein Sammeldatum auswählen kann.
+Im Projektmanager ganz unten gibt es den Button **Neues Projekt erstellen**. Hier kann ein neues Projekt erstellt werden. Es erscheint ein neues Popup, in welchem man den Projektnamen, die Gemeinde, sowie ein Sammeldatum eingeben kann. Man kann nur zum nächsten Schritt weitergeleitet werden, wenn man alle Felder ausgefüllt hat. Mit dem Klick auf "Weiter" werden die eingegebenen Werte gespeichert und man wird zur Definition des Polygons (Gebiet der Sammlung) weitergeleitet und die Karte zoomt zur eingegebenen Gemeinde.
 
 ![neues Projekt](assets/GIFs/new_project.gif){: style="max-width: 75%; height: auto;" }
 
 ### Polygon definieren & Startpunkt setzen
-Mit klick auf **Weiter** bestätigt man die Eingaben und man kommt auf die Karte wo man ein Polygon definieren muss welches das ganze Gebiet exakt umschliesst. Mit Doppelklick oder klick auf den Button **Perimeter speichern** bestätigt man die Eingabe. Danach muss man noch der Startpunkt der Routensammlung definieren durch klicken auf einen Standort innerhalb des gewählten Polygons.
+Nun muss auf der Karte ein Polygon gezeichnet werden, welches das ganze gewünschte Gebiet komplett umschliesst. Mit Doppelklick oder Klick auf den Button **Perimeter speichern** bestätigt man die Eingabe und man wird nach Eingabe des Startpunktes für die Route gefragt. Der Startpunkt muss zwingend innerhalb des Polygons definiert werden. Mit Klick auf die Karte wird der Startpunkt direkt gesetzt und die Route wird im Hintergrund berechnet. Während der Berechnung erscheint ein Popup, welches bei erfolgreichem Berechnen verschwindet.
 
 ![Polygon_definieren](assets/GIFs/polygon_definieren.gif){: style="max-width: 75%; height: auto;" }
 
-Anschliessend kommt eine Meldung, dass die Berechnung der Route im Hintergrund passiert und man sobald die Route berechnet wurde weiter geleitet zur Navigation wird. 
-
-### Berechnungsalgorithmus
-<div id="berechnungsalgorithmus"></div>
-Nachfolgend ist der ganze Berechnungsalgorithmus erklärt, wie er aufgebaut ist. Zuerst werden grundlegende Punkte erklärt und anschliessend der Ablauf und die theoretischen Grundlagen dahinter versucht zuerläutern.
+Nachfolgend ist ein Kurzvideo, welches den kompletten Ablauf der Erstellung eines neuen Projekts aufzeigt.
 
 ![Berechnung_alles](assets/GIFs/berechnung.gif){: style="max-width: 75%; height: auto;" }
+
+## Navigationpage
+<div id="navigation"></div>
+Nach der Berechnung kommt man auf die Navigationseite, auf welcher man durch die Navigation der berechneten Route geführt wird. Dabei wird man Schritt für Schritt durch die Navigation geleitet.
+
+Geplant ist auch, dass die Abschnitte nach Status (erledigt, aktueller Abschnitt, als nächster folgend, als übernächster folgend) unterschiedlich eingefärbt werden, damit der Benutzer möglichst einfach durch die Route geführt wird.
+
+![Navigation](assets/GIFs/navigation.gif){: style="max-width: 75%; height: auto;" }
 
 # **Routing- und Optimierungs-Tool für vollständige Wegenetzbefahrung**
 
@@ -84,8 +56,8 @@ Das Tool ist in einem Python-Skript aufgebaut und berechnet automatisiert eine o
 Für die Ausführung des Skripts werden folgende Daten benötigt:
 
 - **Ein JSON**, das das Polygon des Zielgebiets definiert (EPSG:4326)
-- **Eine GeoPackage-Datei**, die mit einem weiteren Skript (Preprocessing) vorbereitet wird und die Geometrien sowie Eigenschaften der Strassenachsen enthält (z.B. SwissTLM3D)
-- **Die Startkoordinaten**, die den Ausgangspunkt der Route festlegen (EPSG:3857, z.B. aus einer Webkarte)
+- **Eine GeoPackage-Datei**, die mit einem weiteren Skript (Preprocessing) vorbereitet wird und die Geometrien sowie Eigenschaften der Strassenachsen enthält (SwissTLM3D)
+- **Die Startkoordinaten**, die den Ausgangspunkt der Route festlegen (EPSG:3857, aus der Webkarte)
 
 ---
 
@@ -102,13 +74,13 @@ Das Skript erzeugt verschiedene Dateien, die direkt verwendet werden können ode
 
 ## Verwendete Module
 
-| Kategorie         | Bibliotheken/Technologien          | Verwendungszweck                     |
-|-------------------|------------------------------------|---------------------------------------|
-| Geodaten          | geopandas, shapely, pyproj         | Geometrieoperationen, Koordinatentransformation |
-| Graphentheorie    | networkx, scipy.spatial.cKDTree    | Netzwerkaufbau, Knotenanalyse         |
-| Optimierung       | ortools (Google OR-Tools)          | TSP-Lösung, Matching-Algorithmen      |
-| Routing           | requests, Valhalla (lokal)         | Routing-Anfragen                      |
-| Allgemein         | numpy, json, os                    | Datenverarbeitung, Dateioperationen   |
+| Kategorie         | Bibliotheken/Technologien             | Verwendungszweck                                |
+|-------------------|---------------------------------------|-------------------------------------------------|
+| Geodaten          | geopandas, shapely, pyproj            | Geometrieoperationen, Koordinatentransformation |
+| Graphentheorie    | networkx, scipy.spatial.cKDTree       | Netzwerkaufbau, Knotenanalyse                   |
+| Optimierung       | ortools (Google OR-Tools)             | TSP-Lösung, Matching-Algorithmen                |
+| Routing           | requests, Valhalla (lokal)            | Routing-Anfragen                                |
+| Allgemein         | numpy, json, os                       | Datenverarbeitung, Dateioperationen             |
 
 ---
 
@@ -600,17 +572,6 @@ Steuert den gesamten Routing-Workflow von der Eingabe bis zur Ausgabe.
 
 **Output:**  
 Alle Routing- und Navigationsdaten als Dateien im Output-Ordner
-
----
-
-
-## Navigationpage
-<div id="navigation"></div>
-Nach der Berechnung kommt man auf die Navigationseite, auf welcher man durch die Navigation der berechneten Route geführt wird. Dabei wird man step by step durch die Navigation geleitet.
-
-Geplant ist auch das die Abschnitte, erledigt, aktueller Abschnitt, als nächster folgend, als übernächster folgend, unterschiedlich eingefärbt werden, so das ein klarerer Überblick vorhanden ist.
-
-![Navigation](assets/GIFs/navigation.gif){: style="max-width: 75%; height: auto;" }
 
 [↑ Zurück zum Beginn der Webseite](#top) 
 

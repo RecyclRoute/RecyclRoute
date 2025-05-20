@@ -6,7 +6,7 @@ title: Ausblick
 
 # Erweiterungsmöglichkeiten
 <div id="erweiterungsmöglichkeiten"></div>
-Im folgenden Abschnitt werden für gewisse Seiten und Funktionen Verbesserungs- und Erweiterungsvorschläge genannt, die Vorteile für die User Experience bieten oder die Funktionen der Applikation RecyleRoute erweitern.
+Im folgenden Abschnitt werden für gewisse Seiten und Funktionen Verbesserungs- und Erweiterungsvorschläge genannt, die Vorteile für die User Experience bieten oder die Funktionen der Applikation RecylRoute erweitern.
 
 ### Allgemein
 <div id="allgemein"></div>
@@ -26,13 +26,13 @@ In der Reportpage sollen möglichst keine weiteren Features implementiert werden
 
 ### Routenberechnung
 <div id="routenberechnung"></div>
-Die Erstellung/Installation von dem Valhalla Docker Server könnte besser dokumentiert werden damit, die Routingfuntkionen auf verschiedenen Rechner verwendet werden kann.
+Die Erstellung/Installation von dem Valhalla Docker Server könnte besser dokumentiert werden damit, die Routingfunktionen auf verschiedenen Rechner verwendet werden kann.
 Die vom Backend berechnete Route könnte in die Datenbank geschrieben werden anstatt wie zum heutigen Stand in temporäre Dateien damit diese Projektübergreifend verfügbar sind.
 Der Userpfad zum eine Neues Projekt zu erstellen und direkt eine Route zu berechnen könnte optimiert werden damit die Nutzenden weniger warten müssen. Dies setzt vor allem Optimierung seitens des Servers in der Ausführung der Routenberechnung vor.
 
 ### Navigation
 <div id="navigation"></div>
-Die Navigation ist momentan nur mit statischen Testdaten umgesetzt. Dies ist darauf zurückzuführen dass die Routenberechnung noch nicht vollständig ausgeführt werden kann und dass die berechnete Route noch nicht in die Datenbank gespeichert wird. Aufgrund vom verwendeten Algorithmus in Valhalla wird nach jedem Strassenabschnitt das Routing beendet und eine neue Route wird gestartet. Somit sind die erhaltenen und dargestellten Befehle noch nicht optimal. Zudem ist die Farbliche Unterscheidung zwischen dem aktiven Abschnitt, den drei nächsten Abschnitten, den weiteren noch nicht erledigten Abschnitten und den Erledigten Abschnitten noch nicht verfügbar. Dies liegt ebenfalls daran das die Route immer wieder unterbrochen wird. 
+Die Navigation ist momentan nur mit statischen Testdaten umgesetzt. Dies ist darauf zurückzuführen, dass die Routenberechnung noch nicht vollständig ausgeführt werden kann und dass die berechnete Route noch nicht in die Datenbank gespeichert wird. Aufgrund vom verwendeten Algorithmus in Valhalla wird nach jedem Strassenabschnitt das Routing beendet und eine neue Route wird gestartet. Somit sind die erhaltenen und dargestellten Befehle noch nicht optimal. Zudem ist die Farbliche Unterscheidung zwischen dem aktiven Abschnitt, den drei nächsten Abschnitten, den weiteren noch nicht erledigten Abschnitten und den Erledigten Abschnitten noch nicht verfügbar. Dies liegt ebenfalls daran das die Route immer wieder unterbrochen wird. 
 
 
 [↑ Zurück zum Beginn der Webseite](#top) 

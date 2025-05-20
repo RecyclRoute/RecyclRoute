@@ -13,7 +13,7 @@ Die Geodateninfrastruktur von RecyclRoute besteht aus zwei Backends, einem Front
 ## Backend
 <a id="backend"></a>
 
-Das Backend umfasst sämtliche serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript (API-Abfragen) automatisiert mit Geodaten und Routen befüllt. Das Backend interagiert dabei direkt mit der PostgreSQL/PostGIS-Datenbank um neue Informationen abzuspeichern, um bestehende Informationen abzufragen oder um bestehende Informationen zu löschen. Das Backend ist in 3 verschiedene Server unterteilt. Der Hauptserver wird auf einem RaspberryPi gehostet und umfasst alle Anfragen an die Datenbank sowie an den zweiten Server. Da der RaspberryPi nur eine geringe Rechenleistung bietet, wird ein zweiter Server auf einem Laptop gehostet, dieser umfasst den gesamten Berechnungsprozess. Da der zweite Server auf eine API-Schnitstelle vom Repository Valhalla zugreifen muss, wird ein Docker-Container mit entsprechendem Image von Valhalla ebenfalls auf einem Laptop gehostet. 
+Das Backend umfasst sämtliche serverseitigen Prozesse und Daten. Die zugrundeliegende PostgreSQL/PostGIS-Datenbank wird über ein Python-Skript (API-Abfragen) automatisiert mit Geodaten und Routen befüllt. Das Backend interagiert dabei direkt mit der PostgreSQL/PostGIS-Datenbank, um neue Informationen abzuspeichern, um bestehende Informationen abzufragen oder um bestehende Informationen zu löschen. Das Backend ist in 3 verschiedene Server unterteilt. Der Hauptserver wird auf einem RaspberryPi gehostet und umfasst alle Anfragen an die Datenbank sowie an den zweiten Server. Da der RaspberryPi nur eine geringe Rechenleistung bietet, wird ein zweiter Server auf einem Laptop gehostet, dieser umfasst den gesamten Berechnungsprozess. Da der zweite Server auf eine API-Schnittstelle vom Repository Valhalla zugreifen muss, wird ein Docker-Container mit entsprechendem Image von Valhalla ebenfalls auf einem Laptop gehostet. 
 
 ### Hauptserver Punktverwaltung
 
@@ -126,14 +126,14 @@ Der [Node Package Manager (npm)](https://www.npmjs.com/) wird verwendet, um alle
 
 Das Design von RecyclRoute ist bewusst **minimalistisch und funktional** gehalten. Die Farben Grün, Beige und Dunkelbraun spiegeln das Thema Nachhaltigkeit und Orientierung wider. Buttons und Kartenlayer sind einheitlich gestaltet und reagieren auf Mausbewegungen durch Hover- und Fokuszustände. Die Plannerpage und die Reportpage wurden bewusst farblich getrennt, um dem User bewusst zu machen, dass dies zwei unterschiedliche Funktionen für unterschiedliche Anwender sind.
 
-Alle UI-Komponenten, wie auch Dropdowns und andere interaktive Felder wurden manuell mit [HTML](https://developer.mozilla.org/de/docs/Web/HTML) und [CSS](https://developer.mozilla.org/de/docs/Web/CSS) gestaltet. Es wurde bewusst auf die Verwendung von Material UI verzichtet, um so die gewünschten Visualisierungen besser umsezten zu können und die Komponenten von Null auf aufgebaut werden konnten.
+Alle UI-Komponenten, wie auch Dropdowns und andere interaktive Felder wurden manuell mit [HTML](https://developer.mozilla.org/de/docs/Web/HTML) und [CSS](https://developer.mozilla.org/de/docs/Web/CSS) gestaltet. Es wurde bewusst auf die Verwendung von Material UI verzichtet, um so die gewünschten Visualisierungen besser umsetzen zu können und die Komponenten von Null auf aufgebaut werden konnten.
 
 ### UX Design
 <div id="ux-design"></div>
 
 Im Zentrum der **User Experience (UX)** steht eine **intuitive Nutzerführung**: Points of Interest (POI) oder Projekte sowie die dazugehörige Navigation lassen sich einfach erkunden, bearbeiten und aktualisieren. Die Anwendung wurde mit dem durchspielen eines gewöhnlichen Userpfades auf eine einfache Bedienbarkeit überprüft und optimiert.
 
-Das gesamte Frontend wurde so programmiert, dass die meisten Aktionen in möglichst wenigen Klicks und mit einem geleiteten Pfad angewendet werden können, um entweder einen POI abzusetzen oder ein neues Projekt zu erstellen bis hin zur Routennavigaiton.
+Das gesamte Frontend wurde so programmiert, dass die meisten Aktionen in möglichst wenigen Klicks und mit einem geleiteten Pfad angewendet werden können, um entweder einen POI abzusetzen oder ein neues Projekt zu erstellen bis hin zur Routennavigation.
 
 ---
 

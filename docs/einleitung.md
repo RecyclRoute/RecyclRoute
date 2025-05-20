@@ -6,11 +6,11 @@ title: Einleitung
 
 # Einleitung
 
-Diese GitHub-Page widmet sich der Geodateninfrastruktur RecyclRoute. Das effiziente Einsammeln von Papier und Karton stellt für die Vereine ein Mittel dar, um Geld in die Vereinskasse zu bekommen. Jedoch ist es in den letzten Jahren immer schwieriger geworden, genügend freiwillige Helfende zu gewinnen. Daher ist eine effiziente Planung von Sammelrouten für Papier und Karton, um ungünstige Routenführungen sowie vermeidbare Emissionen, Zeitverluste und unnötige Kosten zu mindern, von immer grösserer Bedeutung.
+Diese GitHub-Page widmet sich der Geodateninfrastruktur RecyclRoute. Das effiziente Einsammeln von Papier und Karton stellt für Vereine ein Mittel dar, um Geld in die Vereinskasse zu bekommen. Jedoch ist es in den letzten Jahren immer schwieriger geworden, genügend freiwillige Helfende zu gewinnen. Daher ist eine effiziente Planung von Sammelrouten für Papier und Karton, um ungünstige Routenführungen sowie vermeidbare Emissionen, Zeitverluste und unnötige Kosten zu mindern, von immer grösserer Bedeutung.
 
-RecyclRoute bietet eine Lösung, um Sammelrouten mithilfe geografischer Daten zu visualisieren und zu analysieren. Ähnliche bestehende Anwendungen sind uns soweit nicht bekannt, und es sticht durch die Möglichkeit hervor, in einem gesamten Gebiet alle gemäss SWISS TLM3D befahrbaren Strassen mindestens einmal zu durchfahren. Durch eine interaktive Webkarte, die GIS-Komponenten, Routing und Visualisierung kombiniert, kann RecyclRoute Vorteile bieten:
+RecyclRoute bietet eine Lösung, um Sammelrouten mithilfe geografischer Daten zu visualisieren und zu analysieren. Ähnliche, bestehende Anwendungen sind soweit nicht bekannt. RecyclRoute sticht durch die Möglichkeit in einem Gebiet alle gemäss SWISS TLM3D befahrbaren Strassen mindestens einmal zu durchfahren hervor. Durch eine interaktive Webkarte, die GIS-Komponenten, Routing und Visualisierung kombiniert, kann RecyclRoute Vorteile bieten:
 
-- Sammelstellen räumlich erfassen: Visualisiere Standorte von Sammelstellen direkt auf einer interaktiven Karte.
+- Sammelstellen räumlich erfassen: Visualisiere Standorte, an denen Recyclinggüter falsch deponiert, nicht abgeholt oder mit Fremdstoffen versehen sind auf einer interaktiven Karte.
 
 - Routen nachvollziehen: Sieh dir die berechneten Routen für Sammelgebiete an und navigiere dich durch deine Sammelroute.
 
