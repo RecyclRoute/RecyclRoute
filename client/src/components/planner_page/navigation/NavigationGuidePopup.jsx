@@ -3,19 +3,34 @@ import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import "./navigationpage.css";
 
-export const NavigationGuidePopup = ({ currentIndex }) => {
+export const NavigationGuidePopup = (props) => {
   const navigate = useNavigate();
   const [instructions, setInstructions] = useState([]);
 
   useEffect(() => {
-    fetch("/data/navigation.geojson")
-      .then((res) => res.json())
-      .then((geojson) => {
+    const projname=props.ActiveProject.name
+
+  fetch(`http://localhost:8000/getRoutingByProject/${projname}`)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Failed to fetch routing data");
+      }
+      return res.json();
+    })
+    .then((data) => {
+      const geojson = data.routing_data;
+
+      if (geojson && geojson.features) {
         const fetchedInstructions = geojson.features.map((f) => f.properties);
         setInstructions(fetchedInstructions);
-      })
-      .catch((err) => console.error("Fehler beim Laden der Anweisungen:", err));
-  }, []);
+      } else {
+        console.warn("No features in routing data");
+        setInstructions([]);
+      }
+    })
+    .catch((err) => console.error("Fehler beim Laden der Routing-Daten:", err));
+}, []);
+
 
   const CloseButtonClick = () => {
     navigate('/planner');
@@ -71,7 +86,7 @@ export const NavigationGuidePopup = ({ currentIndex }) => {
   };
   
 
-  const current = instructions[currentIndex] || {};
+  const current = instructions[props.currentIndex] || {};
   const { icon, text } = getDirectionIconByValhallaType(current.type);
 
   const finalInstruction = current.instruction || text;
@@ -89,7 +104,7 @@ export const NavigationGuidePopup = ({ currentIndex }) => {
         <div className="mt-4 flex flex-col items-center">
           <AnimatePresence mode="wait">
             <motion.div
-              key={currentIndex}
+              key={props.currentIndex}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}

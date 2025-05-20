@@ -5,7 +5,7 @@ import { NavigationpageHeader } from "./navigationpage_header_footer/navigationp
 import { NavigationMap } from "./Navigation_map_view.jsx";
 import { NavigationGuidePopup } from "./NavigationGuidePopup.jsx";
 
-export const NavigationPage = () => {
+export const NavigationPage = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [routeLength, setRouteLength] = useState(0);
 
@@ -27,7 +27,7 @@ export const NavigationPage = () => {
       <div style={{ zIndex: 0, height: "100%" }}>
         <NavigationMap currentIndex={currentIndex} onRouteLoad={handleRouteLength} />
       </div>
-      <NavigationGuidePopup currentIndex={currentIndex} />
+      <NavigationGuidePopup currentIndex={currentIndex} ActiveProject={props.ActiveProject} setActiveProject={props.setActiveProject}/>
       <NavigationpageFooter handleNext={handleNext} handlePrev={handlePrev} />
     </div>
   );
