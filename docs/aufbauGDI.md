@@ -105,6 +105,7 @@ Die Daten werden via den Hauptserver im Backend abgefragt und im Frontend genutz
 
 Das Frontend von RecyclRoute ist eine interaktive Webanwendung, die auf [React](https://react.dev/) und [MapLibre](https://maplibre.org/) basiert. Es besteht aus mehreren Komponenten:
 
+
 ### React
 
 [React](https://react.dev/) dient dem Aufbau der Benutzeroberfläche. Es wird verwendet, um interaktive Elemente wie die Kartenansicht, Navigation, Suchfunktionen, Eingabeboxen und Infoboxen umzusetzen. Der Zustand der Anwendung (z. B. „neues Projekt erstellen“) wird komponentenbasiert verwaltet und mit Popup-Fenstern angesteuert.
@@ -116,6 +117,9 @@ Der [Node Package Manager (npm)](https://www.npmjs.com/) wird verwendet, um alle
 ### MapLibre
 
 [MapLibre](https://maplibre.org/) ist für die Darstellung und Interaktion mit der Karte zuständig. Layer aus der Datenbank werden via API (WMS/WFS) eingebunden, Routen dargestellt, Polygone und Punkte erfasst und Benutzerinteraktionen ermöglicht. Die Abfrage von Features (z. B. aktiviertes Projekt / Layer darstellen) erfolgt dynamisch.
+
+## Aufbau Frontend
+![Frontend_Aufbau](assets/Images/dependency-graph.jpg){: style="max-width: 75%; height: auto;" }
 
 ### UI Design
 <div id="ui-design"></div>
