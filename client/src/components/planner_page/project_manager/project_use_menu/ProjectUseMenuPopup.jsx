@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../../plannerpage.css"
+import { useNavigate } from 'react-router-dom';
 
 export const ProjectUseMenuPopup = (props) => { 
+  const navigate = useNavigate();
 
 
   const CloseButtonClick = () => {
@@ -38,7 +40,7 @@ export const ProjectUseMenuPopup = (props) => {
           <button onClick={console.log("der button wurde geklickt")}>
             Route Berechnen
           </button>
-          <button onClick={console.log("der button wurde geklickt")}>
+          <button onClick={() => {navigate('/navigation')}}>
             Routing Starten
           </button>
           <button onClick={StatisticButtonClick}>

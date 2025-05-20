@@ -421,3 +421,35 @@ def delete_project(project_id: int):
         cur.close()
         conn.close()
 
+
+@app.get("/getRoutingByProject/{project_name}")
+def get_routing_by_project(project_name: str):
+    conn = get_db_connection()
+    cur = conn.cursor(cursor_factory=RealDictCursor)
+
+    try:
+        # Query the routing table using the project name
+        cur.execute("""
+            SELECT routing_data, created_at
+            FROM routing
+            WHERE project_name = %s
+            ORDER BY created_at DESC
+            LIMIT 1
+        """, (project_name,))
+        
+        result = cur.fetchone()
+
+        if not result:
+            raise HTTPException(status_code=404, detail=f"No routing data found for project '{project_name}'")
+
+        return {
+            "project_name": project_name,
+            "routing_data": result["routing_data"],
+            "created_at": result["created_at"].isoformat() if result["created_at"] else None
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error retrieving routing data: {e}")
+    finally:
+        cur.close()
+        conn.close()
