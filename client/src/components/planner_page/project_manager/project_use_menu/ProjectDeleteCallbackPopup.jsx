@@ -45,7 +45,7 @@ export const ProjectDeleteCallbackPopup = (props) => {
     <div className="PlannerPopup-overlay">
       <div className="PlannerPopup-content">
         <div>
-          <div>Sind Sie sicher dass sie das Projekt [NAME] löschen möchten?</div>
+          <div>Sind Sie sicher dass sie das Projekt {props.ActiveProject.name} löschen möchten?</div>
           <button
           onClick={SubmitDeleteProject}>
             Ja löschen
