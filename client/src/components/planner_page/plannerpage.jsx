@@ -20,6 +20,7 @@ import { MapLayerPopup } from "../map/MapLayerPopup.jsx";
 import { CalculateWaitingPopUp } from "./project_manager/new_project/CalculateWaitingPopUp.jsx";
 import { ProjectStatisticsPopup } from "./project_manager/project_use_menu/ProjectStatisticsPopup.jsx";
 import { ProjectDeleteCallbackPopup } from"./project_manager/project_use_menu/ProjectDeleteCallbackPopup.jsx";
+import PolygonOverlay from "./project_manager/new_project/Polygonoverlay.jsx";
 
 export const PlannerPage = (props) => {
   const [ProjectManagerMode, setProjectManagerMode] = useState(false);
@@ -155,6 +156,8 @@ if (data.status === "done") {
   const handleNavigationToPage = () => {
     navigate("/navigation");
   };
+
+  
   
   const sendPolygonToBackend = async (polygonGeoJSON) => {
     try {
@@ -167,6 +170,7 @@ if (data.status === "done") {
       if (!response.ok) throw new Error('Fehler beim Routenberechnen');
       const result = await response.json();
       alert(`Projekt "${ProjectName}" gespeichert.`);
+      props.setActiveProject(result.project);
       setPolygonMode(false);
       setCreateStartPointMode(true);
       alert("Bitte klicken Sie auf einen Punkt innerhalb des Polygons, um den Startpunkt zu setzen.");
@@ -193,6 +197,7 @@ if (data.status === "done") {
   
     const handleStartPointClick = (e) => {
       const { lng, lat } = e.lngLat;
+      console.log(polygonPoints)
   
       if (isPointInsidePolygon(lng, lat, polygonPoints)) {
         // Remove old marker if exists
@@ -354,10 +359,17 @@ if (data.status === "done") {
         
       )}
 
-      {CreateStartPointMode &&(
-        <StartPointInstructionsPopup/>
-        
-      )}
+      {CreateStartPointMode && (
+  <>
+    <StartPointInstructionsPopup />
+    <PolygonOverlay 
+      map={map} 
+      CreateStartPointMode={CreateStartPointMode} 
+      ActiveProject={props.ActiveProject} 
+    />
+  </>
+)}
+
 
       {ProjectManagerMode && (
         <ProjectManagerPopup
@@ -414,6 +426,12 @@ if (data.status === "done") {
           setProjects={setProjects}
           polygonMode={polygonMode}
           setPolygonMode={setPolygonMode}
+          CreateStartPointMode={CreateStartPointMode}
+          setCreateStartPointMode={setCreateStartPointMode}
+          setPolygonPoints={setPolygonPoints}
+          polygonPoints={polygonPoints}
+          ProjectName={ProjectName}
+          setProjectName={setProjectName}
         />
       )}
 

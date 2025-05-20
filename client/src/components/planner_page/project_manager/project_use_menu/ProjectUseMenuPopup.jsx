@@ -37,7 +37,7 @@ export const ProjectUseMenuPopup = (props) => {
           </button>
         </div>
         <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "10px",}}>
-          <button className="ProjectManagerPopup-Button" onClick={() => {props.setPolygonMode(true);props.setProjectUseMenuMode(false);}}>
+          <button className="ProjectManagerPopup-Button" onClick={() => {props.setCreateStartPointMode(true);props.setProjectUseMenuMode(false);console.log(props.ActiveProject.geometry.coordinates[0]);props.setPolygonPoints(props.ActiveProject.geometry.coordinates[0]);props.setProjectName(props.ActiveProject.name)}}>
             Route Berechnen
           </button>
           <button className="ProjectManagerPopup-Button" onClick={() => {navigate('/navigation')}}>

@@ -236,10 +236,18 @@ def add_project(project: Project):
         conn.close()
 
         return JSONResponse(content={
-            "message": "Project added successfully",
-            "area": area,
-            "route": list(shapely_polygon.exterior.coords)
-        })
+    "message": "Project added successfully",
+    "project": {
+        "name": name,
+        "gemeindename": gemeindename,
+        "date": date.isoformat(),
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [list(shapely_polygon.exterior.coords)]
+        }
+    }
+})
+
 
     except Exception as e:
         logging.error(f"Error adding project: {e}")
