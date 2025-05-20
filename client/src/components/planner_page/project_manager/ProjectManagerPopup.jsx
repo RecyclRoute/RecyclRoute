@@ -5,6 +5,11 @@ export const ProjectManagerPopup = (props) => {
 
 
   const TableProjectClick = (project) => {
+    props.setProjectInfo({
+  ProjectName: project.name,
+  Location: project.gemeindename,
+  Datum: project.date
+});
     props.setActiveProject(project);
     props.setProjectUseMenuMode(true);
     props.setProjectManagerMode(false);

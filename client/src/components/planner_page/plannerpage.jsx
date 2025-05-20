@@ -63,6 +63,8 @@ export const PlannerPage = (props) => {
   setCalculationStarted(true);
   const coordinates = [lngLat.lng, lngLat.lat];
   console.log("Startpunkt gesetzt:", coordinates);
+  setCreateStartPointMode(false);
+  setIsLoading(true);
     if (calculationCompleted && !userConfirmedRecalculation) {
       const userWantsToRecalculate = window.confirm(
         "Dieses Projekt wurde bereits berechnet. Möchten Sie die Berechnung erneut starten?"
@@ -75,9 +77,6 @@ export const PlannerPage = (props) => {
     }
 
     
-
-    setCreateStartPointMode(false);
-    setIsLoading(true);
     sendCalculationRequestToBackend(ProjectName, coordinates);
   };
 
@@ -387,6 +386,8 @@ if (data.status === "done") {
         setProjectUseMenuMode={setProjectUseMenuMode}
         polygonMode={polygonMode}
         setPolygonMode={setPolygonMode}
+        projectInfo={projectInfo}
+        setProjectInfo={setProjectInfo}
         />
       )}
 
@@ -432,6 +433,8 @@ if (data.status === "done") {
           polygonPoints={polygonPoints}
           ProjectName={ProjectName}
           setProjectName={setProjectName}
+          projectInfo={projectInfo}
+          setProjectInfo={setProjectInfo}
         />
       )}
 
