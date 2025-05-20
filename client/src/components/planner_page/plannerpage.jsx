@@ -127,10 +127,14 @@ export const PlannerPage = () => {
     }
 
     const data = await response.json();
-    console.log("Antwort vom Backend:", data);
+if (data.status === "done") {
+  setIsLoading(false);
+  navigate("/navigation");
+}
+
   }catch (error) {
     console.error("Anfrage fehlgeschlagen:", error);
-    alert("Die Berechnung konnte nicht gestartet werden.");
+    alert("Die Berechnung wurde abgeschlossen, öffnen Sie die Navigation via Projectmanager");
   }
 };
 
@@ -289,39 +293,6 @@ export const PlannerPage = () => {
       alert("Fehler beim Geocoding.");
     }
   };
-useEffect(() => {
-  if (!projectInfo?.ProjectName) return;
-
-  const socket = new WebSocket(`ws://localhost:8000/ws/${projectInfo.ProjectName}`);
-
-  socket.onopen = () => {
-    console.log("📡 WebSocket verbunden");
-    socket.send("hello"); // optional
-  };
-
-  socket.onmessage = (event) => {
-    const data = JSON.parse(event.data);
-    console.log("📬 WebSocket-Nachricht empfangen:", data);
-
-    if (data.status === "done" && data.project === projectInfo.ProjectName) {
-      setIsLoading(false);
-      alert(`✅ Berechnung für Projekt "${data.project}" abgeschlossen.`);
-    }
-  };
-
-  socket.onclose = () => {
-    console.log("🔌 WebSocket getrennt");
-  };
-
-  socket.onerror = (error) => {
-    console.error("❌ WebSocket Fehler:", error);
-  };
-
-  return () => {
-    socket.close();
-  };
-}, [projectInfo?.ProjectName]);
-
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>

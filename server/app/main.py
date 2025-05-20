@@ -6,15 +6,12 @@ import psycopg2
 import psycopg2.extras
 from datetime import datetime
 import base64
-from shapely.geometry import shape
 import logging
-import json
 from pydantic import BaseModel
 from typing import List
 from shapely.geometry import Polygon, mapping
 from fastapi.responses import JSONResponse
 import httpx
-from typing import List, Literal
 
 
 
@@ -79,9 +76,6 @@ def get_point_types():
 
 
 # Endpoint to get points per project from the database
-from fastapi import FastAPI
-from psycopg2.extras import RealDictCursor
-import json
 
 @app.get("/getPointsByProject/{project_id}")
 def get_points_by_project(project_id: int):
@@ -263,8 +257,6 @@ def get_projects():
         cur.execute("SELECT id, name, date, gemeindename, ST_AsGeoJSON(perimeter) FROM project")
         rows = cur.fetchall()
 
-        print("Gefundene DB-Zeilen:", rows)
-
         projects = []
         for row in rows:
             project = {
@@ -330,12 +322,11 @@ async def call_calculate(request: Request, project_name: str):
                 response = await client.post("http://localhost:7999/calculate", json=payload)
                 response.raise_for_status()
                 try:
-                    return {"calculate_response": response.json()}
+                    calculate_response = response.json()
+                    return {"calculate_response": calculate_response}
                 except Exception as decode_error:
                     logging.error(f"⚠️ JSON-Fehler: {decode_error}")
                     return {"calculate_response": response.text}
-                logging.error(f"❌ HTTP-Fehler von 7999: {exc.response.status_code} – {exc.response.text}")
-                raise HTTPException(status_code=exc.response.status_code, detail=f"HTTP error: {exc.response.text}")
             except httpx.RequestError as exc:
                 logging.error(f"❌ Request-Fehler zu 7999: {exc}")
                 raise HTTPException(status_code=500, detail=f"Request error: {exc}")
@@ -377,10 +368,10 @@ async def add_routing(request: Request):
         # Assuming you have a table like 'routing' with columns: id, project_id, routing_data (jsonb), created_at
         cur.execute(
             """
-            INSERT INTO routing (project_id, routing_data, created_at)
-            VALUES (%s, %s, NOW())
+            INSERT INTO routing (id, project_name, routing_data, created_at)
+            VALUES (%s, %s, %s, NOW())
             """,
-            (project_id, json.dumps(routing_result))
+            (project_id, project_name, json.dumps(routing_result))
         )
         conn.commit()
 
@@ -394,17 +385,17 @@ async def add_routing(request: Request):
     return {"message": "Routing data saved successfully", "project_id": project_id}
 
 
-@app.post("/notifyCalculationDone")
-async def notify_calculation_done(data: dict):
-    project_name = data.get("project_name")
-    print(f"✔️ Berechnung für Projekt '{project_name}' erfolgreich abgeschlossen.")
-    project_status[project_name] = "done"
-    return {"message": "Benachrichtigung empfangen"}
+# @app.post("/notifyCalculationDone")
+# async def notify_calculation_done(data: dict):
+#     project_name = data.get("project_name")
+#     print(f"✔️ Berechnung für Projekt '{project_name}' erfolgreich abgeschlossen.")
+#     project_status[project_name] = "done"
+#     return {"message": "Benachrichtigung empfangen"}
 
-@app.get("/getCalculationStatus")
-def get_calculation_status(project_name: str):
-    status = project_status.get(project_name, "pending")
-    return {"project_name": project_name, "status": status}
+# @app.get("/getCalculationStatus")
+# def get_calculation_status(project_name: str):
+#     status = project_status.get(project_name, "pending")
+#     return {"project_name": project_name, "status": status}
 
 @app.delete("/deleteProject/{project_id}")
 def delete_project(project_id: int):
