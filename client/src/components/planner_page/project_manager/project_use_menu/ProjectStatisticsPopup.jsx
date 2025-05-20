@@ -9,14 +9,17 @@ export const ProjectStatisticsPopup = (props) => {
   };
 
   return (
-    <div className="PlannerPopup-overlay">
-      <div className="PlannerPopup-content">
-        <div className="flex justify-between items-center mb-4">
-          <div>Wir arbeiten daran Ihnen möglichst rasch weitere Funktionen bieten zu können</div>
-          <button className="bg-cyan-800 text-white hover:bg-cyan-700 px-4 py-2 rounded-full"
-          onClick={GoBackToUseMenu}>
+    <div className="ProjectManagerPopup-overlay">
+      <div className="ProjectManagerPopup-content">
+        <div>
+          <div style={{marginBottom: "10px"}}>Wir arbeiten daran Ihnen möglichst rasch weitere Funktionen bieten zu können</div>
+          <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "10px",}}>
+          <button
+            className="ProjectManagerPopup-Button"
+            onClick={GoBackToUseMenu}>
             Zurück
           </button>
+          </div>
         </div>
       </div>
     </div>

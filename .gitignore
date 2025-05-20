@@ -49,3 +49,4 @@ valhalla_docker
 polygon.geojson
 routing-valhalla.zip
 valhalla_custom_image.tar
+node_modules

@@ -8,7 +8,7 @@ export const SavePolygonPopup = ({finishPolygon}) => {
     <div className="addpolygon-overlay">
       <div className="addpolygon-content">
         <div className="mt-4 flex justify-center">
-          <button onClick={finishPolygon}>
+          <button className="ProjectManagerPopup-Button" onClick={finishPolygon}>
             Perimeter speichern
           </button>
         </div>

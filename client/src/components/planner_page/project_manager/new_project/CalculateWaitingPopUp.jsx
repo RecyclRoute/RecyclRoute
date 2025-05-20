@@ -21,9 +21,9 @@ export const CalculateWaitingPopUp = ({ projectName, setIsLoading }) => {
       alignItems: "center"
     }}>
       <div style={{
-        backgroundColor: "white",
+        backgroundColor: "#F4F7F5",
+        outlineColor: "#273028",
         padding: "30px 40px",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
         textAlign: "center"
       }}>
         <h2 style={{ marginBottom: "10px" }}>Route wird berechnet</h2>
