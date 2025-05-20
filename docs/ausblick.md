@@ -40,6 +40,9 @@ Die Navigation ist momentan nur mit statischen Testdaten umgesetzt. Dies ist dar
 
 <div style="display: flex; justify-content: space-between;">
   <div>
-    <a href="aufbauGDI.html">← Aufbau GDI/a>
+    <a href="installation.html">← Installation</a>
+  </div>
+  <div>
+    <a href="funktionen_planner.html">Funktionen Planner →</a>
   </div>
 </div>

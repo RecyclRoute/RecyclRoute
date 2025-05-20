@@ -29,6 +29,6 @@ In den folgenden Kapiteln werden alle Funktionen, der Aufbau der Geodateninfrast
     <a href="index.html">← Startseite</a>
   </div>
   <div>
-    <a href="installation.html">Erklärung der Installation der Anwendung →</a>
+    <a href="funktionen_planner.html">Funktionen Planner →</a>
   </div>
 </div>

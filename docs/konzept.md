@@ -185,9 +185,6 @@ Aus diversen Gründen wurden verschiedene Details, welche im Konzept überlegt w
 
 <div style="display: flex; justify-content: space-between;">
   <div>
-    <a href="installation.html">← Erklärung der Installation</a>
-  </div>
-  <div>
-    <a href="funktionen.html">Erklärung der Funktionen →</a>
+    <a href="ausblick.html">← Erweiterungsmöglichkeiten</a>
   </div>
 </div>

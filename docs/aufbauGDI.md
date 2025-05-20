@@ -62,14 +62,14 @@ Das Backend umfasst sämtliche serverseitigen Prozesse und Daten. Die zugrundeli
 
 ### swissTLM3D
 - **Format**: Vektordaten (3D)
-- **Aktualität**: Jährliche Updates  
-- **Bezug**: [swisstopo Shop](https://www.swisstopo.admin.ch/)  
+- **Bezug**: [swisstopo](https://www.swisstopo.admin.ch/de/landschaftsmodell-swisstlm3d)  
 - **Nutzung**: Strassennetz für Routing, Höhendaten für Geländedarstellung.
 
 ### SwissImage
+- **Format**: Rasterdaten
 - **Auflösung**: 10 cm (HD), 25 cm (Standard)  
 - **Spektral**: RGB/Infrarot  
-- **Bezug**: [swisstopo Shop](https://www.swisstopo.admin.ch/)  
+- **Bezug**: [swisstopo](https://www.swisstopo.admin.ch/de/orthobilder-swissimage-10-cm)  
 - **Nutzung**: Realistische Kartenhintergründe.
 
 ### Nominatim (OSM)
@@ -105,6 +105,7 @@ Die Daten werden via den Hauptserver im Backend abgefragt und im Frontend genutz
 
 Das Frontend von RecyclRoute ist eine interaktive Webanwendung, die auf [React](https://react.dev/) und [MapLibre](https://maplibre.org/) basiert. Es besteht aus mehreren Komponenten:
 
+
 ### React
 
 [React](https://react.dev/) dient dem Aufbau der Benutzeroberfläche. Es wird verwendet, um interaktive Elemente wie die Kartenansicht, Navigation, Suchfunktionen, Eingabeboxen und Infoboxen umzusetzen. Der Zustand der Anwendung (z. B. „neues Projekt erstellen“) wird komponentenbasiert verwaltet und mit Popup-Fenstern angesteuert.
@@ -116,6 +117,9 @@ Der [Node Package Manager (npm)](https://www.npmjs.com/) wird verwendet, um alle
 ### MapLibre
 
 [MapLibre](https://maplibre.org/) ist für die Darstellung und Interaktion mit der Karte zuständig. Layer aus der Datenbank werden via API (WMS/WFS) eingebunden, Routen dargestellt, Polygone und Punkte erfasst und Benutzerinteraktionen ermöglicht. Die Abfrage von Features (z. B. aktiviertes Projekt / Layer darstellen) erfolgt dynamisch.
+
+## Aufbau Frontend
+![Frontend_Aufbau](assets/images/dependency-graph.jpg)
 
 ### UI Design
 <div id="ui-design"></div>
@@ -137,9 +141,9 @@ Das gesamte Frontend wurde so programmiert, dass die meisten Aktionen in möglic
 
 <div style="display: flex; justify-content: space-between;">
   <div>
-    <a href="funktionen.html">← Erklärung der Funktionen</a>
+    <a href="funktionen_report.html">← Funktionen Report</a>
   </div>
   <div>
-    <a href="ausblick.html">Ausblick →</a>
+    <a href="installation.html">Installation →</a>
   </div>
 </div>

@@ -2,7 +2,6 @@ import json
 import requests
 import numpy as np
 from tqdm import tqdm
-from math import radians, cos, sin, asin, sqrt
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os

@@ -52,7 +52,7 @@ Mit dieser Funktion kann die Karte wieder nach Norden ausgerichtet werden wenn d
 
 <div style="display: flex; justify-content: space-between;">
   <div>
-    <a href="konzept.html">← Konzept</a>
+    <a href="funktionen_planner.html">← Funktionen Planner</a>
   </div>
   <div>
     <a href="aufbauGDI.html">Aufbau GDI →</a>

@@ -5,8 +5,8 @@ Das Projekt wurde im Rahmen des Moduls 4230 an der FHNW in Muttenz entwickelt. E
 
 ## Projektübersicht
 
-- **Frontend**: React.js, OpenLayers  
-- **Backend**: FastAPI, GeoServer  
+- **Frontend**: React.js, MapLibre  
+- **Backend**: FastAPI, PostGIS, PostgreSQL, python, Valhalla docker image 
 - **Deployment**: GitHub Pages
 
 ## Live-Demo
@@ -22,6 +22,11 @@ Bitte installiere vorab folgende Tools:
 - [Visual Studio Code 1.99.3](https://code.visualstudio.com/)
 - [Docker](https://docs.docker.com/desktop/setup/install/windows-install/)
 - [pgAdmin 4 (Version 9.1)](https://www.postgresql.org/ftp/pgadmin/pgadmin4/v9.1/windows/)
+- PostgreSQL 15
+Hinweis: Bitte während der Installation den Port (standardmäßig 5432), Benutzername und Passwort merken.
+- PostGIS (für PostgreSQL 15)
+PostGIS ist eine Erweiterung für PostgreSQL zur Unterstützung räumlicher Daten. Die Installation kann über den StackBuilder nach der PostgreSQL-Installation erfolgen.
+
 
 ## Installation
 
@@ -117,23 +122,70 @@ recyclroute-venv\Scripts\python.exe -m pip install -r requirements.txt
 
 ### Valhalla mit Docker installieren
 
+Die Routing-Engine **Valhalla** kann über ein vorkonfiguriertes Docker-Image schnell eingerichtet werden. Diese Anleitung zeigt dir Schritt für Schritt, wie du Valhalla auf deinem lokalen System installierst und startest:
+
+### Voraussetzungen
+
+* Docker ist installiert und läuft
+* Ein lokales Verzeichnis, in dem die OpenStreetMap-Daten und die von Valhalla erzeugten Kacheln gespeichert werden
+
+> Beispiel: Erstelle auf deinem System den Ordner `C:\valhalla_docker\valhalla_data`
+
+---
+
+### Schritt 1: Docker-Container mit Valhalla starten
+
 ```bash
-docker run -dt --name valhalla_server -p 8002:8002 -v C:/Pfad/zum/verzeichnis/valhalla_docker/valhalla_data:/custom_files -e tile_urls=https://download.geofabrik.de/europe/switzerland-latest.osm.pbf ghcr.io/nilsnolde/docker-valhalla/valhalla:latest
+docker run -dt \
+  --name valhalla_server \
+  -p 8002:8002 \
+  -v C:/Pfad/zum/verzeichnis/valhalla_docker/valhalla_data:/custom_files \
+  -e tile_urls=https://download.geofabrik.de/europe/switzerland-latest.osm.pbf \
+  ghcr.io/nilsnolde/docker-valhalla/valhalla:latest
 ```
 
-Installationsfortschritt prüfen:
+#### Erklärung der Parameter:
+
+* `-dt`: Startet den Container im Hintergrund (detached mode).
+* `--name valhalla_server`: Vergibt den Namen `valhalla_server` für den Container, damit er leichter referenziert werden kann.
+* `-p 8002:8002`: Leitet Port 8002 des Containers an Port 8002 deines Hosts weiter (Standard-Port für Valhalla API).
+* `-v ...:/custom_files`: Bindet einen lokalen Ordner in den Container ein. Valhalla verwendet dieses Verzeichnis zur Speicherung der Kacheldaten.
+* `-e tile_urls=...`: Gibt die URL der OSM-PBF-Datei an, die automatisch heruntergeladen und verarbeitet wird (hier: aktuelle Schweiz-Daten von Geofabrik).
+* `ghcr.io/nilsnolde/docker-valhalla/valhalla:latest`: Name des Docker-Images mit der aktuellsten Version von Valhalla.
+
+---
+
+### Schritt 2: Installations- und Verarbeitungsfortschritt prüfen
+
+Nachdem der Container gestartet wurde, kannst du mit folgendem Befehl den Log-Ausgabe verfolgen:
 
 ```bash
 docker logs -f valhalla_server
 ```
 
-Zum späteren Neustart:
+Du siehst darin z. B.:
+
+* Download der OSM-Datei
+* Erstellung der Valhalla-Kacheln (Tiles)
+* Start des HTTP-Servers
+
+Wenn der Server betriebsbereit ist, erscheint eine Meldung wie:
+
+```
+[INFO] Listening on 0.0.0.0:8002
+```
+
+### Schritt 3: Valhalla bei Bedarf neu starten
+
+Wenn du den Rechner neu startest oder der Container gestoppt wurde, kannst du ihn ganz einfach wieder starten:
 
 ```bash
 docker start valhalla_server
 ```
 
 ### Preprocessing ausführen
+
+Mit dem Preprocessing wird vorab der Datensatze SwissTLM3D von Swisstopo heruntergeladen und die Höheninformationen des Datensatzes entfernt.
 
 ```bash
 python preprocessing/Preprocessing_swisstlm3d_2025-03_Data.py
@@ -148,15 +200,21 @@ npm start
 ```
 
 ### Backend starten
+Zum Starten der FastAPI-Anwendung(en) werden zwei uvicorn-Befehle ausgeführt:
 ```bash
 uvicorn server.app.main:app --reload --port 8000
 uvicorn server.app.main2:app --reload --port 7999
 ```
+main.py auf Port 8000
+→ Zuständig für die Hauptfunktionen des Projekts bzw. für alle Funktionen des Report & Planners
+
+main2.py auf Port 7999
+→ Dient zur Kommunikation mit Valhalla-Routing Server um das main.py auf einen Raspberry laufen zulassen. 
 
 ## Getestete Versionen
 
 - Python 3.11.7
-- Valhalla (3.5.1)
+- Valhalla 3.5.1
 - Abhängigkeiten: siehe [Requirements](requirements.txt)
 
 ## Projektstruktur
