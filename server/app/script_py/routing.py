@@ -208,25 +208,6 @@ def generate_chinese_postman_coordinates(graph, start_node_coord):
         coordinates.append([lon, lat])
     return coordinates
 
-def haversine(coord1, coord2):
-    lon1, lat1 = coord1
-    lon2, lat2 = coord2
-    R = 6371000
-    dlon = radians(lon2 - lon1)
-    dlat = radians(lat2 - lat1)
-    a = sin(dlat / 2) ** 2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dlon / 2) ** 2
-    c = 2 * asin(sqrt(a))
-    return R * c
-
-
-def filter_nearby_coordinates(coords, min_dist=10):
-    filtered = []
-    for c in coords:
-        if all(haversine(c, f) >= min_dist for f in filtered):
-            filtered.append(c)
-    return filtered
-
-
 def try_sources_to_targets(sources, targets, last_costing):
     body = {"sources": sources, "targets": targets, "costing": last_costing}
     try:
@@ -517,7 +498,6 @@ def run_routing(input_json, input_gpkg, start_node_coord_3857, output_dir="outpu
 
     coords = generate_chinese_postman_coordinates(graph, start_node_coord)
     print(f"Ursprünglich: {len(coords)} Koordinaten")
-    #coords = filter_nearby_coordinates(coords, min_dist=0.1)
     print(f"Nach Filterung: {len(coords)} Koordinaten (≥1m Abstand)")
 
     print("→ Distanzmatrix berechnen...")

@@ -51,19 +51,22 @@ document.addEventListener("DOMContentLoaded", () => {
       <ul>
         <li><a href="{{ '/einleitung.html' | relative_url }}">Einleitung</a></li>
          <li class="dropdown">
-          <a href="{{ '/Installation.html' | relative_url }}">Installation</a>
-          <div class="dropdown-content">
-            <div><a href="{{ '/Installation.html#starten-der-anwendung' | relative_url }}">Starten der Applikation</a></div>
         </li>
-        <li><a href="{{ '/konzept.html' | relative_url }}">Konzept</a></li>
         <li class="dropdown">
-          <a href="{{ '/funktionen.html' | relative_url }}">Erklärung der Funktionen</a>
+          <a href="{{ '/funktionen_planner.html' | relative_url }}">Funktonen Planner</a>
           <div class="dropdown-content">
-            <div><a href="{{ '/funktionen.html#startpage' | relative_url }}">Startpage</a></div>
-            <div><a href="{{ '/funktionen.html#report' | relative_url }}">Report</a></div>
-            <div><a href="{{ '/funktionen.html#funktionenallgemein' | relative_url }}">Allgemeine Funktionen</a></div>
-            <div><a href="{{ '/funktionen.html#planner' | relative_url }}">Planner</a></div>
-            <div><a href="{{ '/funktionen.html#berechnungsalgorithmus' | relative_url }}">Routenberechnung</a></div>
+            <div><a href="{{ '/funktionen_planner.html#startpage' | relative_url }}">Startpage</a></div>
+            <div><a href="{{ '/funktionen_planner.html#planner' | relative_url }}">Planner</a></div>
+            <div><a href="{{ '/funktionen_planner.html#berechnungsalgorithmus' | relative_url }}">Routenberechnung</a></div>
+            <div><a href="{{ '/funktionen_planner.html#funktionenallgemein' | relative_url }}">Allgemeine Funktionen</a></div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="{{ '/funktionen_report.html' | relative_url }}">Funktonen Report</a>
+          <div class="dropdown-content">
+            <div><a href="{{ '/funktionen_report.html#startpage' | relative_url }}">Startpage</a></div>
+            <div><a href="{{ '/funktionen_report.html#report' | relative_url }}">Report</a></div>
+            <div><a href="{{ '/funktionen_report.html#funktionenallgemein' | relative_url }}">Allgemeine Funktionen</a></div>
           </div>
         </li>
         <li class="dropdown">
@@ -75,7 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <div><a href="{{ '/aufbauGDI.html#frontend' | relative_url }}">Frontend</a></div>
           </div>
         </li>
+          <a href="{{ '/Installation.html' | relative_url }}">Installation</a>
+          <div class="dropdown-content">
+            <div><a href="{{ '/Installation.html#starten-der-anwendung' | relative_url }}">Starten der Applikation</a></div>
+        </li>
         <li><a href="{{ '/ausblick.html' | relative_url }}">Erweiterungsmöglichkeiten</a></li>
+        <li><a href="{{ '/konzept.html' | relative_url }}">Konzept</a></li>
       </ul>
     </nav>
   </header>
