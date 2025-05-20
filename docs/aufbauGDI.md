@@ -119,7 +119,7 @@ Der [Node Package Manager (npm)](https://www.npmjs.com/) wird verwendet, um alle
 [MapLibre](https://maplibre.org/) ist für die Darstellung und Interaktion mit der Karte zuständig. Layer aus der Datenbank werden via API (WMS/WFS) eingebunden, Routen dargestellt, Polygone und Punkte erfasst und Benutzerinteraktionen ermöglicht. Die Abfrage von Features (z. B. aktiviertes Projekt / Layer darstellen) erfolgt dynamisch.
 
 ## Aufbau Frontend
-![Frontend_Aufbau](assets/Images/dependency-graph.jpg){: style="max-width: 75%; height: auto;" }
+![Frontend_Aufbau](assets/images/dependency-graph.jpg){: style="max-width: 75%; height: auto;" }
 
 ### UI Design
 <div id="ui-design"></div>
