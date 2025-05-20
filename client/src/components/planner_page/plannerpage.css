@@ -150,29 +150,45 @@ align-items: center;
 }
 
 .ProjectManagerPopup-overlay {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  z-index: 9999;
-  align-items: flex-end;
-  pointer-events: auto;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    align-items: flex-end;
+    pointer-events: none;
 }
+
 .ProjectManagerPopup-content {
   pointer-events: auto;
-  background-color: #fff;
+  background-color: #F4F7F5;
   padding: 10px;
-  max-width: 80%;
-  max-height: 80%;
-  min-height: 45%;
+  width: 85%;
+  max-height: 30%;
   overflow: auto;
-  outline-color: #000000;
+  outline-color: #273028;
   outline-style: solid;
-  outline-width: 2px;
+  outline-width: 3px;
   margin-bottom: 117px;    /* 80px vom unteren Rand entfernt */
   display: flex;          /* Elemente in einer Zeile anordnen */
-  flex-direction: column;
-  gap: 5px; 
+  flex-direction: column; 
+}
+
+.ProjectManagerPopup-closeButton {
+  width: 25px;
+  height: 25px;
+  border-color: #273028;
+  border-width: 1px;
+  background-color: #227d5a;
+  border-style: solid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  font-weight: bold;
+}
+
+.ProjectManagerPopup-closeButton:hover {
+  background-color: #AED581;
 }

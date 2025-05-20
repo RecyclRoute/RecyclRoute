@@ -25,10 +25,10 @@ export const ProjectManagerPopup = (props) => {
     <div className="ProjectManagerPopup-overlay">
       <div className="ProjectManagerPopup-content">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-bold">Projektmanager</h2>
+          <h2 className="">Projektmanager</h2>
           <button
             onClick={CloseButtonClick}
-            className=""
+            className="ProjectManagerPopup-closeButton"
           >
             ×
           </button>

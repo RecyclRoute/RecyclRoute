@@ -21,7 +21,7 @@ import { CalculateWaitingPopUp } from "./project_manager/new_project/CalculateWa
 import { ProjectStatisticsPopup } from "./project_manager/project_use_menu/ProjectStatisticsPopup.jsx";
 import { ProjectDeleteCallbackPopup } from"./project_manager/project_use_menu/ProjectDeleteCallbackPopup.jsx";
 
-export const PlannerPage = () => {
+export const PlannerPage = (props) => {
   const [ProjectManagerMode, setProjectManagerMode] = useState(false);
   const [NewProjectMode, setNewProjectMode] = useState(false);
   const [ProjectUseMenuMode, setProjectUseMenuMode] = useState(false);
@@ -36,7 +36,6 @@ export const PlannerPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [projects, setProjects] = useState([]);
   const [projectInfo, setProjectInfo] = useState(null);
-  const [ActiveProject, setActiveProject] = useState(null);
   const [ProjectName, setProjectName] = useState('');
   const [Datum, setDatum] = useState('');
   const [Location, setLocation] = useState('');
@@ -368,8 +367,8 @@ if (data.status === "done") {
         setProjectManagerMode={setProjectManagerMode}
         NewProjectMode={NewProjectMode}
         setNewProjectMode={setNewProjectMode}
-        ActiveProject={setActiveProject}
-        setActiveProject={setActiveProject}
+        ActiveProject={props.ActiveProject}
+        setActiveProject={props.setActiveProject}
         projects={projects}
         setProjects={setProjects}
         ProjectUseMenuMode={ProjectUseMenuMode}
@@ -383,8 +382,8 @@ if (data.status === "done") {
           setStartPageMode={setStartPageMode}
           NewProjectMode={NewProjectMode}
           setNewProjectMode={setNewProjectMode}
-          ActiveProject={ActiveProject}
-          setActiveProject={setActiveProject}
+          ActiveProject={props.ActiveProject}
+          setActiveProject={props.setActiveProject}
           ProjectName={ProjectName}
           setProjectName={setProjectName}
           Location={Location}
@@ -399,8 +398,8 @@ if (data.status === "done") {
         <ProjectUseMenuPopup
           startPageMode={startPageMode}
           setStartPageMode={setStartPageMode}
-          ActiveProject={ActiveProject}
-          setActiveProject={setActiveProject}
+          ActiveProject={props.ActiveProject}
+          setActiveProject={props.setActiveProject}
           ProjectUseMenuMode={ProjectUseMenuMode}
           setProjectUseMenuMode={setProjectUseMenuMode}
           ProjectStatisticMode={ProjectStatisticMode}
@@ -447,8 +446,8 @@ if (data.status === "done") {
           setProjectUseMenuMode={setProjectUseMenuMode}
           ProjectDeleteCallbackMode={ProjectDeleteCallbackMode}
           setProjectDeleteCallbackMode={setProjectDeleteCallbackMode}
-          ActiveProject={ActiveProject}
-          setActiveProject={setActiveProject}
+          ActiveProject={props.ActiveProject}
+          setActiveProject={props.setActiveProject}
           ProjectManagerMode={ProjectManagerMode}
           setProjectManagerMode={setProjectManagerMode}
           startPageMode={startPageMode}

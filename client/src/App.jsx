@@ -7,11 +7,15 @@ import { NavigationPage } from "./components/planner_page/navigation/NavigationP
 import { ReportPage } from "./components/report_page/reportpage.jsx";
 
 function App() {
+  const [ActiveProject, setActiveProject] = useState(null);
+  
   return (
     <Routes>
       <Route path="/"  element={<StartPage />}/>
-      <Route path="/planner" element={<PlannerPage />}></Route>
-      <Route path="/navigation" element={<NavigationPage/>}/>
+      <Route
+        path="/planner"
+        element={<PlannerPage ActiveProject={ActiveProject} setActiveProject={setActiveProject}/>}/>
+      <Route path="/navigation" element={<NavigationPage  ActiveProject={ActiveProject} setActiveProject={setActiveProject}/>}/>
       <Route path="/report" element={<ReportPage/>}/>
       <Route path="/*" element={<ErrorPage />} />
     </Routes>
