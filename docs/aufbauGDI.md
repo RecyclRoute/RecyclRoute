@@ -62,14 +62,14 @@ Das Backend umfasst sämtliche serverseitigen Prozesse und Daten. Die zugrundeli
 
 ### swissTLM3D
 - **Format**: Vektordaten (3D)
-- **Aktualität**: Jährliche Updates  
-- **Bezug**: [swisstopo Shop](https://www.swisstopo.admin.ch/)  
+- **Bezug**: [swisstopo](https://www.swisstopo.admin.ch/de/landschaftsmodell-swisstlm3d)  
 - **Nutzung**: Strassennetz für Routing, Höhendaten für Geländedarstellung.
 
 ### SwissImage
+- **Format**: Rasterdaten
 - **Auflösung**: 10 cm (HD), 25 cm (Standard)  
 - **Spektral**: RGB/Infrarot  
-- **Bezug**: [swisstopo Shop](https://www.swisstopo.admin.ch/)  
+- **Bezug**: [swisstopo](https://www.swisstopo.admin.ch/de/orthobilder-swissimage-10-cm)  
 - **Nutzung**: Realistische Kartenhintergründe.
 
 ### Nominatim (OSM)
