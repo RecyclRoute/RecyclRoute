@@ -78,25 +78,6 @@ def get_point_types():
     ]
 
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello from FastAPI!"}
-
-# Endpoint to get points from the database
-@app.get("/getPoints")
-def get_points():
-    conn = get_db_connection()
-    cur = conn.cursor()
-
-    cur.execute("SELECT id, name, ST_X(geom), ST_Y(geom) FROM points")
-    rows = cur.fetchall()
-
-    cur.close()
-    conn.close()
-
-    points = [{"id": row[0], "name": row[1], "longitude": row[2], "latitude": row[3]} for row in rows]
-    return {"points": points}
-
 # Endpoint to get points per project from the database
 from fastapi import FastAPI
 from psycopg2.extras import RealDictCursor
