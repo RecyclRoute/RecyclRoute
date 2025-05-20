@@ -617,9 +617,9 @@ Geplant ist auch das die Abschnitte, erledigt, aktueller Abschnitt, als nächste
 
 <div style="display: flex; justify-content: space-between;">
   <div>
-    <a href="konzept.html">← Konzept</a>
+    <a href="einleitung.html">← Einleitung</a>
   </div>
   <div>
-    <a href="aufbauGDI.html">Aufbau GDI →</a>
+    <a href="funktionen_planner.html">Funktionen Planner →</a>
   </div>
 </div>

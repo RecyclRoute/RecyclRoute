@@ -137,9 +137,9 @@ Das gesamte Frontend wurde so programmiert, dass die meisten Aktionen in möglic
 
 <div style="display: flex; justify-content: space-between;">
   <div>
-    <a href="funktionen.html">← Erklärung der Funktionen</a>
+    <a href="funktionen_report.html">← Funktionen Report</a>
   </div>
   <div>
-    <a href="ausblick.html">Ausblick →</a>
+    <a href="installation.html">Installation →</a>
   </div>
 </div>
