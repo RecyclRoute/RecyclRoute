@@ -350,6 +350,50 @@ async def call_calculate(request: Request, project_name: str):
 
 project_status = {}
 
+
+@app.post("/addRouting")
+async def add_routing(request: Request):
+    data = await request.json()
+    project_name = data.get("project_name")
+    routing_result = data.get("routing_result")
+
+    if not project_name or not routing_result:
+        raise HTTPException(status_code=400, detail="Missing project_name or routing_result in request")
+
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    try:
+        # 1. Find project_id by project_name
+        cur.execute("SELECT id FROM project WHERE name = %s", (project_name,))
+        project = cur.fetchone()
+
+        if not project:
+            raise HTTPException(status_code=404, detail=f"Project with name '{project_name}' not found")
+
+        project_id = project['id']
+
+        # 2. Save routing_result JSON into your routing table
+        # Assuming you have a table like 'routing' with columns: id, project_id, routing_data (jsonb), created_at
+        cur.execute(
+            """
+            INSERT INTO routing (project_id, routing_data, created_at)
+            VALUES (%s, %s, NOW())
+            """,
+            (project_id, json.dumps(routing_result))
+        )
+        conn.commit()
+
+    except Exception as e:
+        conn.rollback()
+        raise HTTPException(status_code=500, detail=f"Error saving routing data: {e}")
+    finally:
+        cur.close()
+        conn.close()
+
+    return {"message": "Routing data saved successfully", "project_id": project_id}
+
+
 @app.post("/notifyCalculationDone")
 async def notify_calculation_done(data: dict):
     project_name = data.get("project_name")
