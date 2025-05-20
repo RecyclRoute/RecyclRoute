@@ -74,12 +74,12 @@ align-items: center;
 }
 .PlannerPopup-content {
   pointer-events: auto;
-  background-color: #fff;
+  background-color: #F4F7F5;
   padding: 10px;
   max-width: 80%;
   max-height: 35%;
   overflow: auto;
-  outline-color: #000000;
+  outline-color: #273028;
   outline-style: solid;
   outline-width: 2px;
   margin-bottom: 117px;    /* 80px vom unteren Rand entfernt */
@@ -88,7 +88,7 @@ align-items: center;
   gap: 5px; 
 }
 .loader {
-  border: 6px solid #f3f3f3;
+  border: 6px solid #F4F7F5;
   border-top: 6px solid #007cbf;
   border-radius: 50%;
   width: 40px;
