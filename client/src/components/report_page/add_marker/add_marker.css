@@ -95,6 +95,10 @@ align-items: center;
   font-weight: bold;
 }
 
+.closeButton:hover {
+  background-color: #6D4C41;
+}
+
 .UploadFotoButton {
   height: 25px;
   border-radius: 25px;

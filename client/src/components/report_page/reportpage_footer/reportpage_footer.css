@@ -47,6 +47,10 @@
   box-sizing: border-box;
 }
 
+.SearchBarButtons:hover {
+  background-color: #6D4C41;
+}
+
 .Icons {
   width: 30px !important;
   height: 30px !important;

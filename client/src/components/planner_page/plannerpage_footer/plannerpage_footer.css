@@ -48,7 +48,9 @@
   border-style: solid;
   box-sizing: border-box;
 }
-
+.PlannerpageFooter_SearchBarButtons:hover {
+  background-color: #AED581;
+}
 .Icons {
   width: 30px !important;
   height: 30px !important;

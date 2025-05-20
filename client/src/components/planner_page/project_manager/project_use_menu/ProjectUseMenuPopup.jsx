@@ -23,28 +23,28 @@ export const ProjectUseMenuPopup = (props) => {
   
 
   return (
-    <div className="PlannerPopup-overlay">
-      <div className="PlannerPopup-content">
-        <div>
-          <h2 className="text-xl font-bold">{props.ActiveProject.name}</h2>
+    <div className="ProjectManagerPopup-overlay">
+      <div className="ProjectManagerPopup-content">
+        <div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-start", height: "45px"}}>
+          <h3 style={{marginTop: "0px", marginRight: "10px", alignItems: "flex-start"}}>Projekt: {props.ActiveProject.name}</h3>
           <button
             onClick={CloseButtonClick}
+            className="ProjectManagerPopup-closeButton"
           >
             ×
           </button>
         </div>
-
-        <div className="mt-4 flex justify-center">
-          <button onClick={console.log("der button wurde geklickt")}>
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "10px",}}>
+          <button className="ProjectManagerPopup-Button" onClick={console.log("der button wurde geklickt")}>
             Route Berechnen
           </button>
-          <button onClick={console.log("der button wurde geklickt")}>
+          <button className="ProjectManagerPopup-Button" onClick={console.log("der button wurde geklickt")}>
             Routing Starten
           </button>
-          <button onClick={StatisticButtonClick}>
+          <button className="ProjectManagerPopup-Button" onClick={StatisticButtonClick}>
             Statistiken
           </button>
-          <button onClick={ProjectDeleteButtonClick}>
+          <button className="ProjectManagerPopup-Button" onClick={ProjectDeleteButtonClick}>
             Projekt löschen
           </button>
         </div>

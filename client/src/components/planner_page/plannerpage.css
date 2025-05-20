@@ -197,6 +197,7 @@ align-items: center;
 
 .ProjectManagerPopup-Button {
   height: 30px;
+  min-width: 150px;
   border-radius: 30px;
   border-color: #273028;
   border-width: 1px;
