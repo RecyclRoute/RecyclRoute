@@ -40,7 +40,7 @@ export const ProjectUseMenuPopup = (props) => {
           <button className="ProjectManagerPopup-Button" onClick={console.log("der button wurde geklickt")}>
             Route Berechnen
           </button>
-          <button onClick={() => {navigate('/navigation')}}>
+          <button className="ProjectManagerPopup-Button" onClick={() => {navigate('/navigation')}}>
             Routing Starten
           </button>
           <button className="ProjectManagerPopup-Button" onClick={StatisticButtonClick}>
