@@ -37,7 +37,7 @@ export const ProjectUseMenuPopup = (props) => {
           </button>
         </div>
         <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "10px",}}>
-          <button className="ProjectManagerPopup-Button" onClick={console.log("der button wurde geklickt")}>
+          <button className="ProjectManagerPopup-Button" onClick={() => {props.setPolygonMode(true);props.setProjectUseMenuMode(false);}}>
             Route Berechnen
           </button>
           <button className="ProjectManagerPopup-Button" onClick={() => {navigate('/navigation')}}>

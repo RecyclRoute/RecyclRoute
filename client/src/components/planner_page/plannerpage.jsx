@@ -373,6 +373,8 @@ if (data.status === "done") {
         setProjects={setProjects}
         ProjectUseMenuMode={ProjectUseMenuMode}
         setProjectUseMenuMode={setProjectUseMenuMode}
+        polygonMode={polygonMode}
+        setPolygonMode={setPolygonMode}
         />
       )}
 
@@ -410,6 +412,8 @@ if (data.status === "done") {
           setIsLoading={setIsLoading}
           projects={projects}
           setProjects={setProjects}
+          polygonMode={polygonMode}
+          setPolygonMode={setPolygonMode}
         />
       )}
 
