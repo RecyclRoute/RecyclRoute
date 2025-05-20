@@ -107,6 +107,14 @@ END $$;
 REVOKE ALL ON TABLE public.spatial_ref_sys FROM PUBLIC;
 GRANT SELECT ON TABLE public.spatial_ref_sys TO PUBLIC;
 GRANT ALL ON TABLE public.spatial_ref_sys TO postgres;
+
+CREATE TABLE routing (
+    id SERIAL PRIMARY KEY,
+    project_name VARCHAR NOT NULL,
+    routing_data JSONB NOT NULL,
+	created_at TIMESTAMP DEFAULT NOW()
+);
+
 ```
 
 ### Virtuelle Umgebung einrichten
