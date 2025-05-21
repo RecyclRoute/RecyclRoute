@@ -7,13 +7,14 @@ import httpx
 import os
 from fastapi.responses import JSONResponse
 
+Backend = "http://localhost:8000/"  # URL of your FastAPI backend
 # Initialize FastAPI app
 # use Command "uvicorn server.app.main2:app --reload --port 7999" to startup
 app = FastAPI()
 
 # Add CORS middleware to allow requests from your frontend
 origins = [
-    "http://localhost:3000", "http://localhost:8000"  # Your React app running locally
+    "*"# Your React app running locally
     # You can add other origins here if needed
 ]
 
@@ -72,7 +73,7 @@ async def calculate(request: Request):
         async with httpx.AsyncClient() as client:
             # Send routing result to addRouting endpoint
             save_response = await client.post(
-                "http://localhost:8000/addRouting",
+                Backend +"addRouting",
                 json={
                     "project_name": project_name,
                     "routing_result": result_json

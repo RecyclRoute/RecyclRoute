@@ -2,11 +2,12 @@ import { ReactComponent as FolderIcon } from "../../icons/black/folder_icon.svg"
 import React, { useState, useRef, useEffect } from 'react';
 import "maplibre-gl/dist/maplibre-gl.css";
 import "../plannerpage.css";
+import { BackendURL } from "../../../config";
 
 export const ProjectManagerButton = (props) => {
 
 const ProjectManagerClick = () => {
-  fetch("http://localhost:8000/getProjects")
+  fetch(BackendURL + "/getProjects")
     .then(res => res.json())
     .then(data => {
       console.log("FETCH RESPONSE:", data);

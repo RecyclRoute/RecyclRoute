@@ -3,255 +3,79 @@
     "locations": [
       {
         "type": "break",
-        "lat": 47.523342,
-        "lon": 7.650173,
+        "lat": 47.52337,
+        "lon": 7.649721,
+        "side_of_street": "right",
         "original_index": 0
-      },
-      {
-        "type": "break",
-        "lat": 47.523342,
-        "lon": 7.650173,
-        "original_index": 1
-      },
-      {
-        "type": "break",
-        "lat": 47.523787,
-        "lon": 7.649788,
-        "original_index": 2
-      },
-      {
-        "type": "break",
-        "lat": 47.523594,
-        "lon": 7.649448,
-        "original_index": 3
-      },
-      {
-        "type": "break",
-        "lat": 47.523461,
-        "lon": 7.649217,
-        "original_index": 4
-      },
-      {
-        "type": "break",
-        "lat": 47.523594,
-        "lon": 7.649448,
-        "original_index": 5
       },
       {
         "type": "break",
         "lat": 47.52337,
         "lon": 7.649721,
         "side_of_street": "right",
+        "original_index": 1
+      },
+      {
+        "type": "break",
+        "lat": 47.523594,
+        "lon": 7.649448,
+        "original_index": 2
+      },
+      {
+        "type": "break",
+        "lat": 47.523787,
+        "lon": 7.649788,
+        "original_index": 3
+      },
+      {
+        "type": "break",
+        "lat": 47.523342,
+        "lon": 7.650173,
+        "original_index": 4
+      },
+      {
+        "type": "break",
+        "lat": 47.523707,
+        "lon": 7.651268,
+        "original_index": 5
+      },
+      {
+        "type": "break",
+        "lat": 47.523342,
+        "lon": 7.650173,
         "original_index": 6
       },
       {
         "type": "break",
-        "lat": 47.52324,
-        "lon": 7.649494,
-        "side_of_street": "left",
+        "lat": 47.52306,
+        "lon": 7.650413,
         "original_index": 7
       },
       {
         "type": "break",
-        "lat": 47.523461,
-        "lon": 7.649217,
+        "lat": 47.522888,
+        "lon": 7.649677,
         "original_index": 8
       },
       {
         "type": "break",
-        "lat": 47.523312,
-        "lon": 7.64896,
+        "lat": 47.52266,
+        "lon": 7.649112,
         "original_index": 9
-      },
-      {
-        "type": "break",
-        "lat": 47.523372,
-        "lon": 7.648878,
-        "side_of_street": "right",
-        "original_index": 10
-      },
-      {
-        "type": "break",
-        "lat": 47.523312,
-        "lon": 7.64896,
-        "original_index": 11
-      },
-      {
-        "type": "break",
-        "lat": 47.523372,
-        "lon": 7.648878,
-        "side_of_street": "right",
-        "original_index": 12
-      },
-      {
-        "type": "break",
-        "lat": 47.523399,
-        "lon": 7.648842,
-        "side_of_street": "right",
-        "original_index": 13
-      },
-      {
-        "type": "break",
-        "lat": 47.523321,
-        "lon": 7.648699,
-        "side_of_street": "right",
-        "original_index": 14
-      },
-      {
-        "type": "break",
-        "lat": 47.523366,
-        "lon": 7.648499,
-        "side_of_street": "right",
-        "original_index": 15
-      },
-      {
-        "type": "break",
-        "lat": 47.523321,
-        "lon": 7.648699,
-        "side_of_street": "left",
-        "original_index": 16
-      },
-      {
-        "type": "break",
-        "lat": 47.523295,
-        "lon": 7.648657,
-        "side_of_street": "right",
-        "original_index": 17
-      },
-      {
-        "type": "break",
-        "lat": 47.523217,
-        "lon": 7.64862,
-        "side_of_street": "right",
-        "original_index": 18
-      },
-      {
-        "type": "break",
-        "lat": 47.523227,
-        "lon": 7.64857,
-        "side_of_street": "right",
-        "original_index": 19
-      },
-      {
-        "type": "break",
-        "lat": 47.523175,
-        "lon": 7.648543,
-        "side_of_street": "right",
-        "original_index": 20
-      },
-      {
-        "type": "break",
-        "lat": 47.523182,
-        "lon": 7.648496,
-        "side_of_street": "right",
-        "original_index": 21
-      },
-      {
-        "type": "break",
-        "lat": 47.523137,
-        "lon": 7.648475,
-        "side_of_street": "right",
-        "original_index": 22
-      },
-      {
-        "type": "break",
-        "lat": 47.523154,
-        "lon": 7.648391,
-        "side_of_street": "right",
-        "original_index": 23
-      },
-      {
-        "type": "break",
-        "lat": 47.523137,
-        "lon": 7.648475,
-        "side_of_street": "left",
-        "original_index": 24
-      },
-      {
-        "type": "break",
-        "lat": 47.523182,
-        "lon": 7.648496,
-        "side_of_street": "left",
-        "original_index": 25
-      },
-      {
-        "type": "break",
-        "lat": 47.523175,
-        "lon": 7.648543,
-        "side_of_street": "left",
-        "original_index": 26
-      },
-      {
-        "type": "break",
-        "lat": 47.523227,
-        "lon": 7.64857,
-        "side_of_street": "left",
-        "original_index": 27
-      },
-      {
-        "type": "break",
-        "lat": 47.523217,
-        "lon": 7.64862,
-        "side_of_street": "left",
-        "original_index": 28
-      },
-      {
-        "type": "break",
-        "lat": 47.523295,
-        "lon": 7.648657,
-        "side_of_street": "left",
-        "original_index": 29
-      },
-      {
-        "type": "break",
-        "lat": 47.523321,
-        "lon": 7.648699,
-        "side_of_street": "left",
-        "original_index": 30
-      },
-      {
-        "type": "break",
-        "lat": 47.523399,
-        "lon": 7.648842,
-        "side_of_street": "left",
-        "original_index": 31
-      },
-      {
-        "type": "break",
-        "lat": 47.523372,
-        "lon": 7.648878,
-        "side_of_street": "left",
-        "original_index": 32
-      },
-      {
-        "type": "break",
-        "lat": 47.523286,
-        "lon": 7.648724,
-        "side_of_street": "right",
-        "original_index": 33
-      },
-      {
-        "type": "break",
-        "lat": 47.523194,
-        "lon": 7.648755,
-        "original_index": 34
-      },
-      {
-        "type": "break",
-        "lat": 47.523008,
-        "lon": 7.648435,
-        "original_index": 35
       }
     ],
     "legs": [
       {
         "maneuvers": [
           {
-            "type": 1,
-            "instruction": "Richtung Norden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
+            "type": 2,
+            "instruction": "Auf Scheibenmattweg Richtung Norden fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Norden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
+            "verbal_pre_transition_instruction": "Auf Scheibenmattweg Richtung Norden fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
             "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
+            "street_names": [
+              "Scheibenmattweg"
+            ],
             "bearing_after": 0,
             "time": 0.0,
             "length": 0.0,
@@ -263,10 +87,10 @@
             "travel_type": "car"
           },
           {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
+            "type": 5,
+            "instruction": "Ziel befindet sich auf der rechten Seite.",
+            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
+            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
             "bearing_before": 0,
             "time": 0.0,
             "length": 0.0,
@@ -282,291 +106,15 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523339,
-          "min_lon": 7.650174,
-          "max_lat": 47.523339,
-          "max_lon": 7.650174,
+          "min_lat": 47.523496,
+          "min_lon": 7.650037,
+          "max_lat": 47.523496,
+          "max_lon": 7.650037,
           "time": 0.0,
           "length": 0.0,
           "cost": 0.0
         },
-        "shape": "w_rsyA}v|qM??"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
-            "street_names": [
-              "Scheibenmattweg"
-            ],
-            "bearing_after": 329,
-            "time": 6.068,
-            "length": 0.059,
-            "cost": 6.068,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 342,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 2,
-            "end_shape_index": 2,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523339,
-          "min_lon": 7.649819,
-          "max_lat": 47.523802,
-          "max_lon": 7.650174,
-          "time": 6.068,
-          "length": 0.059,
-          "cost": 6.068
-        },
-        "shape": "w_rsyA}v|qM_XzT{BH"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 230,
-            "time": 4.339,
-            "length": 0.036,
-            "cost": 4.339,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 229,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 2,
-            "end_shape_index": 2,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523588,
-          "min_lon": 7.649455,
-          "max_lat": 47.523802,
-          "max_lon": 7.649819,
-          "time": 4.339,
-          "length": 0.036,
-          "cost": 4.339
-        },
-        "shape": "s|rsyAw`|qMlAjCzIlQ"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 229,
-            "time": 2.74,
-            "length": 0.022,
-            "cost": 2.74,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 229,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523453,
-          "min_lon": 7.649226,
-          "max_lat": 47.523588,
-          "max_lon": 7.649455,
-          "time": 2.74,
-          "length": 0.022,
-          "cost": 2.74
-        },
-        "shape": "iorsyA}i{qMlGhM"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 49,
-            "time": 2.74,
-            "length": 0.022,
-            "cost": 2.74,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 49,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523453,
-          "min_lon": 7.649226,
-          "max_lat": 47.523588,
-          "max_lon": 7.649455,
-          "time": 2.74,
-          "length": 0.022,
-          "cost": 2.74
-        },
-        "shape": "{frsyAs{zqMmGiM"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Rechts auf Scheibenmattweg abbiegen.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Rechts auf Scheibenmattweg abbiegen.",
-            "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 49,
-            "time": 4.339,
-            "length": 0.036,
-            "cost": 4.339,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 10,
-            "instruction": "Rechts auf Scheibenmattweg abbiegen.",
-            "verbal_transition_alert_instruction": "Rechts auf Scheibenmattweg abbiegen.",
-            "verbal_succinct_transition_instruction": "Rechts abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Rechts auf Scheibenmattweg abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
-            "street_names": [
-              "Scheibenmattweg"
-            ],
-            "bearing_before": 50,
-            "bearing_after": 162,
-            "time": 10.986,
-            "length": 0.038,
-            "cost": 17.947,
-            "begin_shape_index": 2,
-            "end_shape_index": 4,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 149,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 4,
-            "end_shape_index": 4,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523496,
-          "min_lon": 7.649455,
-          "max_lat": 47.523801,
-          "max_lon": 7.650037,
-          "time": 15.326,
-          "length": 0.074,
-          "cost": 22.286
-        },
-        "shape": "iorsyA}i{qM{ImQmAkCzBIdNiL"
+        "shape": "qirsyAkn|qM??"
       },
       {
         "maneuvers": [
@@ -593,17 +141,17 @@
             "type": 15,
             "instruction": "Links auf Breitestrasse abbiegen.",
             "verbal_transition_alert_instruction": "Links auf Breitestrasse abbiegen.",
-            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Links auf Breitestrasse abbiegen. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
+            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Links auf Breitestrasse abbiegen. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
             "street_names": [
               "Breitestrasse"
             ],
             "bearing_before": 342,
             "bearing_after": 230,
-            "time": 11.982,
-            "length": 0.059,
-            "cost": 15.733,
+            "time": 9.189,
+            "length": 0.036,
+            "cost": 12.939,
             "begin_shape_index": 2,
             "end_shape_index": 4,
             "verbal_multi_cue": true,
@@ -611,10 +159,10 @@
             "travel_type": "car"
           },
           {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
+            "type": 4,
+            "instruction": "Ziel erreicht.",
+            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Ziel erreicht.",
             "bearing_before": 229,
             "time": 0.0,
             "length": 0.0,
@@ -630,33 +178,33 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523451,
-          "min_lon": 7.649221,
+          "min_lat": 47.523496,
+          "min_lon": 7.649455,
           "max_lat": 47.523801,
           "max_lon": 7.650037,
-          "time": 15.929,
-          "length": 0.097,
-          "cost": 19.68
+          "time": 13.136,
+          "length": 0.074,
+          "cost": 16.886
         },
-        "shape": "qirsyAkn|qMeNhL{BHlAjCnR~_@"
+        "shape": "qirsyAkn|qMeNhL{BHlAjCzIlQ"
       },
       {
         "maneuvers": [
           {
-            "type": 2,
+            "type": 1,
             "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
             "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
+            "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
             "street_names": [
               "Breitestrasse"
             ],
             "bearing_after": 49,
-            "time": 0.053,
-            "length": 0.0,
-            "cost": 0.053,
+            "time": 4.339,
+            "length": 0.036,
+            "cost": 4.339,
             "begin_shape_index": 0,
-            "end_shape_index": 1,
+            "end_shape_index": 2,
             "verbal_multi_cue": true,
             "travel_mode": "drive",
             "travel_type": "car"
@@ -666,12 +214,12 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 49,
+            "bearing_before": 50,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
+            "begin_shape_index": 2,
+            "end_shape_index": 2,
             "travel_mode": "drive",
             "travel_type": "car"
           }
@@ -681,33 +229,33 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523451,
-          "min_lon": 7.649221,
-          "max_lat": 47.523453,
-          "max_lon": 7.649226,
-          "time": 0.053,
-          "length": 0.0,
-          "cost": 0.053
+          "min_lat": 47.523588,
+          "min_lon": 7.649455,
+          "max_lat": 47.523802,
+          "max_lon": 7.649819,
+          "time": 4.339,
+          "length": 0.036,
+          "cost": 4.339
         },
-        "shape": "ufrsyAk{zqMEG"
+        "shape": "iorsyA}i{qM{ImQmAkC"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
+            "instruction": "Auf Scheibenmattweg Richtung S\u00fcden fahren.",
+            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Scheibenmattweg Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
             "street_names": [
-              "Breitestrasse"
+              "Scheibenmattweg"
             ],
-            "bearing_after": 229,
-            "time": 2.759,
-            "length": 0.022,
-            "cost": 2.759,
+            "bearing_after": 162,
+            "time": 6.068,
+            "length": 0.059,
+            "cost": 6.068,
             "begin_shape_index": 0,
-            "end_shape_index": 1,
+            "end_shape_index": 2,
             "verbal_multi_cue": true,
             "travel_mode": "drive",
             "travel_type": "car"
@@ -717,12 +265,12 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 229,
+            "bearing_before": 149,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
+            "begin_shape_index": 2,
+            "end_shape_index": 2,
             "travel_mode": "drive",
             "travel_type": "car"
           }
@@ -732,82 +280,28 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523317,
-          "min_lon": 7.648995,
-          "max_lat": 47.523453,
-          "max_lon": 7.649226,
-          "time": 2.759,
-          "length": 0.022,
-          "cost": 2.759
+          "min_lat": 47.523339,
+          "min_lon": 7.649819,
+          "max_lat": 47.523802,
+          "max_lon": 7.650174,
+          "time": 6.068,
+          "length": 0.059,
+          "cost": 6.068
         },
-        "shape": "{frsyAs{zqMnGjM"
+        "shape": "s|rsyAw`|qMzBI~W{T"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 0.307,
-            "length": 0.002,
-            "cost": 0.307,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.5233,
-          "min_lon": 7.648964,
-          "max_lat": 47.523317,
-          "max_lon": 7.648995,
-          "time": 0.307,
-          "length": 0.002,
-          "cost": 0.307
-        },
-        "shape": "k~qsyAgmzqM`@|@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+            "instruction": "Richtung Nordosten fahren.",
             "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 51,
-            "time": 0.307,
-            "length": 0.002,
-            "cost": 0.307,
+            "verbal_pre_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "90 Meter weiter der Route folgen.",
+            "bearing_after": 64,
+            "time": 13.104,
+            "length": 0.091,
+            "cost": 13.104,
             "begin_shape_index": 0,
             "end_shape_index": 1,
             "verbal_multi_cue": true,
@@ -819,7 +313,7 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 51,
+            "bearing_before": 64,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
@@ -834,1153 +328,28 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.5233,
-          "min_lon": 7.648964,
-          "max_lat": 47.523317,
-          "max_lon": 7.648995,
-          "time": 0.307,
-          "length": 0.002,
-          "cost": 0.307
+          "min_lat": 47.523339,
+          "min_lon": 7.650174,
+          "max_lat": 47.523697,
+          "max_lon": 7.651255,
+          "time": 13.104,
+          "length": 0.091,
+          "cost": 13.104
         },
-        "shape": "i}qsyAikzqMa@}@"
+        "shape": "w_rsyA}v|qMkUqbA"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 0.307,
-            "length": 0.002,
-            "cost": 0.307,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.5233,
-          "min_lon": 7.648964,
-          "max_lat": 47.523317,
-          "max_lon": 7.648995,
-          "time": 0.307,
-          "length": 0.002,
-          "cost": 0.307
-        },
-        "shape": "k~qsyAgmzqM`@|@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 0.028,
-            "length": 0.0,
-            "cost": 0.028,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523299,
-          "min_lon": 7.648962,
-          "max_lat": 47.5233,
-          "max_lon": 7.648964,
-          "time": 0.028,
-          "length": 0.0,
-          "cost": 0.028
-        },
-        "shape": "i}qsyAikzqM@D"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 1.654,
-            "length": 0.013,
-            "cost": 1.654,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523221,
-          "min_lon": 7.648819,
-          "max_lat": 47.523299,
-          "max_lon": 7.648962,
-          "time": 1.654,
-          "length": 0.013,
-          "cost": 1.654
-        },
-        "shape": "g}qsyAckzqMzCzG"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 1.024,
-            "length": 0.008,
-            "cost": 1.025,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523173,
-          "min_lon": 7.648731,
-          "max_lat": 47.523221,
-          "max_lon": 7.648819,
-          "time": 1.024,
-          "length": 0.008,
-          "cost": 1.025
-        },
-        "shape": "kxqsyAgbzqM`BnD"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 51,
-            "time": 1.024,
-            "length": 0.008,
-            "cost": 1.025,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 51,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523173,
-          "min_lon": 7.648731,
-          "max_lat": 47.523221,
-          "max_lon": 7.648819,
-          "time": 1.024,
-          "length": 0.008,
-          "cost": 1.025
-        },
-        "shape": "iuqsyAw|yqMaBoD"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 0.519,
-            "length": 0.004,
-            "cost": 0.519,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523197,
-          "min_lon": 7.648775,
-          "max_lat": 47.523221,
-          "max_lon": 7.648819,
-          "time": 0.519,
-          "length": 0.004,
-          "cost": 0.519
-        },
-        "shape": "kxqsyAgbzqMp@xA"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann, in weniger als 10 Meter, Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann, in weniger als 10 Meter, Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 0.96,
-            "length": 0.007,
-            "cost": 2.742,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 2,
-            "end_shape_index": 2,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523154,
-          "min_lon": 7.648697,
-          "max_lat": 47.523197,
-          "max_lon": 7.648775,
-          "time": 0.96,
-          "length": 0.007,
-          "cost": 2.742
-        },
-        "shape": "yvqsyAm_zqMnApCDH"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 0.27,
-            "length": 0.002,
-            "cost": 0.27,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523141,
-          "min_lon": 7.648673,
-          "max_lat": 47.523154,
-          "max_lon": 7.648697,
-          "time": 0.27,
-          "length": 0.002,
-          "cost": 0.27
-        },
-        "shape": "ctqsyAqzyqMVl@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 0.626,
-            "length": 0.005,
-            "cost": 0.626,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523112,
-          "min_lon": 7.648619,
-          "max_lat": 47.523141,
-          "max_lon": 7.648673,
-          "time": 0.626,
-          "length": 0.005,
-          "cost": 0.626
-        },
-        "shape": "ksqsyAcyyqMz@jB"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 0.266,
-            "length": 0.002,
-            "cost": 0.266,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523099,
-          "min_lon": 7.648596,
-          "max_lat": 47.523112,
-          "max_lon": 7.648619,
-          "time": 0.266,
-          "length": 0.002,
-          "cost": 0.266
-        },
-        "shape": "oqqsyAwuyqMXl@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 0.528,
-            "length": 0.004,
-            "cost": 0.528,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523074,
-          "min_lon": 7.648551,
-          "max_lat": 47.523099,
-          "max_lon": 7.648596,
-          "time": 0.528,
-          "length": 0.004,
-          "cost": 0.528
-        },
-        "shape": "upqsyAityqMn@zA"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 0.447,
-            "length": 0.003,
-            "cost": 0.447,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523053,
-          "min_lon": 7.648512,
-          "max_lat": 47.523074,
-          "max_lon": 7.648551,
-          "time": 0.447,
-          "length": 0.003,
-          "cost": 0.447
-        },
-        "shape": "eoqsyAmqyqMj@jA"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 51,
-            "time": 0.447,
-            "length": 0.003,
-            "cost": 0.447,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 51,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523053,
-          "min_lon": 7.648512,
-          "max_lat": 47.523074,
-          "max_lon": 7.648551,
-          "time": 0.447,
-          "length": 0.003,
-          "cost": 0.447
-        },
-        "shape": "ymqsyAaoyqMk@kA"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 51,
-            "time": 0.528,
-            "length": 0.004,
-            "cost": 0.528,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 51,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523074,
-          "min_lon": 7.648551,
-          "max_lat": 47.523099,
-          "max_lon": 7.648596,
-          "time": 0.528,
-          "length": 0.004,
-          "cost": 0.528
-        },
-        "shape": "eoqsyAmqyqMo@{A"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 51,
-            "time": 0.266,
-            "length": 0.002,
-            "cost": 0.266,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 51,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523099,
-          "min_lon": 7.648596,
-          "max_lat": 47.523112,
-          "max_lon": 7.648619,
-          "time": 0.266,
-          "length": 0.002,
-          "cost": 0.266
-        },
-        "shape": "upqsyAityqMYm@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 51,
-            "time": 0.626,
-            "length": 0.005,
-            "cost": 0.626,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 51,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523112,
-          "min_lon": 7.648619,
-          "max_lat": 47.523141,
-          "max_lon": 7.648673,
-          "time": 0.626,
-          "length": 0.005,
-          "cost": 0.626
-        },
-        "shape": "oqqsyAwuyqM{@kB"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 51,
-            "time": 0.27,
-            "length": 0.002,
-            "cost": 0.27,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 51,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523141,
-          "min_lon": 7.648673,
-          "max_lat": 47.523154,
-          "max_lon": 7.648697,
-          "time": 0.27,
-          "length": 0.002,
-          "cost": 0.27
-        },
-        "shape": "ksqsyAcyyqMWm@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann, in weniger als 10 Meter, Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann, in weniger als 10 Meter, Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 51,
-            "time": 0.96,
-            "length": 0.007,
-            "cost": 2.742,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 51,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 2,
-            "end_shape_index": 2,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523154,
-          "min_lon": 7.648697,
-          "max_lat": 47.523197,
-          "max_lon": 7.648775,
-          "time": 0.96,
-          "length": 0.007,
-          "cost": 2.742
-        },
-        "shape": "ctqsyAqzyqMEIoAqC"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 51,
-            "time": 0.519,
-            "length": 0.004,
-            "cost": 0.519,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 51,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523197,
-          "min_lon": 7.648775,
-          "max_lat": 47.523221,
-          "max_lon": 7.648819,
-          "time": 0.519,
-          "length": 0.004,
-          "cost": 0.519
-        },
-        "shape": "yvqsyAm_zqMq@yA"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 51,
-            "time": 1.654,
-            "length": 0.013,
-            "cost": 1.654,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 51,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523221,
-          "min_lon": 7.648819,
-          "max_lat": 47.523299,
-          "max_lon": 7.648962,
-          "time": 1.654,
-          "length": 0.013,
-          "cost": 1.654
-        },
-        "shape": "kxqsyAgbzqM{C{G"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 3,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 51,
-            "time": 0.028,
-            "length": 0.0,
-            "cost": 0.028,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 6,
-            "instruction": "Ziel befindet sich auf der linken Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
-            "bearing_before": 51,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523299,
-          "min_lon": 7.648962,
-          "max_lat": 47.5233,
-          "max_lon": 7.648964,
-          "time": 0.028,
-          "length": 0.0,
-          "cost": 0.028
-        },
-        "shape": "g}qsyAckzqMAE"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 1.799,
-            "length": 0.014,
-            "cost": 1.799,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 5,
-            "instruction": "Ziel befindet sich auf der rechten Seite.",
-            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
-            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
-            "bearing_before": 231,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523216,
-          "min_lon": 7.648809,
-          "max_lat": 47.5233,
-          "max_lon": 7.648964,
-          "time": 1.799,
-          "length": 0.014,
-          "cost": 1.799
-        },
-        "shape": "i}qsyAikzqMhDtH"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 2,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+            "instruction": "Richtung S\u00fcdwesten fahren.",
             "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 231,
-            "time": 0.563,
-            "length": 0.004,
-            "cost": 0.563,
+            "verbal_pre_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "90 Meter weiter der Route folgen.",
+            "bearing_after": 244,
+            "time": 13.104,
+            "length": 0.091,
+            "cost": 13.104,
             "begin_shape_index": 0,
             "end_shape_index": 1,
             "verbal_multi_cue": true,
@@ -1992,7 +361,7 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 231,
+            "bearing_before": 244,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
@@ -2007,31 +376,194 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523189,
-          "min_lon": 7.648761,
-          "max_lat": 47.523216,
-          "max_lon": 7.648809,
-          "time": 0.563,
-          "length": 0.004,
-          "cost": 0.563
+          "min_lat": 47.523339,
+          "min_lon": 7.650174,
+          "max_lat": 47.523697,
+          "max_lon": 7.651255,
+          "time": 13.104,
+          "length": 0.091,
+          "cost": 13.104
         },
-        "shape": "_xqsyAsazqMr@`B"
+        "shape": "cvrsyAoz~qMjUpbA"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann, in 30 Meter, Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann, in 30 Meter, Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
+            "instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Nordwesten fahren. Dann Links auf Breitestrasse abbiegen.",
+            "verbal_pre_transition_instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren. Dann Links auf Breitestrasse abbiegen.",
+            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
+            "street_names": [
+              "Scheibenmattweg"
+            ],
+            "bearing_after": 329,
+            "time": 6.068,
+            "length": 0.059,
+            "cost": 6.068,
+            "begin_shape_index": 0,
+            "end_shape_index": 2,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 15,
+            "instruction": "Links auf Breitestrasse abbiegen.",
+            "verbal_transition_alert_instruction": "Links auf Breitestrasse abbiegen.",
+            "verbal_succinct_transition_instruction": "Links abbiegen.",
+            "verbal_pre_transition_instruction": "Links auf Breitestrasse abbiegen.",
+            "verbal_post_transition_instruction": "300 Meter weiter der Route folgen.",
             "street_names": [
               "Breitestrasse"
             ],
-            "bearing_after": 231,
-            "time": 3.947,
-            "length": 0.032,
-            "cost": 5.729,
+            "bearing_before": 342,
+            "bearing_after": 230,
+            "time": 42.142,
+            "length": 0.309,
+            "cost": 56.48,
+            "begin_shape_index": 2,
+            "end_shape_index": 13,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 15,
+            "instruction": "Links auf Burggasse abbiegen.",
+            "verbal_transition_alert_instruction": "Links auf Burggasse abbiegen.",
+            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Leicht nach links auf St. Arbogast-Strasse abbiegen.",
+            "verbal_pre_transition_instruction": "Links auf Burggasse abbiegen. Dann Leicht nach links auf St. Arbogast-Strasse abbiegen.",
+            "verbal_post_transition_instruction": "70 Meter weiter der Route folgen.",
+            "street_names": [
+              "Burggasse"
+            ],
+            "bearing_before": 221,
+            "bearing_after": 90,
+            "time": 13.563,
+            "length": 0.069,
+            "cost": 18.397,
+            "begin_shape_index": 13,
+            "end_shape_index": 15,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 16,
+            "instruction": "Leicht nach links auf St. Arbogast-Strasse abbiegen.",
+            "verbal_transition_alert_instruction": "Leicht nach links auf St. Arbogast-Strasse abbiegen.",
+            "verbal_succinct_transition_instruction": "Leicht nach links abbiegen.",
+            "verbal_pre_transition_instruction": "Leicht nach links auf St. Arbogast-Strasse abbiegen.",
+            "verbal_post_transition_instruction": "200 Meter weiter der Route folgen.",
+            "street_names": [
+              "St. Arbogast-Strasse"
+            ],
+            "bearing_before": 76,
+            "bearing_after": 38,
+            "time": 24.511,
+            "length": 0.237,
+            "cost": 42.877,
+            "begin_shape_index": 15,
+            "end_shape_index": 24,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 4,
+            "instruction": "Ziel erreicht.",
+            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Ziel erreicht.",
+            "bearing_before": 76,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 24,
+            "end_shape_index": 24,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 47.521921,
+          "min_lon": 7.646845,
+          "max_lat": 47.523801,
+          "max_lon": 7.650414,
+          "time": 86.285,
+          "length": 0.674,
+          "cost": 123.822
+        },
+        "shape": "w_rsyA}v|qM_XzT{BHlAjCxZbn@`IjQlHfPbQd]dInN`B~Dt@bE`AFfAx@h]|e@Boc@kBoSoCcBqGuQcZwx@wAaEiJeZmCaKyBmMuA}JoA{M"
+      },
+      {
+        "maneuvers": [
+          {
+            "type": 1,
+            "instruction": "Auf St. Arbogast-Strasse Richtung Westen fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Westen fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf St. Arbogast-Strasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
+            "street_names": [
+              "St. Arbogast-Strasse"
+            ],
+            "bearing_after": 256,
+            "time": 6.026,
+            "length": 0.058,
+            "cost": 6.026,
+            "begin_shape_index": 0,
+            "end_shape_index": 4,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 4,
+            "instruction": "Ziel erreicht.",
+            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Ziel erreicht.",
+            "bearing_before": 246,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 4,
+            "end_shape_index": 4,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 47.522886,
+          "min_lon": 7.649679,
+          "max_lat": 47.523058,
+          "max_lon": 7.650414,
+          "time": 6.026,
+          "length": 0.058,
+          "cost": 6.026
+        },
+        "shape": "cnqsyA}e}qMnAzMtA|JxBlMv@tC"
+      },
+      {
+        "maneuvers": [
+          {
+            "type": 1,
+            "instruction": "Auf St. Arbogast-Strasse Richtung S\u00fcdwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf St. Arbogast-Strasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "50 Meter weiter der Route folgen.",
+            "street_names": [
+              "St. Arbogast-Strasse"
+            ],
+            "bearing_after": 240,
+            "time": 4.978,
+            "length": 0.048,
+            "cost": 4.978,
             "begin_shape_index": 0,
             "end_shape_index": 2,
             "verbal_multi_cue": true,
@@ -2043,7 +575,7 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 231,
+            "bearing_before": 238,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
@@ -2058,15 +590,15 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523005,
-          "min_lon": 7.648426,
-          "max_lat": 47.523189,
-          "max_lon": 7.648761,
-          "time": 3.947,
-          "length": 0.032,
-          "cost": 5.729
+          "min_lat": 47.522662,
+          "min_lon": 7.649127,
+          "max_lat": 47.522886,
+          "max_lon": 7.649679,
+          "time": 4.978,
+          "length": 0.048,
+          "cost": 4.978
         },
-        "shape": "kvqsyAq~yqM`AtBlHfP"
+        "shape": "kcqsyA_x{qMtAjFhJdZ"
       }
     ],
     "summary": {
@@ -2074,13 +606,13 @@
       "has_toll": false,
       "has_highway": false,
       "has_ferry": false,
-      "min_lat": 47.523005,
-      "min_lon": 7.648426,
+      "min_lat": 47.521921,
+      "min_lon": 7.646845,
       "max_lat": 47.523802,
-      "max_lon": 7.650174,
-      "time": 69.846,
-      "length": 0.501,
-      "cost": 85.905
+      "max_lon": 7.651255,
+      "time": 147.044,
+      "length": 1.132,
+      "cost": 188.331
     },
     "status_message": "Found route between points",
     "status": 0,

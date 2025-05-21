@@ -3,616 +3,618 @@
     "locations": [
       {
         "type": "break",
-        "lat": 47.523008,
-        "lon": 7.648435,
+        "lat": 47.52266,
+        "lon": 7.649112,
         "original_index": 0
       },
       {
         "type": "break",
-        "lat": 47.523008,
-        "lon": 7.648435,
+        "lat": 47.52266,
+        "lon": 7.649112,
         "original_index": 1
       },
       {
         "type": "break",
-        "lat": 47.523194,
-        "lon": 7.648755,
+        "lat": 47.522888,
+        "lon": 7.649677,
         "original_index": 2
       },
       {
         "type": "break",
-        "lat": 47.523312,
-        "lon": 7.64896,
+        "lat": 47.52306,
+        "lon": 7.650413,
         "original_index": 3
       },
       {
         "type": "break",
-        "lat": 47.523461,
-        "lon": 7.649217,
+        "lat": 47.523342,
+        "lon": 7.650173,
         "original_index": 4
-      },
-      {
-        "type": "break",
-        "lat": 47.523594,
-        "lon": 7.649448,
-        "original_index": 5
       },
       {
         "type": "break",
         "lat": 47.523787,
         "lon": 7.649788,
-        "original_index": 6
+        "original_index": 5
       },
       {
         "type": "break",
         "lat": 47.52382,
         "lon": 7.649851,
-        "original_index": 7
+        "original_index": 6
       },
       {
         "type": "break",
         "lat": 47.523874,
         "lon": 7.649829,
-        "original_index": 8
+        "original_index": 7
       },
       {
         "type": "break",
         "lat": 47.524862,
         "lon": 7.649948,
-        "original_index": 9
+        "original_index": 8
       },
       {
         "type": "break",
         "lat": 47.525053,
         "lon": 7.648929,
-        "original_index": 10
+        "original_index": 9
       },
       {
         "type": "break",
         "lat": 47.525435,
         "lon": 7.649146,
-        "original_index": 11
+        "original_index": 10
       },
       {
         "type": "break",
         "lat": 47.525328,
         "lon": 7.649765,
-        "original_index": 12
+        "original_index": 11
       },
       {
         "type": "break",
         "lat": 47.525435,
         "lon": 7.649146,
-        "original_index": 13
+        "original_index": 12
       },
       {
         "type": "break",
         "lat": 47.52604,
         "lon": 7.649534,
-        "original_index": 14
+        "original_index": 13
       },
       {
         "type": "break",
         "lat": 47.525435,
         "lon": 7.649146,
+        "original_index": 14
+      },
+      {
+        "type": "break",
+        "lat": 47.525053,
+        "lon": 7.648929,
         "original_index": 15
-      },
-      {
-        "type": "break",
-        "lat": 47.525053,
-        "lon": 7.648929,
-        "original_index": 16
-      },
-      {
-        "type": "break",
-        "lat": 47.525159,
-        "lon": 7.647883,
-        "original_index": 17
-      },
-      {
-        "type": "break",
-        "lat": 47.525053,
-        "lon": 7.648929,
-        "original_index": 18
       },
       {
         "type": "break",
         "lat": 47.524862,
         "lon": 7.649948,
-        "original_index": 19
+        "original_index": 16
       },
       {
         "type": "break",
         "lat": 47.524726,
         "lon": 7.650651,
-        "original_index": 20
+        "original_index": 17
       },
       {
         "type": "break",
         "lat": 47.524936,
         "lon": 7.650767,
         "side_of_street": "left",
-        "original_index": 21
+        "original_index": 18
       },
       {
         "type": "break",
         "lat": 47.524944,
         "lon": 7.650733,
         "side_of_street": "right",
-        "original_index": 22
+        "original_index": 19
       },
       {
         "type": "break",
         "lat": 47.52534,
         "lon": 7.650943,
         "side_of_street": "left",
-        "original_index": 23
+        "original_index": 20
       },
       {
         "type": "break",
         "lat": 47.525481,
         "lon": 7.651017,
         "side_of_street": "right",
-        "original_index": 24
+        "original_index": 21
       },
       {
         "type": "break",
         "lat": 47.525522,
         "lon": 7.650874,
         "side_of_street": "left",
-        "original_index": 25
+        "original_index": 22
       },
       {
         "type": "break",
         "lat": 47.525481,
         "lon": 7.651017,
         "side_of_street": "right",
-        "original_index": 26
+        "original_index": 23
       },
       {
         "type": "break",
         "lat": 47.52534,
         "lon": 7.650943,
         "side_of_street": "left",
-        "original_index": 27
+        "original_index": 24
       },
       {
         "type": "break",
         "lat": 47.525261,
         "lon": 7.651262,
-        "original_index": 28
+        "original_index": 25
       },
       {
         "type": "break",
         "lat": 47.525264,
         "lon": 7.6513,
-        "original_index": 29
+        "original_index": 26
       },
       {
         "type": "break",
         "lat": 47.525261,
         "lon": 7.651262,
-        "original_index": 30
+        "original_index": 27
       },
       {
         "type": "break",
         "lat": 47.524864,
         "lon": 7.651052,
         "side_of_street": "left",
-        "original_index": 31
+        "original_index": 28
       },
       {
         "type": "break",
         "lat": 47.524936,
         "lon": 7.650767,
         "side_of_street": "right",
-        "original_index": 32
+        "original_index": 29
       },
       {
         "type": "break",
         "lat": 47.524726,
         "lon": 7.650651,
-        "original_index": 33
+        "original_index": 30
       },
       {
         "type": "break",
         "lat": 47.524616,
         "lon": 7.651223,
-        "original_index": 34
+        "original_index": 31
       },
       {
         "type": "break",
         "lat": 47.524904,
         "lon": 7.651371,
         "side_of_street": "right",
-        "original_index": 35
+        "original_index": 32
       },
       {
         "type": "break",
         "lat": 47.524891,
         "lon": 7.651414,
         "side_of_street": "right",
-        "original_index": 36
+        "original_index": 33
       },
       {
         "type": "break",
         "lat": 47.525148,
         "lon": 7.651533,
-        "original_index": 37
+        "original_index": 34
       },
       {
         "type": "break",
         "lat": 47.525205,
         "lon": 7.651323,
-        "original_index": 38
+        "original_index": 35
       },
       {
         "type": "break",
         "lat": 47.525215,
         "lon": 7.651309,
-        "original_index": 39
+        "original_index": 36
       },
       {
         "type": "break",
         "lat": 47.525264,
         "lon": 7.6513,
-        "original_index": 40
+        "original_index": 37
       },
       {
         "type": "break",
         "lat": 47.5256,
         "lon": 7.651464,
-        "original_index": 41
+        "original_index": 38
       },
       {
         "type": "break",
         "lat": 47.525264,
         "lon": 7.6513,
-        "original_index": 42
+        "original_index": 39
       },
       {
         "type": "break",
         "lat": 47.525215,
         "lon": 7.651309,
-        "original_index": 43
+        "original_index": 40
       },
       {
         "type": "break",
         "lat": 47.525205,
         "lon": 7.651323,
-        "original_index": 44
+        "original_index": 41
       },
       {
         "type": "break",
         "lat": 47.525148,
         "lon": 7.651533,
-        "original_index": 45
+        "original_index": 42
       },
       {
         "type": "break",
         "lat": 47.524891,
         "lon": 7.651414,
         "side_of_street": "right",
-        "original_index": 46
+        "original_index": 43
       },
       {
         "type": "break",
         "lat": 47.524904,
         "lon": 7.651371,
         "side_of_street": "left",
-        "original_index": 47
+        "original_index": 44
       },
       {
         "type": "break",
         "lat": 47.524616,
         "lon": 7.651223,
-        "original_index": 48
+        "original_index": 45
       },
       {
         "type": "break",
         "lat": 47.524518,
         "lon": 7.65171,
-        "original_index": 49
+        "original_index": 46
       },
       {
         "type": "break",
         "lat": 47.52449,
         "lon": 7.651782,
-        "original_index": 50
+        "original_index": 47
       },
       {
         "type": "break",
         "lat": 47.524459,
         "lon": 7.651836,
-        "original_index": 51
+        "original_index": 48
       },
       {
         "type": "break",
         "lat": 47.524405,
         "lon": 7.651877,
-        "original_index": 52
+        "original_index": 49
       },
       {
         "type": "break",
         "lat": 47.524528,
         "lon": 7.652304,
-        "original_index": 53
+        "original_index": 50
       },
       {
         "type": "break",
         "lat": 47.524557,
         "lon": 7.652475,
-        "original_index": 54
+        "original_index": 51
       },
       {
         "type": "break",
         "lat": 47.524576,
         "lon": 7.652911,
-        "original_index": 55
+        "original_index": 52
       },
       {
         "type": "break",
         "lat": 47.524273,
         "lon": 7.655589,
-        "original_index": 56
+        "original_index": 53
       },
       {
         "type": "break",
         "lat": 47.524576,
         "lon": 7.652911,
-        "original_index": 57
+        "original_index": 54
       },
       {
         "type": "break",
         "lat": 47.524557,
         "lon": 7.652475,
-        "original_index": 58
+        "original_index": 55
       },
       {
         "type": "break",
         "lat": 47.524528,
         "lon": 7.652304,
-        "original_index": 59
+        "original_index": 56
       },
       {
         "type": "break",
         "lat": 47.524436,
         "lon": 7.652354,
-        "original_index": 60
+        "original_index": 57
       },
       {
         "type": "break",
         "lat": 47.52439,
         "lon": 7.652416,
-        "original_index": 61
+        "original_index": 58
       },
       {
         "type": "break",
         "lat": 47.524367,
         "lon": 7.652464,
-        "original_index": 62
+        "original_index": 59
       },
       {
         "type": "break",
         "lat": 47.524014,
         "lon": 7.653649,
-        "original_index": 63
+        "original_index": 60
       },
       {
         "type": "break",
         "lat": 47.523953,
         "lon": 7.653744,
-        "original_index": 64
+        "original_index": 61
       },
       {
         "type": "break",
         "lat": 47.523903,
         "lon": 7.653787,
-        "original_index": 65
+        "original_index": 62
       },
       {
         "type": "break",
         "lat": 47.523847,
         "lon": 7.653815,
-        "original_index": 66
+        "original_index": 63
       },
       {
         "type": "break",
         "lat": 47.523903,
         "lon": 7.653787,
-        "original_index": 67
+        "original_index": 64
       },
       {
         "type": "break",
         "lat": 47.523953,
         "lon": 7.653744,
-        "original_index": 68
+        "original_index": 65
       },
       {
         "type": "break",
         "lat": 47.524014,
         "lon": 7.653649,
-        "original_index": 69
+        "original_index": 66
       },
       {
         "type": "break",
         "lat": 47.524367,
         "lon": 7.652464,
-        "original_index": 70
+        "original_index": 67
       },
       {
         "type": "break",
         "lat": 47.52439,
         "lon": 7.652416,
-        "original_index": 71
+        "original_index": 68
       },
       {
         "type": "break",
         "lat": 47.524436,
         "lon": 7.652354,
-        "original_index": 72
+        "original_index": 69
       },
       {
         "type": "break",
         "lat": 47.524528,
         "lon": 7.652304,
-        "original_index": 73
+        "original_index": 70
       },
       {
         "type": "break",
         "lat": 47.524633,
         "lon": 7.652294,
-        "original_index": 74
+        "original_index": 71
       },
       {
         "type": "break",
         "lat": 47.525266,
         "lon": 7.652622,
-        "original_index": 75
+        "original_index": 72
       },
       {
         "type": "break",
         "lat": 47.525302,
         "lon": 7.652623,
-        "original_index": 76
+        "original_index": 73
       },
       {
         "type": "break",
         "lat": 47.525266,
         "lon": 7.652622,
-        "original_index": 77
+        "original_index": 74
       },
       {
         "type": "break",
         "lat": 47.524633,
         "lon": 7.652294,
-        "original_index": 78
+        "original_index": 75
       },
       {
         "type": "break",
         "lat": 47.524528,
         "lon": 7.652304,
-        "original_index": 79
+        "original_index": 76
       },
       {
         "type": "break",
         "lat": 47.524405,
         "lon": 7.651877,
-        "original_index": 80
+        "original_index": 77
       },
       {
         "type": "break",
         "lat": 47.523373,
         "lon": 7.652327,
-        "original_index": 81
+        "original_index": 78
       },
       {
         "type": "break",
         "lat": 47.524405,
         "lon": 7.651877,
-        "original_index": 82
+        "original_index": 79
       },
       {
         "type": "break",
         "lat": 47.524247,
         "lon": 7.651314,
-        "original_index": 83
+        "original_index": 80
       },
       {
         "type": "break",
         "lat": 47.524018,
         "lon": 7.651459,
-        "original_index": 84
+        "original_index": 81
       },
       {
         "type": "break",
         "lat": 47.524118,
         "lon": 7.651817,
-        "original_index": 85
+        "original_index": 82
       },
       {
         "type": "break",
         "lat": 47.524018,
         "lon": 7.651459,
-        "original_index": 86
+        "original_index": 83
       },
       {
         "type": "break",
         "lat": 47.523787,
         "lon": 7.6516,
         "side_of_street": "left",
-        "original_index": 87
+        "original_index": 84
       },
       {
         "type": "break",
         "lat": 47.524018,
         "lon": 7.651459,
-        "original_index": 88
+        "original_index": 85
       },
       {
         "type": "break",
         "lat": 47.524247,
         "lon": 7.651314,
-        "original_index": 89
+        "original_index": 86
       },
       {
         "type": "break",
         "lat": 47.523971,
         "lon": 7.650324,
-        "original_index": 90
+        "original_index": 87
       },
       {
         "type": "break",
         "lat": 47.523719,
         "lon": 7.650503,
-        "original_index": 91
+        "original_index": 88
       },
       {
         "type": "break",
         "lat": 47.523971,
         "lon": 7.650324,
-        "original_index": 92
+        "original_index": 89
       },
       {
         "type": "break",
         "lat": 47.52382,
         "lon": 7.649851,
-        "original_index": 93
+        "original_index": 90
       },
       {
         "type": "break",
         "lat": 47.523787,
         "lon": 7.649788,
+        "original_index": 91
+      },
+      {
+        "type": "break",
+        "lat": 47.523594,
+        "lon": 7.649448,
+        "original_index": 92
+      },
+      {
+        "type": "break",
+        "lat": 47.523461,
+        "lon": 7.649217,
+        "original_index": 93
+      },
+      {
+        "type": "break",
+        "lat": 47.523312,
+        "lon": 7.64896,
         "original_index": 94
       },
       {
         "type": "break",
-        "lat": 47.523342,
-        "lon": 7.650173,
+        "lat": 47.523461,
+        "lon": 7.649217,
         "original_index": 95
       },
       {
         "type": "break",
-        "lat": 47.523213,
-        "lon": 7.650289,
+        "lat": 47.523594,
+        "lon": 7.649448,
         "original_index": 96
       },
       {
         "type": "break",
-        "lat": 47.523342,
-        "lon": 7.650173,
+        "lat": 47.523461,
+        "lon": 7.649217,
         "original_index": 97
       },
       {
         "type": "break",
-        "lat": 47.523707,
-        "lon": 7.651268,
+        "lat": 47.52324,
+        "lon": 7.649494,
+        "side_of_street": "left",
         "original_index": 98
       },
       {
         "type": "break",
-        "lat": 47.523342,
-        "lon": 7.650173,
+        "lat": 47.52337,
+        "lon": 7.649721,
+        "side_of_street": "right",
         "original_index": 99
       }
     ],
@@ -621,17 +623,17 @@
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Breitestrasse Richtung Norden fahren.",
+            "instruction": "Auf St. Arbogast-Strasse Richtung Norden fahren.",
             "verbal_succinct_transition_instruction": "Richtung Norden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf St. Arbogast-Strasse Richtung Norden fahren. Dann Das Ziel wird erreicht.",
             "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
             "street_names": [
-              "Breitestrasse"
+              "St. Arbogast-Strasse"
             ],
             "bearing_after": 0,
             "time": 0.0,
             "length": 0.0,
-            "cost": -0.0,
+            "cost": 0.0,
             "begin_shape_index": 0,
             "end_shape_index": 1,
             "verbal_multi_cue": true,
@@ -658,31 +660,31 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523005,
-          "min_lon": 7.648426,
-          "max_lat": 47.523005,
-          "max_lon": 7.648426,
+          "min_lat": 47.522662,
+          "min_lon": 7.649127,
+          "max_lat": 47.522662,
+          "max_lon": 7.649127,
           "time": 0.0,
           "length": 0.0,
-          "cost": -0.0
+          "cost": 0.0
         },
-        "shape": "{jqsyAsiyqM??"
+        "shape": "kupsyAmuzqM??"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann, in 30 Meter, Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann, in 30 Meter, Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "30 Meter weiter der Route folgen.",
+            "instruction": "Auf St. Arbogast-Strasse Richtung Nordosten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf St. Arbogast-Strasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "50 Meter weiter der Route folgen.",
             "street_names": [
-              "Breitestrasse"
+              "St. Arbogast-Strasse"
             ],
-            "bearing_after": 51,
-            "time": 3.947,
-            "length": 0.032,
-            "cost": 5.729,
+            "bearing_after": 58,
+            "time": 4.978,
+            "length": 0.048,
+            "cost": 4.978,
             "begin_shape_index": 0,
             "end_shape_index": 2,
             "verbal_multi_cue": true,
@@ -694,7 +696,7 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 51,
+            "bearing_before": 60,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
@@ -709,33 +711,33 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523005,
-          "min_lon": 7.648426,
-          "max_lat": 47.523189,
-          "max_lon": 7.648761,
-          "time": 3.947,
-          "length": 0.032,
-          "cost": 5.729
+          "min_lat": 47.522662,
+          "min_lon": 7.649127,
+          "max_lat": 47.522886,
+          "max_lon": 7.649679,
+          "time": 4.978,
+          "length": 0.048,
+          "cost": 4.978
         },
-        "shape": "{jqsyAsiyqMmHgPaAuB"
+        "shape": "kupsyAmuzqMiJeZuAkF"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+            "instruction": "Auf St. Arbogast-Strasse Richtung Nordosten fahren.",
             "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
+            "verbal_pre_transition_instruction": "Auf St. Arbogast-Strasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
             "street_names": [
-              "Breitestrasse"
+              "St. Arbogast-Strasse"
             ],
-            "bearing_after": 51,
-            "time": 2.67,
-            "length": 0.022,
-            "cost": 2.67,
+            "bearing_after": 66,
+            "time": 6.026,
+            "length": 0.058,
+            "cost": 6.026,
             "begin_shape_index": 0,
-            "end_shape_index": 1,
+            "end_shape_index": 4,
             "verbal_multi_cue": true,
             "travel_mode": "drive",
             "travel_type": "car"
@@ -745,12 +747,12 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 51,
+            "bearing_before": 76,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
+            "begin_shape_index": 4,
+            "end_shape_index": 4,
             "travel_mode": "drive",
             "travel_type": "car"
           }
@@ -760,33 +762,114 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523189,
-          "min_lon": 7.648761,
-          "max_lat": 47.523317,
-          "max_lon": 7.648995,
-          "time": 2.67,
-          "length": 0.022,
-          "cost": 2.67
+          "min_lat": 47.522886,
+          "min_lon": 7.649679,
+          "max_lat": 47.523058,
+          "max_lon": 7.650414,
+          "time": 6.026,
+          "length": 0.058,
+          "cost": 6.026
         },
-        "shape": "kvqsyAq~yqM_GuM"
+        "shape": "kcqsyA_x{qMw@uCyBmMuA}JoA{M"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
+            "instruction": "Auf St. Arbogast-Strasse Richtung Osten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Osten fahren. Dann Leicht nach links auf Brunnrainstrasse abbiegen.",
+            "verbal_pre_transition_instruction": "Auf St. Arbogast-Strasse Richtung Osten fahren. Dann Leicht nach links auf Brunnrainstrasse abbiegen.",
+            "verbal_post_transition_instruction": "100 Meter weiter der Route folgen.",
+            "street_names": [
+              "St. Arbogast-Strasse"
+            ],
+            "bearing_after": 82,
+            "time": 12.583,
+            "length": 0.122,
+            "cost": 16.148,
+            "begin_shape_index": 0,
+            "end_shape_index": 3,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 16,
+            "instruction": "Leicht nach links auf Brunnrainstrasse abbiegen.",
+            "verbal_transition_alert_instruction": "Leicht nach links auf Brunnrainstrasse abbiegen.",
+            "verbal_succinct_transition_instruction": "Leicht nach links abbiegen.",
+            "verbal_pre_transition_instruction": "Leicht nach links auf Brunnrainstrasse abbiegen.",
+            "verbal_post_transition_instruction": "200 Meter weiter der Route folgen.",
+            "street_names": [
+              "Brunnrainstrasse"
+            ],
+            "bearing_before": 82,
+            "bearing_after": 49,
+            "time": 16.131,
+            "length": 0.156,
+            "cost": 25.545,
+            "begin_shape_index": 3,
+            "end_shape_index": 9,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 15,
+            "instruction": "Links auf Rainstrasse abbiegen.",
+            "verbal_transition_alert_instruction": "Links auf Rainstrasse abbiegen.",
+            "verbal_succinct_transition_instruction": "Links abbiegen.",
+            "verbal_pre_transition_instruction": "Links auf Rainstrasse abbiegen.",
+            "verbal_post_transition_instruction": "100 Meter weiter der Route folgen.",
+            "street_names": [
+              "Rainstrasse"
+            ],
+            "bearing_before": 83,
+            "bearing_after": 333,
+            "time": 18.876,
+            "length": 0.141,
+            "cost": 23.102,
+            "begin_shape_index": 9,
+            "end_shape_index": 19,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 15,
+            "instruction": "Links auf Breitestrasse abbiegen.",
+            "verbal_transition_alert_instruction": "Links auf Breitestrasse abbiegen.",
+            "verbal_succinct_transition_instruction": "Links abbiegen.",
+            "verbal_pre_transition_instruction": "Links auf Breitestrasse abbiegen.",
+            "verbal_post_transition_instruction": "200 Meter weiter der Route folgen.",
             "street_names": [
               "Breitestrasse"
             ],
-            "bearing_after": 49,
-            "time": 2.759,
-            "length": 0.022,
-            "cost": 2.759,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
+            "bearing_before": 338,
+            "bearing_after": 248,
+            "time": 26.788,
+            "length": 0.205,
+            "cost": 47.6,
+            "begin_shape_index": 19,
+            "end_shape_index": 26,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 15,
+            "instruction": "Links auf Scheibenmattweg abbiegen.",
+            "verbal_transition_alert_instruction": "Links auf Scheibenmattweg abbiegen.",
+            "verbal_succinct_transition_instruction": "Links abbiegen. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Links auf Scheibenmattweg abbiegen. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
+            "street_names": [
+              "Scheibenmattweg"
+            ],
+            "bearing_before": 242,
+            "bearing_after": 162,
+            "time": 7.315,
+            "length": 0.059,
+            "cost": 14.668,
+            "begin_shape_index": 26,
+            "end_shape_index": 28,
             "verbal_multi_cue": true,
             "travel_mode": "drive",
             "travel_type": "car"
@@ -796,12 +879,12 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 49,
+            "bearing_before": 149,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
+            "begin_shape_index": 28,
+            "end_shape_index": 28,
             "travel_mode": "drive",
             "travel_type": "car"
           }
@@ -811,82 +894,31 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523317,
-          "min_lon": 7.648995,
-          "max_lat": 47.523453,
-          "max_lon": 7.649226,
-          "time": 2.759,
-          "length": 0.022,
-          "cost": 2.759
+          "min_lat": 47.523058,
+          "min_lon": 7.64982,
+          "max_lat": 47.524524,
+          "max_lon": 7.653801,
+          "time": 81.694,
+          "length": 0.683,
+          "cost": 127.065
         },
-        "shape": "k~qsyAgmzqMoGkM"
+        "shape": "cnqsyA}e}qMKuBqEweAkAkXoGmMmAcDgVkp@kAeFy@qL{@cUaEnBsCzEaBzD{BpK_Kvj@gAtGy@pDaBzBkBb@}@RnA`HbDrQxHhb@dLbp@bCvKbF~UfBnGzBI~W{T"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
+            "instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
             "street_names": [
-              "Breitestrasse"
+              "Scheibenmattweg"
             ],
-            "bearing_after": 49,
-            "time": 2.74,
-            "length": 0.022,
-            "cost": 2.74,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 49,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523453,
-          "min_lon": 7.649226,
-          "max_lat": 47.523588,
-          "max_lon": 7.649455,
-          "time": 2.74,
-          "length": 0.022,
-          "cost": 2.74
-        },
-        "shape": "{frsyAs{zqMmGiM"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
-            "street_names": [
-              "Breitestrasse"
-            ],
-            "bearing_after": 49,
-            "time": 4.339,
-            "length": 0.036,
-            "cost": 4.339,
+            "bearing_after": 329,
+            "time": 6.068,
+            "length": 0.059,
+            "cost": 6.068,
             "begin_shape_index": 0,
             "end_shape_index": 2,
             "verbal_multi_cue": true,
@@ -898,7 +930,7 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 50,
+            "bearing_before": 342,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
@@ -913,15 +945,15 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523588,
-          "min_lon": 7.649455,
+          "min_lat": 47.523339,
+          "min_lon": 7.649819,
           "max_lat": 47.523802,
-          "max_lon": 7.649819,
-          "time": 4.339,
-          "length": 0.036,
-          "cost": 4.339
+          "max_lon": 7.650174,
+          "time": 6.068,
+          "length": 0.059,
+          "cost": 6.068
         },
-        "shape": "iorsyA}i{qM{ImQmAkC"
+        "shape": "w_rsyA}v|qM_XzT{BH"
       },
       {
         "maneuvers": [
@@ -1414,108 +1446,6 @@
           "cost": 4.628
         },
         "shape": "}bvsyAwvzqMlCtAtQ`K"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf R\u00f6ssligasse Richtung Westen fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Westen fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf R\u00f6ssligasse Richtung Westen fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "80 Meter weiter der Route folgen.",
-            "street_names": [
-              "R\u00f6ssligasse"
-            ],
-            "bearing_after": 278,
-            "time": 9.24,
-            "length": 0.077,
-            "cost": 9.24,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 278,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 2,
-            "end_shape_index": 2,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.525069,
-          "min_lon": 7.647896,
-          "max_lat": 47.525163,
-          "max_lon": 7.648912,
-          "time": 9.24,
-          "length": 0.077,
-          "cost": 9.24
-        },
-        "shape": "ykusyA_hzqMu@lQeC~k@"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf R\u00f6ssligasse Richtung Osten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Osten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf R\u00f6ssligasse Richtung Osten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "80 Meter weiter der Route folgen.",
-            "street_names": [
-              "R\u00f6ssligasse"
-            ],
-            "bearing_after": 98,
-            "time": 9.24,
-            "length": 0.077,
-            "cost": 9.24,
-            "begin_shape_index": 0,
-            "end_shape_index": 2,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 98,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 2,
-            "end_shape_index": 2,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.525069,
-          "min_lon": 7.647896,
-          "max_lat": 47.525163,
-          "max_lon": 7.648912,
-          "time": 9.24,
-          "length": 0.077,
-          "cost": 9.24
-        },
-        "shape": "uqusyAqhxqMdC_l@t@mQ"
       },
       {
         "maneuvers": [
@@ -5740,17 +5670,17 @@
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Scheibenmattweg Richtung S\u00fcden fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Scheibenmattweg Richtung S\u00fcden fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
+            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
             "street_names": [
-              "Scheibenmattweg"
+              "Breitestrasse"
             ],
-            "bearing_after": 162,
-            "time": 6.068,
-            "length": 0.059,
-            "cost": 6.068,
+            "bearing_after": 230,
+            "time": 4.339,
+            "length": 0.036,
+            "cost": 4.339,
             "begin_shape_index": 0,
             "end_shape_index": 2,
             "verbal_multi_cue": true,
@@ -5762,7 +5692,7 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 149,
+            "bearing_before": 229,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
@@ -5777,178 +5707,31 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523339,
-          "min_lon": 7.649819,
+          "min_lat": 47.523588,
+          "min_lon": 7.649455,
           "max_lat": 47.523802,
-          "max_lon": 7.650174,
-          "time": 6.068,
-          "length": 0.059,
-          "cost": 6.068
+          "max_lon": 7.649819,
+          "time": 4.339,
+          "length": 0.036,
+          "cost": 4.339
         },
-        "shape": "s|rsyAw`|qMzBI~W{T"
+        "shape": "s|rsyAw`|qMlAjCzIlQ"
       },
       {
         "maneuvers": [
           {
             "type": 1,
-            "instruction": "Auf Scheibenmattweg Richtung S\u00fcdosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Scheibenmattweg Richtung S\u00fcdosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Scheibenmattweg"
-            ],
-            "bearing_after": 151,
-            "time": 1.234,
-            "length": 0.012,
-            "cost": 1.234,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 151,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523242,
-          "min_lon": 7.650174,
-          "max_lat": 47.523339,
-          "max_lon": 7.650253,
-          "time": 1.234,
-          "length": 0.012,
-          "cost": 1.234
-        },
-        "shape": "w_rsyA}v|qM`E{C"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Auf Scheibenmattweg Richtung Nordwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "10 Meter weiter der Route folgen.",
-            "street_names": [
-              "Scheibenmattweg"
-            ],
-            "bearing_after": 331,
-            "time": 1.234,
-            "length": 0.012,
-            "cost": 1.234,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 331,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523242,
-          "min_lon": 7.650174,
-          "max_lat": 47.523339,
-          "max_lon": 7.650253,
-          "time": 1.234,
-          "length": 0.012,
-          "cost": 1.234
-        },
-        "shape": "uyqsyAy{|qMaEzC"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Richtung Nordosten fahren.",
-            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "90 Meter weiter der Route folgen.",
-            "bearing_after": 64,
-            "time": 13.104,
-            "length": 0.091,
-            "cost": 13.104,
-            "begin_shape_index": 0,
-            "end_shape_index": 1,
-            "verbal_multi_cue": true,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          },
-          {
-            "type": 4,
-            "instruction": "Ziel erreicht.",
-            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 64,
-            "time": 0.0,
-            "length": 0.0,
-            "cost": 0.0,
-            "begin_shape_index": 1,
-            "end_shape_index": 1,
-            "travel_mode": "drive",
-            "travel_type": "car"
-          }
-        ],
-        "summary": {
-          "has_time_restrictions": false,
-          "has_toll": false,
-          "has_highway": false,
-          "has_ferry": false,
-          "min_lat": 47.523339,
-          "min_lon": 7.650174,
-          "max_lat": 47.523697,
-          "max_lon": 7.651255,
-          "time": 13.104,
-          "length": 0.091,
-          "cost": 13.104
-        },
-        "shape": "w_rsyA}v|qMkUqbA"
-      },
-      {
-        "maneuvers": [
-          {
-            "type": 1,
-            "instruction": "Richtung S\u00fcdwesten fahren.",
+            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
             "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_pre_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
-            "verbal_post_transition_instruction": "90 Meter weiter der Route folgen.",
-            "bearing_after": 244,
-            "time": 13.104,
-            "length": 0.091,
-            "cost": 13.104,
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 229,
+            "time": 2.74,
+            "length": 0.022,
+            "cost": 2.74,
             "begin_shape_index": 0,
             "end_shape_index": 1,
             "verbal_multi_cue": true,
@@ -5960,7 +5743,7 @@
             "instruction": "Ziel erreicht.",
             "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
             "verbal_pre_transition_instruction": "Ziel erreicht.",
-            "bearing_before": 244,
+            "bearing_before": 229,
             "time": 0.0,
             "length": 0.0,
             "cost": 0.0,
@@ -5975,15 +5758,342 @@
           "has_toll": false,
           "has_highway": false,
           "has_ferry": false,
-          "min_lat": 47.523339,
-          "min_lon": 7.650174,
-          "max_lat": 47.523697,
-          "max_lon": 7.651255,
-          "time": 13.104,
-          "length": 0.091,
-          "cost": 13.104
+          "min_lat": 47.523453,
+          "min_lon": 7.649226,
+          "max_lat": 47.523588,
+          "max_lon": 7.649455,
+          "time": 2.74,
+          "length": 0.022,
+          "cost": 2.74
         },
-        "shape": "cvrsyAoz~qMjUpbA"
+        "shape": "iorsyA}i{qMlGhM"
+      },
+      {
+        "maneuvers": [
+          {
+            "type": 1,
+            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 229,
+            "time": 2.759,
+            "length": 0.022,
+            "cost": 2.759,
+            "begin_shape_index": 0,
+            "end_shape_index": 1,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 4,
+            "instruction": "Ziel erreicht.",
+            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Ziel erreicht.",
+            "bearing_before": 229,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 1,
+            "end_shape_index": 1,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 47.523317,
+          "min_lon": 7.648995,
+          "max_lat": 47.523453,
+          "max_lon": 7.649226,
+          "time": 2.759,
+          "length": 0.022,
+          "cost": 2.759
+        },
+        "shape": "{frsyAs{zqMnGjM"
+      },
+      {
+        "maneuvers": [
+          {
+            "type": 1,
+            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 49,
+            "time": 2.759,
+            "length": 0.022,
+            "cost": 2.759,
+            "begin_shape_index": 0,
+            "end_shape_index": 1,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 4,
+            "instruction": "Ziel erreicht.",
+            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Ziel erreicht.",
+            "bearing_before": 49,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 1,
+            "end_shape_index": 1,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 47.523317,
+          "min_lon": 7.648995,
+          "max_lat": 47.523453,
+          "max_lon": 7.649226,
+          "time": 2.759,
+          "length": 0.022,
+          "cost": 2.759
+        },
+        "shape": "k~qsyAgmzqMoGkM"
+      },
+      {
+        "maneuvers": [
+          {
+            "type": 1,
+            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 49,
+            "time": 2.74,
+            "length": 0.022,
+            "cost": 2.74,
+            "begin_shape_index": 0,
+            "end_shape_index": 1,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 4,
+            "instruction": "Ziel erreicht.",
+            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Ziel erreicht.",
+            "bearing_before": 49,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 1,
+            "end_shape_index": 1,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 47.523453,
+          "min_lon": 7.649226,
+          "max_lat": 47.523588,
+          "max_lon": 7.649455,
+          "time": 2.74,
+          "length": 0.022,
+          "cost": 2.74
+        },
+        "shape": "{frsyAs{zqMmGiM"
+      },
+      {
+        "maneuvers": [
+          {
+            "type": 1,
+            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel wird erreicht.",
+            "verbal_post_transition_instruction": "20 Meter weiter der Route folgen.",
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 229,
+            "time": 2.74,
+            "length": 0.022,
+            "cost": 2.74,
+            "begin_shape_index": 0,
+            "end_shape_index": 1,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 4,
+            "instruction": "Ziel erreicht.",
+            "verbal_transition_alert_instruction": "Das Ziel wird erreicht.",
+            "verbal_pre_transition_instruction": "Ziel erreicht.",
+            "bearing_before": 229,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 1,
+            "end_shape_index": 1,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 47.523453,
+          "min_lon": 7.649226,
+          "max_lat": 47.523588,
+          "max_lon": 7.649455,
+          "time": 2.74,
+          "length": 0.022,
+          "cost": 2.74
+        },
+        "shape": "iorsyA}i{qMlGhM"
+      },
+      {
+        "maneuvers": [
+          {
+            "type": 1,
+            "instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung S\u00fcdwesten fahren. Dann Das Ziel befindet sich auf der linken Seite.",
+            "verbal_post_transition_instruction": "weniger als 10 Meter weiter der Route folgen.",
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 229,
+            "time": 0.053,
+            "length": 0.0,
+            "cost": 0.053,
+            "begin_shape_index": 0,
+            "end_shape_index": 1,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 6,
+            "instruction": "Ziel befindet sich auf der linken Seite.",
+            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der linken Seite.",
+            "verbal_pre_transition_instruction": "Ziel befindet sich auf der linken Seite.",
+            "bearing_before": 229,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 1,
+            "end_shape_index": 1,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 47.523451,
+          "min_lon": 7.649221,
+          "max_lat": 47.523453,
+          "max_lon": 7.649226,
+          "time": 0.053,
+          "length": 0.0,
+          "cost": 0.053
+        },
+        "shape": "{frsyAs{zqMDF"
+      },
+      {
+        "maneuvers": [
+          {
+            "type": 2,
+            "instruction": "Auf Breitestrasse Richtung Nordosten fahren.",
+            "verbal_succinct_transition_instruction": "Richtung Nordosten fahren. Dann Rechts auf Scheibenmattweg abbiegen.",
+            "verbal_pre_transition_instruction": "Auf Breitestrasse Richtung Nordosten fahren. Dann Rechts auf Scheibenmattweg abbiegen.",
+            "verbal_post_transition_instruction": "60 Meter weiter der Route folgen.",
+            "street_names": [
+              "Breitestrasse"
+            ],
+            "bearing_after": 49,
+            "time": 7.133,
+            "length": 0.059,
+            "cost": 7.133,
+            "begin_shape_index": 0,
+            "end_shape_index": 2,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 10,
+            "instruction": "Rechts auf Scheibenmattweg abbiegen.",
+            "verbal_transition_alert_instruction": "Rechts auf Scheibenmattweg abbiegen.",
+            "verbal_succinct_transition_instruction": "Rechts abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
+            "verbal_pre_transition_instruction": "Rechts auf Scheibenmattweg abbiegen. Dann Das Ziel befindet sich auf der rechten Seite.",
+            "verbal_post_transition_instruction": "40 Meter weiter der Route folgen.",
+            "street_names": [
+              "Scheibenmattweg"
+            ],
+            "bearing_before": 50,
+            "bearing_after": 162,
+            "time": 10.986,
+            "length": 0.038,
+            "cost": 17.947,
+            "begin_shape_index": 2,
+            "end_shape_index": 4,
+            "verbal_multi_cue": true,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          },
+          {
+            "type": 5,
+            "instruction": "Ziel befindet sich auf der rechten Seite.",
+            "verbal_transition_alert_instruction": "Das Ziel befindet sich auf der rechten Seite.",
+            "verbal_pre_transition_instruction": "Ziel befindet sich auf der rechten Seite.",
+            "bearing_before": 149,
+            "time": 0.0,
+            "length": 0.0,
+            "cost": 0.0,
+            "begin_shape_index": 4,
+            "end_shape_index": 4,
+            "travel_mode": "drive",
+            "travel_type": "car"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 47.523451,
+          "min_lon": 7.649221,
+          "max_lat": 47.523801,
+          "max_lon": 7.650037,
+          "time": 18.119,
+          "length": 0.097,
+          "cost": 25.08
+        },
+        "shape": "ufrsyAk{zqMoR_`@mAkCzBIdNiL"
       }
     ],
     "summary": {
@@ -5991,13 +6101,13 @@
       "has_toll": false,
       "has_highway": false,
       "has_ferry": false,
-      "min_lat": 47.523005,
-      "min_lon": 7.647896,
+      "min_lat": 47.522662,
+      "min_lon": 7.648911,
       "max_lat": 47.526066,
       "max_lon": 7.655598,
-      "time": 740.611,
-      "length": 5.618,
-      "cost": 1412.653
+      "time": 805.951,
+      "length": 6.16,
+      "cost": 1528.543
     },
     "status_message": "Found route between points",
     "status": 0,

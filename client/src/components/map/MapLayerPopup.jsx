@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import "maplibre-gl/dist/maplibre-gl.css";
 import maplibregl from "maplibre-gl";
 import "./MapLayerPopup.css"
+import { BackendURL } from "../../config";
+
 
 
 export const MapLayerPopup = (props) => {
@@ -10,7 +12,7 @@ export const MapLayerPopup = (props) => {
   const [selectedProject, setSelectedProject] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:8000/getProjects')
+    fetch(BackendURL + '/getProjects')
       .then(res => res.json())
       .then(data => setProjects(data.projects))
       .catch(err => console.error('Fehler beim Laden der Projekte:', err));
@@ -37,7 +39,7 @@ export const MapLayerPopup = (props) => {
     props.layerMarkers.forEach(marker => marker.remove());
     props.setLayerMarkers([]); // Zustand leeren
   
-    fetch(`http://localhost:8000/getPointsByProject/${selectedProject}`)
+    fetch(BackendURL +`/getPointsByProject/${selectedProject}`)
       .then(res => res.json())
       .then(data => {
         console.log("Erhaltene Punkte:", data.points);

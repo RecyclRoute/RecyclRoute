@@ -8,7 +8,6 @@ import { ReportPage } from "./components/report_page/reportpage.jsx";
 
 function App() {
   const [ActiveProject, setActiveProject] = useState(null);
-  
   return (
     <Routes>
       <Route path="/"  element={<StartPage />}/>

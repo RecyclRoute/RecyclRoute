@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../plannerpage.css"
+import { BackendURL } from "../../../../config.js";
 
 export const ProjectDeleteCallbackPopup = (props) => { 
 
@@ -10,7 +11,7 @@ export const ProjectDeleteCallbackPopup = (props) => {
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/deleteProject/${props.ActiveProject.id}`, {
+      const response = await fetch(BackendURL + `/deleteProject/${props.ActiveProject.id}`, {
         method: "DELETE",
       });
 

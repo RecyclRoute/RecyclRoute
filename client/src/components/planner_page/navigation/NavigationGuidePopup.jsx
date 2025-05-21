@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import "./navigationpage.css";
+import { BackendURL } from "../../../config";
 
 export const NavigationGuidePopup = (props) => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ export const NavigationGuidePopup = (props) => {
   useEffect(() => {
     const projname=props.ActiveProject.name
 
-  fetch(`http://localhost:8000/getRoutingByProject/${projname}`)
+  fetch(BackendURL + `/getRoutingByProject/${projname}`)
     .then((res) => {
       if (!res.ok) {
         throw new Error("Failed to fetch routing data");

@@ -13,7 +13,7 @@ from shapely.geometry import Polygon, mapping
 from fastapi.responses import JSONResponse
 import httpx
 
-
+Backend2 = "http://localhost:7999"
 
 # Initialize FastAPI app
 #use Commmand "uvicorn server.app.main:app --reload --port 8000" to startup
@@ -21,7 +21,7 @@ app = FastAPI()
 
 # Add CORS middleware to allow requests from your frontend
 origins = [
-    "http://localhost:3000",  # Your React app running locally
+    "*",  # Your React app running locally
     # You can add other origins here if needed
 ]
 
@@ -327,7 +327,7 @@ async def call_calculate(request: Request, project_name: str):
         # Send to second API
         async with httpx.AsyncClient(timeout=20000) as client:
             try:
-                response = await client.post("http://localhost:7999/calculate", json=payload)
+                response = await client.post( Backend2 + "/calculate", json=payload)
                 response.raise_for_status()
                 try:
                     calculate_response = response.json()

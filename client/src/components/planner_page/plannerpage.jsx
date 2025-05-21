@@ -21,6 +21,7 @@ import { CalculateWaitingPopUp } from "./project_manager/new_project/CalculateWa
 import { ProjectStatisticsPopup } from "./project_manager/project_use_menu/ProjectStatisticsPopup.jsx";
 import { ProjectDeleteCallbackPopup } from"./project_manager/project_use_menu/ProjectDeleteCallbackPopup.jsx";
 import PolygonOverlay from "./project_manager/new_project/Polygonoverlay.jsx";
+import { BackendURL } from "../../config.js";
 
 export const PlannerPage = (props) => {
   const [ProjectManagerMode, setProjectManagerMode] = useState(false);
@@ -100,7 +101,7 @@ export const PlannerPage = (props) => {
   };
 
   try {
-    const response = await fetch(`http://localhost:8000/berechnen?project_name=${ProjectName}`, {
+    const response = await fetch(BackendURL + `/berechnen?project_name=${ProjectName}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -161,7 +162,7 @@ if (data.status === "done") {
   const sendPolygonToBackend = async (polygonGeoJSON) => {
     try {
       console.log(JSON.stringify(polygonGeoJSON, null, 2));
-      const response = await fetch('http://localhost:8000/addProject', {
+      const response = await fetch(BackendURL + '/addProject', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(polygonGeoJSON),
@@ -229,7 +230,7 @@ if (data.status === "done") {
 
   useEffect(() => {
   if (!isLoading) {
-    fetch("http://localhost:8000/getProjects")
+    fetch(BackendURL + "/getProjects")
       .then(res => res.json())
       .then(data => {
         console.log("FETCH RESPONSE:", data);

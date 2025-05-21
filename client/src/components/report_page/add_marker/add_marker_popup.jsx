@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./add_marker.css";
 import 'maplibre-gl/dist/maplibre-gl.css';
+import { BackendURL } from "../../../config.js";
 
 export const AddMarkerPopup = (props) => {
   const [projects, setProjects] = useState([]);
@@ -14,13 +15,13 @@ export const AddMarkerPopup = (props) => {
     setDatum(heute);
 
     // Fetch projects
-    fetch("http://localhost:8000/getProjects")
+    fetch(BackendURL + "/getProjects")
       .then(res => res.json())
       .then(data => setProjects(data.projects))  // ← nur das Array speichern
       .catch(err => console.error("Fehler beim Laden der Projekte:", err));
 
     // Fetch point types
-    fetch("http://localhost:8000/getPointTypes")
+    fetch(BackendURL + "/getPointTypes")
       .then(res => res.json())
       .then(data => setPointTypes(data))
       .catch(err => console.error("Fehler beim Laden der Punkt-Typen:", err));
@@ -67,7 +68,7 @@ export const AddMarkerPopup = (props) => {
     formData.append("picture", file);
 
     try {
-      const response = await fetch("http://localhost:8000/addPointWithDetails", {
+      const response = await fetch(BackendURL + "/addPointWithDetails", {
         method: "POST",
         body: formData
       });
